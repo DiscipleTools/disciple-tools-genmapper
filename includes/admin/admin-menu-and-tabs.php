@@ -1,8 +1,8 @@
 <?php
 /**
- * DT_Facebook_Menu class for the admin page
+ * DT_Starter_Plugin_Menu class for the admin page
  *
- * @class       DT_Facebook_Menu
+ * @class       DT_Starter_Plugin_Menu
  * @version     0.1.0
  * @since       0.1.0
  */
@@ -11,22 +11,27 @@ if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 
 /**
- * Class DT_Facebook_Menu
+ * Initialize menu class
  */
-class DT_Facebook_Menu {
+DT_Starter_Plugin_Menu::instance();
 
-    public $token = 'dt_facebook';
+/**
+ * Class DT_Starter_Plugin_Menu
+ */
+class DT_Starter_Plugin_Menu {
+
+    public $token = 'dt_starter_plugin';
 
     private static $_instance = null;
 
     /**
-     * DT_Facebook_Menu Instance
+     * DT_Starter_Plugin_Menu Instance
      *
-     * Ensures only one instance of DT_Facebook_Menu is loaded or can be loaded.
+     * Ensures only one instance of DT_Starter_Plugin_Menu is loaded or can be loaded.
      *
      * @since 0.1.0
      * @static
-     * @return DT_Facebook_Menu instance
+     * @return DT_Starter_Plugin_Menu instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -53,8 +58,7 @@ class DT_Facebook_Menu {
      * @since 0.1
      */
     public function register_menu() {
-        add_menu_page( __( 'Extensions (DT)', 'disciple_tools' ), __( 'Extensions (DT)', 'disciple_tools' ), 'manage_dt', 'dt_extensions', [ $this, 'extensions_menu' ], 'dashicons-admin-generic', 59 );
-        add_submenu_page( 'dt_extensions', __( 'Facebook', 'dt_facebook' ), __( 'Facebook', 'dt_facebook' ), 'manage_dt', $this->token, [ $this, 'content' ] );
+        add_menu_page( __( 'Starter Plugin (DT)', 'dt_starter_plugin' ), __( 'Starter Plugin (DT)', 'dt_starter_plugin' ), 'manage_dt', 'dt_starter_plugin', [ $this, 'content' ], 'dashicons-admin-generic', 59 );
     }
 
     /**
@@ -68,7 +72,7 @@ class DT_Facebook_Menu {
      */
     public function content() {
 
-        if ( !current_user_can( 'manage_dt' ) ) {
+        if ( !current_user_can( 'manage_dt' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
@@ -82,10 +86,10 @@ class DT_Facebook_Menu {
 
         ?>
         <div class="wrap">
-            <h2><?php esc_attr_e( 'DISCIPLE TOOLS - FACEBOOK', 'dt_facebook' ) ?></h2>
+            <h2><?php esc_attr_e( 'Starter Plugin', 'dt_starter_plugin' ) ?></h2>
             <h2 class="nav-tab-wrapper">
-                <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_facebook' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_facebook' ) ?></a>
-                <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_facebook' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_facebook' ) ?></a>
+                <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_starter_plugin' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_starter_plugin' ) ?></a>
+                <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_starter_plugin' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_starter_plugin' ) ?></a>
             </h2>
 
             <?php
@@ -108,7 +112,6 @@ class DT_Facebook_Menu {
         <?php
     }
 }
-DT_Facebook_Menu::instance();
 
 /**
  * Class DT_Facebook_Tab_General

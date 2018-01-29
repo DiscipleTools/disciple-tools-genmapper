@@ -19,15 +19,22 @@
 
 /*******************************************************************
  * Using the Starter Plugin
- *
  * The Disciple Tools starter plugin is intended to accelerate integrations and extensions to the Disciple Tools system.
  * This basic plugin starter has some of the basic elements to quickly launch and extension project in the pattern of
  * the Disciple Tools system.
- *
- * To use this plugin, please replace all occurences of the name DT_Starter_Plugin and dt_starter_plugin with you're own
- * name.
- *
- * The starter plugin is equipped with composer to include:
+ */
+
+/**
+ * Refactoring (renaming) this plugin as your own:
+ * 1. Refactor all occurences of the name DT_Starter_Plugin, dt_starter_plugin, and Starter Plugin with you're own plugin
+ * name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php files.
+ * 2. Update the README.md and LICENSE
+ * 3. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit
+ * 4.
+ */
+
+/**
+ * The starter plugin is equipped with:
  * 1. Wordpress style requirements
  * 2. Travis Continueous Integration
  * 3. Disciple Tools Theme presence check
@@ -35,7 +42,6 @@
  * 5. Multilingual ready
  * 6. PHP Code Sniffer support (composer) @use /vendor/bin/phpcs and /vendor/bin/phpcbf
  * 7. Starter Admin menu and options page with tabs.
- *
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -162,10 +168,17 @@ class DT_Starter_Plugin {
         if ( ! class_exists( 'Puc_v4_Factory' ) ) {
             require( $this->includes_path . 'admin/libraries/plugin-update-checker/plugin-update-checker.php' );
         }
+        /**
+         * Below is the publicly hosted .json file that carries the version information. This file can be hosted
+         * anywhere as long as it is publicly accessible. You can download the version file listed below and use it as
+         * a template.
+         * Also, see the instructions for version updating to understand the steps involved.
+         * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
+         */
         Puc_v4_Factory::buildUpdateChecker(
-            'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-starter_plugin-version-control.json',
+            'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-starter-plugin-version-control.json',
             __FILE__,
-            'disciple-tools-starter_plugin'
+            'disciple-tools-starter-plugin'
         );
 
         // Internationalize the text strings used.
@@ -180,6 +193,14 @@ class DT_Starter_Plugin {
      * @return void
      */
     public static function activation() {
+
+        // Confirm 'Administrator' has 'manage_dt' privilege. This is key in 'remote' configuration when
+        // Disciple Tools theme is not installed, otherwise this will already have been installed by the Disciple Tools Theme
+        $role = get_role( 'administrator' );
+        if ( !empty( $role ) ) {
+            $role->add_cap( 'manage_dt' ); // gives access to dt plugin options
+        }
+
     }
 
     /**
