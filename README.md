@@ -6,15 +6,6 @@ This basic plugin starter has some of the basic elements to quickly launch and e
 the Disciple Tools system.
 
 
-
-### Refactoring (renaming) this plugin as your own:
-1. Refactor all occurences of the name DT_Starter_Plugin, dt_starter_plugin, and Starter Plugin with you're own plugin
-name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php files.
-1. Update the README.md and LICENSE
-1. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit
-
-
-
 ### The starter plugin is equipped with:
 1. Wordpress style requirements
 1. Travis Continueous Integration
@@ -24,3 +15,8 @@ name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php file
 1. PHP Code Sniffer support (composer) @use /vendor/bin/phpcs and /vendor/bin/phpcbf
 1. Starter Admin menu and options page with tabs.
 
+### Refactoring this plugin as your own:
+1. Refactor all occurences of the name DT_Starter_Plugin, dt_starter_plugin, and Starter Plugin with you're own plugin
+name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php files.
+1. Update the README.md and LICENSE
+1. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit
