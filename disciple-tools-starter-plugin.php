@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Starter_Plugin
+ * Plugin Name: Disciple Tools - Starter Plugin
  * Plugin URI: https://github.com/ZumeProject/disciple-tools-starter_plugin
  * Description: Disciple Tools - Starter Plugin is intended to help developers and integrator jumpstart their extension
  * of the Disiple Tools system.
