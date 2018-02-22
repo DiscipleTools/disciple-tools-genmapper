@@ -64,7 +64,12 @@ class DT_Genmapper_UI
      * @return string
      */
     public function metrics_menu( $content ) {
-        $content .= '<li><a href="'. site_url( '/metrics/' ) .'#genmapper" onclick="show_genmapper()">' .  esc_html__( 'GenMapper', 'dt_genmapper' ) . '</a></li>';
+        $content .= '<li><a href="'. site_url( '/metrics/' ) .'#genmapper_groups" onclick="show_genmapper_groups()">' .  esc_html__( 'GenMapper', 'dt_genmapper' ) . '</a>
+                        <ul class="menu vertical nested">
+                          <li><a href="'. site_url( '/metrics/' ) .'#genmapper_groups" onclick="show_genmapper_groups()">' .  esc_html__( 'Groups', 'dt_genmapper' ) . '</a></li>
+                          <li><a href="'. site_url( '/metrics/' ) .'#genmapper_disciples" onclick="show_genmapper_disciples()">' .  esc_html__( 'Disciples', 'dt_genmapper' ) . '</a></li>
+                        </ul>
+                      </li>';
         return $content;
     }
 
@@ -89,7 +94,8 @@ class DT_Genmapper_UI
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'translations' => [
-                    "genmapper" => __( "GenMapper", "dt_genmapper" )
+                    "genmapper_groups" => __( "GenMapper Groups", "dt_genmapper" ),
+                    "genmapper_disciples" => __( "GenMapper Disciples", "dt_genmapper" ),
                     ]
                 ]
             );
