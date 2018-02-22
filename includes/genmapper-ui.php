@@ -64,7 +64,7 @@ class DT_Genmapper_UI
      * @return string
      */
     public function metrics_menu( $content ) {
-        $content .= '<li><a onclick="show_genmapper()">' .  esc_html__( 'GenMapper', 'dt_genmapper' ) . '</a></li>';
+        $content .= '<li><a href="'. site_url( '/metrics/' ) .'#genmapper" onclick="show_genmapper()">' .  esc_html__( 'GenMapper', 'dt_genmapper' ) . '</a></li>';
         return $content;
     }
 
@@ -75,10 +75,7 @@ class DT_Genmapper_UI
 
         $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
 
-        dt_write_log( 'script outside');
-
         if ( 'metrics' === $url_path ) {
-            dt_write_log( 'successful script');
 
             wp_enqueue_script( 'dt_genmapper_script', dt_genmapper()->includes_uri . 'genmapper.js', [
                 'jquery',
@@ -86,13 +83,13 @@ class DT_Genmapper_UI
             ], filemtime( dt_genmapper()->includes_path . 'genmapper.js' ), true );
 
             wp_localize_script(
-            'dt_genmapper_script', 'wpApiGenMapper', [
+                'dt_genmapper_script', 'wpApiGenMapper', [
                 'root' => esc_url_raw( rest_url() ),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'translations' => [
-                    "follow_up" => __( "Follow-up", "dt_genmapper" )
+                    "genmapper" => __( "GenMapper", "dt_genmapper" )
                     ]
                 ]
             );

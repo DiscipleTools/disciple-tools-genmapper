@@ -62,7 +62,7 @@ class DT_Genmapper_Endpoints
     {
         $version = '1';
         $namespace = 'dt/v' . $version;
-        $public_namespace = 'dt-public/v' . $version;
+//        $public_namespace = 'dt-public/v' . $version; // @todo prepared for potential public calls. Remove if unnecissary.
         $branch = '/genmapper/';
 
         register_rest_route(
@@ -85,7 +85,24 @@ class DT_Genmapper_Endpoints
 
         $params = $request->get_params();
 
-        $prepared_array = [];
+        $prepared_array = [
+            [
+                'id' => '1',
+                'parent_id' => '',
+            ],
+            [
+                'id' => '2',
+                'parent_id' => '1',
+            ],
+            [
+                'id' => '3',
+                'parent_id' => '2',
+            ],
+            [
+                'id' => '4',
+                'parent_id' => '2',
+            ]
+        ];
 
         if ( empty( $prepared_array ) ) {
             return new WP_Error( 'failed_to_build_data', 'Failed to build data', [ 'status' => 400 ] );

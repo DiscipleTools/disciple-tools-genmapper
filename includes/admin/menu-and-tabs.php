@@ -208,8 +208,8 @@ class DT_Genmapper_Menu {
         if ( 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'dt_genmapper' == sanitize_text_field( wp_unslash( $_GET['page'] ) ) ) {
 
             wp_enqueue_script( 'dt_genmapper_admin_script', dt_genmapper()->admin_uri . 'admin.js', [
-            'jquery',
-            'jquery-ui-core',
+                'jquery',
+                'jquery-ui-core',
             ], filemtime( dt_genmapper()->admin_path . 'admin.js' ), true );
 
             wp_register_style( 'dt_genmapper_admin_css', dt_genmapper()->admin_uri . 'admin.css', [], filemtime( dt_genmapper()->admin_path . 'admin.css' ) );
