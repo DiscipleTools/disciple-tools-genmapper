@@ -40,16 +40,14 @@ class DT_Genmapper_Menu {
         return self::$_instance;
     } // End instance()
 
-
     /**
      * Constructor function.
      * @access  public
      * @since   0.1.0
      */
     public function __construct() {
-
         add_action( "admin_menu", array( $this, "register_menu" ) );
-
+        add_action( 'admin_enqueue_scripts', [ $this, 'admin_scripts' ] );
     } // End __construct()
 
 
@@ -57,8 +55,10 @@ class DT_Genmapper_Menu {
      * Loads the subnav page
      * @since 0.1
      */
-    public function register_menu() {
-        add_menu_page( __( 'GenMapper', 'dt_genmapper' ), __( 'GenMapper', 'dt_genmapper' ), 'manage_dt', 'dt_genmapper', [ $this, 'content' ], 'dashicons-admin-generic', 59 );
+    public function register_menu()
+    {
+        add_menu_page( __( 'Extensions (DT)', 'disciple_tools' ), __( 'Extensions (DT)', 'disciple_tools' ), 'manage_dt', 'dt_extensions', [ $this, 'extensions_menu' ], 'dashicons-admin-generic', 59 );
+        add_submenu_page( 'dt_extensions', __( 'GenMapper', 'dt_genmapper' ), __( 'GenMapper', 'dt_genmapper' ), 'manage_dt', $this->token, [ $this, 'content' ] );
     }
 
     /**
@@ -200,7 +200,26 @@ class DT_Genmapper_Menu {
     }
 
     /**
-     * This function is a placeholder for building metabox content
+     * Loads admin panel specific css and javascript
+     */
+    public function admin_scripts() {
+        global $pagenow;
+
+        if ( 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'dt_genmapper' == sanitize_text_field( wp_unslash( $_GET['page'] ) ) ) {
+
+            wp_enqueue_script( 'dt_genmapper_admin_script', dt_genmapper()->admin_uri . 'admin.js', [
+            'jquery',
+            'jquery-ui-core',
+            ], filemtime( dt_genmapper()->admin_path . 'admin.js' ), true );
+
+            wp_register_style( 'dt_genmapper_admin_css', dt_genmapper()->admin_uri . 'admin.css', [], filemtime( dt_genmapper()->admin_path . 'admin.css' ) );
+            wp_enqueue_style( 'dt_genmapper_admin_css' );
+
+        }
+    }
+
+    /**
+     * This function is a placeholder for building metabox content @todo remove
      */
     public function meta_box_sample() {
         ?>
@@ -208,153 +227,6 @@ class DT_Genmapper_Menu {
         <table class="widefat striped">
             <thead>
             <th>Header</th>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    Content
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- End Box -->
-        <?php
-    }
-}
-
-/**
- * Class DT_Facebook_Tab_General
- */
-class DT_Facebook_Tab_General
-{
-    public function content() {
-        ?>
-        <div class="wrap">
-            <div id="poststuff">
-                <div id="post-body" class="metabox-holder columns-2">
-                    <div id="post-body-content">
-                        <!-- Main Column -->
-
-                        <?php $this->main_column() ?>
-
-                        <!-- End Main Column -->
-                    </div><!-- end post-body-content -->
-                    <div id="postbox-container-1" class="postbox-container">
-                        <!-- Right Column -->
-
-                        <?php $this->right_column() ?>
-
-                        <!-- End Right Column -->
-                    </div><!-- postbox-container 1 -->
-                    <div id="postbox-container-2" class="postbox-container">
-                    </div><!-- postbox-container 2 -->
-                </div><!-- post-body meta box container -->
-            </div><!--poststuff end -->
-        </div><!-- wrap end -->
-        <?php
-    }
-
-    public function main_column() {
-        ?>
-        <!-- Box -->
-        <table class="widefat striped">
-            <thead>
-            <th>Header</th>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    Content
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- End Box -->
-        <?php
-    }
-
-    public function right_column() {
-        ?>
-        <!-- Box -->
-        <table class="widefat striped">
-            <thead>
-            <th>Information</th>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    Content
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- End Box -->
-        <?php
-    }
-
-}
-
-/**
- * Class DT_Facebook_Tab_Second
- */
-class DT_Facebook_Tab_Second
-{
-    public function content() {
-        ?>
-        <div class="wrap">
-            <div id="poststuff">
-                <div id="post-body" class="metabox-holder columns-2">
-                    <div id="post-body-content">
-                        <!-- Main Column -->
-
-                        <?php $this->main_column() ?>
-
-                        <!-- End Main Column -->
-                    </div><!-- end post-body-content -->
-                    <div id="postbox-container-1" class="postbox-container">
-                        <!-- Right Column -->
-
-                        <?php $this->right_column() ?>
-
-                        <!-- End Right Column -->
-                    </div><!-- postbox-container 1 -->
-                    <div id="postbox-container-2" class="postbox-container">
-                    </div><!-- postbox-container 2 -->
-                </div><!-- post-body meta box container -->
-            </div><!--poststuff end -->
-        </div><!-- wrap end -->
-        <?php
-    }
-
-    public function main_column() {
-        ?>
-        <!-- Box -->
-        <table class="widefat striped">
-            <thead>
-            <th>Header</th>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    Content
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- End Box -->
-        <?php
-    }
-
-    public function right_column() {
-        ?>
-        <!-- Box -->
-        <table class="widefat striped">
-            <thead>
-            <th>Information</th>
             </thead>
             <tbody>
             <tr>

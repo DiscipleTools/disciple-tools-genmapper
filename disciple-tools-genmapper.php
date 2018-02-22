@@ -69,6 +69,9 @@ class DT_Genmapper {
     public $dir_path = '';
     public $dir_uri = '';
     public $img_uri = '';
+    public $includes_uri = '';
+    public $admin_uri = '';
+    public $admin_path;
     public $includes_path;
 
     /**
@@ -109,9 +112,9 @@ class DT_Genmapper {
      * @return void
      */
     private function includes() {
-        require_once( 'includes/admin/admin-menu-and-tabs.php' );
+        require_once( 'includes/admin/menu-and-tabs.php' );
         require_once( 'includes/genmapper-endpoints.php' );
-        require_once( 'includes/enqueue-scripts.php' );
+        require_once( 'includes/genmapper-ui.php' );
     }
 
     /**
@@ -129,13 +132,15 @@ class DT_Genmapper {
 
         // Plugin directory paths.
         $this->includes_path      = trailingslashit( $this->dir_path . 'includes' );
+        $this->admin_path       = trailingslashit( $this->dir_path . 'includes/admin' );
 
         // Plugin directory URIs.
-        $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
+        $this->includes_uri     = trailingslashit( $this->dir_uri . 'includes' );
+        $this->admin_uri        = trailingslashit( $this->dir_uri . 'includes/admin' );
 
         // Admin and settings variables
         $this->token             = 'dt_genmapper';
-        $this->version             = '0.1';
+        $this->version           = '0.1';
     }
 
     /**
