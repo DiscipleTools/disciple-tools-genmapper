@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DiscipleTools/disciple-tools-starter-plugin.svg?branch=master)](https://travis-ci.org/DiscipleTools/disciple-tools-starter-plugin)
+[![Build Status](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper.svg?branch=master)](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper)
 
 # Disciple Tools Starter Plugin
 The Disciple Tools Starter Plugin is intended to accelerate integrations and extensions to the Disciple Tools system.
@@ -16,7 +16,7 @@ the Disciple Tools system.
 1. Starter Admin menu and options page with tabs.
 
 ### Refactoring this plugin as your own:
-1. Refactor all occurences of the name DT_Starter_Plugin, dt_starter_plugin, and Starter Plugin with you're own plugin
-name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php files.
+1. Refactor all occurences of the name DT_Genmapper, dt_genmapper, and Starter Plugin with you're own plugin
+name for the `disciple-tools-genmapper.php and admin-menu-and-tabs.php files.
 1. Update the README.md and LICENSE
 1. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit

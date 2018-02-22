@@ -1,12 +1,11 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Starter Plugin
- * Plugin URI: https://github.com/ZumeProject/disciple-tools-starter_plugin
- * Description: Disciple Tools - Starter Plugin is intended to help developers and integrator jumpstart their extension
- * of the Disiple Tools system.
+ * Plugin Name: Disciple Tools - GenMapper
+ * Plugin URI: https://github.com/ZumeProject/disciple-tools-genmapper
+ * Description: Disciple Tools - GenMapper is adds generation mapping visualization to Disciple Tools system.
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
- * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter_plugin
+ * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
  * Tested up to: 4.9
@@ -17,31 +16,13 @@
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/*******************************************************************
- * Using the Starter Plugin
- * The Disciple Tools starter plugin is intended to accelerate integrations and extensions to the Disciple Tools system.
- * This basic plugin starter has some of the basic elements to quickly launch and extension project in the pattern of
- * the Disciple Tools system.
- */
-
 /**
  * Refactoring (renaming) this plugin as your own:
- * 1. Refactor all occurences of the name DT_Starter_Plugin, dt_starter_plugin, and Starter Plugin with you're own plugin
- * name for the `disciple-tools-starter-plugin.php and admin-menu-and-tabs.php files.
+ * 1. Refactor all occurences of the name DT_Genmapper, dt_genmapper, and Starter Plugin with you're own plugin
+ * name for the `disciple-tools-genmapper.php and admin-menu-and-tabs.php files.
  * 2. Update the README.md and LICENSE
  * 3. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit
  * 4.
- */
-
-/**
- * The starter plugin is equipped with:
- * 1. Wordpress style requirements
- * 2. Travis Continueous Integration
- * 3. Disciple Tools Theme presence check
- * 4. Remote upgrade system for ongoing updates outside the Wordpress Directory
- * 5. Multilingual ready
- * 6. PHP Code Sniffer support (composer) @use /vendor/bin/phpcs and /vendor/bin/phpcbf
- * 7. Starter Admin menu and options page with tabs.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -49,24 +30,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Gets the instance of the `DT_Starter_Plugin` class.
+ * Gets the instance of the `DT_Genmapper` class.
  *
  * @since  0.1
  * @access public
  * @return object
  */
-function dt_starter_plugin() {
+function dt_genmapper() {
     $current_theme = get_option( 'current_theme' );
     if ( 'Disciple Tools' == $current_theme ) {
-        return DT_FAcebook::get_instance();
+        return DT_Genmapper::get_instance();
     }
     else {
-        add_action( 'admin_notices', 'dt_starter_plugin_no_disciple_tools_theme_found' );
+        add_action( 'admin_notices', 'dt_genmapper_no_disciple_tools_theme_found' );
         return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active.' );
     }
 
 }
-add_action( 'plugins_loaded', 'dt_starter_plugin' );
+add_action( 'plugins_loaded', 'dt_genmapper' );
 
 /**
  * Singleton class for setting up the plugin.
@@ -74,7 +55,7 @@ add_action( 'plugins_loaded', 'dt_starter_plugin' );
  * @since  0.1
  * @access public
  */
-class DT_Starter_Plugin {
+class DT_Genmapper {
 
     /**
      * Declares public variables
@@ -102,7 +83,7 @@ class DT_Starter_Plugin {
         static $instance = null;
 
         if ( is_null( $instance ) ) {
-            $instance = new dt_starter_plugin();
+            $instance = new dt_genmapper();
             $instance->setup();
             $instance->includes();
             $instance->setup_actions();
@@ -151,7 +132,7 @@ class DT_Starter_Plugin {
         $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
 
         // Admin and settings variables
-        $this->token             = 'dt_starter_plugin';
+        $this->token             = 'dt_genmapper';
         $this->version             = '0.1';
     }
 
@@ -176,9 +157,9 @@ class DT_Starter_Plugin {
          * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
          */
         Puc_v4_Factory::buildUpdateChecker(
-            'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-starter-plugin-version-control.json',
+            'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-genmapper-version-control.json',
             __FILE__,
-            'disciple-tools-starter-plugin'
+            'disciple-tools-genmapper'
         );
 
         // Internationalize the text strings used.
@@ -221,7 +202,7 @@ class DT_Starter_Plugin {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_starter_plugin', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        load_plugin_textdomain( 'dt_genmapper', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
     }
 
     /**
@@ -232,7 +213,7 @@ class DT_Starter_Plugin {
      * @return string
      */
     public function __toString() {
-        return 'dt_starter_plugin';
+        return 'dt_genmapper';
     }
 
     /**
@@ -243,7 +224,7 @@ class DT_Starter_Plugin {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_starter_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_genmapper' ), '0.1' );
     }
 
     /**
@@ -254,7 +235,7 @@ class DT_Starter_Plugin {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_starter_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_genmapper' ), '0.1' );
     }
 
     /**
@@ -266,7 +247,7 @@ class DT_Starter_Plugin {
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
-        _doing_it_wrong( "dt_starter_plugin::{$method}", esc_html__( 'Method does not exist.', 'dt_starter_plugin' ), '0.1' );
+        _doing_it_wrong( "dt_genmapper::{$method}", esc_html__( 'Method does not exist.', 'dt_genmapper' ), '0.1' );
         unset( $method, $args );
         return null;
     }
@@ -274,17 +255,17 @@ class DT_Starter_Plugin {
 // end main plugin class
 
 // Register activation hook.
-register_activation_hook( __FILE__, [ 'DT_Starter_Plugin', 'activation' ] );
-register_deactivation_hook( __FILE__, [ 'DT_Starter_Plugin', 'deactivation' ] );
+register_activation_hook( __FILE__, [ 'DT_Genmapper', 'activation' ] );
+register_deactivation_hook( __FILE__, [ 'DT_Genmapper', 'deactivation' ] );
 
 /**
  * Admin alert for when Disciple Tools Theme is not available
  */
-function dt_starter_plugin_no_disciple_tools_theme_found()
+function dt_genmapper_no_disciple_tools_theme_found()
 {
     ?>
     <div class="notice notice-error">
-        <p><?php esc_html_e( "'Disciple Tools - Starter_Plugin' requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or deactivate 'Disciple Tools - Starter_Plugin' plugin.", "dt_starter_plugin" ); ?></p>
+        <p><?php esc_html_e( "'Disciple Tools - GenMapper' requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or deactivate 'Disciple Tools - GenMapper' plugin.", "dt_genmapper" ); ?></p>
     </div>
     <?php
 }
