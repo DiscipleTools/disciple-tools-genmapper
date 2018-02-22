@@ -58,7 +58,7 @@ class DT_Genmapper_Menu {
      * @since 0.1
      */
     public function register_menu() {
-        add_menu_page( __( 'Starter Plugin (DT)', 'dt_genmapper' ), __( 'Starter Plugin (DT)', 'dt_genmapper' ), 'manage_dt', 'dt_genmapper', [ $this, 'content' ], 'dashicons-admin-generic', 59 );
+        add_menu_page( __( 'GenMapper', 'dt_genmapper' ), __( 'GenMapper', 'dt_genmapper' ), 'manage_dt', 'dt_genmapper', [ $this, 'content' ], 'dashicons-admin-generic', 59 );
     }
 
     /**
@@ -86,7 +86,7 @@ class DT_Genmapper_Menu {
 
         ?>
         <div class="wrap">
-            <h2><?php esc_attr_e( 'Starter Plugin', 'dt_genmapper' ) ?></h2>
+            <h2><?php esc_attr_e( 'GenMapper', 'dt_genmapper' ) ?></h2>
             <h2 class="nav-tab-wrapper">
                 <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_genmapper' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_genmapper' ) ?></a>
                 <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_genmapper' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_genmapper' ) ?></a>
@@ -95,12 +95,10 @@ class DT_Genmapper_Menu {
             <?php
             switch ($tab) {
                 case "general":
-                    $object = new DT_Facebook_Tab_General();
-                    $object->content();
+                    $this->tab_general_settings();
                     break;
                 case "second":
-                    $object = new DT_Facebook_Tab_Second();
-                    $object->content();
+                    $this->tab_second_settings();
                     break;
                 default:
                     break;
@@ -109,6 +107,118 @@ class DT_Genmapper_Menu {
 
         </div><!-- End wrap -->
 
+        <?php
+    }
+
+    public function tab_general_settings() {
+        // begin columns template
+        $this->template( 'begin' );
+
+        /* Insert Call to contents */ $this->meta_box_sample();
+
+        // begin right column template
+        $this->template( 'right_column' );
+
+        /* Insert Call to contents */ $this->meta_box_sample();
+
+        // end columns template
+        $this->template( 'end' );
+    }
+
+    public function tab_second_settings() {
+        // begin columns template
+        $this->template( 'begin' );
+
+        /* Insert Call to contents */ $this->meta_box_sample();
+
+        // begin right column template
+        $this->template( 'right_column' );
+
+        /* Insert Call to contents */ $this->meta_box_sample();
+
+        // end columns template
+        $this->template( 'end' );
+    }
+
+    public function template( $section, $columns = 2 ) {
+        switch ( $columns ) {
+
+            case '1':
+                switch ( $section ) {
+                    case 'begin':
+                        ?>
+                        <div class="wrap">
+                        <div id="poststuff">
+                        <div id="post-body" class="metabox-holder columns-1">
+                        <div id="post-body-content">
+                        <!-- Main Column -->
+                        <?php
+                        break;
+
+
+                    case 'end':
+                        ?>
+                        </div><!-- postbox-container 1 -->
+                        </div><!-- post-body meta box container -->
+                        </div><!--poststuff end -->
+                        </div><!-- wrap end -->
+                        <?php
+                        break;
+                }
+                break;
+
+            case '2':
+                switch ( $section ) {
+                    case 'begin':
+                        ?>
+                        <div class="wrap">
+                        <div id="poststuff">
+                        <div id="post-body" class="metabox-holder columns-2">
+                        <div id="post-body-content">
+                        <!-- Main Column -->
+                        <?php
+                        break;
+                    case 'right_column':
+                        ?>
+                        <!-- End Main Column -->
+                        </div><!-- end post-body-content -->
+                        <div id="postbox-container-1" class="postbox-container">
+                        <!-- Right Column -->
+                        <?php
+                    break;
+                    case 'end':
+                        ?>
+                        </div><!-- postbox-container 1 -->
+                        </div><!-- post-body meta box container -->
+                        </div><!--poststuff end -->
+                        </div><!-- wrap end -->
+                        <?php
+                        break;
+                }
+                break;
+        }
+    }
+
+    /**
+     * This function is a placeholder for building metabox content
+     */
+    public function meta_box_sample() {
+        ?>
+        <!-- Box -->
+        <table class="widefat striped">
+            <thead>
+            <th>Header</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Content
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- End Box -->
         <?php
     }
 }

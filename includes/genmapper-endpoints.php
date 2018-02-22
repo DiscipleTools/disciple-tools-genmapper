@@ -61,15 +61,17 @@ class DT_Genmapper_Endpoints
     public function add_api_routes()
     {
         $version = '1';
-        $namespace = 'dt-public/v' . $version;
+        $namespace = 'dt/v' . $version;
+        $public_namespace = 'dt-public/v' . $version;
+        $branch = '/genmapper/';
 
         register_rest_route(
-        $namespace, '/webform/transfer_collection', [
-        [
-        'methods'  => WP_REST_Server::READABLE,
-        'callback' => [ $this, 'transfer_collection' ],
-        ],
-        ]
+            $namespace, $branch . 'groups', [
+                [
+                'methods'  => WP_REST_Server::READABLE,
+                'callback' => [ $this, 'groups' ],
+                ],
+            ]
         );
     }
 
@@ -79,31 +81,16 @@ class DT_Genmapper_Endpoints
      * @param \WP_REST_Request $request
      * @return array|\WP_Error
      */
-    public function transfer_collection( WP_REST_Request $request ) {
+    public function groups( WP_REST_Request $request ) {
 
         $params = $request->get_params();
-        $test = DT_Api_Keys::verify_param_id_and_token( $params );
 
-        if ( ! is_wp_error( $test ) && $test ) {
-            if ( isset( $params['selected_records'] ) && ! empty( $params['selected_records'] ) ) {
+        $prepared_array = [];
 
-                $old_records = [];
-                foreach ( $params['selected_records'] as $record ) {
-                    $result = DT_Webform_New_Leads_Post_Type::insert_post( $record );
-
-                    if ( is_wp_error( $result ) || empty( $result ) ) {
-                        $error[] = new WP_Error( 'failed_insert', 'Failed record ' . $record['ID'] );
-                    } else {
-                        $old_records[] = $record['ID'];
-                    }
-                }
-                return $old_records;
-
-            } else {
-                return new WP_Error( 'malformed_content', 'Did not find `selected_records` in array.' );
-            }
+        if ( empty( $prepared_array ) ) {
+            return new WP_Error( 'failed_to_build_data', 'Failed to build data', [ 'status' => 400 ] );
         } else {
-            return new WP_Error( 'failed_authentication', 'Failed id and/or token authentication.' );
+            return $prepared_array;
         }
     }
 }

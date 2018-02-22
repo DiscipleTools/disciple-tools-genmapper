@@ -110,6 +110,8 @@ class DT_Genmapper {
      */
     private function includes() {
         require_once( 'includes/admin/admin-menu-and-tabs.php' );
+        require_once( 'includes/genmapper_endpoints.php' );
+        require_once( 'includes/enqueue-scripts.php' );
     }
 
     /**
