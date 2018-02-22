@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function dt_starter_plugin() {
     $current_theme = get_option( 'current_theme' );
     if ( 'Disciple Tools' == $current_theme ) {
-        return DT_FAcebook::get_instance();
+        return DT_Starter_Plugin::get_instance();
     }
     else {
         add_action( 'admin_notices', 'dt_starter_plugin_no_disciple_tools_theme_found' );
