@@ -68,6 +68,7 @@ class DT_Genmapper_UI
                         <ul class="menu vertical nested">
                           <li><a href="'. site_url( '/metrics/' ) .'#genmapper_groups" onclick="show_genmapper_groups()">' .  esc_html__( 'Groups', 'dt_genmapper' ) . '</a></li>
                           <li><a href="'. site_url( '/metrics/' ) .'#genmapper_disciples" onclick="show_genmapper_disciples()">' .  esc_html__( 'Disciples', 'dt_genmapper' ) . '</a></li>
+                          <li><a href="'. site_url( '/metrics/' ) .'#genmapper_four_fields" onclick="show_genmapper_four_fields()">' .  esc_html__( 'Four Fields', 'dt_genmapper' ) . '</a></li>
                         </ul>
                       </li>';
         return $content;
@@ -97,16 +98,11 @@ class DT_Genmapper_UI
                 'translations' => [
                     "genmapper_groups" => __( "GenMapper Groups", "dt_genmapper" ),
                     "genmapper_disciples" => __( "GenMapper Disciples", "dt_genmapper" ),
+                    "genmapper_four_fields" => __( "GenMapper Four Fields", "dt_genmapper" ),
                     ]
                 ]
             );
 
-            wp_register_style( 'dt_genmapper_css', dt_genmapper()->includes_uri . 'genmapper-integration.css', [], filemtime( dt_genmapper()->includes_path . 'genmapper-integration.css' ) );
-            wp_enqueue_style( 'dt_genmapper_css' );
-
         }
     }
-        // /Users/chris/Documents/PROJECTS/localhost/wp-content/plugins/disciple-tools-genmapper/node_modules/lodash/lodash.min.js
-     //wp-content/plugins/disciple-tools-genmapper/node_modules/d3/build/d3.min.js
-
 }

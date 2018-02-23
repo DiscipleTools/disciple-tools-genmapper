@@ -6,13 +6,37 @@ include '../pre-load.php';
 <head>
     <meta charset="utf-8">
     <title>GenMapper</title>
-    <link rel="stylesheet" type="text/css" href="../../vendor/gen-mapper/style.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="../../vendor/gen-mapper/hint.min.css">
-    <link rel="icon" type="image/png" href="../../vendor/gen-mapper/favicon.png">
-    <?php do_action( 'genmapper_head' ) ?>
+    <?php genmapper_head() ?>
+
+    <script>
+        function genmapper_groups() {
+            "use strict";
+            let nonce = '<?php echo wp_create_nonce( 'wp_rest' ) ?>';
+            let root = '<?php echo esc_url_raw( rest_url() ) ?>';
+            return jQuery.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: root + 'dt/v1/genmapper/groups',
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', nonce);
+                },
+            })
+                .done(function (data) {
+
+                    const groups = data // @todo just an idea for passing the returned data
+
+                })
+                .fail(function (err) {
+                    console.log("error")
+                    console.log(err)
+                    jQuery("#alert-message").append(err.responseText)
+                })
+        }
+    </script>
 </head>
 <body>
+<div><script>console.log( genmapper_groups() )</script></div>
 <div id="content">
     <aside id="left-menu">
     </aside>
@@ -31,16 +55,8 @@ include '../pre-load.php';
         <svg id="main-svg" width="100%"></svg>
     </section>
 </div>
-<script src="template.js"></script>
-<script src="../../vendor/gen-mapper/d3.min.js"></script>
-<script src="../../vendor/gen-mapper/i18next.min.js"></script>
-<script src="../../vendor/gen-mapper/i18nextBrowserLanguageDetector.min.js"></script>
-<script src="../../vendor/gen-mapper/lodash.min.js"></script>
-<script src="../../vendor/gen-mapper/translations.js"></script>
-<script src="../../vendor/gen-mapper/genmapper.js"></script>
-<script src="../../vendor/gen-mapper/FileSaver.min.js"></script>
-<script src="../../vendor/gen-mapper/xlsx.core.min.js"></script>
 
-<?php do_action( 'genmapper_footer' ) ?>
+<?php genmapper_footer() ?>
+
 </body>
 </html>
