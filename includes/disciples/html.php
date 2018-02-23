@@ -6,7 +6,35 @@ include '../pre-load.php';
 <head>
     <meta charset="utf-8">
     <title>GenMapper</title>
-    <?php genmapper_head() ?>
+
+    <?php dt_genmapper_head() ?>
+
+    <script>
+
+        function genmapper_disciples() {
+            "use strict";
+            let nonce = '<?php echo esc_attr( wp_create_nonce( 'wp_rest' ) ) ?>';
+            let root = '<?php echo esc_url_raw( rest_url() ) ?>';
+            jQuery(document).ready(function() {
+                return jQuery.ajax({
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    url: root + 'dt/v1/genmapper/disciples',
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader('X-WP-Nonce', nonce);
+                    },
+                })
+                    .fail(function (err) {
+                        console.log("error")
+                        console.log(err)
+                        jQuery("#alert-message").append(err.responseText)
+                    })
+            })
+        }
+
+    </script>
+
 </head>
 <body>
 <div id="content">
@@ -28,7 +56,7 @@ include '../pre-load.php';
     </section>
 </div>
 
-<?php genmapper_footer() ?>
+<?php dt_genmapper_footer() ?>
 
 </body>
 </html>

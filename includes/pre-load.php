@@ -16,35 +16,45 @@ if ( ! isset( $_SERVER['DOCUMENT_ROOT'] ) ) {
 require( $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-load.php' ); // loads the wp framework
 
 // Check if user is logged on
-if( ! is_user_logged_in() ) {
+if ( ! is_user_logged_in() ) {
     wp_redirect( wp_login_url() );
 }
 
 // Check if Disciple Tools is installed and active
-$current_theme = get_option( 'current_theme' );
-if ( 'Disciple Tools' != $current_theme ) {
+$dt_current_theme = get_option( 'current_theme' );
+if ( 'Disciple Tools' != $dt_current_theme ) {
     die( 'Disciple Tools not installed' );
 }
 
-function genmapper_uri() {
+function dt_genmapper_uri() {
     return site_url() . '/wp-content/plugins/disciple-tools-genmapper/';
 }
 
 // Load header scripts
-function genmapper_head() {
+function dt_genmapper_head() {
+    /**
+     * Coding standards are ignored because we don't want to load the entire WP header, which would be required
+     * in order to use wp_enqueue_scripts. This is an optimization choice.
+     */
+    // @codingStandardsIgnoreStart
     ?>
     <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/style.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo  esc_attr( genmapper_uri() ) ?>includes/hint.min.css">
-    <link rel="icon" type="image/png" href="<?php echo  esc_attr( genmapper_uri() ) ?>includes/favicon.png">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/hint.min.css">
+    <link rel="icon" type="image/png" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/favicon.png">
     <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/jquery/dist/jquery.min.js"></script>
     <?php
+    // @codingStandardsIgnoreEnd
 }
 
 // Load footer scripts
-function genmapper_footer() {
+function dt_genmapper_footer() {
+    /**
+     * Coding standards are ignored because we don't want to load the entire WP header, which would be required
+     * in order to use wp_enqueue_scripts. This is an optimization choice.
+     */
+    // @codingStandardsIgnoreStart
     ?>
-
     <script src="template.js"></script>
     <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/d3/build/d3.min.js"></script>
     <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/i18next/i18next.min.js"></script>
@@ -55,4 +65,5 @@ function genmapper_footer() {
     <script src="<?php echo esc_attr( genmapper_uri() ) ?>includes/FileSaver.min.js"></script>
     <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/xlsx/dist/xlsx.core.min.js"></script>
     <?php
+    // @codingStandardsIgnoreEnd
 }
