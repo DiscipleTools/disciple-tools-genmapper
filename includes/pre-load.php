@@ -38,11 +38,11 @@ function dt_genmapper_head() {
      */
     // @codingStandardsIgnoreStart
     ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/style.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/hint.min.css">
-    <link rel="icon" type="image/png" href="<?php echo esc_attr( genmapper_uri() ) ?>includes/favicon.png">
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/hint.min.css">
+    <link rel="icon" type="image/png" href="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/favicon.png">
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/jquery/dist/jquery.min.js"></script>
     <?php
     // @codingStandardsIgnoreEnd
 }
@@ -56,14 +56,14 @@ function dt_genmapper_footer() {
     // @codingStandardsIgnoreStart
     ?>
     <script src="template.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/d3/build/d3.min.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/i18next/i18next.min.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/lodash/lodash.min.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>includes/translations.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>includes/genmapper.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>includes/FileSaver.min.js"></script>
-    <script src="<?php echo esc_attr( genmapper_uri() ) ?>node_modules/xlsx/dist/xlsx.core.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/d3/build/d3.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/i18next/i18next.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/lodash/lodash.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/translations.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/genmapper.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>includes/FileSaver.min.js"></script>
+    <script src="<?php echo esc_attr( dt_genmapper_uri() ) ?>node_modules/xlsx/dist/xlsx.core.min.js"></script>
     <?php
     // @codingStandardsIgnoreEnd
 }

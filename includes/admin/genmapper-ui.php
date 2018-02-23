@@ -53,6 +53,7 @@ class DT_Genmapper_UI
     public function __construct()
     {
         add_filter( 'dt_metrics_menu', [ $this, 'metrics_menu' ], 10 );
+        add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 999 );
     }
 
     /**
@@ -71,4 +72,33 @@ class DT_Genmapper_UI
                       </li>';
         return $content;
     }
+
+    /**
+     * Load scripts for the plugin
+     */
+    public function scripts() {
+        $url_path = trim( parse_url( add_query_arg( array() ), PHP_URL_PATH ), '/' );
+
+        if ( 'metrics' === $url_path ) {
+            wp_enqueue_script( 'dt_genmapper_script', dt_genmapper()->admin_uri . 'genmapper-integration.js', [
+                'jquery',
+                'jquery-ui-core',
+            ], filemtime( dt_genmapper()->admin_path . 'genmapper-integration.js' ), true );
+
+            wp_localize_script(
+                'dt_genmapper_script', 'wpApiGenMapper', [
+                    'root' => esc_url_raw( rest_url() ),
+                    'plugin_uri' => site_url() . '/wp-content/plugins/disciple-tools-genmapper/',
+                    'nonce' => wp_create_nonce( 'wp_rest' ),
+                    'current_user_login' => wp_get_current_user()->user_login,
+                    'current_user_id' => get_current_user_id(),
+                    'translations' => [
+                        "genmapper_groups" => __( "GenMapper Groups", "dt_genmapper" ),
+                        "genmapper_disciples" => __( "GenMapper Disciples", "dt_genmapper" ),
+                    ]
+                ]
+            );
+        }
+    }
+
 }
