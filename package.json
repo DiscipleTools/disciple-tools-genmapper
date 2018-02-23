@@ -17,12 +17,16 @@
     "wordpress-plugin"
   ],
   "author": "Disciple.Tools",
-  "license": "GPL-2.0 or later",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DiscipleTools/disciple-tools-genmapper/issues"
   },
   "homepage": "https://github.com/DiscipleTools/disciple-tools-genmapper#readme",
   "dependencies": {
-    "lodash": "^4.17.5"
+    "d3": "^4.13.0",
+    "i18next": "^10.4.1",
+    "i18next-browser-languagedetector": "^2.1.0",
+    "lodash": "^4.17.5",
+    "xlsx": "^0.12.2"
   }
 }

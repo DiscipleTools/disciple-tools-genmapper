@@ -82,14 +82,15 @@ class DT_Genmapper_UI
 
         if ( 'metrics' === $url_path ) {
 
-            wp_enqueue_script( 'dt_genmapper_script', dt_genmapper()->includes_uri . 'genmapper.js', [
+            wp_enqueue_script( 'dt_genmapper_script', dt_genmapper()->includes_uri . 'genmapper-integration.js', [
                 'jquery',
                 'jquery-ui-core',
-            ], filemtime( dt_genmapper()->includes_path . 'genmapper.js' ), true );
+            ], filemtime( dt_genmapper()->includes_path . 'genmapper-integration.js' ), true );
 
             wp_localize_script(
                 'dt_genmapper_script', 'wpApiGenMapper', [
                 'root' => esc_url_raw( rest_url() ),
+                'plugin_uri' => dt_genmapper()->dir_uri,
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
@@ -100,11 +101,12 @@ class DT_Genmapper_UI
                 ]
             );
 
-            wp_register_style( 'dt_genmapper_admin_css', dt_genmapper()->includes_uri . 'genmapper.css', [], filemtime( dt_genmapper()->includes_path . 'genmapper.css' ) );
-            wp_enqueue_style( 'dt_genmapper_admin_css' );
+            wp_register_style( 'dt_genmapper_css', dt_genmapper()->includes_uri . 'genmapper-integration.css', [], filemtime( dt_genmapper()->includes_path . 'genmapper-integration.css' ) );
+            wp_enqueue_style( 'dt_genmapper_css' );
 
         }
     }
-
+        // /Users/chris/Documents/PROJECTS/localhost/wp-content/plugins/disciple-tools-genmapper/node_modules/lodash/lodash.min.js
+     //wp-content/plugins/disciple-tools-genmapper/node_modules/d3/build/d3.min.js
 
 }
