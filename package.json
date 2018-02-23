@@ -1,0 +1,28 @@
+{
+  "name": "disciple-tools-genmapper",
+  "version": "0.1.0",
+  "description": "[![Build Status](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper.svg?branch=master)](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiscipleTools/disciple-tools-genmapper.git"
+  },
+  "keywords": [
+    "disciple-making",
+    "movement",
+    "jesus",
+    "wordpress-plugin"
+  ],
+  "author": "Disciple.Tools",
+  "license": "GPL-2.0 or later",
+  "bugs": {
+    "url": "https://github.com/DiscipleTools/disciple-tools-genmapper/issues"
+  },
+  "homepage": "https://github.com/DiscipleTools/disciple-tools-genmapper#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
