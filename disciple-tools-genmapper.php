@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function dt_genmapper() {
     $current_theme = get_option( 'current_theme' );
-    if ( 'Disciple Tools' == $current_theme || dt_is_child_theme_of_disciple_tools()  ) {
+    if ( 'Disciple Tools' == $current_theme || dt_is_child_theme_of_disciple_tools() ) {
         return DT_Genmapper::get_instance();
     }
     else {
