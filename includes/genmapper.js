@@ -220,29 +220,29 @@ class GenMapper {
   }
 
   popupEditGroupModal (d) {
-    this.editGroupElement.classList.add('edit-group--active')
-    template.fields.forEach((field) => {
-      if (field.type === 'text') {
-        this.editFieldElements[field.header].value = d.data[field.header]
-      } else if (field.type === 'radio') {
-        field.values.forEach((value) => {
-          const status = (value.header === d.data[field.header])
-          this.editFieldElements[field.header + '-' + value.header].checked = status
-        })
-      } else if (field.type === 'checkbox') {
-        this.editFieldElements[field.header].checked = d.data[field.header]
-      }
-    })
-    // select first element
-    this.editFieldElements[Object.keys(this.editFieldElements)[0]].select()
+    // this.editGroupElement.classList.add('edit-group--active')
+    // template.fields.forEach((field) => {
+    //   if (field.type === 'text') {
+    //     this.editFieldElements[field.header].value = d.data[field.header]
+    //   } else if (field.type === 'radio') {
+    //     field.values.forEach((value) => {
+    //       const status = (value.header === d.data[field.header])
+    //       this.editFieldElements[field.header + '-' + value.header].checked = status
+    //     })
+    //   } else if (field.type === 'checkbox') {
+    //     this.editFieldElements[field.header].checked = d.data[field.header]
+    //   }
+    // })
+    // // select first element
+    // this.editFieldElements[Object.keys(this.editFieldElements)[0]].select()
 
-    this.editParentElement.innerHTML = d.parent ? d.parent.data.name : 'N/A'
-    const groupData = d.data
-    const group = d
-    d3.select('#edit-submit').on('click', () => { this.editGroup(groupData) })
-    d3.select('#edit-cancel').on('click', () => { this.editGroupElement.classList.remove('edit-group--active') })
-    d3.select('#edit-delete').on('click', () => { this.removeNode(group) })
-    d3.select('#file-input-subtree').on('change', () => { this.importFileSubtree(group) })
+    // this.editParentElement.innerHTML = d.parent ? d.parent.data.name : 'N/A'
+    // const groupData = d.data
+    // const group = d
+    // d3.select('#edit-submit').on('click', () => { this.editGroup(groupData) })
+    // d3.select('#edit-cancel').on('click', () => { this.editGroupElement.classList.remove('edit-group--active') })
+    // d3.select('#edit-delete').on('click', () => { this.removeNode(group) })
+    // d3.select('#file-input-subtree').on('change', () => { this.importFileSubtree(group) })
   }
 
   editGroup (groupData) {
@@ -382,7 +382,7 @@ class GenMapper {
     const newGroup = node.enter()
       .append('g')
 
-    newGroup.append('title').text(i18next.t('editGroup.editGroup'))
+    // newGroup.append('title').text(i18next.t('editGroup.editGroup'))
     this.appendRemoveButton(newGroup)
     this.appendAddButton(newGroup)
 
@@ -513,40 +513,40 @@ class GenMapper {
   }
 
   appendRemoveButton (group) {
-    group.append('g')
-      .attr('class', 'removeNode')
-      .append('svg')
-      .html(
-        '<rect x="40" y="0" rx="7" width="25" height="40">' +
-          '<title>' + i18next.t('editGroup.hoverDeleteGroupAndSubtree') + '</title>' +
-        '</rect>' +
-        '<line x1="46" y1="13.5" x2="59" y2="26.5" stroke="white" stroke-width="3"></line>' +
-        '<line x1="59" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>'
-      )
+    // group.append('g')
+    //   .attr('class', 'removeNode')
+    //   .append('svg')
+    //   .html(
+    //     '<rect x="40" y="0" rx="7" width="25" height="40">' +
+    //       '<title>' + i18next.t('editGroup.hoverDeleteGroupAndSubtree') + '</title>' +
+    //     '</rect>' +
+    //     '<line x1="46" y1="13.5" x2="59" y2="26.5" stroke="white" stroke-width="3"></line>' +
+    //     '<line x1="59" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>'
+    //   )
   }
 
   appendAddButton (group) {
-    group.append('g')
-      .attr('class', 'addNode')
-      .append('svg')
-      .html(
-        '<rect x="40" y="40" rx="7" width="25" height="40">' +
-          '<title>' + i18next.t('editGroup.hoverAddChildGroup') + '</title>' +
-        '</rect>' +
-        '<line x1="45" y1="60" x2="60" y2="60" stroke="white" stroke-width="3"></line>' +
-        '<line x1="52.5" y1="52.5" x2="52.5" y2="67.5" stroke="white" stroke-width="3"></line>'
-      )
+    // group.append('g')
+    //   .attr('class', 'addNode')
+    //   .append('svg')
+    //   .html(
+    //     '<rect x="40" y="40" rx="7" width="25" height="40">' +
+    //       '<title>' + i18next.t('editGroup.hoverAddChildGroup') + '</title>' +
+    //     '</rect>' +
+    //     '<line x1="45" y1="60" x2="60" y2="60" stroke="white" stroke-width="3"></line>' +
+    //     '<line x1="52.5" y1="52.5" x2="52.5" y2="67.5" stroke="white" stroke-width="3"></line>'
+    //   )
   }
 
   addNode (d) {
-    const newNodeData = {}
-    template.fields.forEach((field) => {
-      newNodeData[field.header] = this.getInitialValue(field)
-    })
-    newNodeData['id'] = this.findNewId()
-    newNodeData['parentId'] = d.data.id
-    this.data.push(newNodeData)
-    this.redraw(template)
+    // const newNodeData = {}
+    // template.fields.forEach((field) => {
+    //   newNodeData[field.header] = this.getInitialValue(field)
+    // })
+    // newNodeData['id'] = this.findNewId()
+    // newNodeData['parentId'] = d.data.id
+    // this.data.push(newNodeData)
+    // this.redraw(template)
   }
 
   findNewId () {
@@ -574,25 +574,25 @@ class GenMapper {
   }
 
   removeNode (d) {
-    if (!d.parent) {
-      this.displayAlert(i18next.t('messages.errDeleteRoot'))
-    } else {
-      let confirmMessage
-      if (!d.children) {
-        confirmMessage = i18next.t('messages.confirmDeleteGroup', {groupName: d.data.name})
-      } else {
-        confirmMessage = i18next.t('messages.confirmDeleteGroupWithChildren', {groupName: d.data.name})
-      }
-      if (window.confirm(confirmMessage)) {
-        this.deleteAllDescendants(d)
-        const nodeToDelete = _.filter(this.data, {id: d.data.id})
-        if (nodeToDelete) {
-          this.data = _.without(this.data, nodeToDelete[0])
-        }
-      }
-    }
-    this.editGroupElement.classList.remove('edit-group--active')
-    this.redraw(template)
+    // if (!d.parent) {
+    //   this.displayAlert(i18next.t('messages.errDeleteRoot'))
+    // } else {
+    //   let confirmMessage
+    //   if (!d.children) {
+    //     confirmMessage = i18next.t('messages.confirmDeleteGroup', {groupName: d.data.name})
+    //   } else {
+    //     confirmMessage = i18next.t('messages.confirmDeleteGroupWithChildren', {groupName: d.data.name})
+    //   }
+    //   if (window.confirm(confirmMessage)) {
+    //     this.deleteAllDescendants(d)
+    //     const nodeToDelete = _.filter(this.data, {id: d.data.id})
+    //     if (nodeToDelete) {
+    //       this.data = _.without(this.data, nodeToDelete[0])
+    //     }
+    //   }
+    // }
+    // this.editGroupElement.classList.remove('edit-group--active')
+    // this.redraw(template)
   }
 
   parseCsvData (csvData) {

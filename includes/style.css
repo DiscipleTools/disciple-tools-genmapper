@@ -338,3 +338,23 @@ p {
   fill-opacity:0;
   stroke-opacity:0;
 }
+
+
+/* ----------------------------------------------------------- */
+/* CSS specifically for Disciple Tools */
+/* usually overwrittes previous definitions */
+
+#left-menu {
+  display: none;
+}
+
+#genmapper-graph {
+  width: 800px;
+  height: 600px;
+  border: solid 3px black;
+  margin: 10px;
+}
+
+.node:hover > rect, .node:hover > line {
+  fill: white;
+}
