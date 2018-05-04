@@ -42,7 +42,8 @@ function dt_genmapper() {
         return DT_Genmapper::get_instance();
     }
     else {
-        add_action( 'admin_notices', 'dt_genmapper_no_disciple_tools_theme_found' );
+        add_action( 'admin_notices', 'dt_genmapper_hook_admin_notice' );
+        add_action( 'wp_ajax_dismissed_notice_handler', 'dt_genmapper_ajax_notice_handler' );
         return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active.' );
     }
 
@@ -265,17 +266,6 @@ class DT_Genmapper {
 register_activation_hook( __FILE__, [ 'DT_Genmapper', 'activation' ] );
 register_deactivation_hook( __FILE__, [ 'DT_Genmapper', 'deactivation' ] );
 
-/**
- * Admin alert for when Disciple Tools Theme is not available
- */
-function dt_genmapper_no_disciple_tools_theme_found()
-{
-    ?>
-    <div class="notice notice-error">
-        <p><?php esc_html_e( "'Disciple Tools - GenMapper' requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or deactivate 'Disciple Tools - GenMapper' plugin.", "dt_genmapper" ); ?></p>
-    </div>
-    <?php
-}
 
 /**
  * A simple function to assist with development and non-disruptive debugging.
@@ -337,4 +327,33 @@ if ( ! function_exists( 'dt_is_child_theme_of_disciple_tools' ) ) {
         }
         return false;
     }
+}
+
+function dt_genmapper_hook_admin_notice() {
+    if ( ! get_option( 'dismissed-dt-genmapper', false ) ) { ?>
+        <div class="notice notice-error notice-dt-genmapper is-dismissible" data-notice="dt-facebook">
+            <p><?php esc_html_e( "'Disciple Tools - GenMapper' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or deactivate 'Disciple Tools - GenMapper' plugin.", "dt_genmapper" ); ?></p>
+        </div>
+        <script>
+            jQuery(function($) {
+                $( document ).on( 'click', '.notice-dt-genmapper .notice-dismiss', function () {
+                    let type = $( this ).closest( '.notice-dt-genmapper' ).data( 'notice' );
+                    $.ajax( ajaxurl,
+                        {
+                            type: 'POST',
+                            data: {
+                                action: 'dismissed_notice_handler',
+                                type: type,
+                            }
+                        } );
+                } );
+            });
+        </script>
+
+    <?php }
+}
+
+function dt_genmapper_ajax_notice_handler() {
+    $type = 'dt-genmapper';
+    update_option( 'dismissed-' . $type, true );
 }

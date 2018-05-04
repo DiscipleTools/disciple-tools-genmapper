@@ -52,7 +52,7 @@ class DT_Genmapper_UI
      */
     public function __construct()
     {
-        add_filter( 'dt_metrics_menu', [ $this, 'metrics_menu' ], 10 );
+        add_filter( 'dt_metrics_menu', [ $this, 'metrics_menu' ], 99 );
         add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 999 );
     }
 
