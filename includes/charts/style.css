@@ -5,7 +5,7 @@ body{
   margin: 0px;
 }
 
-#chart button {
+button {
     background-color: steelblue;
     border: none;
     color: white;
@@ -58,6 +58,7 @@ p {
   border-bottom: 3px solid #bbb;
   border-right: 3px solid #bbb;
   padding: 10px 10px;
+  background-color: #3f729b;
 }
 
 #left-menu button:hover{
@@ -236,7 +237,7 @@ p {
 }
 
 #edit-submit{
-  background-color: steelblue;
+  background-color: #3f729b;
 }
 
 #edit-cancel{
@@ -245,6 +246,14 @@ p {
 
 #edit-delete{
   background-color: red;
+}
+
+#open-record {
+    background-color: #3f729b;
+}
+
+#rebase-node {
+    background-color: #3f729b;
 }
 
 #intro-content button{
@@ -293,7 +302,7 @@ p {
 }
 
 .rebaseNode rect{
-  fill: orange;
+  fill: rgba(63, 114, 155, 0.68);
 }
 
 .rebaseNode {
@@ -301,7 +310,7 @@ p {
 }
 
 .rebaseNode:hover rect {
-  fill:red;
+  fill:#3f729b;
 }
 
 .node text {
@@ -320,6 +329,10 @@ p {
 .node--active text, .link-text--active {
   stroke: black;
   fill: black;
+}
+
+.node--dummyroot {
+    display: none;
 }
 
 .node--inactive text, .link-text--inactive {
@@ -344,6 +357,10 @@ p {
 
 .link-text {
   text-anchor: middle;
+}
+
+.link-dummy {
+    display: none;
 }
 
 .invisible-rect {

@@ -39,13 +39,16 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
         wp_register_script( 'i18next', 'https://cdnjs.cloudflare.com/ajax/libs/i18next/15.0.5/i18next.min.js', false );
         wp_register_script( 'i18next-browser', 'https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/3.0.1/i18nextBrowserLanguageDetector.min.js', false );
 
+        $group_fields = Disciple_Tools_Groups_Post_Type::instance()->get_custom_fields_settings();
         wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/template.js", [
             'jquery',
             'jquery-ui-core',
+            'wp-i18n'
         ], filemtime( plugin_dir_path( __FILE__ ) . "church-circles/template.js" ), true );
         wp_localize_script(
             'gen-template', 'genApiTemplate', [
                 'plugin_uri' => plugin_dir_url( __DIR__ ),
+                'group_fields' => $group_fields
             ]
         );
         wp_enqueue_script( 'gen_translations', trailingslashit( plugin_dir_url( __FILE__ ) ) . "translations.js", [
@@ -176,7 +179,8 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "parentId" => $group["parent_id"] ?? 0,
                 "name" => $group["name"],
                 "church" => $group["group_type"] === "church",
-                "active" => $group["group_status"] === "active"
+                "active" => $group["group_status"] === "active",
+                "group_type" => $group["group_type"]
             ];
             if ( isset( $church_health[ $group["id"] ] ) ){
                 $health_metrics = explode( ',', $church_health[ $group["id"] ] );
@@ -187,7 +191,6 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
             $prepared_array[] = $values;
         }
 
-        $here = "oheo";
 
 //        $prepared_array = [
 //              [

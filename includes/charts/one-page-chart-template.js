@@ -10,9 +10,10 @@
 
   function show_template_overview() {
     let chartDiv = jQuery('#chart') // retrieves the chart div in the metrics page
+    const windowHeight = document.documentElement.clientHeight
     chartDiv.empty().html(`
       <span class="section-header">Group Generation Tree</span>
-
+      This tree only show First Generation groups that have multiplied
       <div >
         <div class="section-subheader">See descendants of a specific group</div>
         <var id="groups-result-container" class="result-container" style="display: block"></var>
@@ -43,7 +44,7 @@
       <section id="edit-group" class="edit-group">
       </section>
     
-      <section id="genmapper-graph">
+      <section id="genmapper-graph" style="height:${document.documentElement.clientHeight -200}px">
         <svg id="genmapper-graph-svg" width="100%"></svg>
       </section>     
     `)
@@ -111,7 +112,7 @@
         })
         .then(e=>{
           genmapper.importJSON(e)
-          genmapper.origPosition()
+          genmapper.origPosition( true )
         })
 
     })
@@ -121,7 +122,8 @@
   $("#chart").on('add-node-requested', function (e, parent) {
     let fields = {
       "title": "New Group",
-      "parent_groups": { "values": [ { "value" : parent.data.id } ] }
+      "parent_groups": { "values": [ { "value" : parent.data.id } ] },
+      "group_type": "group"
     }
     window.API.create_group(fields).then(( newGroup )=>{
       let newNodeData = {}
@@ -137,7 +139,12 @@
       if ( key === "name" ){
         groupFields["title"] = value
       }
-
+      if ( key === "active" ){
+        groupFields["group_status"] = value ? "active" : "inactive"
+      }
+      if ( key === "group_type"){
+        groupFields["group_type"] = value
+      }
     })
     window.API.save_field_api( "group", nodeID, groupFields )
   })

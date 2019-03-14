@@ -1,4 +1,4 @@
-const { __, _x, _n, _nx } = wp.i18n;
+// const { __, _x, _n, _nx } = wp.i18n;
 class GenMapper {
   // GenMapper
   // App for mapping generations of simple churches
@@ -132,6 +132,7 @@ class GenMapper {
      <div id="edit-buttons">
        <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
        <button id="edit-submit"> ${ __( 'Save Changes', 'disciple_tools' ) }  </button>
+       <button id="rebase-node"> ${ __( 'Center on this node', 'disciple_tools' ) }  </button>
        <button id="edit-cancel"> ${i18next.t('editGroup.btnCancel')}  </button>
      </div>
     </div>`
@@ -198,13 +199,13 @@ class GenMapper {
   origData(){
     this.data = this.masterData
     this.redraw(template)
-    this.origPosition()
+    this.origPosition(true)
   }
 
-  origPosition () {
+  origPosition ( atRoot = false) {
     this.zoom.scaleTo(this.svg, 1)
     const origX = this.margin.left + (document.getElementById('genmapper-graph').clientWidth / 2)
-    const origY = this.margin.top
+    const origY = this.margin.top - ( atRoot ? 150 : 0 )
     const parsedTransform = this.parseTransform(this.g.attr('transform'))
     this.zoom.translateBy(this.svg, origX - parsedTransform.translate[0], origY - parsedTransform.translate[1])
   }
@@ -252,8 +253,7 @@ class GenMapper {
     d3.select('#edit-submit').on('click', () => { this.editGroup(groupData) })
     d3.select('#edit-cancel').on('click', () => { this.editGroupElement.classList.remove('edit-group--active') })
     d3.select('#open-record').on('click', () => { this.openRecord( group ) })
-    // d3.select('#edit-delete').on('click', () => { this.removeNode(group) })
-    // d3.select('#file-input-subtree').on('change', () => { this.importFileSubtree(group) })
+    d3.select('#rebase-node').on('click', () => { this.rebaseOnNode( group );this.editGroupElement.classList.remove('edit-group--active') })
   }
 
   editGroup (groupData) {
@@ -371,7 +371,9 @@ class GenMapper {
     link.enter()
         .append('path')
       .merge(link)
-          .attr('class', 'link')
+          .attr('class', function (d) {
+            return (d.parent.id == 0)? 'link-dummy' : 'link'   // #customtft dummy root node
+          })
           .attr('d', function (d) {
             return 'M' + d.x + ',' + d.y +
                'C' + d.x + ',' + (d.y + (d.parent.y + boxHeight)) / 2 +
@@ -437,7 +439,7 @@ class GenMapper {
     // UPDATE including NEW
     const nodeWithNew = node.merge(newGroup)
     nodeWithNew.attr('class', function (d) {
-      return 'node' + (d.data.active ? ' node--active' : ' node--inactive')
+      return 'node' + ((d.data.id === 0) ? ' node--dummyroot' : (d.data.active ? ' node--active' : ' node--inactive'))
     })
       .attr('transform', function (d) {
         return 'translate(' + d.x + ',' + d.y + ')'
@@ -911,7 +913,7 @@ class GenMapper {
           .select('table')
           .append('tr')
         // add left column
-        const fieldDesciption = i18next.t('template.' + field.header) + ':'
+        const fieldDesciption = field.label + ':'
         tr.append('td')
           .text(fieldDesciption)
           .attr('class', 'left-field')
@@ -920,7 +922,7 @@ class GenMapper {
           .attr('class', 'right-field')
         if (field.type === 'radio') {
           for (let value of field.values) {
-            const valueDescription = i18next.t('template.' + value.header)
+            const valueDescription = value.label
             td.append('input')
               .attr('type', field.type)
               .attr('name', field.header)
