@@ -83,7 +83,7 @@ const template = {
     {
       'header': 'name',
       'label' : __( 'Name', 'disciple_tools' ),
-      'initialTranslationCode': 'initialLeadersName',
+      'initial': '',
       'type': 'text',
       'svg': {
         'type': 'text',
@@ -199,14 +199,11 @@ const template = {
     // },
     {
       'header': 'group_type',
-      'label' : __( 'Group Type', 'disciple_tools' ),
-      // 'initial': group_types["group"].label,
+      'label' : window.genApiTemplate.group_fields.group_type.name,
       'initial': 'group',
       'type': 'radio',
       'inheritsFrom': 'church-box',
       'values': Object.keys(group_types).map((key)=>{
-        console.log(key);
-
         let a = {
           'header': key,
           'label': group_types[key].label,

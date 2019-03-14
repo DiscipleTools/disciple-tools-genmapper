@@ -36,8 +36,6 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
         wp_enqueue_style( "group-styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "church-circles/style.css" ) );
         wp_enqueue_style( "styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "style.css" ) );
         wp_register_script( 'd3', 'https://d3js.org/d3.v5.min.js', false, '5' ); //@todo v5
-        wp_register_script( 'i18next', 'https://cdnjs.cloudflare.com/ajax/libs/i18next/15.0.5/i18next.min.js', false );
-        wp_register_script( 'i18next-browser', 'https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/3.0.1/i18nextBrowserLanguageDetector.min.js', false );
 
         $group_fields = Disciple_Tools_Groups_Post_Type::instance()->get_custom_fields_settings();
         wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/template.js", [
@@ -59,8 +57,6 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
             'jquery',
             'jquery-ui-core',
             'd3',
-            'i18next',
-            'i18next-browser',
             'gen_translations',
             'gen-template',
             'wp-i18n'

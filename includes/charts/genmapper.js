@@ -5,25 +5,16 @@ class GenMapper {
   // https://github.com/dvopalecky/gen-mapper
   // Copyright (c) 2016-2018 Daniel Vopalecky, MIT license
 
-  /* global d3, XLSX, saveAs, FileReader, template, translations, _, Blob, boxHeight, i18next */
+  /* global d3, XLSX, saveAs, FileReader, template, translations, _, Blob, boxHeight */
 
   constructor () {
     this.plugin_uri = window.wpApiGenmapper.plugin_uri
     this.appVersion = '0.2.16'
-    i18next.use(window.i18nextBrowserLanguageDetector)
-      .init({
-        fallbackLng: 'en',
-        resources: _.defaultsDeep(translations, template.translations)
-      })
 
-    if (translations[i18next.language]) {
-      this.language = i18next.language
-    } else {
-      this.language = 'en'
-    }
+    this.language = 'en'
 
     this.margin = {top: 50, right: 30, bottom: 50, left: 30}
-    this.projectName = i18next.t('menu.defaultProjectName')
+    this.projectName = "Untitled project"
 
     this.updateDOMafterLangSwitch()
 
@@ -91,40 +82,20 @@ class GenMapper {
 
   loadHTMLContent () {
     document.getElementById('left-menu').innerHTML = `<div id="template-logo">
-   ${ i18next.t('template.logo', '') }
-    <button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.helpAbout')}">
+    <button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ __( 'Help / About', 'disciple_tools' ) }">
      <img src="${this.plugin_uri}/charts/icons/266-question.svg">
      </button>
-    <!--<div class="dropdown" id="lang-selector">
-    <button aria-label="Language"><img src="${this.plugin_uri}/charts/icons/203-earth.svg"></button>
-    <ul class="dropdown-content">
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-en">English</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-cs">Čeština</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-es">Español</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-pl">Polski</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-ro">Română</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-ru">Русский</button></li>
-      <li><button onclick="genmapper.switchLanguage(this)" id="lang-sq">Shqip</button></li>
-    </ul>
-    </div>
-    -->
-    <!--<button id="project-name" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label=""><img src="${this.plugin_uri}/charts/icons/039-file-text2.svg"></button>-->
-    <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.originalZoom')}"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
-    <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.zoomIn')}"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
-    <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.zoomOut')}"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
-    <!--<button onclick="genmapper.onLoad(\'file-input\')" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.importXlsxCsv')}"><img src="${this.plugin_uri}/charts/icons/098-upload.svg"></button>-->
-    <!--<input type="file" id="file-input" onchange="genmapper.importFile()" style="display:none;">-->
-    <!--<button onclick="genmapper.outputCsv()" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.exportCsv')}"><img src="${this.plugin_uri}/charts/icons/097-download.svg"></button>-->
-    <!--<button onclick="genmapper.printMap(\'vertical\');" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.btnPrintVertical')}"><img src="${this.plugin_uri}/charts/icons/print-vertical.svg"></button>-->
-    <!--<button onclick="genmapper.printMap(\'horizontal\');" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.btnPrintHorizontal')}"><img src="${this.plugin_uri}/charts/icons/print-horizontal.svg"></button>-->
+    <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="${ __( 'Original Zoom &amp; Position', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
+    <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom In', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
+    <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom Out', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
   `
 
     document.getElementById('edit-group').innerHTML = `<div id="edit-group-content">
-     <h1> ${i18next.t('editGroup.editGroup')}</h1>
+     <h1> ${ __( 'Edit Record', 'disciple_tools' ) }</h1>
      <form>
        <table>
          <tr>
-           <td class="left-field"> ${i18next.t('editGroup.elementParent')}  </td>
+           <td class="left-field"> ${ __( 'Parent', 'disciple_tools' ) }  </td>
            <td class="right-field"><p id="edit-parent"></p></td>
          </tr>
        </table>
@@ -132,48 +103,36 @@ class GenMapper {
      <div id="edit-buttons">
        <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
        <button id="edit-submit"> ${ __( 'Save Changes', 'disciple_tools' ) }  </button>
+       <button id="edit-cancel"> ${ __( 'Cancel', 'disciple_tools' ) }  </button>
        <button id="rebase-node"> ${ __( 'Center on this node', 'disciple_tools' ) }  </button>
-       <button id="edit-cancel"> ${i18next.t('editGroup.btnCancel')}  </button>
      </div>
     </div>`
 
     document.getElementById('intro-content').innerHTML = `<h2>
-    ${i18next.t('help.genmapperHelp')}</h2>
-    <p>${i18next.t('help.introContent')}</p>
-    ${i18next.t('template.helpLegend') }
-    <!--<h3>${i18next.t('help.importExportHeader')}</h3>
-    <p><strong style="color:red">${i18next.t('help.importExportWarningChangesLost')}</strong><br>
-     ${i18next.t('help.importExportContent')}<br><br>
-    ${i18next.t('help.exportSafariIssuePart1')}
-    <img src="../safari-export-issue-0.png" style="margin:10px; margin-left:0px;" alt="safari export issue"><br>${i18next.t('help.exportSafariIssuePart2')}
-    <br><img src="../safari-export-issue-1.png" style="margin:10px; margin-left:0px;" alt="safari export issue">-->
-    <!--<br>${i18next.t('help.exportToPdf')}</p>-->
-    <h3>${i18next.t('help.panZoomHeader')}</h3>
-    <p>${i18next.t('help.panZoomContent')}</p>
-    <!--<h3>${i18next.t('help.changelogHeader')}</h3>
-    <p><a href="https://github.com/dvopalecky/gen-mapper/blob/master/changelog.md">
-    ${i18next.t('help.changelogLink')}</a><br>
-    ${i18next.t('help.genmapperVersion')}: <span id="gen-mapper-version"></span><br>
-    ${i18next.t('help.templateVersion')}: <span id="template-version"></span></p>-->
-    <h3>${i18next.t('help.creditsHeader')}</h3>
-    <p>${i18next.t('help.creditsThanks1')}<br>
-    ${i18next.t('help.creditsJavaScriptLibraries')}
-    : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>, <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>, 
+    ${ __( 'GenMapper Help', 'disciple_tools' ) }
+    </h2>
+    <p>${ __( "Hello, this app should serve for mapping generations of simple churches. I pray it serves you to advance Jesus' kingdom.", 'disciple_tools' ) }</p>
+    ${ __( 'Legend', 'disciple_tools' ) }
+    <h3>${ __( 'Panning / Zooming', 'disciple_tools' ) }</h3>
+    <p>${ __( 'You can pan by draging the map and zoom by mouse wheel or using buttons on the left.', 'disciple_tools' ) }</p>
+    <h3>${ __( 'Credits', 'disciple_tools' ) }</h3>
+    <p>${ __( 'Thanks to Curtis Sergeant for the idea of generational mapping and for providing useful feedback.', 'disciple_tools' ) }<br>
+    ${ __( 'JavaScript/CSS libraries used', 'disciple_tools' ) }
+    : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>, 
+    <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>, 
     <a href="https://lodash.com">lodash</a> 
-    ${i18next.t('help.creditsAnd')}
-     <a href="https://www.i18next.com">i18next</a><br>
-    ${i18next.t('help.creditsIcons')}
+    ${ __( 'Icons used', 'disciple_tools' ) }
     : <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>
-    ${i18next.t('help.creditsCopyright')}<br>
-    ${i18next.t('help.creditsLicense')}<br>
-    <a href="https://github.com/dvopalecky/gen-mapper">${i18next.t('help.creditsGithub')}</a><br>
-    ${i18next.t('help.creditsSuggestions')}<br></p>
-    <button onclick="genmapper.introSwitchVisibility()">${i18next.t('help.btnOKStart')}</button>`
+    ${ __( 'Copyright (c) 2016 - 2018 Daniel Vopalecky', 'disciple_tools' ) }<br>
+    ${ __( 'Licensed with MIT Licence', 'disciple_tools' ) }<br>
+    <a href="https://github.com/dvopalecky/gen-mapper">${ __( 'Github repository', 'disciple_tools' ) }</a><br>
+    <br></p>
+    <button onclick="genmapper.introSwitchVisibility()">${ __( 'Close', 'disciple_tools' ) }</button>`
 
     document.getElementById('alert-message').innerHTML =
     `<div id="alert-message-content">
       <p id="alert-message-text"></p>
-      <button onclick="genmapper.closeAlert()">${i18next.t('messages.btnOK') }</button>
+      <button onclick="genmapper.closeAlert()">${ __( 'OK', 'disciple_tools' ) }</button>
     </div>`
 
     // document.getElementById('gen-mapper-version').innerHTML = this.appVersion
@@ -181,11 +140,7 @@ class GenMapper {
   }
 
   getInitialValue (field) {
-    if (field.initialTranslationCode) {
-      return i18next.t('template.' + field.initialTranslationCode)
-    } else {
       return field.initial
-    }
   }
 
   zoomIn () {
@@ -257,7 +212,6 @@ class GenMapper {
   }
 
   editGroup (groupData) {
-    console.log(template.fields);
     let groupFields = {};
     template.fields.forEach((field) => {
       if (field.type === 'text') {
@@ -408,8 +362,6 @@ class GenMapper {
     const newGroup = node.enter()
       .append('g')
 
-    // newGroup.append('title').text(i18next.t('editGroup.editGroup'))
-    // this.appendRemoveButton(newGroup)
     this.appendRebaseButton(newGroup)
     this.appendAddButton(newGroup)
 
@@ -553,7 +505,7 @@ class GenMapper {
       .append('svg')
       .html(
         '<rect x="40" y="0" rx="7" width="25" height="40">' +
-          '<title>' + i18next.t('editGroup.hoverDeleteGroupAndSubtree') + '</title>' +
+          '<title>' + __( 'Delete group &amp; subtree', 'disciple_tools' ) + '</title>' +
         '</rect>' +
         '<line x1="46" y1="13.5" x2="59" y2="26.5" stroke="white" stroke-width="3"></line>' +
         '<line x1="59" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>'
@@ -566,7 +518,7 @@ class GenMapper {
       .append('svg')
       .html(`
         <rect x="40" y="0" rx="7" width="25" height="40">
-          <title>Rebase</title>
+          <title>${ __( 'Rebase', 'disciple_tools' ) }</title>
         </rect>
         <line x1="46" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>
         <line x1="59" y1="13.5" x2="46" y2="13.5" stroke="white" stroke-width="3"></line>
@@ -579,13 +531,13 @@ class GenMapper {
     group.append('g')
       .attr('class', 'addNode')
       .append('svg')
-      .html(
-        '<rect x="40" y="40" rx="7" width="25" height="40">' +
-          '<title>' + i18next.t('editGroup.hoverAddChildGroup') + '</title>' +
-        '</rect>' +
-        '<line x1="45" y1="60" x2="60" y2="60" stroke="white" stroke-width="3"></line>' +
-        '<line x1="52.5" y1="52.5" x2="52.5" y2="67.5" stroke="white" stroke-width="3"></line>'
-      )
+      .html(`
+        <rect x="40" y="40" rx="7" width="25" height="40">
+          <title> ${ __( 'Add child', 'disciple_tools' ) }</title>
+        </rect>
+        <line x1="45" y1="60" x2="60" y2="60" stroke="white" stroke-width="3"></line>
+        <line x1="52.5" y1="52.5" x2="52.5" y2="67.5" stroke="white" stroke-width="3"></line>
+      `)
   }
 
   addNode (d) {
@@ -699,27 +651,6 @@ class GenMapper {
     })
   }
 
-  outputCsv () {
-    const out = d3.csvFormatRows(this.data.map(function (d, i) {
-      const output = []
-      template.fields.forEach((field) => {
-        if (field.type === 'checkbox') {
-          output.push(d[field.header] ? '1' : '0')
-        } else {
-          output.push(d[field.header])
-        }
-      })
-      return output
-    }))
-    const blob = new Blob([this.csvHeader + out], {type: 'text/csv;charset=utf-8'})
-    const isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-                 navigator.userAgent && !navigator.userAgent.match('CriOS')
-    const promptMessage = isSafari ? i18next.t('messages.saveAsInSafari') : i18next.t('messages.saveAs')
-    const saveName = window.prompt(promptMessage, this.projectName + '.csv')
-    if (saveName === null) return
-    saveAs(blob, saveName)
-  }
-
   parseTransform (a) {
     const b = {}
     for (let i in a = a.match(/(\w+\((-?\d+.?\d*e?-?\d*,?)+\))+/g)) {
@@ -747,49 +678,6 @@ class GenMapper {
     this.redraw(template)
   }
 
-  // importFile () {
-  //   this.importFileFromInput('file-input', (filedata, filename) => {
-  //     const parsedCsv = this.parseAndValidateCsv(filedata, filename)
-  //     if (parsedCsv === null) { return }
-  //     this.data = parsedCsv
-  //     const regex = /(.+?)(\.[^.]*$|$)/
-  //     const filenameNoExtension = regex.exec(filename)[1]
-  //     this.projectName = filenameNoExtension
-  //     d3.select('#project-name')
-  //       .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
-  //     this.redraw(template)
-  //   })
-  // }
-
-  // importFileSubtree (d) {
-  //   if (!window.confirm(i18next.t('messages.confirmImportSubtreeOverwrite', {groupName: d.data.name}))) {
-  //     return
-  //   }
-  //   this.importFileFromInput('file-input-subtree', (filedata, filename) => {
-  //     const parsedCsv = this.parseAndValidateCsv(filedata, filename)
-  //     if (parsedCsv === null) { return }
-  //     this.csvIntoNode(d, parsedCsv)
-  //     this.redraw(template)
-  //     this.editGroupElement.classList.remove('edit-group--active')
-  //   })
-  // }
-
-  /**
-   * If error occurs, displays error and returns null
-   * If not, raises error
-   */
-  parseAndValidateCsv (filedata, filename) {
-    try {
-      const csvString = this.fileToCsvString(filedata, filename)
-      const parsedCsv = this.parseCsvData(csvString)
-      this.validTree(parsedCsv)
-      return parsedCsv
-    } catch (err) {
-      this.displayImportError(err)
-      return null
-    }
-  }
-
   /**
    * Checks if parsedCsv creates a valid tree.
    * If not, raises error
@@ -802,9 +690,9 @@ class GenMapper {
 
   displayImportError (err) {
     if (err.toString().includes('>= 0.') || err.toString().includes('Wrong type')) {
-      this.displayAlert(i18next.t('messages.errImport') + ' <br>' + err.toString())
+      this.displayAlert(` ${ __( 'Error when importing file.', 'disciple_tools' ) }  <br>${err.toString()}`)
     } else {
-      this.displayAlert(i18next.t('messages.errImport') + '<br><br>' + i18next.t('messages.errImportWhatToCheck'))
+      this.displayAlert(` ${ __( 'Error when importing file.', 'disciple_tools' ) }<br><br> ${ __( 'Please check that the file is in correct format (comma separated values), that the root group has no parent, and that all other relationships make a valid tree.<br>Also check that you use the correct version of the App.', 'disciple_tools' ) } `)
     }
   }
 
@@ -818,90 +706,6 @@ class GenMapper {
       const nodeToDelete = _.filter(this.data, {id: currentId})
       if (nodeToDelete) { this.data = _.without(this.data, nodeToDelete[0]) }
     }
-  }
-
-  csvIntoNode (d, parsedCsv) {
-    this.deleteAllDescendants(d)
-
-    // replace node by root of imported
-    const nodeToDelete = _.filter(this.data, {id: d.data.id})[0]
-    const rowRootOfImported = _.filter(parsedCsv, {parentId: ''})[0]
-    const mapOldIdToNewId = {}
-    mapOldIdToNewId[rowRootOfImported.id] = nodeToDelete.id
-    parsedCsv = _.without(parsedCsv, rowRootOfImported)
-    rowRootOfImported.id = nodeToDelete.id
-    rowRootOfImported.parentId = nodeToDelete.parentId
-    this.data[_.indexOf(this.data, nodeToDelete)] = rowRootOfImported
-
-    const idsUnsorted = _.map(this.data, function (row) { return row.id })
-    const ids = idsUnsorted.sort(function (a, b) { return a - b })
-    // update ids of other nodes and push into data
-    while (parsedCsv.length > 0) {
-      const row = parsedCsv.pop()
-      if (!(row.id in mapOldIdToNewId)) {
-        const newId = this.findNewIdFromArray(ids)
-        mapOldIdToNewId[row.id] = newId
-        ids.push(newId)
-      }
-      if (!(row.parentId in mapOldIdToNewId)) {
-        const newId = this.findNewIdFromArray(ids)
-        mapOldIdToNewId[row.parentId] = newId
-        ids.push(newId)
-      }
-      // change id and parentId
-      row.id = mapOldIdToNewId[row.id]
-      row.parentId = mapOldIdToNewId[row.parentId]
-      this.data.push(row)
-    }
-  }
-
-  importFileFromInput (fileInputElementId, callback) {
-    if (typeof window.FileReader !== 'function') {
-      this.displayAlert("The file API isn't supported on this browser yet.")
-      return
-    }
-
-    const input = document.getElementById(fileInputElementId)
-    if (!input) {
-      this.displayAlert("Um, couldn't find the fileinput element.")
-    } else if (!input.files) {
-      this.displayAlert("This browser doesn't seem to support the 'files' property of file inputs.")
-    } else if (!input.files[0]) {
-      this.displayAlert(i18next.t('messages.selectFile'))
-    } else {
-      const file = input.files[0]
-      const filename = file.name
-      const fr = new FileReader()
-      fr.onload = () => {
-        const filedata = fr.result
-        callback(filedata, filename)
-      }
-      const extension = /(?:\.([^.]+))?$/.exec(filename)[1]
-      if (extension === 'csv') {
-        fr.readAsText(file)
-      } else {
-        fr.readAsBinaryString(file)
-      }
-    }
-  }
-
-  fileToCsvString (filedata, filename) {
-    const regex = /(?:\.([^.]+))?$/
-    const extension = regex.exec(filename)[1].toLowerCase()
-    let csvString
-
-    if (extension === 'xls' || extension === 'xlsx') {
-      const workbook = XLSX.read(filedata, {type: 'binary'})
-      const worksheet = workbook.Sheets[workbook.SheetNames[0]]
-      csvString = XLSX.utils.sheet_to_csv(worksheet)
-    } else if (extension === 'csv') {
-      csvString = filedata
-    } else {
-      throw new Error(i18next.t('messages.errWrongFileType'))
-    }
-    csvString = csvString.replace(/\r{1,2}\n?/g, '\n')
-    // replace first line with a default one
-    return this.csvHeader + csvString.substring(csvString.indexOf('\n') + 1)
   }
 
   addFieldsToEditWindow (template) {
@@ -942,29 +746,22 @@ class GenMapper {
     })
   }
 
-  switchLanguage (button) {
-    this.language = button.id.substring(5, 7)
-    i18next.changeLanguage(this.language)
-    this.updateDOMafterLangSwitch()
-    this.redraw(template)
-  }
-
   updateDOMafterLangSwitch () {
     this.loadHTMLContent()
     this.addFieldsToEditWindow(template)
     // document.getElementById('lang-' + this.language).className = 'current-lang'
-    d3.select('#project-name')
-      .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
-      .on('click', () => {
-        let userInput = window.prompt(i18next.t('messages.editProjectName'), this.projectName)
-        if (userInput === null) { return }
-        userInput = userInput.trim()
-        if (userInput === '') { this.displayAlert(i18next.t('messages.errProjectNameEmpty')) } else {
-          this.projectName = userInput
-          d3.select('#project-name')
-            .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
-        }
-      })
+    // d3.select('#project-name')
+    //   .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
+    //   .on('click', () => {
+    //     let userInput = window.prompt(i18next.t('messages.editProjectName'), this.projectName)
+    //     if (userInput === null) { return }
+    //     userInput = userInput.trim()
+    //     if (userInput === '') { this.displayAlert(i18next.t('messages.errProjectNameEmpty')) } else {
+    //       this.projectName = userInput
+    //       d3.select('#project-name')
+    //         .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
+    //     }
+    //   })
     this.editFieldElements = {}
     template.fields.forEach((field) => {
       if (field.type === 'radio') {
