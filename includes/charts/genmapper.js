@@ -90,32 +90,34 @@ class GenMapper {
   }
 
   loadHTMLContent () {
-    document.getElementById('left-menu').innerHTML = '<div id="template-logo">' +
-    i18next.t('template.logo', '') +
-    '<button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.helpAbout') + '">' +
-      '<img src="' + this.plugin_uri + '/charts/icons/266-question.svg">' +
-      '</button>' +
-    '<div class="dropdown" id="lang-selector">' +
-    '<button aria-label="Language"><img src="' + this.plugin_uri + '/charts/icons/203-earth.svg"></button>' +
-    '<ul class="dropdown-content">' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-en">English</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-cs">Čeština</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-es">Español</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-pl">Polski</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-ro">Română</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-ru">Русский</button></li>' +
-    '  <li><button onclick="genmapper.switchLanguage(this)" id="lang-sq">Shqip</button></li>' +
-    '</ul>' +
-    '</div>' +
-    '<button id="project-name" class="hint--rounded hint--right" aria-label=""><img src="' + this.plugin_uri + '/charts/icons/039-file-text2.svg"></button>' +
-    '<button onclick="genmapper.origPosition();" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.originalZoom') + '"><img src="' + this.plugin_uri + '/charts/icons/135-search.svg"></i></button>' +
-    '<button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.zoomIn') + '"><img src="' + this.plugin_uri + '/charts/icons/136-zoom-in.svg"></i></button>' +
-    '<button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.zoomOut') + '"><img src="' + this.plugin_uri + '/charts/icons/137-zoom-out.svg"></i></button>' +
-    '<button onclick="genmapper.onLoad(\'file-input\')" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.importXlsxCsv') + '"><img src="' + this.plugin_uri + '/charts/icons/098-upload.svg"></button>' +
-    '<input type="file" id="file-input" onchange="genmapper.importFile()" style="display:none;">' +
-    '<button onclick="genmapper.outputCsv()" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.exportCsv') + '"><img src="' + this.plugin_uri + '/charts/icons/097-download.svg"></button>' +
-    '<button onclick="genmapper.printMap(\'vertical\');" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.btnPrintVertical') + '"><img src="' + this.plugin_uri + '/charts/icons/print-vertical.svg"></button>' +
-    '<button onclick="genmapper.printMap(\'horizontal\');" class="hint--rounded hint--right" aria-label="' + i18next.t('menu.btnPrintHorizontal') + '"><img src="' + this.plugin_uri + '/charts/icons/print-horizontal.svg"></button>'
+    document.getElementById('left-menu').innerHTML = `<div id="template-logo">
+   ${ i18next.t('template.logo', '') }
+    <button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.helpAbout')}">
+     <img src="${this.plugin_uri}/charts/icons/266-question.svg">
+     </button>
+    <!--<div class="dropdown" id="lang-selector">
+    <button aria-label="Language"><img src="${this.plugin_uri}/charts/icons/203-earth.svg"></button>
+    <ul class="dropdown-content">
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-en">English</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-cs">Čeština</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-es">Español</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-pl">Polski</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-ro">Română</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-ru">Русский</button></li>
+      <li><button onclick="genmapper.switchLanguage(this)" id="lang-sq">Shqip</button></li>
+    </ul>
+    </div>
+    -->
+    <!--<button id="project-name" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label=""><img src="${this.plugin_uri}/charts/icons/039-file-text2.svg"></button>-->
+    <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.originalZoom')}"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
+    <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.zoomIn')}"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
+    <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="${ i18next.t('menu.zoomOut')}"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
+    <!--<button onclick="genmapper.onLoad(\'file-input\')" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.importXlsxCsv')}"><img src="${this.plugin_uri}/charts/icons/098-upload.svg"></button>-->
+    <!--<input type="file" id="file-input" onchange="genmapper.importFile()" style="display:none;">-->
+    <!--<button onclick="genmapper.outputCsv()" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.exportCsv')}"><img src="${this.plugin_uri}/charts/icons/097-download.svg"></button>-->
+    <!--<button onclick="genmapper.printMap(\'vertical\');" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.btnPrintVertical')}"><img src="${this.plugin_uri}/charts/icons/print-vertical.svg"></button>-->
+    <!--<button onclick="genmapper.printMap(\'horizontal\');" class="hint&#45;&#45;rounded hint&#45;&#45;right" aria-label="${ i18next.t('menu.btnPrintHorizontal')}"><img src="${this.plugin_uri}/charts/icons/print-horizontal.svg"></button>-->
+  `
 
     document.getElementById('edit-group').innerHTML = `<div id="edit-group-content">
      <h1> ${i18next.t('editGroup.editGroup')}</h1>
@@ -129,55 +131,52 @@ class GenMapper {
      </form>
      <div id="edit-buttons">
        <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
-       <button id="edit-submit"> ${i18next.t('editGroup.btnSubmit')}  </button>
+       <button id="edit-submit"> ${ __( 'Save Changes', 'disciple_tools' ) }  </button>
        <button id="edit-cancel"> ${i18next.t('editGroup.btnCancel')}  </button>
-       <button id="edit-delete"> ${i18next.t('editGroup.btnDelete')}  </button>
-       <button onclick="genmapper.onLoad(\'file-input-subtree\')"> ${i18next.t('editGroup.btnImportSubtree')}  </button>
-       <input type="file" id="file-input-subtree" style="display:none;">
      </div>
     </div>`
 
-    document.getElementById('intro-content').innerHTML = '<h2>' +
-    i18next.t('help.genmapperHelp') + '</h2>' +
-    '<p>' + i18next.t('help.introContent') + '</p>' +
-    i18next.t('template.helpLegend') +
-    '<h3>' + i18next.t('help.importExportHeader') + '</h3>' +
-    '<p><strong style="color:red">' + i18next.t('help.importExportWarningChangesLost') + '</strong><br>' +
-    i18next.t('help.importExportContent') + '<br><br>' +
-    i18next.t('help.exportSafariIssuePart1') +
-    '<img src="../safari-export-issue-0.png" style="margin:10px; margin-left:0px;" alt="safari export issue"><br>' + i18next.t('help.exportSafariIssuePart2') +
-    '<br><img src="../safari-export-issue-1.png" style="margin:10px; margin-left:0px;" alt="safari export issue">' +
-    '<br>' + i18next.t('help.exportToPdf') + '</p>' +
-    '<h3>' + i18next.t('help.panZoomHeader') + '</h3>' +
-    '<p>' + i18next.t('help.panZoomContent') + '</p>' +
-    '<h3>' + i18next.t('help.changelogHeader') + '</h3>' +
-    '<p><a href="https://github.com/dvopalecky/gen-mapper/blob/master/changelog.md">' +
-    i18next.t('help.changelogLink') + '</a><br>' +
-    i18next.t('help.genmapperVersion') + ': <span id="gen-mapper-version"></span><br>' +
-    i18next.t('help.templateVersion') + ': <span id="template-version"></span></p>' +
-    '<h3>' + i18next.t('help.creditsHeader') + '</h3>' +
-    '<p>' + i18next.t('help.creditsThanks1') + '<br>' +
-    i18next.t('help.creditsJavaScriptLibraries') +
-    ': <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>, <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>, ' +
-    '<a href="https://lodash.com">lodash</a> ' +
-    i18next.t('help.creditsAnd') +
-    ' <a href="https://www.i18next.com">i18next</a><br>' +
-    i18next.t('help.creditsIcons') +
-    ': <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>' +
-    i18next.t('help.creditsCopyright') + '<br>' +
-    i18next.t('help.creditsLicense') + '<br>' +
-    '<a href="https://github.com/dvopalecky/gen-mapper">' + i18next.t('help.creditsGithub') + '</a><br>' +
-    i18next.t('help.creditsSuggestions') + '<br></p>' +
-    '<button onclick="genmapper.introSwitchVisibility()">' + i18next.t('help.btnOKStart') + '</button>'
+    document.getElementById('intro-content').innerHTML = `<h2>
+    ${i18next.t('help.genmapperHelp')}</h2>
+    <p>${i18next.t('help.introContent')}</p>
+    ${i18next.t('template.helpLegend') }
+    <!--<h3>${i18next.t('help.importExportHeader')}</h3>
+    <p><strong style="color:red">${i18next.t('help.importExportWarningChangesLost')}</strong><br>
+     ${i18next.t('help.importExportContent')}<br><br>
+    ${i18next.t('help.exportSafariIssuePart1')}
+    <img src="../safari-export-issue-0.png" style="margin:10px; margin-left:0px;" alt="safari export issue"><br>${i18next.t('help.exportSafariIssuePart2')}
+    <br><img src="../safari-export-issue-1.png" style="margin:10px; margin-left:0px;" alt="safari export issue">-->
+    <!--<br>${i18next.t('help.exportToPdf')}</p>-->
+    <h3>${i18next.t('help.panZoomHeader')}</h3>
+    <p>${i18next.t('help.panZoomContent')}</p>
+    <!--<h3>${i18next.t('help.changelogHeader')}</h3>
+    <p><a href="https://github.com/dvopalecky/gen-mapper/blob/master/changelog.md">
+    ${i18next.t('help.changelogLink')}</a><br>
+    ${i18next.t('help.genmapperVersion')}: <span id="gen-mapper-version"></span><br>
+    ${i18next.t('help.templateVersion')}: <span id="template-version"></span></p>-->
+    <h3>${i18next.t('help.creditsHeader')}</h3>
+    <p>${i18next.t('help.creditsThanks1')}<br>
+    ${i18next.t('help.creditsJavaScriptLibraries')}
+    : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>, <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>, 
+    <a href="https://lodash.com">lodash</a> 
+    ${i18next.t('help.creditsAnd')}
+     <a href="https://www.i18next.com">i18next</a><br>
+    ${i18next.t('help.creditsIcons')}
+    : <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>
+    ${i18next.t('help.creditsCopyright')}<br>
+    ${i18next.t('help.creditsLicense')}<br>
+    <a href="https://github.com/dvopalecky/gen-mapper">${i18next.t('help.creditsGithub')}</a><br>
+    ${i18next.t('help.creditsSuggestions')}<br></p>
+    <button onclick="genmapper.introSwitchVisibility()">${i18next.t('help.btnOKStart')}</button>`
 
     document.getElementById('alert-message').innerHTML =
-    '<div id="alert-message-content">' +
-    '  <p id="alert-message-text"></p>' +
-    '  <button onclick="genmapper.closeAlert()">' + i18next.t('messages.btnOK') + '</button>' +
-    '</div>'
+    `<div id="alert-message-content">
+      <p id="alert-message-text"></p>
+      <button onclick="genmapper.closeAlert()">${i18next.t('messages.btnOK') }</button>
+    </div>`
 
-    document.getElementById('gen-mapper-version').innerHTML = this.appVersion
-    document.getElementById('template-version').innerHTML = template.name
+    // document.getElementById('gen-mapper-version').innerHTML = this.appVersion
+    // document.getElementById('template-version').innerHTML = template.name
   }
 
   getInitialValue (field) {
@@ -194,6 +193,12 @@ class GenMapper {
 
   zoomOut () {
     this.zoom.scaleBy(this.svg, 1 / 1.2)
+  }
+
+  origData(){
+    this.data = this.masterData
+    this.redraw(template)
+    this.origPosition()
   }
 
   origPosition () {
@@ -225,49 +230,62 @@ class GenMapper {
   }
 
   popupEditGroupModal (d) {
-    console.log("edit")
     this.editGroupElement.classList.add('edit-group--active')
-    // template.fields.forEach((field) => {
-    //   if (field.type === 'text') {
-    //     this.editFieldElements[field.header].value = d.data[field.header]
-    //   } else if (field.type === 'radio') {
-    //     field.values.forEach((value) => {
-    //       const status = (value.header === d.data[field.header])
-    //       this.editFieldElements[field.header + '-' + value.header].checked = status
-    //     })
-    //   } else if (field.type === 'checkbox') {
-    //     this.editFieldElements[field.header].checked = d.data[field.header]
-    //   }
-    // })
-    // // select first element
-    // this.editFieldElements[Object.keys(this.editFieldElements)[0]].select()
+    template.fields.forEach((field) => {
+      if (field.type === 'text') {
+        this.editFieldElements[field.header].value = d.data[field.header]
+      } else if (field.type === 'radio') {
+        field.values.forEach((value) => {
+          const status = (value.header === d.data[field.header])
+          this.editFieldElements[field.header + '-' + value.header].checked = status
+        })
+      } else if (field.type === 'checkbox') {
+        this.editFieldElements[field.header].checked = d.data[field.header]
+      }
+    })
+    // select first element
+    this.editFieldElements[Object.keys(this.editFieldElements)[0]].select()
 
     this.editParentElement.innerHTML = d.parent ? d.parent.data.name : 'N/A'
     const groupData = d.data
     const group = d
     d3.select('#edit-submit').on('click', () => { this.editGroup(groupData) })
     d3.select('#edit-cancel').on('click', () => { this.editGroupElement.classList.remove('edit-group--active') })
-    d3.select('#edit-delete').on('click', () => { this.removeNode(group) })
-    d3.select('#file-input-subtree').on('change', () => { this.importFileSubtree(group) })
+    d3.select('#open-record').on('click', () => { this.openRecord( group ) })
+    // d3.select('#edit-delete').on('click', () => { this.removeNode(group) })
+    // d3.select('#file-input-subtree').on('change', () => { this.importFileSubtree(group) })
   }
 
   editGroup (groupData) {
-    // template.fields.forEach((field) => {
-    //   if (field.type === 'text') {
-    //     groupData[field.header] = this.editFieldElements[field.header].value
-    //   } else if (field.type === 'radio') {
-    //     field.values.forEach((value) => {
-    //       if (this.editFieldElements[field.header + '-' + value.header].checked) {
-    //         groupData[field.header] = value.header
-    //       }
-    //     })
-    //   } else if (field.type === 'checkbox') {
-    //     groupData[field.header] = this.editFieldElements[field.header].checked
-    //   }
-    // })
+    console.log(template.fields);
+    let groupFields = {};
+    template.fields.forEach((field) => {
+      if (field.type === 'text') {
+        groupData[field.header] = this.editFieldElements[field.header].value
+        if ( field.header === "name" ){
+          // @todo double activity on group record
+          groupFields["title"] = this.editFieldElements[field.header].value
+        }
+      } else if (field.type === 'radio') {
+        field.values.forEach((value) => {
+          if (this.editFieldElements[field.header + '-' + value.header].checked) {
+            groupData[field.header] = value.header
+          }
+        })
+      } else if (field.type === 'checkbox') {
+        groupData[field.header] = this.editFieldElements[field.header].checked
+      }
+    })
+    jQuery('#chart').trigger("node-updated", [groupData.id, groupData, groupFields])
 
     this.editGroupElement.classList.remove('edit-group--active')
     this.redraw(template)
+  }
+
+  openRecord( d ){
+    let id = d.data.id
+    var win = window.open( `${wpApiShare.site_url}/contacts/${id}/`, '_blank');
+    win.focus();
   }
 
   printMap (printType) {
@@ -425,9 +443,8 @@ class GenMapper {
         return 'translate(' + d.x + ',' + d.y + ')'
       })
       .on('click', (d) => {
-          console.log("transformNode");
         this.popupEditGroupModal(d) }
-        )
+      )
 
     nodeWithNew.select('.removeNode')
         .on('click', (d) => {
@@ -540,6 +557,7 @@ class GenMapper {
         '<line x1="59" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>'
       )
   }
+
   appendRebaseButton (group) {
     group.append('g')
       .attr('class', 'rebaseNode')
@@ -568,17 +586,33 @@ class GenMapper {
       )
   }
 
-
   addNode (d) {
-    // @todo hook up with DT
-    const newNodeData = {}
+    jQuery('#chart').trigger("add-node-requested", [d])
+  }
+  /* required: id, parentId, name
+   *
+   */
+  createNode( newNode ){
     template.fields.forEach((field) => {
-      newNodeData[field.header] = this.getInitialValue(field)
+      if ( !newNode[field.header] ){
+        newNode[field.header] = this.getInitialValue(field)
+      }
     })
-    newNodeData['id'] = this.findNewId()
-    newNodeData['parentId'] = d.data.id
-    this.data.push(newNodeData)
+    this.data.push(newNode)
     this.redraw(template)
+    let node = this.findNodeById( newNode.id )
+    if ( node ){
+      this.popupEditGroupModal( node )
+    }
+  }
+
+  findNodeById( id ){
+    let nodes = this.nodes.descendants().filter( x=>x.data.id === id )
+    if ( nodes.length === 1 ){
+      return nodes[0];
+    } else {
+      return false
+    }
   }
 
   findNewId () {
@@ -611,6 +645,14 @@ class GenMapper {
     this.data = tmpData
     this.redraw(template)
     this.origPosition()
+  }
+  rebaseOnNodeID(id){
+    this.data = this.masterData
+    this.redraw(template)
+    let node = this.findNodeById( id );
+    if ( node ){
+      this.rebaseOnNode( node );
+    }
   }
 
   removeNode (d) {
@@ -698,36 +740,37 @@ class GenMapper {
       this.displayImportError(err)
       return
     }
+    this.masterData = tree
     this.data = tree
     this.redraw(template)
   }
 
-  importFile () {
-    this.importFileFromInput('file-input', (filedata, filename) => {
-      const parsedCsv = this.parseAndValidateCsv(filedata, filename)
-      if (parsedCsv === null) { return }
-      this.data = parsedCsv
-      const regex = /(.+?)(\.[^.]*$|$)/
-      const filenameNoExtension = regex.exec(filename)[1]
-      this.projectName = filenameNoExtension
-      d3.select('#project-name')
-        .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
-      this.redraw(template)
-    })
-  }
+  // importFile () {
+  //   this.importFileFromInput('file-input', (filedata, filename) => {
+  //     const parsedCsv = this.parseAndValidateCsv(filedata, filename)
+  //     if (parsedCsv === null) { return }
+  //     this.data = parsedCsv
+  //     const regex = /(.+?)(\.[^.]*$|$)/
+  //     const filenameNoExtension = regex.exec(filename)[1]
+  //     this.projectName = filenameNoExtension
+  //     d3.select('#project-name')
+  //       .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
+  //     this.redraw(template)
+  //   })
+  // }
 
-  importFileSubtree (d) {
-    if (!window.confirm(i18next.t('messages.confirmImportSubtreeOverwrite', {groupName: d.data.name}))) {
-      return
-    }
-    this.importFileFromInput('file-input-subtree', (filedata, filename) => {
-      const parsedCsv = this.parseAndValidateCsv(filedata, filename)
-      if (parsedCsv === null) { return }
-      this.csvIntoNode(d, parsedCsv)
-      this.redraw(template)
-      this.editGroupElement.classList.remove('edit-group--active')
-    })
-  }
+  // importFileSubtree (d) {
+  //   if (!window.confirm(i18next.t('messages.confirmImportSubtreeOverwrite', {groupName: d.data.name}))) {
+  //     return
+  //   }
+  //   this.importFileFromInput('file-input-subtree', (filedata, filename) => {
+  //     const parsedCsv = this.parseAndValidateCsv(filedata, filename)
+  //     if (parsedCsv === null) { return }
+  //     this.csvIntoNode(d, parsedCsv)
+  //     this.redraw(template)
+  //     this.editGroupElement.classList.remove('edit-group--active')
+  //   })
+  // }
 
   /**
    * If error occurs, displays error and returns null
@@ -860,41 +903,41 @@ class GenMapper {
   }
 
   addFieldsToEditWindow (template) {
-    // template.fields.forEach((field) => {
-    //   if (field.type) {
-    //     // add table row
-    //     const tr = d3.select('#edit-group-content')
-    //       .select('form')
-    //       .select('table')
-    //       .append('tr')
-    //     // add left column
-    //     const fieldDesciption = i18next.t('template.' + field.header) + ':'
-    //     tr.append('td')
-    //       .text(fieldDesciption)
-    //       .attr('class', 'left-field')
-    //     // add right column
-    //     const td = tr.append('td')
-    //       .attr('class', 'right-field')
-    //     if (field.type === 'radio') {
-    //       for (let value of field.values) {
-    //         const valueDescription = i18next.t('template.' + value.header)
-    //         td.append('input')
-    //           .attr('type', field.type)
-    //           .attr('name', field.header)
-    //           .attr('value', value.header)
-    //           .attr('id', 'edit-' + field.header + '-' + value.header)
-    //         td.append('span')
-    //           .html(valueDescription)
-    //         td.append('br')
-    //       }
-    //     } else {
-    //       td.append('input')
-    //         .attr('type', field.type)
-    //         .attr('name', field.header)
-    //         .attr('id', 'edit-' + field.header)
-    //     }
-    //   }
-    // })
+    template.fields.forEach((field) => {
+      if (field.type) {
+        // add table row
+        const tr = d3.select('#edit-group-content')
+          .select('form')
+          .select('table')
+          .append('tr')
+        // add left column
+        const fieldDesciption = i18next.t('template.' + field.header) + ':'
+        tr.append('td')
+          .text(fieldDesciption)
+          .attr('class', 'left-field')
+        // add right column
+        const td = tr.append('td')
+          .attr('class', 'right-field')
+        if (field.type === 'radio') {
+          for (let value of field.values) {
+            const valueDescription = i18next.t('template.' + value.header)
+            td.append('input')
+              .attr('type', field.type)
+              .attr('name', field.header)
+              .attr('value', value.header)
+              .attr('id', 'edit-' + field.header + '-' + value.header)
+            td.append('span')
+              .html(valueDescription)
+            td.append('br')
+          }
+        } else {
+          td.append('input')
+            .attr('type', field.type)
+            .attr('name', field.header)
+            .attr('id', 'edit-' + field.header)
+        }
+      }
+    })
   }
 
   switchLanguage (button) {
@@ -907,7 +950,7 @@ class GenMapper {
   updateDOMafterLangSwitch () {
     this.loadHTMLContent()
     this.addFieldsToEditWindow(template)
-    document.getElementById('lang-' + this.language).className = 'current-lang'
+    // document.getElementById('lang-' + this.language).className = 'current-lang'
     d3.select('#project-name')
       .attr('aria-label', i18next.t('messages.editProjectName') + ': ' + this.projectName)
       .on('click', () => {

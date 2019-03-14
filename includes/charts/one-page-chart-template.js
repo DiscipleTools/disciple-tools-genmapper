@@ -14,7 +14,7 @@
       <span class="section-header">Group Generation Tree</span>
 
       <div >
-        <div class="section-subheader">Groups</div>
+        <div class="section-subheader">See descendants of a specific group</div>
         <var id="groups-result-container" class="result-container" style="display: block"></var>
         <div id="groups_t" name="form-groups" class="scrollable-typeahead" style="max-width:300px; display: inline-block">
             <div class="typeahead__container">
@@ -70,7 +70,7 @@
       dynamic: true,
       callback: {
         onClick: function(node, a, item, event){
-          get_groups( item.ID)
+          genmapper.rebaseOnNodeID( item.ID )
         },
         onResult: function (node, query, result, resultCount) {
           let text = TYPEAHEADS.typeaheadHelpText(resultCount, query, result)
@@ -116,42 +116,31 @@
 
     })
   }
-  $('.rebaseNode').on("click", function (a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
+
+
+  $("#chart").on('add-node-requested', function (e, parent) {
+    let fields = {
+      "title": "New Group",
+      "parent_groups": { "values": [ { "value" : parent.data.id } ] }
+    }
+    window.API.create_group(fields).then(( newGroup )=>{
+      let newNodeData = {}
+      newNodeData['id'] = newGroup["post_id"]
+      newNodeData['parentId'] = parent.data.id
+      newNodeData['name'] = fields.title
+      genmapper.createNode( newNodeData )
+    })
+  })
+
+  $("#chart").on('node-updated', function (e, nodeID, nodeFields, groupFields) {
+    _.forOwn(nodeFields, (value, key)=>{
+      if ( key === "name" ){
+        groupFields["title"] = value
+      }
+
+    })
+    window.API.save_field_api( "group", nodeID, groupFields )
   })
 
 
-
-  window.sample_api_call = function sample_api_call( button_data ) {
-
-
-     // change this object to the one named in ui-menu-and-enqueue.php
-
-    let button = jQuery('#sample_button')
-
-    button.append(localizedObject.spinner)
-
-    let data = { "button_data": button_data };
-    return jQuery.ajax({
-      type: "POST",
-      data: JSON.stringify(data),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      url: localizedObject.root + 'dt/v1/genmapper/'+localizedObject.name_key+'/sample',
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader('X-WP-Nonce', localizedObject.nonce);
-      },
-    })
-    .done(function (data) {
-      button.empty().append(data)
-      console.log( 'success' )
-      console.log( data )
-    })
-    .fail(function (err) {
-      console.log("error");
-      console.log(err);
-    })
-  }
 })();

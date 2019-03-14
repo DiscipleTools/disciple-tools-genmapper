@@ -265,175 +265,175 @@ const template = {
     //     }
     //   }
     // },
-    {
-      'header': 'church',
-      'initial': false,
-      'type': 'checkbox',
-      'inheritsFrom': 'church-box',
-      'class': {
-        'checkedTrue': 'is-church',
-        'checkedFalse': 'is-not-church'
-      }
-    },
-    {
-      'header': 'churchType',
-      'initial': 'newBelievers',
-      'type': 'radio',
-      'inheritsFrom': 'church-box',
-      'values': [
-        {
-          'header': 'legacy',
-          'class': 'church-legacy',
-          'attributes': {
-            'rx': 0
-          }
-        },
-        {
-          'header': 'existingBelievers',
-          'attributes': {
-            'rx': 0
-          }
-        },
-        {
-          'header': 'newBelievers'
-        }
-      ]
-    },
-    {
-      'header': 'church_baptism',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.4,
-          'y': boxHeight * 0.1,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-baptism.png'
-        }
-      }
-    },
-    {
-      'header': 'church_bible',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.125,
-          'y': boxHeight * 0.1,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-word.png'
-        }
-      }
-    },
-    {
-      'header': 'church_prayer',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': boxHeight * 0.15,
-          'y': boxHeight * 0.1,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-prayer.png'
-        }
-      }
-    },
-    {
-      'header': 'church_communion',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.4,
-          'y': boxHeight * 0.375,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-lords-supper.png'
-        }
-      }
-    },
-    {
-      'header': 'church_giving',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.125,
-          'y': boxHeight * 0.375,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-give.png'
-        }
-      }
-    },
-    {
-      'header': 'church_fellowship',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': boxHeight * 0.15,
-          'y': boxHeight * 0.375,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-love.png'
-        }
-      }
-    },
-    {
-      'header': 'church_praise',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.4,
-          'y': boxHeight * 0.65,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-worship.png'
-        }
-      }
-    },
-    {
-      'header': 'church_leaders',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': -boxHeight * 0.125,
-          'y': boxHeight * 0.65,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-leaders.png'
-        }
-      }
-    },
-    {
-      'header': 'church_sharing',
-      'initial': false,
-      'type': 'checkbox',
-      'svg': {
-        'type': 'image',
-        'attributes': {
-          'x': boxHeight * 0.15,
-          'y': boxHeight * 0.65,
-          'width': boxHeight / 4,
-          'height': boxHeight / 4,
-          'xlink:href': icons + 'element-make-disciples.png'
-        }
-      }
-    },
+    // {
+    //   'header': 'church',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'inheritsFrom': 'church-box',
+    //   'class': {
+    //     'checkedTrue': 'is-church',
+    //     'checkedFalse': 'is-not-church'
+    //   }
+    // },
+    // {
+    //   'header': 'churchType',
+    //   'initial': 'newBelievers',
+    //   'type': 'radio',
+    //   'inheritsFrom': 'church-box',
+    //   'values': [
+    //     {
+    //       'header': 'legacy',
+    //       'class': 'church-legacy',
+    //       'attributes': {
+    //         'rx': 0
+    //       }
+    //     },
+    //     {
+    //       'header': 'existingBelievers',
+    //       'attributes': {
+    //         'rx': 0
+    //       }
+    //     },
+    //     {
+    //       'header': 'newBelievers'
+    //     }
+    //   ]
+    // },
+    // {
+    //   'header': 'church_baptism',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.4,
+    //       'y': boxHeight * 0.1,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-baptism.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_bible',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.125,
+    //       'y': boxHeight * 0.1,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-word.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_prayer',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': boxHeight * 0.15,
+    //       'y': boxHeight * 0.1,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-prayer.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_communion',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.4,
+    //       'y': boxHeight * 0.375,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-lords-supper.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_giving',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.125,
+    //       'y': boxHeight * 0.375,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-give.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_fellowship',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': boxHeight * 0.15,
+    //       'y': boxHeight * 0.375,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-love.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_praise',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.4,
+    //       'y': boxHeight * 0.65,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-worship.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_leaders',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': -boxHeight * 0.125,
+    //       'y': boxHeight * 0.65,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-leaders.png'
+    //     }
+    //   }
+    // },
+    // {
+    //   'header': 'church_sharing',
+    //   'initial': false,
+    //   'type': 'checkbox',
+    //   'svg': {
+    //     'type': 'image',
+    //     'attributes': {
+    //       'x': boxHeight * 0.15,
+    //       'y': boxHeight * 0.65,
+    //       'width': boxHeight / 4,
+    //       'height': boxHeight / 4,
+    //       'xlink:href': icons + 'element-make-disciples.png'
+    //     }
+    //   }
+    // },
     // {
     //   'header': 'place',
     //   'initialTranslationCode': 'initialPlace',
@@ -476,11 +476,11 @@ const template = {
     //     }
     //   }
     // },
-    {
-      'header': 'active',
-      'initial': true,
-      'type': 'checkbox'
-      // svg defined currently in genmapper.js
-    }
+    // {
+    //   'header': 'active',
+    //   'initial': true,
+    //   'type': 'checkbox'
+    //   // svg defined currently in genmapper.js
+    // }
   ]
 }
