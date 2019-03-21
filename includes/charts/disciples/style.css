@@ -1,0 +1,31 @@
+/* CSS for GenMapper: template specific */
+
+.node-box {
+  stroke: black;
+  stroke-width: 2;
+  fill: white;
+  stroke-dasharray: 0;
+}
+
+.node-date {
+  font-size: 8px;
+}
+
+.node-timothy {
+  stroke: red;
+  stroke-width: 1;
+  fill: red;
+}
+
+.disciple-individual {
+  stroke-dasharray: 7,7;
+}
+
+.disciple-facilitates-group {
+  stroke-dasharray: 0;
+}
+
+.disciple-facilitates-church {
+  stroke-dasharray: 0;
+  stroke-width: 4;
+}

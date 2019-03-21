@@ -3,14 +3,14 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly.
 
-class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
+class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
 {
 
-    public $title = 'Groups';
-    public $slug = 'groups'; // lowercase
+    public $title = 'Baptisms';
+    public $slug = 'baptisms'; // lowercase
     public $js_object_name = 'wpApiGenmapper'; // This object will be loaded into the metrics.js file by the wp_localize_script.
-    public $js_file_name = 'one-page-chart-template.js'; // should be full file name plus extension
-    public $deep_link_hash = '#groups'; // should be the full hash name. #genmapper_of_hash
+    public $js_file_name = 'baptisms.js'; // should be full file name plus extension
+    public $deep_link_hash = '#baptisms'; // should be the full hash name. #genmapper_of_hash
     public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
 
     public function __construct() {
@@ -33,16 +33,16 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
      */
     public function scripts() {
         wp_enqueue_style( "hint", "https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.5.1/hint.min.css" );
-        wp_enqueue_style( "group-styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "church-circles/style.css" ) );
+        wp_enqueue_style( "baptism-styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "disciples/style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "disciples/style.css" ) );
         wp_enqueue_style( "styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "style.css" ) );
         wp_register_script( 'd3', 'https://d3js.org/d3.v5.min.js', false, '5' );
 
         $group_fields = Disciple_Tools_Groups_Post_Type::instance()->get_custom_fields_settings();
-        wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/template.js", [
+        wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "disciples/template.js", [
             'jquery',
             'jquery-ui-core',
             'wp-i18n'
-        ], filemtime( plugin_dir_path( __FILE__ ) . "church-circles/template.js" ), true );
+        ], filemtime( plugin_dir_path( __FILE__ ) . "disciples/template.js" ), true );
         wp_localize_script(
             'gen-template', 'genApiTemplate', [
                 'plugin_uri' => plugin_dir_url( __DIR__ ),
@@ -79,29 +79,29 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
 
     public function add_api_routes() {
         register_rest_route(
-            $this->namespace, 'groups', [
+            $this->namespace, 'baptisms', [
                 [
                     'methods'  => WP_REST_Server::READABLE,
-                    'callback' => [ $this, 'groups' ],
+                    'callback' => [ $this, 'baptisms' ],
                 ],
             ]
         );
     }
 
-    function get_node_descendants( $nodes, $node_ids ){
-        $descendants = [];
-        $children = [];
-        foreach ( $nodes as $node ){
-            if ( in_array( $node["parent_id"], $node_ids ) ){
-                $descendants[] = $node;
-                $children[] = $node["id"];
-            }
-        }
-        if ( sizeof( $children ) > 0 ){
-            $descendants = array_merge( $descendants, $this->get_node_descendants( $nodes, $children ) );
-        }
-        return $descendants;
-    }
+//    private function get_node_descendants( $nodes, $node_ids ){
+//        $descendants = [];
+//        $children = [];
+//        foreach ( $nodes as $node ){
+//            if ( in_array( $node["parent_id"], $node_ids ) ){
+//                $descendants[] = $node;
+//                $children[] = $node["id"];
+//            }
+//        }
+//        if ( sizeof( $children ) > 0 ){
+//            $descendants = array_merge( $descendants, $this->get_node_descendants( $nodes, $children ) );
+//        }
+//        return $descendants;
+//    }
 
     /**
      * Respond to transfer request of files
@@ -109,7 +109,7 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
      * @param \WP_REST_Request $request
      * @return array|\WP_Error
      */
-    public function groups( WP_REST_Request $request ) {
+    public function baptisms( WP_REST_Request $request ) {
 
         $params = $request->get_params();
 
@@ -121,48 +121,42 @@ class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "name" => "source"
             ]
         ];
-        $groups = dt_queries()->tree( 'multiplying_groups_only' );
+        $baptisms = dt_queries()->tree( 'multiplying_baptisms_only' );
 
-        if ( !empty( $params["node"] && $params["node"] != "null" ) ){
-            $node = [];
-            foreach ( $groups as $group ){
-                if ( $group["id"] === $params["node"] ){
-                    $prepared_array = [];
-                    $node = $group;
-                    $node["parent_id"] = "";
-                }
-            }
-            $groups = array_merge( [ $node ], $this->get_node_descendants( $groups, [ $params["node"] ] ) );
+        $contact_ids = [];
+        foreach ( $baptisms as $b ){
+            $contact_ids[] =$b["id"];
         }
 
 
-//        $church_health_query = $wpdb->get_results("
-//            SELECT pm.post_id, GROUP_CONCAT(pm.meta_value) as meta
-//            FROM $wpdb->postmeta pm
-//            WHERE pm.meta_key = 'health_metrics'
-//            GROUP BY post_id
-//        ", ARRAY_A );
-//        $church_health = [];
-//        foreach ( $church_health_query as $query ){
-//            $church_health[ $query["post_id"] ] = $query["meta"];
-//        }
+        $active_contacts = $wpdb->get_results("
+            SELECT pm.post_id 
+            FROM $wpdb->postmeta pm
+            WHERE pm.meta_key = 'overall_status'
+            AND pm.meta_value = 'active'
+            GROUP BY post_id
+        ", ARRAY_A );
+        $active_ids = [];
+        foreach ( $active_contacts as $c ){
+            $active_ids[] = $c["post_id"];
+        }
 
 
-        foreach ( $groups as $group ){
+        foreach ( $baptisms as $baptism ){
             $values = [
-                "id" => $group["id"],
-                "parentId" => $group["parent_id"] ?? 0,
-                "name" => $group["name"],
-                "church" => $group["group_type"] === "church",
-                "active" => $group["group_status"] === "active",
-                "group_type" => $group["group_type"]
+                "id" => $baptism["id"],
+                "parentId" => $baptism["parent_id"] ?? 0,
+                "name" => $baptism["name"],
+//                "church" => $baptism["group_type"] === "church",
+                "active" => in_array( $baptism["id"], $active_ids )
+//                "group_type" => $baptism["group_type"]
             ];
-            if ( isset( $church_health[ $group["id"] ] ) ){
-                $health_metrics = explode( ',', $church_health[ $group["id"] ] );
-                foreach ( $health_metrics as $health_metric ){
-                    $values[$health_metric] = true;
-                }
-            }
+//            if ( isset( $church_health[ $baptism["id"] ] ) ){
+//                $health_metrics = explode( ',', $church_health[ $baptism["id"] ] );
+//                foreach ( $health_metrics as $health_metric ){
+//                    $values[$health_metric] = true;
+//                }
+//            }
             $prepared_array[] = $values;
         }
 

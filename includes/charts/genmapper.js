@@ -101,9 +101,9 @@ class GenMapper {
        </table>
      </form>
      <div id="edit-buttons">
-       <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
        <button id="edit-submit"> ${ __( 'Save Changes', 'disciple_tools' ) }  </button>
        <button id="edit-cancel"> ${ __( 'Cancel', 'disciple_tools' ) }  </button>
+       <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
        <button id="rebase-node"> ${ __( 'Center on this node', 'disciple_tools' ) }  </button>
      </div>
     </div>`
@@ -240,68 +240,6 @@ class GenMapper {
     let id = d.data.id
     var win = window.open( `${wpApiShare.site_url}/contacts/${id}/`, '_blank');
     win.focus();
-  }
-
-  printMap (printType) {
-    // calculate width and height of the map (printed rotated by 90 degrees)
-    const arrNodes = this.nodes.descendants()
-    let minX = 0
-    let maxX = 0
-    let minY = 0
-    let maxY = 0
-    for (let i = 0; i < arrNodes.length; i++) {
-      const x = arrNodes[i].x
-      const y = arrNodes[i].y
-      minX = Math.min(minX, x)
-      maxX = Math.max(maxX, x)
-      minY = Math.min(minY, y)
-      maxY = Math.max(maxY, y)
-    }
-
-    // store original values
-    const origWidth = this.svg.attr('width')
-    const origHeight = this.svg.attr('height')
-    const origTransform = this.g.attr('transform')
-
-    const totalHeight = Math.max(600, this.margin.top + (maxY - minY) + boxHeight + this.margin.top)
-    const totalWidthLeft = Math.max(500, -minX + boxHeight * 1.5 / 2 + 20)
-    const totalWidthRight = Math.max(500, maxX + boxHeight * 1.5 / 2 + 20)
-
-    let translateX, translateY
-    if (printType === 'horizontal') {
-      const printHeight = 700
-      const printWidth = 1200
-
-      // resize for printing
-      this.svg.attr('width', printWidth)
-        .attr('height', printHeight)
-      const printScale = Math.min(1, printWidth / (totalWidthLeft + totalWidthRight), printHeight / totalHeight)
-      translateX = totalWidthLeft * printScale
-      translateY = this.margin.top * printScale
-      this.g.attr('transform', 'translate(' + translateX + ', ' + translateY + ') scale(' + printScale + ')')
-    } else {
-      // resize for printing
-      this.svg.attr('width', totalHeight)
-        .attr('height', totalWidthLeft + totalWidthRight)
-      translateX = totalHeight - this.margin.top
-      translateY = totalWidthLeft
-      this.g.attr('transform', 'translate(' + translateX + ', ' + translateY + ') rotate(90)')
-    }
-
-    // change CSS for printing
-    d3.select('#left-menu').style('display', 'none')
-    d3.select('#genmapper-graph').style('float', 'left')
-    d3.selectAll('#genmapper-graph-svg').style('background', 'white')
-
-    window.print()
-
-    // change CSS back after printing
-    this.svg.attr('width', origWidth)
-      .attr('height', origHeight)
-    this.g.attr('transform', origTransform)
-    d3.select('#left-menu').style('display', null)
-    d3.select('#genmapper-graph').style('float', null)
-    d3.selectAll('#genmapper-graph-svg').style('background', null)
   }
 
   redraw (template) {
