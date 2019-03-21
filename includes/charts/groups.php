@@ -88,20 +88,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         );
     }
 
-    function get_node_descendants( $nodes, $node_ids ){
-        $descendants = [];
-        $children = [];
-        foreach ( $nodes as $node ){
-            if ( in_array( $node["parent_id"], $node_ids ) ){
-                $descendants[] = $node;
-                $children[] = $node["id"];
-            }
-        }
-        if ( sizeof( $children ) > 0 ){
-            $descendants = array_merge( $descendants, $this->get_node_descendants( $nodes, $children ) );
-        }
-        return $descendants;
-    }
+
 
     /**
      * Respond to transfer request of files

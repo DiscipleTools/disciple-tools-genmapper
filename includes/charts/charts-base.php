@@ -131,4 +131,20 @@ abstract class DT_Genmapper_Metrics_Chart_Base
         }
         return $pass;
     }
+
+    public function get_node_descendants( $nodes, $node_ids ){
+        $descendants = [];
+        $children = [];
+        foreach ( $nodes as $node ){
+            $parent_id = $node["parent_id"] ?? $node["parentId"];
+            if ( in_array( $parent_id, $node_ids ) ){
+                $descendants[] = $node;
+                $children[] = $node["id"];
+            }
+        }
+        if ( sizeof( $children ) > 0 ){
+            $descendants = array_merge( $descendants, $this->get_node_descendants( $nodes, $children ) );
+        }
+        return $descendants;
+    }
 }
