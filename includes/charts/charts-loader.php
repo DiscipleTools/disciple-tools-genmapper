@@ -13,10 +13,10 @@ class DT_Genmapper_Metrics_Charts
     public function __construct(){
         // Load required files
         require_once( 'charts-base.php' );
-        require_once( 'one-page-chart-template.php' );
+        require_once( 'groups.php' );
         require_once( 'baptisms.php' );
 
-        new DT_Genmapper_Metrics_Chart();
+        new DT_Genmapper_Groups_Chart();
         new DT_Genmapper_Baptisms_Chart();
 
     } // End __construct

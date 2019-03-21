@@ -3,13 +3,13 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly.
 
-class DT_Genmapper_Metrics_Chart extends DT_Genmapper_Metrics_Chart_Base
+class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
 {
 
     public $title = 'Groups';
     public $slug = 'groups'; // lowercase
     public $js_object_name = 'wpApiGenmapper'; // This object will be loaded into the metrics.js file by the wp_localize_script.
-    public $js_file_name = 'one-page-chart-template.js'; // should be full file name plus extension
+    public $js_file_name = 'groups.js'; // should be full file name plus extension
     public $deep_link_hash = '#groups'; // should be the full hash name. #genmapper_of_hash
     public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
 
