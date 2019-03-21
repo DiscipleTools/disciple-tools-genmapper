@@ -157,12 +157,12 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "active" => $group["group_status"] === "active",
                 "group_type" => $group["group_type"]
             ];
-            if ( isset( $church_health[ $group["id"] ] ) ){
-                $health_metrics = explode( ',', $church_health[ $group["id"] ] );
-                foreach ( $health_metrics as $health_metric ){
-                    $values[$health_metric] = true;
-                }
-            }
+//            if ( isset( $church_health[ $group["id"] ] ) ){
+//                $health_metrics = explode( ',', $church_health[ $group["id"] ] );
+//                foreach ( $health_metrics as $health_metric ){
+//                    $values[$health_metric] = true;
+//                }
+//            }
             $prepared_array[] = $values;
         }
 

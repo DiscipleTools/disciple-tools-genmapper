@@ -9,7 +9,7 @@ const template = {
   'name': 'Church circles 0.6',
   'settings': {
     'nodeSize': {
-      'width': boxHeight * 1.3,
+      'width': boxHeight * 1.4,
       'height': boxHeight * 2.1
     }
   },
@@ -86,10 +86,12 @@ const template = {
       'initial': '',
       'type': 'text',
       'svg': {
-        'type': 'text',
+        'type': 'foreignObject',
         'attributes': {
-          'x': 0,
-          'y': boxHeight + textHeight
+          'x': -(boxHeight*1.5/2),
+          'y': boxHeight,
+          'width': boxHeight*1.5,
+          'height': 80,
         }
       }
     },

@@ -123,6 +123,8 @@
     let fields = {
       "title": "New Contact",
       "baptized_by": { "values": [ { "value" : parent.data.id } ] },
+      "milestones": { "values": [ { "value" : 'milestone_baptized' } ] },
+      "baptism_date": new Date()
     }
     window.API.create_contact(fields).then(( newcontact )=>{
       let newNodeData = {}
@@ -139,10 +141,16 @@
         contactFields["title"] = value
       }
       if ( key === "active" ){
-        contactFields["contact_status"] = value ? "active" : "inactive"
+        if ( value ){
+          contactFields["overall_status"] = "active"
+        } else {
+          contactFields["overall_status"] = "closed"
+          // @todo implement genmapper reason
+          contactFields["reason_closed"] = "close_from_genmapper"
+        }
       }
-      if ( key === "contact_type"){
-        contactFields["contact_type"] = value
+      if ( key === "date" ){
+        contactFields["baptism_date"] = value
       }
     })
     window.API.save_field_api( "contact", nodeID, contactFields )

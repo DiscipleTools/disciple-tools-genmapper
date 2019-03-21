@@ -17,3 +17,19 @@
   stroke-width: 4;
   stroke: green;
 }
+
+.node-name {
+    text-align: center;
+}
+
+.node--active .node-name, .link-text--active {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.node--inactive .node-name, .link-text--inactive {
+    text-align: center;
+    font-weight: bold;
+    color: #939393;
+}

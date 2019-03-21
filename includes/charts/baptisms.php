@@ -88,20 +88,13 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         );
     }
 
-//    private function get_node_descendants( $nodes, $node_ids ){
-//        $descendants = [];
-//        $children = [];
-//        foreach ( $nodes as $node ){
-//            if ( in_array( $node["parent_id"], $node_ids ) ){
-//                $descendants[] = $node;
-//                $children[] = $node["id"];
-//            }
-//        }
-//        if ( sizeof( $children ) > 0 ){
-//            $descendants = array_merge( $descendants, $this->get_node_descendants( $nodes, $children ) );
-//        }
-//        return $descendants;
-//    }
+    public static function array_to_sql( $values ) {
+        foreach ( $values as &$val ) {
+            $val = "'" . esc_sql( trim( $val ) ) . "'";
+        }
+
+        return implode( ',', $values );
+    }
 
     /**
      * Respond to transfer request of files
@@ -121,42 +114,52 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "name" => "source"
             ]
         ];
-        $baptisms = dt_queries()->tree( 'multiplying_baptisms_only' );
+        $baptisms_results = dt_queries()->tree( 'multiplying_baptisms_only' );
 
         $contact_ids = [];
-        foreach ( $baptisms as $b ){
-            $contact_ids[] =$b["id"];
-        }
-
-
-        $active_contacts = $wpdb->get_results("
-            SELECT pm.post_id 
-            FROM $wpdb->postmeta pm
-            WHERE pm.meta_key = 'overall_status'
-            AND pm.meta_value = 'active'
-            GROUP BY post_id
-        ", ARRAY_A );
-        $active_ids = [];
-        foreach ( $active_contacts as $c ){
-            $active_ids[] = $c["post_id"];
-        }
-
-
-        foreach ( $baptisms as $baptism ){
-            $values = [
+        $baptisms = [];
+        foreach ( $baptisms_results as $baptism ){
+            $contact_ids[] = $baptism["id"];
+            $baptisms[$baptism["id"]] = [
                 "id" => $baptism["id"],
                 "parentId" => $baptism["parent_id"] ?? 0,
                 "name" => $baptism["name"],
-//                "church" => $baptism["group_type"] === "church",
-                "active" => in_array( $baptism["id"], $active_ids )
-//                "group_type" => $baptism["group_type"]
             ];
-//            if ( isset( $church_health[ $baptism["id"] ] ) ){
-//                $health_metrics = explode( ',', $church_health[ $baptism["id"] ] );
-//                foreach ( $health_metrics as $health_metric ){
-//                    $values[$health_metric] = true;
-//                }
-//            }
+        }
+        $sql_ids = self::array_to_sql( $contact_ids );
+
+        // phpcs:disable
+        // WordPress.WP.PreparedSQL.NotPrepared
+        $active_contacts = $wpdb->get_results("
+            SELECT pm.post_id 
+            FROM $wpdb->postmeta pm
+            WHERE pm.post_id IN ($sql_ids) 
+            AND pm.meta_key = 'overall_status'
+            AND pm.meta_value = 'active'
+            GROUP BY post_id
+        ", ARRAY_A );
+        // phpcs:enable
+        foreach ( $active_contacts as $c ){
+            $baptisms[$c["post_id"]]["active"] = true;
+        }
+        // phpcs:disable
+        // WordPress.WP.PreparedSQL.NotPrepared
+        $baptism_dates = $wpdb->get_results("
+            SELECT pm.post_id, pm.meta_value as date
+            FROM $wpdb->postmeta pm
+            WHERE pm.post_id IN ($sql_ids) 
+            AND pm.meta_key = 'baptism_date'
+            GROUP BY post_id
+        ", ARRAY_A );
+        // phpcs:enable
+        $active_ids = [];
+        foreach ( $baptism_dates as $c ){
+            $active_ids[] = $c["post_id"];
+            $baptisms[$c["post_id"]]["date"] = dt_format_date( $c["date"] );
+        }
+
+
+        foreach ( $baptisms as $baptism_id => $values ){
             $prepared_array[] = $values;
         }
 
@@ -164,20 +167,6 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
             return new WP_Error( 'failed_to_build_data', 'Failed to build data', [ 'status' => 400 ] );
         } else {
             return $prepared_array;
-        }
-    }
-
-    public function sample( WP_REST_Request $request ) {
-        if ( !$this->has_permission() ){
-            return new WP_Error( __METHOD__, 'Missing auth.' );
-        }
-        $params = $request->get_params();
-        if ( isset( $params['button_data'] ) ) {
-            // Do something
-            $results = $params['button_data'];
-            return $results;
-        } else {
-            return new WP_Error( __METHOD__, 'Missing parameters.' );
         }
     }
 

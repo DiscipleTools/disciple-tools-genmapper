@@ -189,7 +189,7 @@ class GenMapper {
     this.editGroupElement.classList.add('edit-group--active')
     template.fields.forEach((field) => {
       if (field.type === 'text') {
-        this.editFieldElements[field.header].value = d.data[field.header]
+        this.editFieldElements[field.header].value = d.data[field.header] || ""
       } else if (field.type === 'radio') {
         field.values.forEach((value) => {
           const status = (value.header === d.data[field.header])
@@ -217,7 +217,6 @@ class GenMapper {
       if (field.type === 'text') {
         groupData[field.header] = this.editFieldElements[field.header].value
         if ( field.header === "name" ){
-          // @todo double activity on group record
           groupFields["title"] = this.editFieldElements[field.header].value
         }
       } else if (field.type === 'radio') {

@@ -107,18 +107,19 @@ const template = {
         }
       }
     },
-    // {
-    //   'header': 'date',
-    //   'initial': null,
-    //   'type': 'text',
-    //   'svg': {
-    //     'type': 'text',
-    //     'attributes': {
-    //       'x': 0,
-    //       'y': -4
-    //     }
-    //   }
-    // },
+    {
+      'header': 'date',
+      'initial': null,
+      'label': __( "Baptism Date", 'disciple_tools' ),
+      'type': 'text',
+      'svg': {
+        'type': 'text',
+        'attributes': {
+          'x': 0,
+          'y': -4
+        }
+      }
+    },
     // {
     //   'header': 'believer',
     //   'initial': true,
