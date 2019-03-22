@@ -344,7 +344,10 @@ class GenMapper {
     nodeWithNew.select('.rebaseNode')
         .on('click', (d) => {
           console.log("rebaseNode");
-          this.rebaseOnNode(d); d3.event.stopPropagation() })
+          jQuery('#chart').trigger("rebase-node-requested", [d])
+          // this.rebaseOnNode(d);
+          d3.event.stopPropagation()
+        })
 
     nodeWithNew.select('.addNode')
         .on('click', (d) => { this.addNode(d); d3.event.stopPropagation() })
@@ -537,6 +540,7 @@ class GenMapper {
     this.redraw(template)
     this.origPosition()
   }
+
   rebaseOnNodeID(id){
     this.data = this.masterData
     this.redraw(template)
@@ -597,7 +601,7 @@ class GenMapper {
     return b
   }
 
-  importJSON (jsonString) {
+  importJSON (jsonString, initial = false) {
     let tree = {}
     if ( typeof jsonString === "string" ){
       tree = JSON.parse(jsonString)
@@ -610,7 +614,9 @@ class GenMapper {
       this.displayImportError(err)
       return
     }
-    this.masterData = tree
+    if ( initial ){
+      this.masterData = tree
+    }
     this.data = tree
     this.redraw(template)
   }

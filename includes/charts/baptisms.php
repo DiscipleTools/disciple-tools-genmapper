@@ -117,6 +117,30 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         ];
         $baptisms_results = dt_queries()->tree( 'multiplying_baptisms_only' );
 
+        //limit multiplier's view to just their tree
+        if ( !current_user_can( 'view_any_contacts' ) && !current_user_can( 'view_project_metrics' ) ) {
+            $node = [];
+            $contact_id = Disciple_Tools_Users::get_contact_for_user( get_current_user_id() );
+            foreach ( $baptisms_results as $values ){
+                if ( $values["id"] == (string) $contact_id ){
+                    $node = $values;
+                    $node["parentId"] = 0;
+                }
+            }
+            $baptisms_results = array_merge( [ $node ], $this->get_node_descendants( $baptisms_results, [ $contact_id ] ) );
+        }
+        if ( !empty( $params["node"] && $params["node"] != "null" ) ){
+            $node = [];
+            foreach ( $baptisms_results as $res ){
+                if ( $res["id"] === $params["node"] ){
+                    $node = $res;
+                    $node["parent_id"] = 0;
+                }
+            }
+            $baptisms_results = array_merge( [ $node ], $this->get_node_descendants( $baptisms_results, [ $params["node"] ] ) );
+        }
+
+
         $contact_ids = [];
         $baptisms = [];
         foreach ( $baptisms_results as $baptism ){
@@ -162,17 +186,6 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
 
         foreach ( $baptisms as $baptism_id => $values ){
             $prepared_array[] = $values;
-        }
-        if ( !current_user_can( 'view_any_contacts' ) && !current_user_can( 'view_project_metrics' ) ) {
-            $node = [];
-            $contact_id = Disciple_Tools_Users::get_contact_for_user( get_current_user_id() );
-            foreach ( $prepared_array as $values ){
-                if ( $values["id"] == (string) $contact_id ){
-                    $node = $values;
-                    $node["parentId"] = 0;
-                }
-            }
-            $prepared_array = array_merge( [ $node ], [ $root_node ], $this->get_node_descendants( $prepared_array, [ $contact_id ] ) );
         }
 
         if ( empty( $prepared_array ) ) {

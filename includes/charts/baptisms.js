@@ -28,7 +28,8 @@
                 </div>
             </div>
         </div>
-        <button class="button" id="reset_tree" style="margin: 0">Reset</button>
+        <button class="button" id="reset_tree" style="margin: 0">${ __( 'Reset', 'disciple_tools' ) }</button>
+        <div style="display: inline-block" class="loading-spinner active"></div>
       </div>
       <hr style="max-width:100%;">
       <aside id="left-menu">
@@ -71,7 +72,8 @@
       dynamic: true,
       callback: {
         onClick: function(node, a, item, event){
-          genmapper.rebaseOnNodeID( item.ID )
+          // genmapper.rebaseOnNodeID( item.ID ) //disabled because of possibility of multiple parents
+          get_records( item.ID)
         },
         onResult: function (node, query, result, resultCount) {
           let text = TYPEAHEADS.typeaheadHelpText(resultCount, query, result)
@@ -89,18 +91,20 @@
 
     $('#reset_tree').on("click", function () {
       group_search_input.val("")
-      get_records()
+      genmapper.origData()
     })
   }
 
 
-  function get_records( group = null ){
+  function get_records( nodeId = null ){
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
     jQuery(document).ready(function() {
       return jQuery.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: `${localizedObject.root}dt/v1/genmapper/baptisms?node=${group}`,
+        url: `${localizedObject.root}dt/v1/genmapper/baptisms?node=${nodeId}`,
         beforeSend: function(xhr) {
           xhr.setRequestHeader('X-WP-Nonce', localizedObject.nonce);
         },
@@ -111,13 +115,17 @@
           jQuery("#alert-message").append(err.responseText)
         })
         .then(e=>{
-          genmapper.importJSON(e)
+          loading_spinner.removeClass("active")
+          genmapper.importJSON(e, nodeId === null)
           genmapper.origPosition( true )
         })
 
     })
   }
 
+  chartDiv.on('rebase-node-requested', function (e, node) {
+    get_records( node.data.id )
+  })
 
   chartDiv.on('add-node-requested', function (e, parent) {
     let fields = {

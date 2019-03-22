@@ -28,7 +28,9 @@
                 </div>
             </div>
         </div>
-        <button class="button" id="reset_tree" style="margin: 0">Reset</button>
+        <button class="button" id="reset_tree" style="margin: 0">${ __( 'Reset', 'disciple_tools' ) }</button>
+        <div style="display: inline-block" class="loading-spinner active"></div>
+
       </div>
       <hr style="max-width:100%;">
       <aside id="left-menu">
@@ -71,7 +73,8 @@
       dynamic: true,
       callback: {
         onClick: function(node, a, item, event){
-          genmapper.rebaseOnNodeID( item.ID )
+          //genmapper.rebaseOnNodeID( item.ID ) //disabled because of possibility of multiple parents
+          get_groups( item.ID )
         },
         onResult: function (node, query, result, resultCount) {
           let text = TYPEAHEADS.typeaheadHelpText(resultCount, query, result)
@@ -95,6 +98,8 @@
 
 
   function get_groups( group = null ){
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
     jQuery(document).ready(function() {
       return jQuery.ajax({
         type: "GET",
@@ -111,13 +116,17 @@
           jQuery("#alert-message").append(err.responseText)
         })
         .then(e=>{
-          genmapper.importJSON(e)
+          loading_spinner.removeClass("active")
+          genmapper.importJSON(e, group === null)
           genmapper.origPosition( true )
         })
 
     })
   }
 
+  chartDiv.on('rebase-node-requested', function (e, node) {
+    get_groups( node.data.id )
+  })
 
   chartDiv.on('add-node-requested', function (e, parent) {
     let fields = {
