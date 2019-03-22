@@ -2,122 +2,200 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Disciple Tools - Starter_Plugin\n"
-"POT-Creation-Date: 2018-01-29 05:56-0700\n"
-"PO-Revision-Date: 2018-01-29 05:53-0700\n"
+"Project-Id-Version: Disciple Tools - Genmapper Metrics\n"
+"POT-Creation-Date: 2019-03-22 14:19+0100\n"
+"PO-Revision-Date: 2019-03-22 14:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
-"X-Poedit-Basepath: ../../../../..\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: disciple-tools-advanced-metrics.php\n"
+"X-Poedit-WPHeader: disciple-tools-genmapper.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
-"X-Poedit-SearchPathExcluded-1: */libraries/*\n"
+"X-Poedit-SearchPathExcluded-0: includes/admin/libraries\n"
+"X-Poedit-SearchPathExcluded-1: includes/admin-menu-and-tabs.php\n"
 
-#: disciple-tools-advanced-metrics.php:226 disciple-tools-advanced-metrics.php:237
-msgid "Whoah, partner!"
-msgstr ""
-
-#: disciple-tools-advanced-metrics.php:249
-msgid "Method does not exist."
-msgstr ""
-
-#: disciple-tools-advanced-metrics.php:267
+#: disciple-tools-genmapper.php:262
 msgid ""
-"'Disciple Tools - Starter_Plugin' requires 'Disciple Tools' theme to work. "
-"Please activate 'Disciple Tools' theme or deactivate 'Disciple Tools - "
-"Starter_Plugin' plugin."
+"'Disciple Tools - genmapper Metrics Template' requires 'Disciple Tools' "
+"theme to work. Please activate 'Disciple Tools' theme or deactivate "
+"'Disciple Tools - genmapper Metrics Template' plugin."
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:61
+#: disciple-tools-genmapper.php:334
+msgid ""
+"'Disciple Tools - genmapper Metrics Template' requires 'Disciple Tools' "
+"theme to work. Please activate 'Disciple Tools' theme or deactivate "
+"'Disciple Tools - genmapper Metrics Template'."
+msgstr ""
+
+#: includes/admin-menu-and-tabs.php:61
 msgid "Extensions (DT)"
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:62
-msgid "Facebook"
+#: includes/admin-menu-and-tabs.php:62 includes/admin-menu-and-tabs.php:90
+msgid "genmapper Metrics"
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:77
+#: includes/admin-menu-and-tabs.php:77
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:90
-msgid "DISCIPLE TOOLS - STARTER PLUGIN"
-msgstr ""
-
-#: includes/admin/admin-menu-and-tabs.php:92
-#: includes/admin/admin-menu-and-tabs.php:93
+#: includes/admin-menu-and-tabs.php:92 includes/admin-menu-and-tabs.php:93
 msgid "nav-tab-active"
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:92
+#: includes/admin-menu-and-tabs.php:92
 msgid "General"
 msgstr ""
 
-#: includes/admin/admin-menu-and-tabs.php:93
+#: includes/admin-menu-and-tabs.php:93
 msgid "Second"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
-msgid "Check for updates"
+#: includes/admin-menu-and-tabs.php:154 includes/admin-menu-and-tabs.php:228
+msgid "Header"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
-msgid "View details"
+#: includes/admin-menu-and-tabs.php:159 includes/admin-menu-and-tabs.php:179
+#: includes/admin-menu-and-tabs.php:233 includes/admin-menu-and-tabs.php:253
+msgid "Content"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
-#, php-format
-msgid "More information about %s"
+#: includes/admin-menu-and-tabs.php:174 includes/admin-menu-and-tabs.php:248
+msgid "Information"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
-#, php-format
-msgctxt "the plugin title"
-msgid "The %s plugin is up to date."
+#: includes/charts/baptisms.js:15
+msgid "Baptism Generation Tree"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
-#, php-format
-msgctxt "the plugin title"
-msgid "A new version of the %s plugin is available."
+#: includes/charts/charts-base.php:112
+msgid "Permission Denied"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
-#, php-format
-msgctxt "the plugin title"
-msgid "Could not determine if updates are available for %s."
+#: includes/charts/charts-base.php:120
+msgid "Missing parameters."
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
-#, php-format
-msgid "Unknown update checker status \"%s\""
+#: includes/charts/church-circles/template.js:73
+msgid "ID"
 msgstr ""
 
-#: includes/admin/libraries/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
-msgid "There is no changelog available."
+#: includes/charts/church-circles/template.js:79
+msgid "Parent Id"
+msgstr ""
+
+#: includes/charts/church-circles/template.js:85
+#: includes/charts/disciples/template.js:49
+msgid "Name"
+msgstr ""
+
+#: includes/charts/church-circles/template.js:417
+#: includes/charts/disciples/template.js:254
+msgid "Active"
+msgstr ""
+
+#: includes/charts/disciples/template.js:63
+msgid "Baptism Date"
+msgstr ""
+
+#: includes/charts/genmapper.js:94
+msgid "Edit Record"
+msgstr ""
+
+#: includes/charts/genmapper.js:105
+msgid "Cancel"
+msgstr ""
+
+#: includes/charts/genmapper.js:107
+msgid "Center on this node"
+msgstr ""
+
+#: includes/charts/genmapper.js:114
+msgid ""
+"Hello, this app should serve for mapping generations of simple churches. I "
+"pray it serves you to advance Jesus' kingdom."
+msgstr ""
+
+#: includes/charts/genmapper.js:117
+msgid ""
+"You can pan by draging the map and zoom by mouse wheel or using buttons on "
+"the left."
+msgstr ""
+
+#: includes/charts/genmapper.js:119
+msgid ""
+"Thanks to Curtis Sergeant for the idea of generational mapping and for "
+"providing useful feedback."
+msgstr ""
+
+#: includes/charts/genmapper.js:120
+msgid "JavaScript/CSS libraries used"
+msgstr ""
+
+#: includes/charts/genmapper.js:126
+msgid "Copyright (c) 2016 - 2018 Daniel Vopalecky"
+msgstr ""
+
+#: includes/charts/genmapper.js:127
+msgid "Licensed with MIT Licence"
+msgstr ""
+
+#: includes/charts/genmapper.js:128
+msgid "Github repository"
+msgstr ""
+
+#: includes/charts/genmapper.js:130
+msgid "Close"
+msgstr ""
+
+#: includes/charts/genmapper.js:135
+msgid "OK"
+msgstr ""
+
+#: includes/charts/genmapper.js:448
+msgid "Delete group &amp; subtree"
+msgstr ""
+
+#: includes/charts/genmapper.js:461
+msgid "Rebase"
+msgstr ""
+
+#: includes/charts/genmapper.js:476
+msgid "Add child"
+msgstr ""
+
+#: includes/charts/genmapper.js:636 includes/charts/genmapper.js:638
+msgid "Error when importing file."
+msgstr ""
+
+#: includes/charts/genmapper.js:638
+msgid ""
+"Please check that the file is in correct format (comma separated values), "
+"that the root group has no parent, and that all other relationships make a "
+"valid tree.<br>Also check that you use the correct version of the App."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Disciple Tools - Starter_Plugin"
+msgid "Disciple Tools - Genmapper Metrics"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/ZumeProject/disciple-tools-starter_plugin"
+msgid "https://github.com/ZumeProject/disciple-tools-advanced-metrics-template"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Disciple Tools - Advanced Metrics is intended to help developers and "
-"integrator jumpstart their extension"
+"Disciple Tools - Genmapper Metrics Template extends the charts and reporting "
+"ability of Disciple Tools"
 msgstr ""
 
 #. Author URI of the plugin/theme

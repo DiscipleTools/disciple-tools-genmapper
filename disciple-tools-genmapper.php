@@ -218,7 +218,7 @@ class DT_Genmapper_Metrics {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_genmapper_metrics' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, 'Whoah, partner!', '0.1' );
     }
 
     /**
@@ -229,7 +229,7 @@ class DT_Genmapper_Metrics {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_genmapper_metrics' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, 'Whoah, partner!', '0.1' );
     }
 
     /**
@@ -241,7 +241,7 @@ class DT_Genmapper_Metrics {
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
-        _doing_it_wrong( "dt_genmapper_metrics::{$method}", esc_html__( 'Method does not exist.', 'dt_genmapper_metrics' ), '0.1' );
+        _doing_it_wrong( "dt_genmapper_metrics::{$method}", 'Method does not exist.', '0.1' );
         unset( $method, $args );
         return null;
     }

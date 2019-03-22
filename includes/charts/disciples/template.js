@@ -5,56 +5,6 @@ const { __, _x, _n, _nx } = wp.i18n;
 const icons = window.genApiTemplate.plugin_uri + 'charts/disciples/icons/';
 const template = {
   'name': 'Disciples 0.1',
-  'translations': {
-    en: {
-      translation: {
-        'template': {
-          'helpLegend': '<p>This version of GenMapper is for mapping individual disciples, not groups/churches. Each rectangle represents a disciple.</p><p>Click on the disciple to edit.<br>Click on red (x) button to remove a disciple.<br>Click on green (+) button to add child disciple.</p>',
-          'name': 'Name',
-          'date': 'Date of start following Christ',
-          'believer': 'Is believer?',
-          'baptized': 'Is baptized?',
-          'word': 'Abides in Word',
-          'prayer': 'Abides in Prayer',
-          'field1': 'Field 1: Go',
-          'field2': 'Field 2: Gospel',
-          'field3': 'Field 3: Grow',
-          'field4': 'Field 4: Gather',
-          'field5': 'Trainer',
-          'timothy': 'Is Timothy (key disciple)?',
-          'discipleType': 'Disciple type',
-          'individual': 'Individual',
-          'facilitatesGroup': 'Facilitates Group',
-          'facilitatesChurch': 'Facilitates Church',
-          'active': 'Active'
-        }
-      }
-    },
-    cs: {
-      translation: {
-        'template': {
-          'helpLegend': '<p>Tato šablona GenMapperu je pro mapování jednotlivých učedníků, ne skupin/církví. Každý obdélník znázorňuje jednoho učedníka.<br><br>Klikni na učedníka pro editaci.<br>Klikni na červené tlačítko (x) pro odstranění učedníka.<br>Klikni na zelené tlačítko (+) pro přidání učedníka.</p>',
-          'name': 'Jméno',
-          'date': 'Datum uvěření',
-          'believer': 'Věřící',
-          'baptized': 'Pokřtěný',
-          'word': 'Zůstává v Božím Slovu',
-          'prayer': 'Pravidelně se modlí',
-          'field1': '1. Pole: Oikosová mapa, ',
-          'field2': '2. Pole: Osobní příběh, Boží příběh',
-          'field3': '3. Pole: Krátkodobé učednictví, LTG',
-          'field4': '4. Pole: Součástí Boží rodiny',
-          'field5': 'Trénuje další, Iron-on-iron',
-          'timothy': 'Timoteus (klíčový učedník)',
-          'discipleType': 'Typ učedníka',
-          'individual': 'Jednotlivec',
-          'facilitatesGroup': 'Provází skupinu',
-          'facilitatesChurch': 'Provází Boží rodinu',
-          'active': 'Aktivní'
-        }
-      }
-    }
-  },
   'settings': {
     'nodeSize': {
       'width': boxHeight * 1.5,
