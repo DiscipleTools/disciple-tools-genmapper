@@ -1,8 +1,8 @@
 <?php
 /**
- * DT_genmapper_Metrics_Menu class for the admin page
+ * DT_Genmapper_Metrics_Menu class for the admin page
  *
- * @class       DT_genmapper_Metrics_Menu
+ * @class       DT_Genmapper_Metrics_Menu
  * @version     0.1.0
  * @since       0.1.0
  */
@@ -13,25 +13,25 @@ if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 /**
  * Initialize menu class
  */
-DT_genmapper_Metrics_Menu::instance();
+DT_Genmapper_Metrics_Menu::instance();
 
 /**
- * Class DT_genmapper_Metrics_Menu
+ * Class DT_Genmapper_Metrics_Menu
  */
-class DT_genmapper_Metrics_Menu {
+class DT_Genmapper_Metrics_Menu {
 
     public $token = 'dt_genmapper_metrics';
 
     private static $_instance = null;
 
     /**
-     * DT_genmapper_Metrics_Menu Instance
+     * DT_Genmapper_Metrics_Menu Instance
      *
-     * Ensures only one instance of DT_genmapper_Metrics_Menu is loaded or can be loaded.
+     * Ensures only one instance of DT_Genmapper_Metrics_Menu is loaded or can be loaded.
      *
      * @since 0.1.0
      * @static
-     * @return DT_genmapper_Metrics_Menu instance
+     * @return DT_Genmapper_Metrics_Menu instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
