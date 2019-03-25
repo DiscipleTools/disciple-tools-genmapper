@@ -27,7 +27,6 @@ abstract class DT_Genmapper_Metrics_Chart_Base
                 return;
             }
             add_filter( 'dt_metrics_menu', [ $this, 'base_menu' ], 99 ); //load menu links
-            dt_write_log("uhasnethusnteoau");
             if ( strpos( $url_path, 'metrics/genmapper' ) === 0 ) {
                 add_filter( 'dt_templates_for_urls', [ $this, 'base_add_url' ] ); // add custom URLs
                 add_action( 'wp_enqueue_scripts', [ $this, 'base_scripts' ], 99 );

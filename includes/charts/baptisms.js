@@ -128,22 +128,29 @@
   })
 
   chartDiv.on('add-node-requested', function (e, parent) {
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
+    let baptismDate = moment().format("YYYY-MM-DD")
     let fields = {
       "title": "New Contact",
       "baptized_by": { "values": [ { "value" : parent.data.id } ] },
       "milestones": { "values": [ { "value" : 'milestone_baptized' } ] },
-      "baptism_date": new Date()
+      "baptism_date": baptismDate
     }
-    window.API.create_contact(fields).then(( newcontact )=>{
+    window.API.create_contact(fields).then(( newContact )=>{
       let newNodeData = {}
-      newNodeData['id'] = newcontact["post_id"]
+      newNodeData['id'] = newContact["post_id"]
       newNodeData['parentId'] = parent.data.id
       newNodeData['name'] = fields.title
+      newNodeData["date"] = baptismDate
       genmapper.createNode( newNodeData )
+      loading_spinner.removeClass("active")
     })
   })
 
   $("#chart").on('node-updated', function (e, nodeID, nodeFields, contactFields) {
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
     _.forOwn(nodeFields, (value, key)=>{
       if ( key === "name" ){
         contactFields["title"] = value
@@ -161,7 +168,9 @@
         contactFields["baptism_date"] = value
       }
     })
-    window.API.save_field_api( "contact", nodeID, contactFields )
+    window.API.save_field_api( "contact", nodeID, contactFields ).then(resp=>{
+      loading_spinner.removeClass("active")
+    })
   })
 
 

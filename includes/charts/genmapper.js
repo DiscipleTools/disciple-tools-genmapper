@@ -344,8 +344,7 @@ class GenMapper {
     nodeWithNew.select('.rebaseNode')
         .on('click', (d) => {
           console.log("rebaseNode");
-          jQuery('#chart').trigger("rebase-node-requested", [d])
-          // this.rebaseOnNode(d);
+          this.rebaseOnNode(d);
           d3.event.stopPropagation()
         })
 
@@ -534,11 +533,13 @@ class GenMapper {
   }
 
   rebaseOnNode(d){
-    const tmpData = _.cloneDeep(d.descendants().map(x => x.data))
-    tmpData[0].parentId = ''
-    this.data = tmpData
-    this.redraw(template)
-    this.origPosition()
+    //fetch from server because the local tree might not be complete
+    jQuery('#chart').trigger("rebase-node-requested", [d])
+    // const tmpData = _.cloneDeep(d.descendants().map(x => x.data))
+    // tmpData[0].parentId = ''
+    // this.data = tmpData
+    // this.redraw(template)
+    // this.origPosition()
   }
 
   rebaseOnNodeID(id){

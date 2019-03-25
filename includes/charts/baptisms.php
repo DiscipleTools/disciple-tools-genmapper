@@ -60,7 +60,8 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
             'jquery',
             'jquery-ui-core',
             'genmapper',
-            'wp-i18n'
+            'wp-i18n',
+            'moment'
         ], filemtime( plugin_dir_path( __FILE__ ) .$this->js_file_name ), true );
 
         // Localize script with array data

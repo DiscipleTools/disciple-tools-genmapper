@@ -129,6 +129,8 @@
   })
 
   chartDiv.on('add-node-requested', function (e, parent) {
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
     let fields = {
       "title": "New Group",
       "parent_groups": { "values": [ { "value" : parent.data.id } ] },
@@ -140,10 +142,13 @@
       newNodeData['parentId'] = parent.data.id
       newNodeData['name'] = fields.title
       genmapper.createNode( newNodeData )
+      loading_spinner.removeClass("active")
     })
   })
 
   chartDiv.on('node-updated', function (e, nodeID, nodeFields, groupFields) {
+    let loading_spinner = $(".loading-spinner")
+    loading_spinner.addClass("active")
     _.forOwn(nodeFields, (value, key)=>{
       if ( key === "name" ){
         groupFields["title"] = value
@@ -155,7 +160,9 @@
         groupFields["group_type"] = value
       }
     })
-    window.API.save_field_api( "group", nodeID, groupFields )
+    window.API.save_field_api( "group", nodeID, groupFields ).then(resp=>{
+      loading_spinner.removeClass("active")
+    })
   })
 
 
