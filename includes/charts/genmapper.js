@@ -82,9 +82,9 @@ class GenMapper {
 
   loadHTMLContent () {
     document.getElementById('left-menu').innerHTML = `<div id="template-logo">
-    <button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ __( 'Help / About', 'disciple_tools' ) }">
-     <img src="${this.plugin_uri}/charts/icons/266-question.svg">
-     </button>
+    <!--<button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ __( 'Help / About', 'disciple_tools' ) }">
+      <img src="${this.plugin_uri}/charts/icons/266-question.svg">
+      </button> -->
     <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="${ __( 'Original Zoom &amp; Position', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
     <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom In', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
     <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom Out', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
@@ -108,26 +108,26 @@ class GenMapper {
      </div>
     </div>`
 
-    document.getElementById('intro-content').innerHTML = `<h2>
-    ${ __( 'GenMapper Help', 'disciple_tools' ) }
-    </h2>
-    <p>${ __( "Hello, this app should serve for mapping generations of simple churches. I pray it serves you to advance Jesus' kingdom.", 'disciple_tools' ) }</p>
-    ${ __( 'Legend', 'disciple_tools' ) }
-    <h3>${ __( 'Panning / Zooming', 'disciple_tools' ) }</h3>
-    <p>${ __( 'You can pan by draging the map and zoom by mouse wheel or using buttons on the left.', 'disciple_tools' ) }</p>
-    <h3>${ __( 'Credits', 'disciple_tools' ) }</h3>
-    <p>${ __( 'Thanks to Curtis Sergeant for the idea of generational mapping and for providing useful feedback.', 'disciple_tools' ) }<br>
-    ${ __( 'JavaScript/CSS libraries used', 'disciple_tools' ) }
-    : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>, 
-    <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>, 
-    <a href="https://lodash.com">lodash</a> 
-    ${ __( 'Icons used', 'disciple_tools' ) }
-    : <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>
-    ${ __( 'Copyright (c) 2016 - 2018 Daniel Vopalecky', 'disciple_tools' ) }<br>
-    ${ __( 'Licensed with MIT Licence', 'disciple_tools' ) }<br>
-    <a href="https://github.com/dvopalecky/gen-mapper">${ __( 'Github repository', 'disciple_tools' ) }</a><br>
-    <br></p>
-    <button onclick="genmapper.introSwitchVisibility()">${ __( 'Close', 'disciple_tools' ) }</button>`
+    // document.getElementById('intro-content').innerHTML = `<h2>
+    // ${ __( 'GenMapper Help', 'disciple_tools' ) }
+    // </h2>
+    // <p>${ __( "Hello, this app should serve for mapping generations of simple churches. I pray it serves you to advance Jesus' kingdom.", 'disciple_tools' ) }</p>
+    // ${ __( 'Legend', 'disciple_tools' ) }
+    // <h3>${ __( 'Panning / Zooming', 'disciple_tools' ) }</h3>
+    // <p>${ __( 'You can pan by draging the map and zoom by mouse wheel or using buttons on the left.', 'disciple_tools' ) }</p>
+    // <h3>${ __( 'Credits', 'disciple_tools' ) }</h3>
+    // <p>${ __( 'Thanks to Curtis Sergeant for the idea of generational mapping and for providing useful feedback.', 'disciple_tools' ) }<br>
+    // ${ __( 'JavaScript/CSS libraries used', 'disciple_tools' ) }
+    // : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>,
+    // <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>,
+    // <a href="https://lodash.com">lodash</a>
+    // ${ __( 'Icons used', 'disciple_tools' ) }
+    // : <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>
+    // ${ __( 'Copyright (c) 2016 - 2018 Daniel Vopalecky', 'disciple_tools' ) }<br>
+    // ${ __( 'Licensed with MIT Licence', 'disciple_tools' ) }<br>
+    // <a href="https://github.com/dvopalecky/gen-mapper">${ __( 'Github repository', 'disciple_tools' ) }</a><br>
+    // <br></p>
+    // <button onclick="genmapper.introSwitchVisibility()">${ __( 'Close', 'disciple_tools' ) }</button>`
 
     document.getElementById('alert-message').innerHTML =
     `<div id="alert-message-content">
@@ -480,6 +480,17 @@ class GenMapper {
   }
 
   addNode (d) {
+    let tmp = _.cloneDeep(this.masterData)
+    console.log(tmp);
+    console.log(d);
+    tmp.push({parentId:d.data.id})
+    try {
+      this.validTree(tmp)
+    } catch (err) {
+      this.displayAlert(` ${ __( 'Cannot add a child to this node. Check if node has 2 parents.', 'disciple_tools' ) }`)
+      return
+    }
+    // this.validTree(tmp)
     jQuery('#chart').trigger("add-node-requested", [d])
   }
   /* required: id, parentId, name
@@ -603,6 +614,7 @@ class GenMapper {
   }
 
   importJSON (jsonString, initial = false) {
+    console.log(jsonString);
     let tree = {}
     if ( typeof jsonString === "string" ){
       tree = JSON.parse(jsonString)
@@ -632,11 +644,13 @@ class GenMapper {
     treeTest(stratifiedDataTest)
   }
 
-  displayImportError (err) {
+  displayImportError (err, msg) {
+
+
     if (err.toString().includes('>= 0.') || err.toString().includes('Wrong type')) {
-      this.displayAlert(` ${ __( 'Error when importing file.', 'disciple_tools' ) }  <br>${err.toString()}`)
+      this.displayAlert(` ${ __( 'Error setting up the graph.', 'disciple_tools' ) }  <br>${err.toString()}`)
     } else {
-      this.displayAlert(` ${ __( 'Error when importing file.', 'disciple_tools' ) }<br><br> ${ __( 'Please check that the file is in correct format (comma separated values), that the root group has no parent, and that all other relationships make a valid tree.<br>Also check that you use the correct version of the App.', 'disciple_tools' ) } `)
+      this.displayAlert(` ${ __( 'Error setting up the graph', 'disciple_tools' ) }<br><br> ${ __( 'Please check that the file is in correct format (comma separated values), that the root group has no parent, and that all other relationships make a valid tree.<br>Also check that you use the correct version of the App.', 'disciple_tools' ) } `)
     }
   }
 

@@ -6,7 +6,7 @@ abstract class DT_Genmapper_Metrics_Chart_Base
 
     public $namespace = "dt/v1/genmapper/";
     public $base_slug = 'genmapper';
-    public $base_title = "Genmapper";
+    public $base_title = "Gen Mapper";
 
     //child
     public $title = '';

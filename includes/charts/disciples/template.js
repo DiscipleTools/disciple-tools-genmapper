@@ -8,7 +8,7 @@ const template = {
   'settings': {
     'nodeSize': {
       'width': boxHeight * 1.5,
-      'height': boxHeight * 1.8
+      'height': boxHeight * 2
     }
   },
   'svg': {
