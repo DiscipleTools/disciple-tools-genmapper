@@ -613,7 +613,6 @@ class GenMapper {
   }
 
   importJSON (jsonString, initial = false) {
-    console.log(jsonString);
     let tree = {}
     if ( typeof jsonString === "string" ){
       tree = JSON.parse(jsonString)

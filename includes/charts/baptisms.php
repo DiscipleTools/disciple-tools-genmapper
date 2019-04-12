@@ -152,6 +152,10 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "name" => $baptism["name"],
             ];
         }
+        if ( empty( $contact_ids ) ){
+            return $prepared_array;
+        }
+
         $sql_ids = self::array_to_sql( $contact_ids );
 
         // phpcs:disable
