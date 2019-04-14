@@ -1,7 +1,6 @@
 const boxHeight = 80
 const textHeight = 14
 const textMargin = 6
-const { __, _x, _n, _nx } = wp.i18n;
 
 const icons = window.genApiTemplate.plugin_uri + 'charts/church-circles/icons/';
 let group_types = window.genApiTemplate.group_fields.group_type.default

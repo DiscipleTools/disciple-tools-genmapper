@@ -1,4 +1,3 @@
-// const { __, _x, _n, _nx } = wp.i18n;
 class GenMapper {
   // GenMapper
   // App for mapping generations of simple churches
@@ -614,7 +613,6 @@ class GenMapper {
   }
 
   importJSON (jsonString, initial = false) {
-    console.log(jsonString);
     let tree = {}
     if ( typeof jsonString === "string" ){
       tree = JSON.parse(jsonString)
