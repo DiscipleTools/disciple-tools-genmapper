@@ -59,7 +59,7 @@ class DT_Genmapper_Metrics_Menu {
      */
     public function register_menu() {
         add_menu_page( __( 'Extensions (DT)', 'disciple_tools' ), __( 'Extensions (DT)', 'disciple_tools' ), 'manage_dt', 'dt_extensions', [ $this, 'extensions_menu' ], 'dashicons-admin-generic', 59 );
-        add_submenu_page( 'dt_extensions', __( 'genmapper Metrics', 'dt_genmapper_metrics' ), __( 'genmapper Metrics', 'dt_genmapper_metrics' ), 'manage_dt', $this->token, [ $this, 'content' ] );
+        add_submenu_page( 'dt_extensions', __( 'Genmapper Metrics', 'dt_genmapper_metrics' ), __( 'Genmapper Metrics', 'dt_genmapper_metrics' ), 'manage_dt', $this->token, [ $this, 'content' ] );
     }
 
     /**
