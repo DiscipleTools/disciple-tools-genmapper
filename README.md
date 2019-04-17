@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper.svg?branch=master)](https://travis-ci.org/DiscipleTools/disciple-tools-genmapper)
+[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-genmapper.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-genmapper)
 
 # Disciple Tools GenMapper
 
