@@ -137,7 +137,7 @@
       "milestones": { "values": [ { "value" : 'milestone_baptized' } ] },
       "baptism_date": baptismDate
     }
-    window.API.create_contact(fields).then(( newContact )=>{
+    window.APIV2.create_post( 'contacts', fields ).then(( newContact )=>{
       let newNodeData = {}
       newNodeData['id'] = newContact["post_id"]
       newNodeData['parentId'] = parent.data.id
@@ -168,7 +168,7 @@
         contactFields["baptism_date"] = value
       }
     })
-    window.API.save_field_api( "contact", nodeID, contactFields ).then(resp=>{
+    window.APIV2.update_post( "contacts", nodeID, contactFields ).then(resp=>{
       loading_spinner.removeClass("active")
     })
   })
