@@ -67,7 +67,7 @@
       template: function (query, item) {
         return `<span>${_.escape(item.name)}</span>`
       },
-      source: TYPEAHEADS.typeaheadSource('groups', 'dt/v1/groups/compact/'),
+      source: TYPEAHEADS.typeaheadSource('groups', 'dt-posts/v2/groups/compact/'),
       display: "name",
       templateValue: "{{name}}",
       dynamic: true,
