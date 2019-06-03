@@ -139,7 +139,7 @@ class DT_Genmapper_Metrics {
 
         // Admin and settings variables
         $this->token             = 'dt_genmapper_metrics';
-        $this->version             = '0.1';
+        $this->version             = '0.1.1';
     }
 
     /**
