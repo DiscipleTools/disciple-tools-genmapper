@@ -648,7 +648,11 @@ class GenMapper {
     if (err.toString().includes('>= 0.') || err.toString().includes('Wrong type')) {
       this.displayAlert(` ${ __( 'Error setting up the graph.', 'disciple_tools' ) }  <br>${err.toString()}`)
     } else {
-      this.displayAlert(` ${ __( 'Error setting up the graph', 'disciple_tools' ) }<br><br> ${ __( 'Please check that the file is in correct format (comma separated values), that the root group has no parent, and that all other relationships make a valid tree.<br>Also check that you use the correct version of the App.', 'disciple_tools' ) } `)
+      this.displayAlert(` ${ __( 'Error setting up the graph', 'disciple_tools' ) }
+        <br><br>
+        This can be caused by circular connection data. 
+        Check that no child has two parents that are related. A group and a grand child group can't both be the parent of another group.
+      `)
     }
   }
 
