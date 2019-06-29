@@ -73,6 +73,8 @@ class DT_Genmapper_Metrics_Menu {
      */
     public function content() {
 
+
+
         if ( !current_user_can( 'manage_dt' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
@@ -87,28 +89,8 @@ class DT_Genmapper_Metrics_Menu {
 
         ?>
         <div class="wrap">
-            <h2><?php esc_attr_e( 'genmapper Metrics', 'dt_genmapper_metrics' ) ?></h2>
-            <h2 class="nav-tab-wrapper">
-                <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_genmapper_metrics' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_genmapper_metrics' ) ?></a>
-                <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_genmapper_metrics' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_genmapper_metrics' ) ?></a>
-            </h2>
-
-            <?php
-            switch ($tab) {
-                case "general":
-                    $object = new DT_Genmapper_Tab_General();
-                    $object->content();
-                    break;
-                case "second":
-                    $object = new DT_Genmapper_Tab_Second();
-                    $object->content();
-                    break;
-                default:
-                    break;
-            }
-            ?>
-
-        </div><!-- End wrap -->
+            <h2><?php esc_attr_e( 'Genmapper', 'dt_genmapper_metrics' ) ?></h2>
+            <p>No configuration needed. </p>
 
         <?php
     }

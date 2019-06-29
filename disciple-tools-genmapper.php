@@ -106,6 +106,7 @@ class DT_Genmapper_Metrics {
      * @return void
      */
     private function __construct() {
+        add_filter( 'plugin_action_links_' .  plugin_basename( __FILE__ ), array( &$this, 'plugin_action_links' ) );
     }
 
     /**
@@ -260,6 +261,15 @@ class DT_Genmapper_Metrics {
         unset( $method, $args );
         return null;
     }
+
+
+    public function plugin_action_links( $links ) {
+        $settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/DiscipleTools/disciple-tools-genmapper', __( 'GitHub', plugin_basename( __FILE__ ) ) );
+        array_unshift( $links, $settings_link );
+
+        return $links;
+    }
+
 }
 // end main plugin class
 
