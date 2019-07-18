@@ -264,7 +264,7 @@ class DT_Genmapper_Metrics {
 
 
     public function plugin_action_links( $links ) {
-        $settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/DiscipleTools/disciple-tools-genmapper', __( 'GitHub', plugin_basename( __FILE__ ) ) );
+        $settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/DiscipleTools/disciple-tools-genmapper', __( 'GitHub', 'dt_genmapper' ) );
         array_unshift( $links, $settings_link );
 
         return $links;
