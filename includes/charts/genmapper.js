@@ -4,7 +4,7 @@ class GenMapper {
   // https://github.com/dvopalecky/gen-mapper
   // Copyright (c) 2016-2018 Daniel Vopalecky, MIT license
 
-  /* global d3, XLSX, saveAs, FileReader, template, translations, _, Blob, boxHeight */
+
 
   constructor () {
     this.plugin_uri = window.wpApiGenmapper.plugin_uri
