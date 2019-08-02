@@ -136,7 +136,7 @@
       "parent_groups": { "values": [ { "value" : parent.data.id } ] },
       "group_type": "group"
     }
-    window.API.create_group(fields).then(( newGroup )=>{
+    window.API.create_post('groups', fields).then(( newGroup )=>{
       let newNodeData = {}
       newNodeData['id'] = newGroup["ID"]
       newNodeData['parentId'] = parent.data.id
