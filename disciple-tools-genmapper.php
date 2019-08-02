@@ -3,12 +3,12 @@
  * Plugin Name: Disciple Tools - Genmapper
  * Plugin URI: https://github.com/ZumeProject/disciple-tools-advanced-metrics-template
  * Description: Disciple Tools - Genmapper Metrics Template extends the charts and reporting ability of Disciple Tools
- * Version:  0.1.1
+ * Version:  0.1.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-advanced-metrics-template
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
- * Tested up to: 5.1
+ * Tested up to: 5.2
  *
  * @package Disciple_Tools
  * @link    https://github.com/DiscipleTools
@@ -141,7 +141,7 @@ class DT_Genmapper_Metrics {
 
         // Admin and settings variables
         $this->token             = 'dt_genmapper_metrics';
-        $this->version             = '0.1.1';
+        $this->version             = '0.1.2';
     }
 
     /**
