@@ -138,7 +138,7 @@
     }
     window.API.create_group(fields).then(( newGroup )=>{
       let newNodeData = {}
-      newNodeData['id'] = newGroup["post_id"]
+      newNodeData['id'] = newGroup["ID"]
       newNodeData['parentId'] = parent.data.id
       newNodeData['name'] = fields.title
       genmapper.createNode( newNodeData )
