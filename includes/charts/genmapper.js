@@ -480,8 +480,6 @@ class GenMapper {
 
   addNode (d) {
     let tmp = _.cloneDeep(this.masterData)
-    console.log(tmp);
-    console.log(d);
     tmp.push({parentId:d.data.id})
     try {
       this.validTree(tmp)

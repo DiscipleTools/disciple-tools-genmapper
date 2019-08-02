@@ -137,9 +137,9 @@
       "milestones": { "values": [ { "value" : 'milestone_baptized' } ] },
       "baptism_date": baptismDate
     }
-    window.APIV2.create_post( 'contacts', fields ).then(( newContact )=>{
+    window.API.create_post( 'contacts', fields ).then(( newContact )=>{
       let newNodeData = {}
-      newNodeData['id'] = newContact["post_id"]
+      newNodeData['id'] = newContact["ID"]
       newNodeData['parentId'] = parent.data.id
       newNodeData['name'] = fields.title
       newNodeData["date"] = baptismDate
@@ -168,7 +168,7 @@
         contactFields["baptism_date"] = value
       }
     })
-    window.APIV2.update_post( "contacts", nodeID, contactFields ).then(resp=>{
+    window.API.update_post( "contacts", nodeID, contactFields ).then(resp=>{
       loading_spinner.removeClass("active")
     })
   })

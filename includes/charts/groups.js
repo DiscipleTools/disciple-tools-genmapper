@@ -160,7 +160,7 @@
         groupFields["group_type"] = value
       }
     })
-    window.APIV2.update_post( "groups", nodeID, groupFields ).then(resp=>{
+    window.API.update_post( "groups", nodeID, groupFields ).then(resp=>{
       loading_spinner.removeClass("active")
     })
   })
