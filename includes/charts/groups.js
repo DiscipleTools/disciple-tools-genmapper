@@ -64,9 +64,6 @@
       accent: true,
       searchOnFocus: true,
       maxItem: 20,
-      template: function (query, item) {
-        return `<span>${_.escape(item.name)}</span>`
-      },
       source: TYPEAHEADS.typeaheadSource('groups', 'dt-posts/v2/groups/compact/'),
       display: "name",
       templateValue: "{{name}}",
