@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <button class="button" id="reset_tree" style="margin: 0">${ __( 'Reset', 'disciple_tools' ) }</button>
+        <button class="button" id="reset_tree" style="margin: 0">Reset</button>
         <div style="display: inline-block" class="loading-spinner active"></div>
 
       </div>
@@ -64,6 +64,9 @@
       accent: true,
       searchOnFocus: true,
       maxItem: 20,
+      template: function (query, item) {
+        return `<span>${_.escape(item.name)}</span>`
+      },
       source: TYPEAHEADS.typeaheadSource('groups', 'dt-posts/v2/groups/compact/'),
       display: "name",
       templateValue: "{{name}}",

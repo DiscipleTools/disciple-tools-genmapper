@@ -45,7 +45,7 @@ const template = {
     },
     {
       'header': 'name',
-      'label' : __( 'Name', 'disciple_tools' ),
+      'label' : 'Name',
       'initial': '',
       'type': 'text',
       'svg': {
@@ -59,7 +59,7 @@ const template = {
     {
       'header': 'date',
       'initial': null,
-      'label': __( "Baptism Date", 'disciple_tools' ),
+      'label': "Baptism Date",
       'type': 'text',
       'svg': {
         'type': 'text',
@@ -250,7 +250,7 @@ const template = {
     // },
     {
       'header': 'active',
-      'label' : __( 'Active', 'disciple_tools' ),
+      'label' : 'Active',
       'initial': true,
       'type': 'checkbox'
       // svg defined currently in genmapper.js

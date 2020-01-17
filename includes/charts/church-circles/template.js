@@ -69,19 +69,19 @@ const template = {
   'fields': [
     {
       'header': 'id',
-      'label' : __( 'ID', 'disciple_tools' ),
+      'label' : 'ID',
       'initial': 0,
       'type': null
     },
     {
       'header': 'parentId',
-      'label' : __( 'Parent Id', 'disciple_tools' ),
+      'label' :'Parent Id',
       'initial': null,
       'type': null
     },
     {
       'header': 'name',
-      'label' : __( 'Name', 'disciple_tools' ),
+      'label' : 'Name',
       'initial': '',
       'type': 'text',
       'svg': {
@@ -221,16 +221,16 @@ const template = {
         return a
       })
 
-        // [
-        // {
-        //   'header': 'group',
-        //   'class': 'type-group',
-        //
-        // },
-        // {
-        //   'header': 'type-church',
-        //
-        // },
+      // [
+      // {
+      //   'header': 'group',
+      //   'class': 'type-group',
+      //
+      // },
+      // {
+      //   'header': 'type-church',
+      //
+      // },
 
       // ]
     },
@@ -413,7 +413,7 @@ const template = {
     // },
     {
       'header': 'active',
-      'label' : __( 'Active', 'disciple_tools' ),
+      'label' :'Active',
       'initial': true,
       'type': 'checkbox'
       // svg defined currently in genmapper.js

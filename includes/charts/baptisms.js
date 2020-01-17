@@ -12,10 +12,10 @@
     let chartDiv = jQuery('#chart') // retrieves the chart div in the metrics page
     const windowHeight = document.documentElement.clientHeight
     chartDiv.empty().html(`
-      <span class="section-header">${ __( 'Baptism Generation Tree', 'disciple_tools' ) }</span>
+      <span class="section-header">Baptism Generation Tree</span>
       <!--This tree only show First Generation ba that have multiplied-->
       <div >
-        <div class="section-subheader">${ __( 'Search for a specific contact or multiplier', 'disciple_tools' ) }</div>
+        <div class="section-subheader">Search for a specific contact or multiplier</div>
         <var id="groups-result-container" class="result-container" style="display: block"></var>
         <div id="groups_t" name="form-groups" class="scrollable-typeahead" style="max-width:300px; display: inline-block">
             <div class="typeahead__container">
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <button class="button" id="reset_tree" style="margin: 0">${ __( 'Reset', 'disciple_tools' ) }</button>
+        <button class="button" id="reset_tree" style="margin: 0">Reset</button>
         <div style="display: inline-block" class="loading-spinner active"></div>
       </div>
       <hr style="max-width:100%;">
@@ -63,6 +63,9 @@
       accent: true,
       searchOnFocus: true,
       maxItem: 20,
+      template: function (query, item) {
+        return `<span>${_.escape(item.name)}</span>`
+      },
       source: TYPEAHEADS.typeaheadSource('contacts', 'dt-posts/v2/contacts/compact/'),
       display: "name",
       templateValue: "{{name}}",

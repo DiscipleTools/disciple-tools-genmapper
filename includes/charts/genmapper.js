@@ -76,62 +76,62 @@ class GenMapper {
     const leftMenuHeight = document.getElementById('left-menu').clientHeight
     const height = Math.max(windowHeight, leftMenuHeight + 10)
     d3.select('#genmapper-graph-svg')
-      .attr('height', height)
+    .attr('height', height)
   }
 
   loadHTMLContent () {
     document.getElementById('left-menu').innerHTML = `<div id="template-logo">
-    <!--<button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="${ __( 'Help / About', 'disciple_tools' ) }">
+    <!--<button onclick="genmapper.introSwitchVisibility()" class="hint--rounded hint--right" aria-label="Help / About">
       <img src="${this.plugin_uri}/charts/icons/266-question.svg">
       </button> -->
-    <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="${ __( 'Original Zoom &amp; Position', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
-    <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom In', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
-    <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="${ __( 'Zoom Out', 'disciple_tools' ) }"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
+    <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="Original Zoom &amp; Position"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
+    <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="Zoom In"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
+    <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="Zoom Out"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
   `
 
     document.getElementById('edit-group').innerHTML = `<div id="edit-group-content">
-     <h1> ${ __( 'Edit Record', 'disciple_tools' ) }</h1>
+     <h1> Edit Record</h1>
      <form>
        <table>
          <tr>
-           <td class="left-field"> ${ __( 'Parent', 'disciple_tools' ) }  </td>
+           <td class="left-field"> Parent  </td>
            <td class="right-field"><p id="edit-parent"></p></td>
          </tr>
        </table>
      </form>
      <div id="edit-buttons">
-       <button id="edit-submit"> ${ __( 'Save Changes', 'disciple_tools' ) }  </button>
-       <button id="edit-cancel"> ${ __( 'Cancel', 'disciple_tools' ) }  </button>
-       <button id="open-record"> ${ __( 'Open Record', 'disciple_tools' ) }  </button>
-       <button id="rebase-node"> ${ __( 'Center on this node', 'disciple_tools' ) }  </button>
+       <button id="edit-submit"> Save Changes  </button>
+       <button id="edit-cancel"> Cancel  </button>
+       <button id="open-record"> Open Record  </button>
+       <button id="rebase-node"> Center on this node  </button>
      </div>
     </div>`
 
     // document.getElementById('intro-content').innerHTML = `<h2>
-    // ${ __( 'GenMapper Help', 'disciple_tools' ) }
+    // GenMapper Help
     // </h2>
     // <p>${ __( "Hello, this app should serve for mapping generations of simple churches. I pray it serves you to advance Jesus' kingdom.", 'disciple_tools' ) }</p>
-    // ${ __( 'Legend', 'disciple_tools' ) }
-    // <h3>${ __( 'Panning / Zooming', 'disciple_tools' ) }</h3>
-    // <p>${ __( 'You can pan by draging the map and zoom by mouse wheel or using buttons on the left.', 'disciple_tools' ) }</p>
-    // <h3>${ __( 'Credits', 'disciple_tools' ) }</h3>
-    // <p>${ __( 'Thanks to Curtis Sergeant for the idea of generational mapping and for providing useful feedback.', 'disciple_tools' ) }<br>
-    // ${ __( 'JavaScript/CSS libraries used', 'disciple_tools' ) }
+    // Legend
+    // <h3>Panning / Zooming</h3>
+    // <p>You can pan by draging the map and zoom by mouse wheel or using buttons on the left.</p>
+    // <h3>Credits</h3>
+    // <p>Thanks to Curtis Sergeant for the idea of generational mapping and for providing useful feedback.<br>
+    // JavaScript/CSS libraries used
     // : <a href="https://github.com/chinchang/hint.css/">hint.css</a>, <a href="https://d3js.org">d3.js</a>,
     // <a href="https://github.com/eligrey/FileSaver.js/">FileSaver.js</a>, <a href="https://github.com/SheetJS/js-xlsx">js-xlsx</a>,
     // <a href="https://lodash.com">lodash</a>
-    // ${ __( 'Icons used', 'disciple_tools' ) }
+    // Icons used
     // : <a href="https://github.com/Keyamoon/IcoMoon-Free">IcoMoon-Free</a><br><br>
-    // ${ __( 'Copyright (c) 2016 - 2018 Daniel Vopalecky', 'disciple_tools' ) }<br>
-    // ${ __( 'Licensed with MIT Licence', 'disciple_tools' ) }<br>
-    // <a href="https://github.com/dvopalecky/gen-mapper">${ __( 'Github repository', 'disciple_tools' ) }</a><br>
+    // Copyright (c) 2016 - 2018 Daniel Vopalecky<br>
+    // Licensed with MIT Licence<br>
+    // <a href="https://github.com/dvopalecky/gen-mapper">Github repository</a><br>
     // <br></p>
-    // <button onclick="genmapper.introSwitchVisibility()">${ __( 'Close', 'disciple_tools' ) }</button>`
+    // <button onclick="genmapper.introSwitchVisibility()">Close</button>`
 
     document.getElementById('alert-message').innerHTML =
-    `<div id="alert-message-content">
+      `<div id="alert-message-content">
       <p id="alert-message-text"></p>
-      <button onclick="genmapper.closeAlert()">${ __( 'OK', 'disciple_tools' ) }</button>
+      <button onclick="genmapper.closeAlert()">OK</button>
     </div>`
 
     // document.getElementById('gen-mapper-version').innerHTML = this.appVersion
@@ -139,7 +139,7 @@ class GenMapper {
   }
 
   getInitialValue (field) {
-      return field.initial
+    return field.initial
   }
 
   zoomIn () {
@@ -456,7 +456,7 @@ class GenMapper {
       .append('svg')
       .html(`
         <rect x="40" y="0" rx="7" width="25" height="40">
-          <title>${ __( 'Rebase', 'disciple_tools' ) }</title>
+          <title>Rebase</title>
         </rect>
         <line x1="46" y1="13.5" x2="46" y2="26.5" stroke="white" stroke-width="3"></line>
         <line x1="59" y1="13.5" x2="46" y2="13.5" stroke="white" stroke-width="3"></line>
@@ -471,7 +471,7 @@ class GenMapper {
       .append('svg')
       .html(`
         <rect x="40" y="40" rx="7" width="25" height="40">
-          <title> ${ __( 'Add child', 'disciple_tools' ) }</title>
+          <title> Add child</title>
         </rect>
         <line x1="45" y1="60" x2="60" y2="60" stroke="white" stroke-width="3"></line>
         <line x1="52.5" y1="52.5" x2="52.5" y2="67.5" stroke="white" stroke-width="3"></line>
@@ -484,7 +484,7 @@ class GenMapper {
     try {
       this.validTree(tmp)
     } catch (err) {
-      this.displayAlert(` ${ __( 'Cannot add a child to this node. Check if node has 2 parents.', 'disciple_tools' ) }`)
+      this.displayAlert(` Cannot add a child to this node. Check if node has 2 parents.`)
       return
     }
     // this.validTree(tmp)
@@ -644,9 +644,9 @@ class GenMapper {
 
 
     if (err.toString().includes('>= 0.') || err.toString().includes('Wrong type')) {
-      this.displayAlert(` ${ __( 'Error setting up the graph.', 'disciple_tools' ) }  <br>${err.toString()}`)
+      this.displayAlert(` Error setting up the graph.  <br>${err.toString()}`)
     } else {
-      this.displayAlert(` ${ __( 'Error setting up the graph', 'disciple_tools' ) }
+      this.displayAlert(` Error setting up the graph
         <br><br>
         This can be caused by circular connection data. 
         Check that no child has two parents that are related. A group and a grand child group can't both be the parent of another group.
