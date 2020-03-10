@@ -39,22 +39,12 @@
        the WordPress namespaces. -->
   <rule ref="WordPress">
 
-    <!-- TODO: enable these -->
-    <exclude name="WordPress.VIP.DirectDatabaseQuery.NoCaching" />
+    <!-- TODO: enable these rules: -->
     <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
-    <exclude name="WordPress.VIP.PostsPerPage.posts_per_page_nopaging" />
-    <exclude name="WordPress.VIP.PostsPerPage.posts_per_page_numberposts" />
     <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_get_user_meta" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_add_user_meta" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_update_user_meta" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.user_meta_delete_user_meta" />
-    <exclude name="WordPress.VIP.RestrictedVariables.user_meta__wpdb__usermeta" />
     <exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar" />
-    <exclude name="WordPress.VIP.FileSystemWritesDisallow" />
 
     <!-- We currently don't want these rules that WordPress imports: -->
-
     <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
     <exclude name="Generic.Classes.OpeningBraceSameLine.SpaceBeforeBrace" />
     <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedELSE" />
@@ -148,12 +138,9 @@
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.NoSpaceAfterComma" />
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.SpaceAfterComma" />
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.SpaceBeforeComma" />
+    <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+    <exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
     <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
-    <exclude name="WordPress.VIP.AdminBarRemoval.RemovalDetected" />
-    <exclude name="WordPress.VIP.DirectDatabaseQuery.SchemaChange" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.custom_role_add_role" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.get_term_by_get_term_by" />
-    <exclude name="WordPress.VIP.RestrictedFunctions.switch_to_blog_switch_to_blog" />
     <!-- <exclude name="WordPress.WhiteSpace.CastStructureSpacing.NoSpaceBeforeOpenParenthesis" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.ExtraSpaceAfterCloseParenthesis" /> -->
@@ -172,8 +159,6 @@
     <!-- <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.OperatorSpacing.SpacingAfter" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.OperatorSpacing.SpacingBefore" /> -->
-    <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
-    <exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
 
   </rule>
 
@@ -213,14 +198,10 @@
     </properties>
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+    <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
   </rule>
   <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
   <rule ref="PEAR.NamingConventions.ValidClassName"/>
-  <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
-    <properties>
-      <property name="prefixes" type="array" value="dt,Disciple_Tools" />
-    </properties>
-  </rule>
 
   <!-- Maybe these rules will be enabled in the future: -->
   <!-- <rule ref="Generic.Files.LineLength"/> -->
@@ -240,4 +221,3 @@
   <!-- <rule ref="Generic.Arrays.DisallowLongArraySyntax"/> -->
 
 </ruleset>
-
