@@ -27,7 +27,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
     }
 
-
     /**
      * Load scripts for the plugin
      */
@@ -88,8 +87,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         );
     }
 
-
-
     /**
      * Respond to transfer request of files
      *
@@ -122,19 +119,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
             $groups = array_merge( [ $node ], $this->get_node_descendants( $groups, [ $params["node"] ] ) );
         }
 
-
-//        $church_health_query = $wpdb->get_results("
-//            SELECT pm.post_id, GROUP_CONCAT(pm.meta_value) as meta
-//            FROM $wpdb->postmeta pm
-//            WHERE pm.meta_key = 'health_metrics'
-//            GROUP BY post_id
-//        ", ARRAY_A );
-//        $church_health = [];
-//        foreach ( $church_health_query as $query ){
-//            $church_health[ $query["post_id"] ] = $query["meta"];
-//        }
-
-
         foreach ( $groups as $group ){
             $values = [
                 "id" => $group["id"],
@@ -144,12 +128,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "active" => $group["group_status"] === "active",
                 "group_type" => $group["group_type"]
             ];
-//            if ( isset( $church_health[ $group["id"] ] ) ){
-//                $health_metrics = explode( ',', $church_health[ $group["id"] ] );
-//                foreach ( $health_metrics as $health_metric ){
-//                    $values[$health_metric] = true;
-//                }
-//            }
             $prepared_array[] = $values;
         }
 
@@ -159,19 +137,4 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
             return $prepared_array;
         }
     }
-
-    public function sample( WP_REST_Request $request ) {
-        if ( !$this->has_permission() ){
-            return new WP_Error( __METHOD__, 'Missing auth.' );
-        }
-        $params = $request->get_params();
-        if ( isset( $params['button_data'] ) ) {
-            // Do something
-            $results = $params['button_data'];
-            return $results;
-        } else {
-            return new WP_Error( __METHOD__, 'Missing parameters.' );
-        }
-    }
-
 }
