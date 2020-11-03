@@ -36,7 +36,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         wp_enqueue_style( "styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "style.css" ) );
         wp_register_script( 'd3', 'https://d3js.org/d3.v5.min.js', false, '5' );
 
-        $group_fields = Disciple_Tools_Groups_Post_Type::instance()->get_custom_fields_settings();
+        $group_fields = DT_Posts::get_post_field_settings( "groups" );
         wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "church-circles/template.js", [
             'jquery',
             'jquery-ui-core',

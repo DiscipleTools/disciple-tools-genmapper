@@ -37,7 +37,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         wp_enqueue_style( "styles", trailingslashit( plugin_dir_url( __FILE__ ) ) . "style.css", [], filemtime( plugin_dir_path( __FILE__ ) . "style.css" ) );
         wp_register_script( 'd3', 'https://d3js.org/d3.v5.min.js', false, '5' );
 
-        $group_fields = Disciple_Tools_Groups_Post_Type::instance()->get_custom_fields_settings();
+        $group_fields = DT_Posts::get_post_field_settings( "groups" );
         wp_enqueue_script( 'gen-template', trailingslashit( plugin_dir_url( __FILE__ ) ) . "disciples/template.js", [
             'jquery',
             'jquery-ui-core',
@@ -161,9 +161,9 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         // phpcs:disable
         // WordPress.WP.PreparedSQL.NotPrepared
         $active_contacts = $wpdb->get_results("
-            SELECT pm.post_id 
+            SELECT pm.post_id
             FROM $wpdb->postmeta pm
-            WHERE pm.post_id IN ($sql_ids) 
+            WHERE pm.post_id IN ($sql_ids)
             AND pm.meta_key = 'overall_status'
             AND pm.meta_value = 'active'
             GROUP BY post_id
@@ -177,7 +177,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         $baptism_dates = $wpdb->get_results("
             SELECT pm.post_id, pm.meta_value as date
             FROM $wpdb->postmeta pm
-            WHERE pm.post_id IN ($sql_ids) 
+            WHERE pm.post_id IN ($sql_ids)
             AND pm.meta_key = 'baptism_date'
             GROUP BY post_id
         ", ARRAY_A );
