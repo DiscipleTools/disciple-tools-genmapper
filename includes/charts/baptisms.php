@@ -11,7 +11,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
     public $js_object_name = 'wpApiGenmapper'; // This object will be loaded into the metrics.js file by the wp_localize_script.
     public $js_file_name = 'baptisms.js'; // should be full file name plus extension
     public $deep_link_hash = '#baptisms'; // should be the full hash name. #genmapper_of_hash
-    public $permissions = [ 'view_any_contacts', 'view_project_metrics', 'access_contacts' ];
+    public $permissions = [ 'dt_all_access_contacts', 'view_project_metrics', 'access_contacts' ];
 
     public function __construct() {
         parent::__construct();
@@ -119,7 +119,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
         $baptisms_results = dt_queries()->tree( 'multiplying_baptisms_only' );
 
         //limit multiplier's view to just their tree
-        if ( !current_user_can( 'view_any_contacts' ) && !current_user_can( 'view_project_metrics' ) ) {
+        if ( !current_user_can( 'dt_all_access_contacts' ) && !current_user_can( 'view_project_metrics' ) ) {
             $node = [];
             $contact_id = Disciple_Tools_Users::get_contact_for_user( get_current_user_id() );
             foreach ( $baptisms_results as $values ){
