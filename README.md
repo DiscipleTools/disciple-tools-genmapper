@@ -2,4 +2,4 @@
 
 # Disciple Tools GenMapper
 
-Disciple Tools GenMapper - Adds Genmapping capability to Disciple Tools.
+This plugin adds a generation mapping to the metrics section of the Disciple Tools system. Generation mapping shows parent/child relationship between contact, baptisms, and groups. 
