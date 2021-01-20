@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Disciple Tools - Genmapper
- * Plugin URI: https://github.com/ZumeProject/disciple-tools-advanced-metrics-template
- * Description: Disciple Tools - Genmapper Metrics Template extends the charts and reporting ability of Disciple Tools
- * Version:  0.2
+ * Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
+ * Description: Disciple Tools - Genmapper adds generation visualization to metrics section.
+ * Version:  1.0
  * Author URI: https://github.com/DiscipleTools
- * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-advanced-metrics-template
+ * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
  * Tested up to: 5.6
@@ -16,11 +16,10 @@
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_genmapper_required_dt_theme_version = '0.21.0';
+
 /**
  * Gets the instance of the `DT_genmapper_Metrics` class.
  *
@@ -29,7 +28,7 @@ $dt_genmapper_required_dt_theme_version = '0.21.0';
  * @return object|bool
  */
 function dt_genmapper_metrics() {
-    global $dt_genmapper_required_dt_theme_version;
+    $dt_genmapper_required_dt_theme_version = '0.21.0';
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
     /*
@@ -55,10 +54,10 @@ function dt_genmapper_metrics() {
      */
     $is_rest = dt_is_rest();
     if ( !$is_rest || strpos( dt_get_url_path(), 'genmapper' ) !== false ){
-        return DT_genmapper_Metrics::get_instance();
+        return DT_genmapper_Metrics::instance();
     }
 }
-add_action( 'init', 'dt_genmapper_metrics' );
+add_action( 'after_setup_theme', 'dt_genmapper_metrics' );
 
 /**
  * Singleton class for setting up the plugin.
@@ -68,96 +67,17 @@ add_action( 'init', 'dt_genmapper_metrics' );
  */
 class DT_Genmapper_Metrics {
 
-    /**
-     * Declares public variables
-     *
-     * @since  0.1
-     * @access public
-     * @return object
-     */
-    public $token;
-    public $version;
-    public $dir_path = '';
-    public $dir_uri = '';
-    public $img_uri = '';
-    public $includes_path;
-
-    /**
-     * Returns the instance.
-     *
-     * @since  0.1
-     * @access public
-     * @return object
-     */
-    public static function get_instance() {
-
-        static $instance = null;
-
-        if ( is_null( $instance ) ) {
-            $instance = new dt_genmapper_metrics();
-            $instance->setup();
-            $instance->includes();
-            $instance->setup_actions();
+    private static $_instance = null;
+    public static function instance() {
+        if ( is_null( self::$_instance ) ) {
+            self::$_instance = new self();
         }
-        return $instance;
+        return self::$_instance;
     }
 
-    /**
-     * Constructor method.
-     *
-     * @since  0.1
-     * @access private
-     * @return void
-     */
     private function __construct() {
-        add_filter( 'plugin_action_links_' .  plugin_basename( __FILE__ ), array( &$this, 'plugin_action_links' ) );
-    }
 
-    /**
-     * Loads files needed by the plugin.
-     *
-     * @since  0.1
-     * @access public
-     * @return void
-     */
-    private function includes() {
         require_once( 'includes/charts/charts-loader.php' );
-
-        if ( is_admin() ) {
-            require_once( 'includes/admin-menu-and-tabs.php' );
-        }
-    }
-
-    /**
-     * Sets up globals.
-     *
-     * @since  0.1
-     * @access public
-     * @return void
-     */
-    private function setup() {
-
-        // Main plugin directory path and URI.
-        $this->dir_path     = trailingslashit( plugin_dir_path( __FILE__ ) );
-        $this->dir_uri      = trailingslashit( plugin_dir_url( __FILE__ ) );
-
-        // Plugin directory paths.
-        $this->includes_path      = trailingslashit( $this->dir_path . 'includes' );
-
-
-        // Admin and settings variables
-        $this->token             = 'dt_genmapper_metrics';
-        $this->version             = '0.2';
-    }
-
-    /**
-     * Sets up main plugin actions and filters.
-     *
-     * @since  0.1
-     * @access public
-     * @return void
-     */
-    private function setup_actions() {
 
         if ( is_admin() ) {
             // Check for plugin updates
@@ -172,14 +92,19 @@ class DT_Genmapper_Metrics {
              * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
              */
             Puc_v4_Factory::buildUpdateChecker(
-                'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-genmapper-version-control.json',
+                'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/version-control.json',
                 __FILE__,
                 'disciple-tools-genmapper'
             );
         }
 
+        // Add links to plugin
+        if ( is_admin() ) {
+            add_filter( 'plugin_action_links_' .  plugin_basename( __FILE__ ), array( &$this, 'plugin_action_links' ) );
+        }
+
         // Internationalize the text strings used.
-        add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
+        add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
 
     /**
@@ -189,16 +114,7 @@ class DT_Genmapper_Metrics {
      * @access public
      * @return void
      */
-    public static function activation() {
-
-        // Confirm 'Administrator' has 'manage_dt' privilege. This is key in 'remote' configuration when
-        // Disciple Tools theme is not installed, otherwise this will already have been installed by the Disciple Tools Theme
-        $role = get_role( 'administrator' );
-        if ( !empty( $role ) ) {
-            $role->add_cap( 'manage_dt' ); // gives access to dt plugin options
-        }
-
-    }
+    public static function activation() {}
 
     /**
      * Method that runs only when the plugin is deactivated.
@@ -219,7 +135,20 @@ class DT_Genmapper_Metrics {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_genmapper_metrics', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        //Take from loadTextDomain() in /disciple-tools-theme/dt-core/libraries/plugin-update-checker/Puc/v4p5/UpdateChecker.php
+        $domain = 'disciple-tools-genmapper'; // this must be the same as the slug for the plugin
+        $locale = apply_filters(
+            'plugin_locale',
+            ( is_admin() && function_exists( 'get_user_locale' ) ) ? get_user_locale() : get_locale(),
+            $domain
+        );
+
+        $mo_file = $domain . '-' . $locale . '.mo';
+        $path = realpath( dirname( __FILE__ ) . '/languages' );
+
+        if ($path && file_exists( $path )) {
+            load_textdomain( $domain, $path . '/' . $mo_file );
+        }
     }
 
     /**

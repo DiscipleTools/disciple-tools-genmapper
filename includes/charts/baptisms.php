@@ -74,6 +74,12 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'spinner' => '<img src="' .trailingslashit( plugin_dir_url( __DIR__ ) ) . 'ajax-loader.gif" style="height:1em;" />',
+                'translation' => [
+                    'string1' => __( 'Baptism Generation Tree', 'disciple-tools-genmapper' ),
+                    'string2' => __( 'Search for a specific contact or multiplier', 'disciple-tools-genmapper' ),
+                    'string3' => __( 'Reset', 'disciple-tools-genmapper' ),
+                    'string4' => __( 'New Contact', 'disciple-tools-genmapper' ),
+                ]
             ]
         );
     }

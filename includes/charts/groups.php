@@ -72,9 +72,17 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'spinner' => '<img src="' .trailingslashit( plugin_dir_url( __DIR__ ) ) . 'ajax-loader.gif" style="height:1em;" />',
+                'translation' => [
+                    'string1' => __( 'Group Generation Tree', 'disciple-tools-genmapper' ),
+                    'string2' => __( 'This tree only shows First Generation groups that have multiplied.', 'disciple-tools-genmapper' ),
+                    'string3' => __( 'See descendants of a specific group', 'disciple-tools-genmapper' ),
+                    'string4' => __( 'Reset', 'disciple-tools-genmapper' ),
+                ]
             ]
         );
     }
+
+    //${localizedObject.translation.string /**/}
 
     public function add_api_routes() {
         register_rest_route(

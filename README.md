@@ -2,7 +2,48 @@
 
 # Disciple Tools - GenMapper
 
-This plugin adds a generation mapping to the metrics section of the Disciple Tools system. Generation mapping shows parent/child relationship between contact, baptisms, and groups.
+Add beautiful generation charts to visualize the connections between contacts, groups, churches, and baptisms.
+
+## Purpose
+
+Disciple.Tools can track all records generationally. This plugin adds the ability to visualize those connections
+in trees, so disciple making movement leaders can better understand and respond to fruitful and non-fruitful
+parts of the network.
+
+## Usage
+#### Can Do
+
+- Item
+- Item
+- Item
+
+#### Can't Do
+
+- Item
+- Item
+
+## Requirements
+
+- Disciple Tools Theme installed on a Wordpress Server
+
+## Installing
+
+Install as a standard Disciple.Tools/Wordpress plugin in the system Admin/Plugins area. Requires the user role of Administrator.
+
+
+## Contribution
+
+Contributions welcome. You can report issues and bugs in the
+[Issues](https://github.com/DiscipleTools/disciple-tools-list-exports/issues) section of the repo. You can present ideas
+in the [Discussions](https://github.com/DiscipleTools/disciple-tools-list-exports/discussions) section of the repo. And
+code contributions are welcome using the [Pull Request](https://github.com/DiscipleTools/disciple-tools-list-exports/pulls)
+system for git. For a more details on contribution see the
+[contribution guidelines](https://github.com/DiscipleTools/disciple-tools-list-exports/blob/master/CONTRIBUTING.md).
+
+
+## Screenshots
+
+
 
 ## Screenshots
 

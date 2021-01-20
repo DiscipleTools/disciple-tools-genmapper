@@ -12,43 +12,49 @@
 
     const windowHeight = document.documentElement.clientHeight
     chartDiv.empty().html(`
-      <span class="section-header">Group Generation Tree</span>
-      This tree only show First Generation groups that have multiplied
-      <div >
-        <div class="section-subheader">See descendants of a specific group</div>
-        <var id="groups-result-container" class="result-container" style="display: block"></var>
-        <div id="groups_t" name="form-groups" class="scrollable-typeahead" style="max-width:300px; display: inline-block">
-            <div class="typeahead__container">
-                <div class="typeahead__field">
-                    <span class="typeahead__query">
-                        <input class="js-typeahead-groups input-height"
-                               name="groups[query]" placeholder="Search groups"
-                               autocomplete="off">
-                    </span>
-                </div>
+      <div class="grid-x">
+        <div class="cell medium-9">
+            <span class="section-header">${localizedObject.translation.string1 /*Group Generation Tree*/}</span>
+            ${localizedObject.translation.string2 /*This tree only show First Generation groups that have multiplied*/}
+        </div>
+        <div class="cell medium-3">
+            <div class="input-group">
+              <div id="groups_t" name="form-groups" class="scrollable-typeahead">
+                  <div class="typeahead__container">
+                      <div class="typeahead__field">
+                          <span class="typeahead__query">
+                              <input class="js-typeahead-groups input-height"
+                                     name="groups[query]" placeholder="${localizedObject.translation.string3 /*See descendants of a specific group*/}"
+                                     autocomplete="off">
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <div class="input-group-button">
+                <button type="button" class="button small hollow" style="border:0"><span class="loading-spinner active"></span></button>
+              </div>
             </div>
         </div>
-        <button class="button" id="reset_tree" style="margin: 0">Reset</button>
-        <div style="display: inline-block" class="loading-spinner active"></div>
+        <div class="cell">
+          <hr style="max-width:100%;">
+          <aside id="left-menu">
+          </aside>
 
+          <section id="intro" class="intro">
+            <div id="intro-content"></div>
+          </section>
+
+          <section id="alert-message" class="alert-message">
+          </section>
+
+          <section id="edit-group" class="edit-group">
+          </section>
+
+          <section id="genmapper-graph" style="height:${document.documentElement.clientHeight -250}px">
+            <svg id="genmapper-graph-svg" width="100%"></svg>
+          </section>
+        </div>
       </div>
-      <hr style="max-width:100%;">
-      <aside id="left-menu">
-      </aside>
-    
-      <section id="intro" class="intro">
-        <div id="intro-content"></div>
-      </section>
-    
-      <section id="alert-message" class="alert-message">
-      </section>
-    
-      <section id="edit-group" class="edit-group">
-      </section>
-    
-      <section id="genmapper-graph" style="height:${document.documentElement.clientHeight -200}px">
-        <svg id="genmapper-graph-svg" width="100%"></svg>
-      </section>     
     `)
 
     window.genmapper = new window.genMapperClass()
