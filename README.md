@@ -13,14 +13,11 @@ parts of the network.
 ## Usage
 #### Can Do
 
-- Item
-- Item
-- Item
-
-#### Can't Do
-
-- Item
-- Item
+- Adds a new section to metrics called Gen Mapper
+- Adds baptism metrics
+- Adds group metrics
+- Adds filtering
+- Adds node creation management
 
 ## Requirements
 
@@ -28,27 +25,20 @@ parts of the network.
 
 ## Installing
 
-Install as a standard Disciple.Tools/Wordpress plugin in the system Admin/Plugins area. Requires the user role of Administrator.
-
+- Install as a standard Disciple.Tools/Wordpress plugin in the system Admin/Plugins area.
+- Requires the user role of Administrator.
+- No further configuration required.
 
 ## Contribution
 
 Contributions welcome. You can report issues and bugs in the
-[Issues](https://github.com/DiscipleTools/disciple-tools-list-exports/issues) section of the repo. You can present ideas
-in the [Discussions](https://github.com/DiscipleTools/disciple-tools-list-exports/discussions) section of the repo. And
-code contributions are welcome using the [Pull Request](https://github.com/DiscipleTools/disciple-tools-list-exports/pulls)
+[Issues](https://github.com/DiscipleTools/disciple-tools-genmapper/issues) section of the repo. You can present ideas
+in the [Discussions](https://github.com/DiscipleTools/disciple-tools-genmapper/discussions) section of the repo. And
+code contributions are welcome using the [Pull Request](https://github.com/DiscipleTools/disciple-tools-genmapper/pulls)
 system for git. For a more details on contribution see the
-[contribution guidelines](https://github.com/DiscipleTools/disciple-tools-list-exports/blob/master/CONTRIBUTING.md).
-
-
-## Screenshots
-
+[contribution guidelines](https://github.com/DiscipleTools/disciple-tools-genmapper/blob/master/CONTRIBUTING.md).
 
 
 ## Screenshots
 
 ![sample gen map](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/documentation/genmapper-1.png)
-
-![sample gen map](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/documentation/genmapper-2.png)
-
-![sample gen map](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/documentation/genmapper-3.png)
