@@ -106,8 +106,8 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
     /**
      * Respond to transfer request of files
      *
-     * @param \WP_REST_Request $request
-     * @return array|\WP_Error
+     * @param WP_REST_Request $request
+     * @return array|WP_Error
      */
     public function baptisms( WP_REST_Request $request ) {
 
@@ -123,6 +123,9 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
           $root_node
         ];
         $baptisms_results = dt_queries()->tree( 'multiplying_baptisms_only' );
+        if ( is_wp_error( $baptisms_results )){
+            return $baptisms_results;
+        }
 
         //limit multiplier's view to just their tree
         if ( !current_user_can( 'dt_all_access_contacts' ) && !current_user_can( 'view_project_metrics' ) ) {
@@ -136,7 +139,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
             }
             $baptisms_results = array_merge( [ $node ], $this->get_node_descendants( $baptisms_results, [ $contact_id ] ) );
         }
-        if ( !empty( $params["node"] && $params["node"] != "null" ) ){
+        if ( !empty( $params["node"] ) && $params["node"] != "null" ){
             $node = [];
             foreach ( $baptisms_results as $res ){
                 if ( $res["id"] === $params["node"] ){

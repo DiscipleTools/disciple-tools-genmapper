@@ -117,9 +117,9 @@
         },
       })
         .fail(function (err) {
+          displayError(err)
           console.log("error")
           console.log(err)
-          jQuery("#alert-message").append(err.responseText)
         })
         .then(e=>{
           loading_spinner.removeClass("active")
@@ -128,6 +128,13 @@
         })
 
     })
+  }
+  function displayError (err, msg) {
+    window.genmapper.displayAlert()
+    if ( err.responseJSON && err.responseJSON.data && err.responseJSON.data.record ){
+      let msg = err.responseJSON.message + ` <a target="_blank" href="${err.responseJSON.data.link}">Open Record</a>`
+      window.genmapper.displayAlert(msg)
+    }
   }
 
   chartDiv.on('rebase-node-requested', function (e, node) {

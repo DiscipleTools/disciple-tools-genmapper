@@ -15,17 +15,17 @@
 
       <div class="grid-x">
         <div class="cell medium-9">
-            <span class="section-header">${localizedObject.translation.string1 /*Group Generation Tree*/}</span>
+            <span class="section-header">${localizedObject.translation.string1 /*contact Generation Tree*/}</span>
         </div>
         <div class="cell medium-3">
-        <var id="groups-result-container" class="result-container" style="display: block"></var>
+        <var id="contacts-result-container" class="result-container" style="display: block"></var>
             <div class="input-group">
-              <div id="groups_t" name="form-groups" class="scrollable-typeahead">
+              <div id="contacts_t" name="form-contacts" class="scrollable-typeahead">
                   <div class="typeahead__container">
                       <div class="typeahead__field">
                           <span class="typeahead__query">
-                              <input class="js-typeahead-groups input-height"
-                                     name="groups[query]" placeholder="${localizedObject.translation.string2 /*This tree only show First Generation groups that have multiplied*/}"
+                              <input class="js-typeahead-contacts input-height"
+                                     name="contacts[query]" placeholder="${localizedObject.translation.string2 /*This tree only show First Generation contacts that have multiplied*/}"
                                      autocomplete="off">
                           </span>
                       </div>
@@ -120,9 +120,9 @@
         },
       })
         .fail(function (err) {
+          displayError(err)
           console.log("error")
           console.log(err)
-          jQuery("#alert-message").append(err.responseText)
         })
         .then(e=>{
           loading_spinner.removeClass("active")
@@ -131,6 +131,13 @@
         })
 
     })
+  }
+  function displayError (err, msg) {
+    window.genmapper.displayAlert()
+    if ( err.responseJSON && err.responseJSON.data && err.responseJSON.data.record ){
+      let msg = err.responseJSON.message + ` <a target="_blank" href="${err.responseJSON.data.link}">Open Record</a>`
+      window.genmapper.displayAlert(msg)
+    }
   }
 
   chartDiv.on('rebase-node-requested', function (e, node) {

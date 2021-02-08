@@ -98,8 +98,8 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
     /**
      * Respond to transfer request of files
      *
-     * @param \WP_REST_Request $request
-     * @return array|\WP_Error
+     * @param WP_REST_Request $request
+     * @return array|WP_Error
      */
     public function groups( WP_REST_Request $request ) {
 
@@ -114,6 +114,9 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
             ]
         ];
         $groups = dt_queries()->tree( 'multiplying_groups_only' );
+        if ( is_wp_error( $groups )){
+            return $groups;
+        }
 
         if ( !empty( $params["node"] && $params["node"] != "null" ) ){
             $node = [];
