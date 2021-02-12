@@ -1,0 +1,1750 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Disciple Tools Plugins\n"
+"Language: kn\n"
+
+#: disciple-tools-dashboard.php:253 disciple-tools-dashboard.php:264
+msgid "Whoah, partner!"
+msgstr "ಓಹ್, ಪಾಲುದಾರ!"
+
+#: disciple-tools-dashboard.php:276
+msgid "Method does not exist."
+msgstr "ವಿಧಾನವು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ."
+
+#: metrics/mapbox-maps.php:30
+msgid "Training Maps"
+msgstr "ತರಬೇತಿ ನಕ್ಷೆಗಳು"
+
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:54
+#: post-type/module-base.php:528
+#: post-type/module-base.php:354
+msgid "Trainings"
+msgstr "ತರಬೇತಿಗಳು"
+
+#: metrics/mapbox-personal-maps.php:30
+msgid "Trainings Maps"
+msgstr "ತರಬೇತಿ ನಕ್ಷೆಗಳು"
+
+#: post-type/module-base.php:54
+msgid "Training"
+msgstr "ತರಬೇತಿ"
+
+#: post-type/module-base.php:61
+#: post-type/module-base.php:59
+msgid "Multiplier"
+msgstr "ಗುಣಕ"
+
+#: post-type/module-base.php:67
+#: post-type/module-base.php:65
+msgid "Dispatcher"
+msgstr "ರವಾನೆದಾರ"
+
+#: post-type/module-base.php:74
+#: post-type/module-base.php:72
+msgid "Disciple.Tools Admin"
+msgstr "ಶಿಷ್ಯ. ಟೂಲ್ಸ್ ನಿರ್ವಹಣೆ"
+
+#: post-type/module-base.php:81
+#: post-type/module-base.php:79
+msgid "Administrator"
+msgstr "ನಿರ್ವಾಹಕರು"
+
+#: post-type/module-base.php:432
+msgid "Members"
+msgstr "ಸದಸ್ಯರು"
+
+#: post-type/module-base.php:433
+#: metrics/base.php:222
+#: metrics/base.php:249
+#: metrics/network-maps-area.php:72
+#: metrics/network-maps-area.php:115
+#: metrics/network-statistics-contacts.php:12
+#: metrics/network-statistics-contacts.php:13
+#: metrics/network-statistics-contacts.php:14
+#: metrics/network-statistics-contacts.php:51
+msgid "Contacts"
+msgstr "ಸಂಪರ್ಕಗಳು"
+
+#: post-type/module-base.php:475
+#: post-type/module-base.php:294
+#: post-type/module-base.php:450
+#: metrics/base.php:223
+#: metrics/base.php:252
+#: metrics/network-maps-area.php:81
+#: metrics/network-maps-area.php:121
+#: metrics/network-statistics-groups.php:12
+#: metrics/network-statistics-groups.php:13
+#: metrics/network-statistics-groups.php:14
+#: metrics/network-statistics-groups.php:50
+msgid "Groups"
+msgstr "ಗುಂಪುಗಳು"
+
+#: post-type/module-base.php:457
+#: post-type/module-base.php:259
+#: post-type/module-base.php:467
+msgid "Leaders"
+msgstr "ನಾಯಕರು"
+
+#: post-type/module-base.php:484
+msgid "Coaches"
+msgstr "ತರಬೇತುದಾರರು"
+
+#: post-type/module-base.php:497
+msgid "Planted by"
+msgstr "ಇವರಿಂದ ನೆಡಲಾಗಿದೆ"
+
+#: post-type/module-base.php:498
+msgid "Planting"
+msgstr "ನಾಟಿ"
+
+#: post-type/module-base.php:466
+#: post-type/module-base.php:203
+#: post-type/module-base.php:519
+msgid "People Groups"
+msgstr "ಜನರ ಗುಂಪುಗಳು"
+
+#: post-type/module-base.php:217
+#: post-type/module-base.php:102
+msgid "Tags"
+msgstr "ಟ್ಯಾಗ್ಗಳು"
+
+#: post-type/module-base.php:218
+msgctxt "Optional Documentation"
+msgid "A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags."
+msgstr "ಸಂಬಂಧಿತ ವಸ್ತುಗಳನ್ನು ತರಬೇತಿ ಮಾಡಲು ಒಂದು ಉಪಯುಕ್ತ ಮಾರ್ಗ ಮತ್ತು ಗಮನಾರ್ಹ ಗುಣಲಕ್ಷಣಗಳೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಸಂಪರ್ಕಗಳನ್ನು ತರಬೇತಿ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಉದಾ. ವ್ಯಾಪಾರ ಮಾಲೀಕರು, ಕ್ರೀಡಾ ಪ್ರೇಮಿ. ಈ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸಂಪರ್ಕಗಳನ್ನು ಸಹ ಫಿಲ್ಟರ್ ಮಾಡಬಹುದು."
+
+#: post-type/module-base.php:225
+#: post-type/module-base.php:111
+msgid "Follow"
+msgstr "ಅನುಸರಿಸಿ"
+
+#: post-type/module-base.php:232
+#: post-type/module-base.php:118
+msgid "Un-Follow"
+msgstr "ಅನ್-ಫಾಲೋ"
+
+#: includes/template-dashboard.php:164
+#: post-type/module-base.php:238
+#: post-type/module-base.php:124
+msgid "Tasks"
+msgstr "ಕಾರ್ಯಗಳು"
+
+#: post-type/module-base.php:252
+msgctxt "Training Status label"
+msgid "New"
+msgstr "ಹೊಸದು"
+
+#: post-type/module-base.php:253
+msgctxt "Training Status field description"
+msgid "New training added to the system"
+msgstr "ವ್ಯವಸ್ಥೆಗೆ ಹೊಸ ತರಬೇತಿ ಸೇರಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:257
+msgctxt "Training Status label"
+msgid "Proposed"
+msgstr "ಪ್ರಸ್ತಾಪಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:258
+msgctxt "Training Status field description"
+msgid "This training has been proposed and is in initial conversations"
+msgstr "ಈ ತರಬೇತಿಯನ್ನು ಪ್ರಸ್ತಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಆರಂಭಿಕ ಸಂಭಾಷಣೆಯಲ್ಲಿದೆ"
+
+#: post-type/module-base.php:262
+msgctxt "Training Status label"
+msgid "Scheduled"
+msgstr "ಪರಿಶಿಷ್ಟ"
+
+#: post-type/module-base.php:263
+msgctxt "Training Status field description"
+msgid "This training is confirmed, on the calendar."
+msgstr "ಈ ತರಬೇತಿಯನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದೃ is ಪಡಿಸಲಾಗಿದೆ."
+
+#: post-type/module-base.php:267
+msgctxt "Training Status label"
+msgid "In Progress"
+msgstr "ಪ್ರಗತಿಯಲ್ಲಿದೆ"
+
+#: post-type/module-base.php:268
+msgctxt "Training Status field description"
+msgid "This training is confirmed, on the calendar, or currently active."
+msgstr "ಈ ತರಬೇತಿಯನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಅಥವಾ ಪ್ರಸ್ತುತ ಸಕ್ರಿಯವಾಗಿ ದೃ confirmed ಪಡಿಸಲಾಗಿದೆ."
+
+#: post-type/module-base.php:272
+msgctxt "Training Status label"
+msgid "Complete"
+msgstr "ಪೂರ್ಣಗೊಂಡಿದೆ"
+
+#: post-type/module-base.php:273
+msgctxt "Training Status field description"
+msgid "This training has successfully completed"
+msgstr "ಈ ತರಬೇತಿ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ"
+
+#: post-type/module-base.php:277
+msgctxt "Training Status label"
+msgid "Paused"
+msgstr "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:278
+msgctxt "Training Status field description"
+msgid "This contact is currently on hold. It has potential of getting scheduled in the future."
+msgstr "ಈ ಸಂಪರ್ಕವು ಪ್ರಸ್ತುತ ಸ್ಥಗಿತಗೊಂಡಿದೆ. ಇದು ಭವಿಷ್ಯದಲ್ಲಿ ನಿಗದಿತ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೊಂದಿದೆ."
+
+#: post-type/module-base.php:282
+msgctxt "Training Status label"
+msgid "Closed"
+msgstr "ಮುಚ್ಚಲಾಗಿದೆ"
+
+#: post-type/module-base.php:283
+msgctxt "Training Status field description"
+msgid "This training is no longer going to happen."
+msgstr "ಈ ತರಬೇತಿ ಇನ್ನು ಮುಂದೆ ಆಗುವುದಿಲ್ಲ."
+
+#: post-type/module-base.php:290
+#: post-type/module-base.php:176
+msgid "Assigned To"
+msgstr "ಗೆ ನಿಯೋಜಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:291
+msgid "Select the main person who is responsible for reporting on this training."
+msgstr "ಈ ತರಬೇತಿಯ ಬಗ್ಗೆ ವರದಿ ಮಾಡುವ ಜವಾಬ್ದಾರಿಯುತ ಮುಖ್ಯ ವ್ಯಕ್ತಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+
+#: post-type/module-base.php:299
+msgid "Training Coach / Church Planter"
+msgstr "ತರಬೇತಿ ಕೋಚ್ / ಚರ್ಚ್ ಪ್ಲಾಂಟರ್"
+
+#: post-type/module-base.php:300
+msgctxt "Optional Documentation"
+msgid "The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training."
+msgstr "ಈ ತರಬೇತಿಯನ್ನು ನೆಟ್ಟ ಮತ್ತು / ಅಥವಾ ತರಬೇತಿ ನೀಡುವ ವ್ಯಕ್ತಿ. ಒಬ್ಬ ವ್ಯಕ್ತಿಯನ್ನು ಮಾತ್ರ ತರಬೇತಿಗೆ ನಿಯೋಜಿಸಬಹುದು ಆದರೆ ಅನೇಕ ಜನರು ಈ ತರಬೇತಿಯ ತರಬೇತುದಾರರು / ಚರ್ಚ್ ಪ್ಲಾಂಟರ್‌ಗಳಾಗಿರಬಹುದು."
+
+#: post-type/module-base.php:310
+#: post-type/module-base.php:196
+msgid "Requires Update"
+msgstr "ನವೀಕರಣದ ಅಗತ್ಯವಿದೆ"
+
+#: post-type/module-base.php:316
+msgid "Video Link"
+msgstr "ವೀಡಿಯೊ ಲಿಂಕ್"
+
+#: post-type/module-base.php:317
+msgctxt "Optional Documentation"
+msgid "Link to video chat service"
+msgstr "ವೀಡಿಯೊ ಚಾಟ್ ಸೇವೆಗೆ ಲಿಂಕ್ ಮಾಡಿ"
+
+#: post-type/module-base.php:324
+msgid "Notes"
+msgstr "ಟಿಪ್ಪಣಿಗಳು"
+
+#: post-type/module-base.php:325
+msgctxt "Optional Documentation"
+msgid "Notes on when the trainings will happen"
+msgstr "ತರಬೇತಿಗಳು ಯಾವಾಗ ಸಂಭವಿಸುತ್ತವೆ ಎಂಬುದರ ಕುರಿತು ಟಿಪ್ಪಣಿಗಳು"
+
+#: post-type/module-base.php:334
+#: post-type/module-base.php:544
+msgid "Meeting Times"
+msgstr "ಮೀಟಿಂಗ್ ಟೈಮ್ಸ್"
+
+#: post-type/module-base.php:382
+#: post-type/module-base.php:391
+#: post-type/module-base.php:219
+#: post-type/module-base.php:228
+msgid "Locations"
+msgstr "ಸ್ಥಳಗಳು"
+
+#: post-type/module-base.php:383
+#: post-type/module-base.php:392
+#: post-type/module-base.php:220
+#: post-type/module-base.php:229
+msgctxt "Optional Documentation"
+msgid "The general location where this contact is located."
+msgstr "ಈ ಸಂಪರ್ಕ ಇರುವ ಸಾಮಾನ್ಯ ಸ್ಥಳ."
+
+#: post-type/module-base.php:399
+#: post-type/module-base.php:236
+msgid "Address"
+msgstr "ವಿಳಾಸ"
+
+#: post-type/module-base.php:416
+msgid "Parent Training"
+msgstr "ಪೋಷಕರ ತರಬೇತಿ"
+
+#: post-type/module-base.php:417
+msgctxt "Optional Documentation"
+msgid "A training that launched this training."
+msgstr "ಈ ತರಬೇತಿಯನ್ನು ಪ್ರಾರಂಭಿಸಿದ ತರಬೇತಿ."
+
+#: post-type/module-base.php:427
+msgid "Peer Training"
+msgstr "ಪೀರ್ ತರಬೇತಿ"
+
+#: post-type/module-base.php:428
+msgctxt "Optional Documentation"
+msgid "A related training that isn't a parent/child in relationship. It might indicate trainings that collaborate, are about to merge, recently split, etc."
+msgstr "ಸಂಬಂಧದಲ್ಲಿ ಪೋಷಕರು / ಮಗು ಅಲ್ಲದ ಸಂಬಂಧಿತ ತರಬೇತಿ. ಇದು ಸಹಕರಿಸುವ, ವಿಲೀನಗೊಳ್ಳಲಿರುವ, ಇತ್ತೀಚೆಗೆ ವಿಭಜನೆಯಾಗುವಂತಹ ತರಬೇತಿಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ."
+
+#: post-type/module-base.php:438
+msgid "Child Training"
+msgstr "ಮಕ್ಕಳ ತರಬೇತಿ"
+
+#: post-type/module-base.php:439
+msgctxt "Optional Documentation"
+msgid "A training that has been birthed out of this training."
+msgstr "ಈ ತರಬೇತಿಯಿಂದ ಹೊರಹೊಮ್ಮಿದ ತರಬೇತಿ."
+
+#: post-type/module-base.php:449
+#: post-type/module-base.php:543
+#: post-type/module-base.php:654
+msgid "Member List"
+msgstr "ಸದಸ್ಯರ ಪಟ್ಟಿ"
+
+#: post-type/module-base.php:450
+msgctxt "Optional Documentation"
+msgid "The contacts who are members of this training."
+msgstr "ಈ ತರಬೇತಿಯ ಸದಸ್ಯರಾದ ಸಂಪರ್ಕಗಳು."
+
+#: post-type/module-base.php:467
+msgctxt "Optional Documentation"
+msgid "The people trainings represented by this training."
+msgstr "ಈ ತರಬೇತಿಯಿಂದ ಪ್ರತಿನಿಧಿಸುವ ಜನರ ತರಬೇತಿ."
+
+#: post-type/module-base.php:487
+msgid "Member Count"
+msgstr "ಸದಸ್ಯರ ಎಣಿಕೆ"
+
+#: post-type/module-base.php:488
+#: post-type/module-base.php:495
+msgctxt "Optional Documentation"
+msgid "The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training."
+msgstr "ಈ ತರಬೇತಿಯಲ್ಲಿ ಸದಸ್ಯರ ಸಂಖ್ಯೆ. ಸದಸ್ಯರ ಪಟ್ಟಿಯಲ್ಲಿ ಹೊಸ ಸದಸ್ಯರನ್ನು ಸೇರಿಸಿದಾಗ ಅಥವಾ ತೆಗೆದುಹಾಕಿದಾಗ ಅದು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಿಸಲ್ಪಡುತ್ತದೆ. ವ್ಯವಸ್ಥೆಯಲ್ಲಿಲ್ಲದ ಆದರೆ ತರಬೇತಿಯ ಸದಸ್ಯರಾಗಿರುವ ವ್ಯಕ್ತಿಗಳಿಗೆ ಈ ಸಂಖ್ಯೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ."
+
+#: post-type/module-base.php:494
+msgid "Leader Count"
+msgstr "ಲೀಡರ್ ಎಣಿಕೆ"
+
+#: post-type/module-base.php:504
+msgid "Training as Leader"
+msgstr "ನಾಯಕನಾಗಿ ತರಬೇತಿ"
+
+#: post-type/module-base.php:505
+msgctxt "Optional Documentation"
+msgid "Leader of a training"
+msgstr "ತರಬೇತಿಯ ನಾಯಕ"
+
+#: post-type/module-base.php:515
+msgid "Training as Participant"
+msgstr "ಭಾಗವಹಿಸುವವರಾಗಿ ತರಬೇತಿ"
+
+#: post-type/module-base.php:516
+msgctxt "Optional Documentation"
+msgid "Participant in a training."
+msgstr "ತರಬೇತಿಯಲ್ಲಿ ಭಾಗವಹಿಸುವವರು."
+
+#: post-type/module-base.php:545
+#: post-type/module-base.php:537
+msgid "Other"
+msgstr "ಇತರೆ"
+
+#: post-type/module-base.php:576
+#: post-type/module-base.php:568
+msgctxt "input field placeholder"
+msgid "Search Users"
+msgstr "ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ"
+
+#: post-type/module-base.php:633
+#: post-type/module-base.php:601
+msgctxt "Search 'something'"
+msgid "Search %s"
+msgstr "% S ಹುಡುಕಿ"
+
+#: post-type/module-base.php:657
+msgid "Create"
+msgstr "ರಚಿಸಿ"
+
+#: post-type/module-base.php:662
+msgid "Select"
+msgstr "ಆಯ್ಕೆ ಮಾಡಿ"
+
+#: post-type/module-base.php:667
+msgid "To add new members, click on 'Create' or 'Select'."
+msgstr "ಹೊಸ ಸದಸ್ಯರನ್ನು ಸೇರಿಸಲು, 'ರಚಿಸು' ಅಥವಾ 'ಆಯ್ಕೆ' ಕ್ಲಿಕ್ ಮಾಡಿ."
+
+#: post-type/module-base.php:672
+msgctxt "Add members modal"
+msgid "Add members from existing contacts"
+msgstr "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸಂಪರ್ಕಗಳಿಂದ ಸದಸ್ಯರನ್ನು ಸೇರಿಸಿ"
+
+#: post-type/module-base.php:673
+msgctxt "Add members modal"
+msgid "In the 'Member List' field, type the name of an existing contact to add them to this training."
+msgstr "'ಸದಸ್ಯರ ಪಟ್ಟಿ' ಕ್ಷೇತ್ರದಲ್ಲಿ, ಈ ತರಬೇತಿಗೆ ಅವರನ್ನು ಸೇರಿಸಲು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸಂಪರ್ಕದ ಹೆಸರನ್ನು ಟೈಪ್ ಮಾಡಿ."
+
+#: post-type/module-base.php:682
+msgid "Close"
+msgstr "ಮುಚ್ಚಿ"
+
+#: post-type/module-base.php:880
+msgid "Removed %1$s: %2$s"
+msgstr "% 1 $ s ತೆಗೆದುಹಾಕಲಾಗಿದೆ:% 2 $ s"
+
+#: post-type/module-base.php:883
+msgid "Added %1$s: %2$s"
+msgstr "% 1 $ s ಸೇರಿಸಲಾಗಿದೆ:% 2 $ s"
+
+#: post-type/module-base.php:886
+msgid "Updated %1$s: %2$s to %3$s"
+msgstr "% 1 $ s:% 2 $ s ನಿಂದ% 3 $ s ಗೆ ನವೀಕರಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:958
+#: post-type/module-base.php:942
+msgctxt "List Filters"
+msgid "Assigned to me"
+msgstr "ನನಗೆ ನಿಯೋಜಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:966
+#: post-type/module-base.php:1023
+#: post-type/module-base.php:1031
+#: post-type/module-base.php:950
+#: post-type/module-base.php:1007
+#: post-type/module-base.php:1015
+msgctxt "List Filters"
+msgid "All"
+msgstr "ಎಲ್ಲಾ"
+
+#: post-type/module-reports.php:85
+msgid "Reports"
+msgstr "ವರದಿಗಳು"
+
+#: post-type/module-reports.php:121
+msgid "Total Groups"
+msgstr "ಒಟ್ಟು ಗುಂಪುಗಳು"
+
+#: post-type/module-reports.php:122
+msgid "Total Baptisms"
+msgstr "ಒಟ್ಟು ಬ್ಯಾಪ್ಟಿಸಮ್ಗಳು"
+
+#: post-type/module-reports.php:123
+#: metrics/base.php:312
+msgid "Countries"
+msgstr "ದೇಶಗಳು"
+
+#: post-type/module-reports.php:124
+msgid "States"
+msgstr "ರಾಜ್ಯಗಳು"
+
+#: post-type/module-reports.php:125
+msgid "Counties"
+msgstr "ಕೌಂಟಿಗಳು"
+
+#: post-type/module-public-calendar.php:432
+#: post-type/module-registration.php:385
+msgid "Add"
+msgstr "ಸೇರಿಸಿ"
+
+#: post-type/module-registration.php:31
+msgid "Apps"
+msgstr "ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"
+
+#: post-type/module-registration.php:59
+msgid "copy link"
+msgstr "ನಕಲು ಲಿಂಕ್"
+
+#: post-type/module-registration.php:61
+msgid "edit form"
+msgstr "ಫಾರ್ಮ್ ಅನ್ನು ಸಂಪಾದಿಸಿ"
+
+#: post-type/module-registration.php:63
+msgid "report"
+msgstr "ವರದಿ"
+
+#: post-type/module-registration.php:67
+msgid "create link"
+msgstr "ಲಿಂಕ್ ರಚಿಸಿ"
+
+#: post-type/module-registration.php:114
+msgid "link"
+msgstr "ಲಿಂಕ್"
+
+#: post-type/module-registration.php:116
+msgid "show on calendar"
+msgstr "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ತೋರಿಸಿ"
+
+#: post-type/module-registration.php:118
+msgid "open registration"
+msgstr "ಮುಕ್ತ ನೋಂದಣಿ "
+
+#: metrics/network-maps-area.php:68
+msgid "add"
+msgstr "ಸೇರಿಸಿ"
+
+#: post-type/module-registration.php:266
+msgid "Use"
+msgstr "ಬಳಸಿ"
+
+#: post-type/module-registration.php:267 post-type/module-registration.php:695
+msgid "Search Location"
+msgstr "ಸ್ಥಳವನ್ನು ಹುಡುಕಿ"
+
+#: post-type/module-registration.php:268
+msgid "Delete Location"
+msgstr "ಸ್ಥಳವನ್ನು ಅಳಿಸಿ"
+
+#: post-type/module-registration.php:269
+msgid "Open Mapping"
+msgstr "ಓಪನ್ ಮ್ಯಾಪಿಂಗ್"
+
+#: post-type/module-registration.php:270
+msgid "clear"
+msgstr "ಸ್ಪಷ್ಟ"
+
+#: post-type/module-registration.php:384
+msgid "Register for Training"
+msgstr "ತರಬೇತಿಗಾಗಿ ನೋಂದಾಯಿಸಿ"
+
+#: post-type/module-registration.php:386
+msgid "Join Training"
+msgstr "ತರಬೇತಿಗೆ ಸೇರಿ"
+
+#: post-type/module-registration.php:387
+msgid "Join in"
+msgstr "ಸೇರಲು"
+
+#: post-type/module-registration.php:700
+msgid "Clear"
+msgstr "ಸ್ಪಷ್ಟ"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Training"
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ತರಬೇತಿ"
+
+#: includes/admin/admin-menu-and-tabs.php:62
+msgid "Extensions (DT)"
+msgstr "ವಿಸ್ತರಣೆಗಳು (ಡಿಟಿ)"
+
+#: admin/menu-and-tabs.php:64 admin/menu-and-tabs.php:65
+#: admin/menu-and-tabs.php:103
+msgid "Network Dashboard"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
+
+#: includes/admin/admin-menu-and-tabs.php:78
+msgid "You do not have sufficient permissions to access this page."
+msgstr "ಈ ಪುಟವನ್ನು ಪ್ರವೇಶಿಸಲು ನಿಮಗೆ ಸಾಕಷ್ಟು ಅನುಮತಿಗಳಿಲ್ಲ."
+
+#: admin/menu-and-tabs.php:107 admin/menu-and-tabs.php:130
+#: admin/menu-and-tabs.php:135
+msgid "nav-tab-active"
+msgstr "nav-tab-active"
+
+#: admin/migrations/0000-initial.php:21
+msgid "Network Dashboard Viewer"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ವೀಕ್ಷಕ"
+
+#: metrics/base.php:220
+msgid "ID"
+msgstr "ಐಡಿ"
+
+#: metrics/base.php:221
+#: metrics/base.php:255
+msgid "Site"
+msgstr "ಸೈಟ್"
+
+#: metrics/base.php:224
+#: metrics/base.php:254
+#: metrics/network-maps-area.php:89
+#: metrics/network-maps-area.php:133
+#: metrics/network-statistics-users.php:12
+#: metrics/network-statistics-users.php:13
+#: metrics/network-statistics-users.php:14
+#: metrics/network-statistics-users.php:50
+msgid "Users"
+msgstr "ಬಳಕೆದಾರರು"
+
+#: metrics/base.php:225
+msgid "Timestamp"
+msgstr "ಟೈಮ್‌ಸ್ಟ್ಯಾಂಪ್"
+
+#: metrics/base.php:226
+msgid "Visit"
+msgstr "ಭೇಟಿ"
+
+#: metrics/base.php:227
+msgid "View"
+msgstr "ನೋಟ"
+
+#: metrics/base.php:229
+msgid "Active Snapshot"
+msgstr "ಸಕ್ರಿಯ ಸ್ನ್ಯಾಪ್‌ಶಾಟ್"
+
+#: metrics/base.php:230
+msgid "Generations"
+msgstr "ತಲೆಮಾರುಗಳು"
+
+#: metrics/base.php:231
+msgid "Follow-up Funnel"
+msgstr "ಫಾಲೋ-ಅಪ್ ಫನಲ್"
+
+#: metrics/base.php:232
+msgid "On-Going Meetings"
+msgstr "ನಡೆಯುತ್ತಿರುವ ಸಭೆಗಳು"
+
+#: metrics/base.php:233
+msgid "Coaching"
+msgstr "ತರಬೇತಿ"
+
+#: metrics/base.php:234
+msgid "Baptized"
+msgstr "ದೀಕ್ಷಾಸ್ನಾನ"
+
+#: metrics/base.php:235
+msgid "Active Groups"
+msgstr "ಸಕ್ರಿಯ ಗುಂಪುಗಳು"
+
+#: metrics/base.php:236
+#: metrics/base.php:258
+msgid "Church"
+msgstr "ಚರ್ಚ್"
+
+#: metrics/base.php:237
+msgid "Health Metrics"
+msgstr "ಆರೋಗ್ಯ ಮಾಪನಗಳು"
+
+#: metrics/base.php:238
+msgid "Total Users"
+msgstr "ಒಟ್ಟು ಬಳಕೆದಾರರು"
+
+#: metrics/base.php:239
+msgid "Responders"
+msgstr "ಪ್ರತಿಕ್ರಿಯಿಸುವವರು"
+
+#: metrics/base.php:240
+msgid "Dispatchers"
+msgstr "ರವಾನೆದಾರರು"
+
+#: metrics/base.php:241
+msgid "Multipliers"
+msgstr "ಗುಣಕಗಳು"
+
+#: metrics/base.php:242
+msgid "Admins"
+msgstr "ನಿರ್ವಾಹಕರು"
+
+#: metrics/base.php:243
+msgid "User Login Activity"
+msgstr "ಬಳಕೆದಾರರ ಲಾಗಿನ್ ಚಟುವಟಿಕೆ"
+
+#: metrics/base.php:244
+msgid "Users Active in the Last 30 Days"
+msgstr "ಕಳೆದ 30 ದಿನಗಳಲ್ಲಿ ಸಕ್ರಿಯವಾಗಿರುವ ಬಳಕೆದಾರರು"
+
+#: metrics/base.php:245
+msgid "Practicing"
+msgstr "ಅಭ್ಯಾಸ"
+
+#: metrics/base.php:246
+msgid "Not Practicing"
+msgstr "ಅಭ್ಯಾಸ ಮಾಡುತ್ತಿಲ್ಲ"
+
+#: metrics/base.php:247
+msgid "Chart Funnel"
+msgstr "ಚಾರ್ಟ್ ಫನಲ್"
+
+#: metrics/base.php:250
+msgid "Contact"
+msgstr "ಸಂಪರ್ಕಿಸಿ"
+
+#: metrics/base.php:251
+msgid "Group"
+msgstr "ಗುಂಪು"
+
+#: metrics/base.php:253
+msgid "User"
+msgstr "ಬಳಕೆದಾರ"
+
+#: metrics/base.php:256
+#: metrics/base.php:301
+msgid "Sites"
+msgstr "ಸೈಟ್‌ಗಳು"
+
+#: metrics/base.php:257
+msgid "Baptisms"
+msgstr "ಬ್ಯಾಪ್ಟಿಸಮ್"
+
+#: metrics/base.php:259
+#: metrics/network-maps-area.php:97
+#: metrics/network-maps-area.php:127
+msgid "Churches"
+msgstr "ಚರ್ಚುಗಳು"
+
+#: metrics/base.php:260
+msgid "Location"
+msgstr "ಸ್ಥಳ"
+
+#: metrics/base.php:261
+msgid "Types"
+msgstr "ರೀತಿಯ"
+
+#: metrics/base.php:263
+msgid "modify filter"
+msgstr "ಫಿಲ್ಟರ್ ಅನ್ನು ಮಾರ್ಪಡಿಸಿ"
+
+#: metrics/base.php:264
+msgid "Filter List"
+msgstr "ಫಿಲ್ಟರ್ ಪಟ್ಟಿ"
+
+#: metrics/base.php:265
+msgid "reset data"
+msgstr "ಡೇಟಾವನ್ನು ಮರುಹೊಂದಿಸಿ"
+
+#: post-type/module-base.php:133
+#: metrics/base.php:267
+msgid "Status"
+msgstr "ಸ್ಥಿತಿ"
+
+#: metrics/base.php:268
+msgid "Status - All"
+msgstr "ಸ್ಥಿತಿ - ಎಲ್ಲಾ"
+
+#: metrics/base.php:270
+msgid "Zoom Level"
+msgstr "Om ೂಮ್ ಮಟ್ಟ"
+
+#: metrics/base.php:271
+msgid "Auto Zoom"
+msgstr "ಸ್ವಯಂ ಜೂಮ್"
+
+#: metrics/base.php:272
+msgid "World"
+msgstr "ವಿಶ್ವ"
+
+#: metrics/base.php:273
+msgid "Country"
+msgstr "ದೇಶ"
+
+#: metrics/base.php:274
+msgid "State"
+msgstr "ರಾಜ್ಯ"
+
+#: includes/template-dashboard.php:23
+#: metrics/base.php:276
+msgid "Active Contacts"
+msgstr "ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳು"
+
+#: metrics/base.php:277
+msgid "Paused Contacts"
+msgstr "ವಿರಾಮಗೊಳಿಸಲಾದ ಸಂಪರ್ಕಗಳು"
+
+#: metrics/base.php:278
+msgid "Closed Contacts"
+msgstr "ಮುಚ್ಚಿದ ಸಂಪರ್ಕಗಳು"
+
+#: metrics/base.php:279
+msgid "Total Contacts"
+msgstr "ಒಟ್ಟು ಸಂಪರ್ಕಗಳು"
+
+#: metrics/base.php:280
+msgid "New Contacts"
+msgstr "ಹೊಸ ಸಂಪರ್ಕಗಳು"
+
+#: metrics/base.php:282
+msgid "New Baptisms"
+msgstr "ಹೊಸ ಬ್ಯಾಪ್ಟಿಸಮ್ಗಳು"
+
+#: metrics/base.php:283
+msgid "Baptism Generations"
+msgstr "ಬ್ಯಾಪ್ಟಿಸಮ್ ಪೀಳಿಗೆಗಳು"
+
+#: metrics/base.php:284
+msgid "Select Location"
+msgstr "ಸ್ಥಳ ಆಯ್ಕೆಮಾಡಿ"
+
+#: metrics/base.php:286
+msgid "New Groups"
+msgstr "ಹೊಸ ಗುಂಪುಗಳು"
+
+#: metrics/base.php:287
+msgid "Pre-Group"
+msgstr "ಪೂರ್ವ ಗುಂಪು"
+
+#: metrics/base.php:288
+msgid "Pre-Groups"
+msgstr "ಪೂರ್ವ ಗುಂಪುಗಳು"
+
+#: metrics/base.php:290
+msgid "Last 7 Days"
+msgstr "ಕೊನೆಯ 7 ದಿನಗಳು"
+
+#: metrics/base.php:291
+msgid "Last 30 Days"
+msgstr "ಕೊನೆಯ 30 ದಿನಗಳು"
+
+#: metrics/base.php:292
+msgid "Last 60 Days"
+msgstr "ಕೊನೆಯ 60 ದಿನಗಳು"
+
+#: metrics/base.php:293
+msgid "Last 12 Months"
+msgstr "ಕಳೆದ 12 ತಿಂಗಳುಗಳು"
+
+#: metrics/base.php:294
+msgid "Last 24 Months"
+msgstr "ಕಳೆದ 24 ತಿಂಗಳುಗಳು"
+
+#: metrics/base.php:295
+msgid "This Year"
+msgstr "ಈ ವರ್ಷ"
+
+#: metrics/base.php:297
+msgid "Activity Map"
+msgstr "ಚಟುವಟಿಕೆ ನಕ್ಷೆ"
+
+#: metrics/base.php:298
+#: metrics/network-activity-stats.php:11
+#: metrics/network-activity-stats.php:12
+#: metrics/network-activity-stats.php:13
+#: metrics/network-activity-stats.php:57
+msgid "Stats"
+msgstr "ಅಂಕಿಅಂಶಗಳು"
+
+#: metrics/base.php:299
+msgid "Activities"
+msgstr "ಚಟುವಟಿಕೆಗಳು"
+
+#: metrics/base.php:300
+msgid "Actions"
+msgstr "ಕ್ರಿಯೆಗಳು"
+
+#: metrics/base.php:302
+msgid "By Action Type"
+msgstr "ಆಕ್ಷನ್ ಪ್ರಕಾರದಿಂದ"
+
+#: metrics/base.php:303
+msgid "Key"
+msgstr "ಕೀ"
+
+#: metrics/base.php:304
+msgid "Name"
+msgstr "ಹೆಸರು"
+
+#: metrics/base.php:305
+msgid "Total Activities"
+msgstr "ಒಟ್ಟು ಚಟುವಟಿಕೆಗಳು"
+
+#: metrics/base.php:306
+msgid "Feed"
+msgstr "ಫೀಡ್"
+
+#: metrics/base.php:307
+msgid "Time"
+msgstr "ಸಮಯ"
+
+#: metrics/base.php:308
+msgid "Result Limit"
+msgstr "ಫಲಿತಾಂಶ ಮಿತಿ"
+
+#: metrics/base.php:309
+msgid "uncheck"
+msgstr "ಗುರುತಿಸಬೇಡಿ"
+
+#: metrics/base.php:311
+#: metrics/network-home.php:12
+#: metrics/network-home.php:13
+#: metrics/network-home.php:14
+#: metrics/network-home.php:48
+msgid "Home"
+msgstr "ಮನೆ"
+
+#: metrics/base.php:313
+msgid "Events (30 Days)"
+msgstr "ಘಟನೆಗಳು (30 ದಿನಗಳು)"
+
+#: metrics/base.php:315
+msgid "All Active/Inactive"
+msgstr "ಎಲ್ಲಾ ಸಕ್ರಿಯ / ನಿಷ್ಕ್ರಿಯ"
+
+#: metrics/base.php:316
+#: metrics/network-maps-hovermap.php:12
+#: metrics/network-maps-hovermap.php:13
+#: metrics/network-maps-hovermap.php:14
+#: metrics/network-maps-hovermap.php:51
+msgid "Hover Map"
+msgstr "ನಕ್ಷೆಯನ್ನು ಸುಳಿದಾಡಿ"
+
+#: metrics/loader.php:16
+msgid "Network"
+msgstr "ನೆಟ್‌ವರ್ಕ್"
+
+#: metrics/network-activity-map.php:15
+#: metrics/network-activity-map.php:16
+#: metrics/network-activity-map.php:17
+#: metrics/network-activity-map.php:63
+msgid "Map"
+msgstr "ನಕ್ಷೆ"
+
+#: metrics/network-activity-stream.php:12
+#: metrics/network-activity-stream.php:13
+#: metrics/network-activity-stream.php:14
+#: metrics/network-activity-stream.php:51
+msgid "Log"
+msgstr "ಲಾಗ್"
+
+#: metrics/network-activity.php:12
+#: metrics/network-activity.php:13
+#: metrics/network-activity.php:14
+#: metrics/network-activity.php:25
+msgid "Activity"
+msgstr "ಚಟುವಟಿಕೆ"
+
+#: metrics/network-maps-area.php:15
+#: metrics/network-maps-area.php:16
+#: metrics/network-maps-area.php:17
+#: metrics/network-maps-area.php:110
+msgid "Area Maps"
+msgstr "ಪ್ರದೇಶ ನಕ್ಷೆಗಳು"
+
+#: metrics/network-maps-locationlist.php:12
+#: metrics/network-maps-locationlist.php:13
+#: metrics/network-maps-locationlist.php:14
+#: metrics/network-maps-locationlist.php:46
+msgid "Location List"
+msgstr "ಸ್ಥಳ ಪಟ್ಟಿ"
+
+#: metrics/network-maps.php:12
+#: metrics/network-maps.php:13
+#: metrics/network-maps.php:14
+#: metrics/network-maps.php:25
+msgid "Maps"
+msgstr "ನಕ್ಷೆಗಳು"
+
+#: metrics/network-sites.php:12
+#: metrics/network-sites.php:13
+#: metrics/network-sites.php:14
+#: metrics/network-sites.php:45
+msgid "Site Reports"
+msgstr "ಸೈಟ್ ವರದಿಗಳು"
+
+#: metrics/network-statistics.php:12
+#: metrics/network-statistics.php:13
+#: metrics/network-statistics.php:14
+#: metrics/network-statistics.php:25
+msgid "Statistics"
+msgstr "ಅಂಕಿಅಂಶಗಳು"
+
+#: shared/permissions.php:41
+msgid "Network Dashboard Transfer Both Ways"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಎರಡೂ ಮಾರ್ಗಗಳನ್ನು ವರ್ಗಾಯಿಸುತ್ತದೆ"
+
+#: shared/permissions.php:42
+msgid "Network Dashboard Receiving Only"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಸ್ವೀಕರಿಸಲಾಗುತ್ತಿದೆ"
+
+#: shared/permissions.php:43
+msgid "Network Dashboard Sending Only"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ"
+
+#: shared/site-profile.php:99
+msgid "Network Dashboard Site Profile"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಸೈಟ್ ಪ್ರೊಫೈಲ್"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Network Dashboard"
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ನೆಟ್‌ವರ್ಕ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
+
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:53
+#: post-type/module-base.php:393
+#: post-type/module-base.php:405
+#: post-type/module-base.php:449
+#: post-type/module-base.php:466
+#: post-type/module-base.php:483
+#: post-type/module-base.php:520
+msgid "Streams"
+msgstr "ಸ್ಟ್ರೀಮ್‌ಗಳು"
+
+#: metrics/mapbox-maps.php:30
+msgid "Stream Maps"
+msgstr "ಸ್ಟ್ರೀಮ್ ನಕ್ಷೆಗಳು"
+
+#: metrics/mapbox-personal-maps.php:30
+msgid "Streams Maps"
+msgstr "ಸ್ಟ್ರೀಮ್ಸ್ ನಕ್ಷೆಗಳು"
+
+#: post-type/module-base.php:103
+msgctxt "Optional Documentation"
+msgid "A useful way to stream related items and can help stream contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags."
+msgstr "ಸಂಬಂಧಿತ ವಸ್ತುಗಳನ್ನು ಸ್ಟ್ರೀಮ್ ಮಾಡಲು ಒಂದು ಉಪಯುಕ್ತ ಮಾರ್ಗ ಮತ್ತು ಗಮನಾರ್ಹ ಗುಣಲಕ್ಷಣಗಳೊಂದಿಗೆ ಸಂಬಂಧಿಸಿದ ಸಂಪರ್ಕಗಳನ್ನು ಸ್ಟ್ರೀಮ್ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಉದಾ. ವ್ಯಾಪಾರ ಮಾಲೀಕರು, ಕ್ರೀಡಾ ಪ್ರೇಮಿ. ಈ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಸಂಪರ್ಕಗಳನ್ನು ಸಹ ಫಿಲ್ಟರ್ ಮಾಡಬಹುದು."
+
+#: post-type/module-base.php:138
+msgctxt "Stream Status label"
+msgid "New"
+msgstr "ಹೊಸದು"
+
+#: post-type/module-base.php:139
+msgctxt "Stream Status field description"
+msgid "New stream added to the system"
+msgstr "ಸಿಸ್ಟಮ್‌ಗೆ ಹೊಸ ಸ್ಟ್ರೀಮ್ ಸೇರಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:143
+msgctxt "Stream Status label"
+msgid "Model"
+msgstr "ಮಾದರಿ"
+
+#: post-type/module-base.php:144
+msgctxt "Stream Status field description"
+msgid "This stream has been proposed and is in initial conversations"
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಪ್ರಸ್ತಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಇದು ಆರಂಭಿಕ ಸಂಭಾಷಣೆಯಲ್ಲಿದೆ"
+
+#: post-type/module-base.php:148
+msgctxt "Stream Status label"
+msgid "Assist"
+msgstr "ಸಹಾಯ"
+
+#: post-type/module-base.php:149
+msgctxt "Stream Status field description"
+msgid "This stream is confirmed, on the calendar."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದೃ is ೀಕರಿಸಲಾಗಿದೆ."
+
+#: post-type/module-base.php:153
+msgctxt "Stream Status label"
+msgid "Watch"
+msgstr "ವೀಕ್ಷಿಸಿ"
+
+#: post-type/module-base.php:154
+msgctxt "Stream Status field description"
+msgid "This stream is confirmed, on the calendar, or currently active."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಅಥವಾ ಪ್ರಸ್ತುತ ಸಕ್ರಿಯವಾಗಿ ದೃ confirmed ೀಕರಿಸಲಾಗಿದೆ."
+
+#: post-type/module-base.php:158
+msgctxt "Stream Status label"
+msgid "Leave"
+msgstr "ಬಿಡಿ"
+
+#: post-type/module-base.php:159
+msgctxt "Stream Status field description"
+msgid "This stream has successfully completed"
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ"
+
+#: post-type/module-base.php:163
+msgctxt "Stream Status label"
+msgid "Paused"
+msgstr "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ"
+
+#: post-type/module-base.php:164
+msgctxt "Stream Status field description"
+msgid "This contact is currently on hold. It has potential of getting scheduled in the future."
+msgstr "ಈ ಸಂಪರ್ಕವು ಪ್ರಸ್ತುತ ಸ್ಥಗಿತಗೊಂಡಿದೆ. ಇದು ಭವಿಷ್ಯದಲ್ಲಿ ನಿಗದಿತ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೊಂದಿದೆ."
+
+#: post-type/module-base.php:168
+msgctxt "Stream Status label"
+msgid "Closed"
+msgstr "ಮುಚ್ಚಲಾಗಿದೆ"
+
+#: post-type/module-base.php:169
+msgctxt "Stream Status field description"
+msgid "This stream is no longer going to happen."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಇನ್ನು ಮುಂದೆ ಆಗುವುದಿಲ್ಲ."
+
+#: post-type/module-base.php:177
+msgid "Select the main person who is responsible for reporting on this stream."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್‌ನಲ್ಲಿ ವರದಿ ಮಾಡುವ ಜವಾಬ್ದಾರಿಯುತ ಮುಖ್ಯ ವ್ಯಕ್ತಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+
+#: post-type/module-base.php:186
+msgctxt "Optional Documentation"
+msgid "The person who planted and/or is coaching this stream. Only one person can be assigned to a stream while multiple people can be coaches / church planters of this stream."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ನೆಟ್ಟ ಮತ್ತು / ಅಥವಾ ತರಬೇತಿ ನೀಡುವ ವ್ಯಕ್ತಿ. ಒಬ್ಬ ವ್ಯಕ್ತಿಯನ್ನು ಮಾತ್ರ ಸ್ಟ್ರೀಮ್‌ಗೆ ನಿಯೋಜಿಸಬಹುದು ಆದರೆ ಅನೇಕ ಜನರು ಈ ಸ್ಟ್ರೀಮ್‌ನ ತರಬೇತುದಾರರು / ಚರ್ಚ್ ಪ್ಲಾಂಟರ್‌ಗಳಾಗಿರಬಹುದು."
+
+#: post-type/module-base.php:204
+msgctxt "Optional Documentation"
+msgid "The people streams represented by this stream."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್‌ನಿಂದ ಪ್ರತಿನಿಧಿಸುವ ಜನರ ಸ್ಟ್ರೀಮ್‌ಗಳು."
+
+#: post-type/module-base.php:309
+msgid "Parent Stream"
+msgstr "ಪೋಷಕ ಸ್ಟ್ರೀಮ್"
+
+#: post-type/module-base.php:310
+msgctxt "Optional Documentation"
+msgid "A stream that launched this stream."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿದ ಸ್ಟ್ರೀಮ್."
+
+#: post-type/module-base.php:321
+msgid "Peer Streams"
+msgstr "ಪೀರ್ ಸ್ಟ್ರೀಮ್‌ಗಳು"
+
+#: post-type/module-base.php:322
+msgctxt "Optional Documentation"
+msgid "A related stream that isn't a parent/child in relationship. It might indicate streams that collaborate, are about to merge, recently split, etc."
+msgstr "ಸಂಬಂಧದಲ್ಲಿ ಪೋಷಕರು / ಮಗು ಅಲ್ಲದ ಸಂಬಂಧಿತ ಸ್ಟ್ರೀಮ್. ಇದು ಸಹಕರಿಸುವ, ವಿಲೀನಗೊಳ್ಳಲಿರುವ, ಇತ್ತೀಚೆಗೆ ವಿಭಜನೆಯಾದ ಸ್ಟ್ರೀಮ್‌ಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ."
+
+#: post-type/module-base.php:333
+msgid "Child Streams"
+msgstr "ಮಕ್ಕಳ ಹೊಳೆಗಳು"
+
+#: post-type/module-base.php:334
+msgctxt "Optional Documentation"
+msgid "A stream that has been birthed out of this stream."
+msgstr "ಈ ಸ್ಟ್ರೀಮ್‌ನಿಂದ ಹೊರಹಾಕಲ್ಪಟ್ಟ ಸ್ಟ್ರೀಮ್."
+
+#: post-type/module-base.php:369
+msgid "Leader in Stream"
+msgstr "ಸ್ಟ್ರೀಮ್ನಲ್ಲಿ ನಾಯಕ"
+
+#: post-type/module-base.php:370
+msgctxt "Optional Documentation"
+msgid "Leader of a stream"
+msgstr "ಸ್ಟ್ರೀಮ್ನ ನಾಯಕ"
+
+#: post-type/module-base.php:380
+msgid "Key Disciple in Stream"
+msgstr "ಸ್ಟ್ರೀಮ್ನಲ್ಲಿ ಪ್ರಮುಖ ಶಿಷ್ಯ"
+
+#: post-type/module-base.php:381
+msgctxt "Optional Documentation"
+msgid "Disciple in a stream."
+msgstr "ಸ್ಟ್ರೀಮ್ನಲ್ಲಿ ಶಿಷ್ಯ."
+
+#: post-type/module-base.php:536
+msgid "Connections"
+msgstr "ಸಂಪರ್ಕಗಳು"
+
+#: post-type/module-reports.php:432
+msgid "Add Report"
+msgstr "ವರದಿ ಸೇರಿಸಿ"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Streams"
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ಸ್ಟ್ರೀಮ್‌ಗಳು"
+
+#: logging/log-generations.php:11
+msgid "Pre-Group Generations"
+msgstr "ಪೂರ್ವ ಗುಂಪು ತಲೆಮಾರುಗಳು"
+
+#: logging/log-generations.php:17
+msgid "Group Generations"
+msgstr "ಗುಂಪು ತಲೆಮಾರುಗಳು"
+
+#: logging/log-generations.php:23
+msgid "Church Generations"
+msgstr "ಚರ್ಚ್ ಪೀಳಿಗೆಗಳು"
+
+#: logging/log-generations.php:29
+msgid "Team Generations"
+msgstr "ತಂಡದ ಪೀಳಿಗೆಗಳು"
+
+#: logging/log-generations.php:76
+msgid "%s is reporting a new pre-group generation."
+msgstr "% s ಹೊಸ ಗುಂಪು ಪೂರ್ವ ಪೀಳಿಗೆಯನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-generations.php:81
+msgid "%s is reporting a new group generation."
+msgstr "% s ಹೊಸ ಗುಂಪು ಪೀಳಿಗೆಯನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-generations.php:86
+msgid "%s is reporting a new church generation."
+msgstr "% s ಹೊಸ ಚರ್ಚ್ ಪೀಳಿಗೆಯನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-generations.php:91
+msgid "%s is reporting a new leadership team generation."
+msgstr "% s ಹೊಸ ನಾಯಕತ್ವದ ತಂಡದ ಪೀಳಿಗೆಯನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: includes/charts/baptisms.php:81
+msgid "New Contact"
+msgstr "ಹೊಸ ಸಂಪರ್ಕ"
+
+#: logging/log-new-posts.php:16
+msgid "New Pre-Group"
+msgstr "ಹೊಸ ಪೂರ್ವ ಗುಂಪು"
+
+#: logging/log-new-posts.php:21
+msgid "New Group"
+msgstr "ಹೊಸ ಗುಂಪು"
+
+#: logging/log-new-posts.php:26
+msgid "New Church"
+msgstr "ಹೊಸ ಚರ್ಚ್"
+
+#: logging/log-new-posts.php:31
+msgid "New Team"
+msgstr "ಹೊಸ ತಂಡ"
+
+#: logging/log-new-posts.php:36
+msgid "New Baptism"
+msgstr "ಹೊಸ ಬ್ಯಾಪ್ಟಿಸಮ್"
+
+#: logging/log-new-posts.php:41
+msgid "New Coaching"
+msgstr "ಹೊಸ ತರಬೇತಿ"
+
+#: logging/log-new-posts.php:164
+msgid "%s is reporting a new contact."
+msgstr "% s ಹೊಸ ಸಂಪರ್ಕವನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:169
+msgid "%s is reporting a new pre-group formed."
+msgstr "% s ಹೊಸ ಪೂರ್ವ ಗುಂಪನ್ನು ರಚಿಸುತ್ತಿದೆ ಎಂದು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:174
+msgid "%s is reporting a new group formed."
+msgstr "% s ಹೊಸ ಗುಂಪನ್ನು ರಚಿಸುತ್ತಿದೆ ಎಂದು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:179
+msgid "%s is reporting a new church."
+msgstr "% s ಹೊಸ ಚರ್ಚ್ ಅನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:184
+msgid "%s is reporting a new leadership team formed."
+msgstr "% s ಹೊಸ ನಾಯಕತ್ವದ ತಂಡವನ್ನು ರಚಿಸುತ್ತಿದೆ ಎಂದು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:189
+msgid "%s is reporting a new baptism."
+msgstr "% s ಹೊಸ ಬ್ಯಾಪ್ಟಿಸಮ್ ಅನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: logging/log-new-posts.php:194
+msgid "%s is reporting an coaching relationship."
+msgstr "% s ಕೋಚಿಂಗ್ ಸಂಬಂಧವನ್ನು ವರದಿ ಮಾಡುತ್ತಿದೆ."
+
+#: metrics/network-maps-area.php:74
+#: metrics/network-maps-area.php:83
+#: metrics/network-maps-area.php:91
+#: metrics/network-maps-area.php:99
+msgid "Active"
+msgstr "ಸಕ್ರಿಯ"
+
+#: metrics/network-maps-area.php:75
+msgid "Paused"
+msgstr "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ"
+
+#: metrics/network-maps-area.php:76
+msgid "Closed"
+msgstr "ಮುಚ್ಚಲಾಗಿದೆ"
+
+#: metrics/network-maps-area.php:84
+#: metrics/network-maps-area.php:92
+#: metrics/network-maps-area.php:100
+msgid "Inactive"
+msgstr "ನಿಷ್ಕ್ರಿಯ"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
+msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
+
+#. Description of the plugin/theme
+#: 
+msgid "Connect this Disciple Tools site to a larger network of sites. Adds security sensitive totals, mapping, activity logging."
+msgstr "ಈ ಶಿಷ್ಯ ಪರಿಕರಗಳ ಸೈಟ್‌ ಅನ್ನು ಸೈಟ್‌ಗಳ ದೊಡ್ಡ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ. ಭದ್ರತಾ ಸೂಕ್ಷ್ಮ ಮೊತ್ತಗಳು, ಮ್ಯಾಪಿಂಗ್, ಚಟುವಟಿಕೆ ಲಾಗಿಂಗ್ ಅನ್ನು ಸೇರಿಸುತ್ತದೆ."
+
+#. Author URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools"
+msgstr "https://github.com/DiscipleTools"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-streams"
+msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools Streams Extension adds recording of streams and cross reference them with contacts, groups, and locations."
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳ ಸ್ಟ್ರೀಮ್‌ಗಳ ವಿಸ್ತರಣೆಯು ಸ್ಟ್ರೀಮ್‌ಗಳ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಸೇರಿಸುತ್ತದೆ ಮತ್ತು ಅವುಗಳನ್ನು ಸಂಪರ್ಕಗಳು, ಗುಂಪುಗಳು ಮತ್ತು ಸ್ಥಳಗಳೊಂದಿಗೆ ಅಡ್ಡ ಉಲ್ಲೇಖಿಸುತ್ತದೆ."
+
+#: disciple-tools-training.php:297
+msgid "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version."
+msgstr "'ಶಿಷ್ಯ ಪರಿಕರಗಳು - ತರಬೇತಿ' ಪ್ಲಗಿನ್‌ಗೆ ಕೆಲಸ ಮಾಡಲು 'ಶಿಷ್ಯ ಪರಿಕರಗಳು' ಥೀಮ್ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು 'ಶಿಷ್ಯ ಪರಿಕರಗಳು' ಥೀಮ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಅಥವಾ ಅದು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."
+
+#: disciple-tools-training.php:299
+msgid "Current Disciple Tools version: %1$s, required version: %2$s"
+msgstr "ಪ್ರಸ್ತುತ ಶಿಷ್ಯ ಪರಿಕರಗಳ ಆವೃತ್ತಿ:% 1 $ s, ಅಗತ್ಯವಿರುವ ಆವೃತ್ತಿ:% 2 $ s"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-training"
+msgstr "https://github.com/DiscipleTools/disciple-tools-training"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations."
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳ ತರಬೇತಿ ವಿಸ್ತರಣೆಯು ತರಬೇತಿಗಳ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಸೇರಿಸುತ್ತದೆ ಮತ್ತು ಅವುಗಳನ್ನು ಸಂಪರ್ಕಗಳು, ಗುಂಪುಗಳು ಮತ್ತು ಸ್ಥಳಗಳೊಂದಿಗೆ ಅಡ್ಡ ಉಲ್ಲೇಖಿಸುತ್ತದೆ."
+
+#: post-type/module-base.php:128
+msgid "Duplicates"
+msgstr "ನಕಲುಗಳು"
+
+#: post-type/module-base.php:185
+msgid "Coach"
+msgstr "ಕೋಚ್"
+
+#: post-type/module-base.php:253
+msgid "Leaders Total"
+msgstr "ನಾಯಕರ ಒಟ್ಟು"
+
+#: post-type/module-base.php:271
+msgid "Disciples Total"
+msgstr "ಶಿಷ್ಯರು ಒಟ್ಟು"
+
+#: post-type/module-base.php:277
+msgid "Key Disciples"
+msgstr "ಪ್ರಮುಖ ಶಿಷ್ಯರು"
+
+#: post-type/module-base.php:288
+msgid "Groups Total"
+msgstr "ಗುಂಪುಗಳು ಒಟ್ಟು"
+
+#: post-type/module-base.php:348
+msgid "Trainings Total"
+msgstr "ತರಬೇತಿಗಳು ಒಟ್ಟು"
+
+#: includes/admin/admin-menu-and-tabs.php:63
+msgid "Dashboard Plugin"
+msgstr "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಪ್ಲಗಿನ್"
+
+#: includes/functions.php:85
+msgid "Dashboard"
+msgstr "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
+
+#: includes/rest-api.php:86
+msgid "%s days since last update"
+msgstr "ಕೊನೆಯ ನವೀಕರಣದ ನಂತರ% s ದಿನಗಳು"
+
+#: includes/rest-api.php:419
+msgid "Accept"
+msgstr "ಒಪ್ಪಿಕೊಳ್ಳಿ"
+
+#: includes/rest-api.php:420
+msgid "Decline"
+msgstr "ಅವನತಿ"
+
+#: includes/rest-api.php:421
+msgid "# Contacts Assigned"
+msgstr "# ಸಂಪರ್ಕಗಳನ್ನು ನಿಯೋಜಿಸಲಾಗಿದೆ"
+
+#: includes/rest-api.php:422
+msgid "# First Meetings"
+msgstr "# ಮೊದಲ ಸಭೆಗಳು"
+
+#: includes/rest-api.php:423
+msgid "# Faith milestones"
+msgstr "# ನಂಬಿಕೆಯ ಮೈಲಿಗಲ್ಲುಗಳು"
+
+#: includes/rest-api.php:424
+msgid "Hurray! You are caught up."
+msgstr "ಹರ್ರೆ! ನೀವು ಸಿಕ್ಕಿಹಾಕಿಕೊಂಡಿದ್ದೀರಿ."
+
+#: includes/rest-api.php:425
+msgid "remove"
+msgstr "ತೆಗೆದುಹಾಕಿ"
+
+#: includes/rest-api.php:426
+msgid "mark as complete"
+msgstr "ಪೂರ್ಣಗೊಂಡಿದೆ ಎಂದು ಗುರುತಿಸಿ"
+
+#: includes/rest-api.php:427
+msgid "No task created"
+msgstr "ಯಾವುದೇ ಕಾರ್ಯವನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ"
+
+#: includes/rest-api.php:428
+msgid "Reminder"
+msgstr "ಜ್ಞಾಪನೆ"
+
+#: includes/rest-api.php:429
+msgid "No note set"
+msgstr "ಟಿಪ್ಪಣಿ ಹೊಂದಿಸಿಲ್ಲ"
+
+#: includes/template-dashboard.php:30
+msgid "Add a contact"
+msgstr "ಸಂಪರ್ಕವನ್ನು ಸೇರಿಸಿ"
+
+#: includes/template-dashboard.php:33
+msgid "View Contacts List"
+msgstr "ಸಂಪರ್ಕಗಳ ಪಟ್ಟಿಯನ್ನು ವೀಕ್ಷಿಸಿ"
+
+#: includes/template-dashboard.php:47
+msgid "Pending Contacts"
+msgstr "ಸಂಪರ್ಕಗಳು ಬಾಕಿ ಉಳಿದಿವೆ"
+
+#: includes/template-dashboard.php:52 includes/template-dashboard.php:70
+msgid "View All"
+msgstr "ಎಲ್ಲಾ ವೀಕ್ಷಿಸಿ"
+
+#: includes/template-dashboard.php:65
+msgid "Update Needed"
+msgstr "ನವೀಕರಣ ಅಗತ್ಯವಿದೆ"
+
+#: includes/template-dashboard.php:79
+msgid "Contact Workload"
+msgstr "ಕೆಲಸದ ಹೊರೆ ಸಂಪರ್ಕಿಸಿ"
+
+#: includes/template-dashboard.php:83
+msgid "Choose an option to let the dispatcher(s) know if you are ready for new contacts"
+msgstr "ನೀವು ಹೊಸ ಸಂಪರ್ಕಗಳಿಗೆ ಸಿದ್ಧರಿದ್ದೀರಾ ಎಂದು ರವಾನೆದಾರರಿಗೆ ತಿಳಿಸಲು ಒಂದು ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ"
+
+#: includes/template-dashboard.php:93
+msgid "Set travel or dates unavailable"
+msgstr "ಪ್ರಯಾಣ ಅಥವಾ ದಿನಾಂಕಗಳು ಲಭ್ಯವಿಲ್ಲ ಎಂದು ಹೊಂದಿಸಿ"
+
+#: includes/template-dashboard.php:106
+msgid "Personal Benchmarks"
+msgstr "ವೈಯಕ್ತಿಕ ಮಾನದಂಡಗಳು"
+
+#: includes/template-dashboard.php:135
+msgid "Faith Milestone Totals"
+msgstr "ನಂಬಿಕೆ ಮೈಲಿಗಲ್ಲು ಒಟ್ಟು"
+
+#: includes/template-dashboard.php:138
+msgid "Milestones on your active contacts"
+msgstr "ನಿಮ್ಮ ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳಲ್ಲಿ ಮೈಲಿಗಲ್ಲುಗಳು"
+
+#: includes/template-dashboard.php:149
+msgid "Seeker Path Progress"
+msgstr "ಸೀಕರ್ ಹಾದಿ ಪ್ರಗತಿ"
+
+#: includes/template-dashboard.php:152
+msgid "No data to show yet. You have no active contacts"
+msgstr "ಇನ್ನೂ ತೋರಿಸಲು ಡೇಟಾ ಇಲ್ಲ. ನೀವು ಯಾವುದೇ ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳನ್ನು ಹೊಂದಿಲ್ಲ"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Dashboard"
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
+msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
+
+#. Description of the plugin/theme
+#: 
+msgid "The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats."
+msgstr "ಮಲ್ಟಿಪ್ಲೈಯರ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಅವರು ಸಿಸ್ಟಮ್‌ಗೆ ಲಾಗ್ ಆದ ಕೂಡಲೇ ಅಂಕಿಅಂಶಗಳೊಂದಿಗೆ ಲ್ಯಾಂಡಿಂಗ್ ಪುಟವನ್ನು ನೀಡುವ ಮೂಲಕ ಅನುಭವವನ್ನು ನವೀಕರಿಸುತ್ತದೆ"
+
+#: includes/dt-hooks.php:10
+msgid "Reason Assigned To"
+msgstr "ಇದಕ್ಕೆ ನಿಯೋಜಿಸಲಾದ ಕಾರಣ"
+
+#: includes/dt-hooks.php:14
+msgid "Follow-Up"
+msgstr "ಅನುಸರಿಸು"
+
+#: includes/dt-hooks.php:20
+msgid "Digital Response"
+msgstr "ಡಿಜಿಟಲ್ ಪ್ರತಿಕ್ರಿಯೆ"
+
+#: includes/dt-hooks.php:26
+msgid "Dispatch"
+msgstr "ರವಾನೆ"
+
+#: includes/dt-hooks.php:34
+msgid "No Answer"
+msgstr "ಉತ್ತರವಿಲ್ಲ"
+
+#: includes/dt-hooks.php:38
+msgid "Talked"
+msgstr "ಮಾತನಾಡಿದರು"
+
+#: includes/dt-hooks.php:42
+msgid "Scheduled"
+msgstr "ಪರಿಶಿಷ್ಟ"
+
+#: includes/dt-hooks.php:46
+msgid "Complete"
+msgstr "ಪೂರ್ಣಗೊಂಡಿದೆ"
+
+#: includes/dt-hooks.php:50
+msgid "No-Show"
+msgstr "ನೋ-ಶೋ"
+
+#: includes/rest-api.php:44
+msgid "No permission"
+msgstr "ಅನುಮತಿ ಇಲ್ಲ"
+
+#: includes/tiles.php:28
+msgid "All"
+msgstr "ಎಲ್ಲಾ"
+
+#: includes/tiles.php:29
+msgid "Ready"
+msgstr "ಸಿದ್ಧ"
+
+#: includes/tiles.php:30
+msgid "Recent"
+msgstr "ಇತ್ತೀಚಿನದು"
+
+#: includes/tiles.php:32
+msgid "Assign"
+msgstr "ನಿಯೋಜಿಸಿ"
+
+#: includes/tiles.php:50
+msgid "Choose an option:"
+msgstr "ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ:"
+
+#: includes/tiles.php:64
+msgid "Cancel"
+msgstr "ರದ್ದುಮಾಡಿ"
+
+#: includes/tiles.php:77
+msgid "Assign For"
+msgstr "ಇದಕ್ಕಾಗಿ ನಿಯೋಜಿಸಿ"
+
+#: includes/tiles.php:127
+msgid "Search"
+msgstr "ಹುಡುಕಿ Kannada"
+
+#: includes/tiles.php:208
+msgid "Claim for follow-up"
+msgstr "ಅನುಸರಣೆಗೆ ಹಕ್ಕು"
+
+#: includes/tiles.php:214
+msgid "Ready for Dispatch"
+msgstr "ರವಾನೆಗೆ ಸಿದ್ಧವಾಗಿದೆ"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles"
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ಸುಧಾರಿತ ಎಂ 2 ಎಂ ಟೈಲ್ಸ್"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
+msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for different roles."
+msgstr "ಶಿಷ್ಯ ಪರಿಕರಗಳು - ಸುಧಾರಿತ ಎಂ 2 ಎಂ ಟೈಲ್ಸ್ ವಿಭಿನ್ನ ಪಾತ್ರಗಳಿಗೆ ನಿರ್ದಿಷ್ಟ ಪೋಷಕ ಅಂಚುಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ."
+
+#: network/network-dashboard-integration.php:44
+msgid "New Training"
+msgstr ""
+
+#: network/network-dashboard-integration.php:50
+msgid "Training Started"
+msgstr ""
+
+#: network/network-dashboard-integration.php:56
+msgid "Training Completed"
+msgstr ""
+
+#: post-type/module-base.php:53
+msgid "Stream"
+msgstr ""
+
+#: includes/charts/baptisms.php:78
+msgid "Baptism Generation Tree"
+msgstr ""
+
+#: includes/charts/baptisms.php:79
+msgid "Search for a specific contact or multiplier"
+msgstr ""
+
+#: includes/charts/baptisms.php:80
+#: includes/charts/groups.php:79
+msgid "Reset"
+msgstr ""
+
+#: includes/charts/groups.php:76
+msgid "Group Generation Tree"
+msgstr ""
+
+#: includes/charts/groups.php:77
+msgid "This tree only shows First Generation groups that have multiplied."
+msgstr ""
+
+#: includes/charts/groups.php:78
+msgid "See descendants of a specific group"
+msgstr ""
+
+#: includes/export-action.php:9
+msgid "List Exports"
+msgstr ""
+
+#: includes/export-action.php:21
+msgid "bcc email list"
+msgstr ""
+
+#: includes/export-action.php:22
+msgid "phone number list"
+msgstr ""
+
+#: includes/export-action.php:23
+msgid "csv list"
+msgstr ""
+
+#: includes/export-action.php:25
+msgid "map list"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Mapped Locations"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Contacts Without Locations"
+msgstr ""
+
+#: includes/export-action.php:52
+msgid "List Export Help"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:72
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:81
+msgctxt "Coaching Checklist Initial for: Heard"
+msgid "H"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:82
+msgctxt "Coaching Checklist Initial for: Obeyed"
+msgid "O"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:83
+msgctxt "Coaching Checklist Initial for: Shared"
+msgid "S"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:84
+msgctxt "Coaching Checklist Initial for: Trained"
+msgid "T"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:88
+msgctxt "coaching checklist"
+msgid "Duckling Discipleship"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:89
+msgctxt "coaching checklist"
+msgid "Tell Your Story (testimony)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:90
+msgctxt "coaching checklist"
+msgid "Tell God's Story (gospel)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:91
+msgctxt "coaching checklist"
+msgid "List of 100"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:92
+msgctxt "coaching checklist"
+msgid "Pace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:93
+msgctxt "coaching checklist"
+msgid "Non-Sequential Ministry"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:94
+msgctxt "coaching checklist"
+msgid "3/3 Group Format"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:95
+msgctxt "coaching checklist"
+msgid "Simple Church"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:96
+msgctxt "coaching checklist"
+msgid "Being Part of Two Churches"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:97
+msgctxt "coaching checklist"
+msgid "Training Cycle"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:98
+msgctxt "coaching checklist"
+msgid "Accountability Groups"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:99
+msgctxt "coaching checklist"
+msgid "SOAPS"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:100
+msgctxt "coaching checklist"
+msgid "Prayer Wheel"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:101
+msgctxt "coaching checklist"
+msgid "Spiritual Breathing"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:102
+msgctxt "coaching checklist"
+msgid "Persecution & Suffering"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:103
+msgctxt "coaching checklist"
+msgid "Eyes to See Where the Kingdom Isn't"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:104
+msgctxt "coaching checklist"
+msgid "Person of Peace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:105
+msgctxt "coaching checklist"
+msgid "Prayer Walking"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:106
+msgctxt "coaching checklist"
+msgid "Baptism"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:107
+msgctxt "coaching checklist"
+msgid "Lord's Supper"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:108
+msgctxt "coaching checklist"
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:109
+msgctxt "coaching checklist"
+msgid "Leadership Cells"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:110
+msgctxt "coaching checklist"
+msgid "Peer Mentoring Group"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:111
+msgctxt "coaching checklist"
+msgid "Four Fields Tool"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:112
+msgctxt "coaching checklist"
+msgid "Generational Mapping"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:145
+msgid "Completed"
+msgstr ""
+

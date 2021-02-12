@@ -1,0 +1,1750 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Disciple Tools Plugins\n"
+"Language: sr\n"
+
+#: disciple-tools-dashboard.php:253 disciple-tools-dashboard.php:264
+msgid "Whoah, partner!"
+msgstr "Вхоах, партнеру!"
+
+#: disciple-tools-dashboard.php:276
+msgid "Method does not exist."
+msgstr "Метода не постоји."
+
+#: metrics/mapbox-maps.php:30
+msgid "Training Maps"
+msgstr "Мапе за тренинг"
+
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:54
+#: post-type/module-base.php:528
+#: post-type/module-base.php:354
+msgid "Trainings"
+msgstr "Тренинзи"
+
+#: metrics/mapbox-personal-maps.php:30
+msgid "Trainings Maps"
+msgstr "Мапе тренинга"
+
+#: post-type/module-base.php:54
+msgid "Training"
+msgstr "обука"
+
+#: post-type/module-base.php:61
+#: post-type/module-base.php:59
+msgid "Multiplier"
+msgstr "Множилац"
+
+#: post-type/module-base.php:67
+#: post-type/module-base.php:65
+msgid "Dispatcher"
+msgstr "Диспечер"
+
+#: post-type/module-base.php:74
+#: post-type/module-base.php:72
+msgid "Disciple.Tools Admin"
+msgstr "Дисципле.Тоолс Админ"
+
+#: post-type/module-base.php:81
+#: post-type/module-base.php:79
+msgid "Administrator"
+msgstr "Администратор"
+
+#: post-type/module-base.php:432
+msgid "Members"
+msgstr "Чланови"
+
+#: post-type/module-base.php:433
+#: metrics/base.php:222
+#: metrics/base.php:249
+#: metrics/network-maps-area.php:72
+#: metrics/network-maps-area.php:115
+#: metrics/network-statistics-contacts.php:12
+#: metrics/network-statistics-contacts.php:13
+#: metrics/network-statistics-contacts.php:14
+#: metrics/network-statistics-contacts.php:51
+msgid "Contacts"
+msgstr "Контакти"
+
+#: post-type/module-base.php:475
+#: post-type/module-base.php:294
+#: post-type/module-base.php:450
+#: metrics/base.php:223
+#: metrics/base.php:252
+#: metrics/network-maps-area.php:81
+#: metrics/network-maps-area.php:121
+#: metrics/network-statistics-groups.php:12
+#: metrics/network-statistics-groups.php:13
+#: metrics/network-statistics-groups.php:14
+#: metrics/network-statistics-groups.php:50
+msgid "Groups"
+msgstr "Групе"
+
+#: post-type/module-base.php:457
+#: post-type/module-base.php:259
+#: post-type/module-base.php:467
+msgid "Leaders"
+msgstr "Вође"
+
+#: post-type/module-base.php:484
+msgid "Coaches"
+msgstr "Тренери"
+
+#: post-type/module-base.php:497
+msgid "Planted by"
+msgstr "Садио"
+
+#: post-type/module-base.php:498
+msgid "Planting"
+msgstr "Садња"
+
+#: post-type/module-base.php:466
+#: post-type/module-base.php:203
+#: post-type/module-base.php:519
+msgid "People Groups"
+msgstr "Групе људи"
+
+#: post-type/module-base.php:217
+#: post-type/module-base.php:102
+msgid "Tags"
+msgstr "Ознаке"
+
+#: post-type/module-base.php:218
+msgctxt "Optional Documentation"
+msgid "A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags."
+msgstr "Користан начин обучавања предмета и може помоћи контактима у обуци повезаним са вредним карактеристикама. на пример. власник предузећа, љубитељ спорта. Контакти се такође могу филтрирати помоћу ових ознака."
+
+#: post-type/module-base.php:225
+#: post-type/module-base.php:111
+msgid "Follow"
+msgstr "Пратити"
+
+#: post-type/module-base.php:232
+#: post-type/module-base.php:118
+msgid "Un-Follow"
+msgstr "Ун-Фоллов"
+
+#: includes/template-dashboard.php:164
+#: post-type/module-base.php:238
+#: post-type/module-base.php:124
+msgid "Tasks"
+msgstr "Задаци"
+
+#: post-type/module-base.php:252
+msgctxt "Training Status label"
+msgid "New"
+msgstr "Нова"
+
+#: post-type/module-base.php:253
+msgctxt "Training Status field description"
+msgid "New training added to the system"
+msgstr "Нова обука додата у систем"
+
+#: post-type/module-base.php:257
+msgctxt "Training Status label"
+msgid "Proposed"
+msgstr "Предложено"
+
+#: post-type/module-base.php:258
+msgctxt "Training Status field description"
+msgid "This training has been proposed and is in initial conversations"
+msgstr "Овај тренинг је предложен и у почетним је разговорима"
+
+#: post-type/module-base.php:262
+msgctxt "Training Status label"
+msgid "Scheduled"
+msgstr "Заказано"
+
+#: post-type/module-base.php:263
+msgctxt "Training Status field description"
+msgid "This training is confirmed, on the calendar."
+msgstr "Ова обука је потврђена у календару."
+
+#: post-type/module-base.php:267
+msgctxt "Training Status label"
+msgid "In Progress"
+msgstr "У току"
+
+#: post-type/module-base.php:268
+msgctxt "Training Status field description"
+msgid "This training is confirmed, on the calendar, or currently active."
+msgstr "Ова обука је потврђена, у календару или тренутно активна."
+
+#: post-type/module-base.php:272
+msgctxt "Training Status label"
+msgid "Complete"
+msgstr "комплетан"
+
+#: post-type/module-base.php:273
+msgctxt "Training Status field description"
+msgid "This training has successfully completed"
+msgstr "Овај тренинг је успешно завршен"
+
+#: post-type/module-base.php:277
+msgctxt "Training Status label"
+msgid "Paused"
+msgstr "Паузирано"
+
+#: post-type/module-base.php:278
+msgctxt "Training Status field description"
+msgid "This contact is currently on hold. It has potential of getting scheduled in the future."
+msgstr "Овај контакт је тренутно на чекању. Има потенцијал да се закаже у будућности."
+
+#: post-type/module-base.php:282
+msgctxt "Training Status label"
+msgid "Closed"
+msgstr "Затворено"
+
+#: post-type/module-base.php:283
+msgctxt "Training Status field description"
+msgid "This training is no longer going to happen."
+msgstr "Ова обука се више неће одвијати."
+
+#: post-type/module-base.php:290
+#: post-type/module-base.php:176
+msgid "Assigned To"
+msgstr "Додељено"
+
+#: post-type/module-base.php:291
+msgid "Select the main person who is responsible for reporting on this training."
+msgstr "Изаберите главну особу која је одговорна за извештавање о овој обуци."
+
+#: post-type/module-base.php:299
+msgid "Training Coach / Church Planter"
+msgstr "Тренер за обуку / црквени плантажер"
+
+#: post-type/module-base.php:300
+msgctxt "Optional Documentation"
+msgid "The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training."
+msgstr "Особа која је поставила и / или тренира овај тренинг. Само једна особа може бити распоређена на тренинг, док више људи може бити тренери / планери ове обуке."
+
+#: post-type/module-base.php:310
+#: post-type/module-base.php:196
+msgid "Requires Update"
+msgstr "Захтева ажурирање"
+
+#: post-type/module-base.php:316
+msgid "Video Link"
+msgstr "Видео Линк"
+
+#: post-type/module-base.php:317
+msgctxt "Optional Documentation"
+msgid "Link to video chat service"
+msgstr "Линк до услуге видео ћаскања"
+
+#: post-type/module-base.php:324
+msgid "Notes"
+msgstr "Напомене"
+
+#: post-type/module-base.php:325
+msgctxt "Optional Documentation"
+msgid "Notes on when the trainings will happen"
+msgstr "Напомене о томе када ће се одржати тренинзи"
+
+#: post-type/module-base.php:334
+#: post-type/module-base.php:544
+msgid "Meeting Times"
+msgstr "Меетинг Тимес"
+
+#: post-type/module-base.php:382
+#: post-type/module-base.php:391
+#: post-type/module-base.php:219
+#: post-type/module-base.php:228
+msgid "Locations"
+msgstr "Локације"
+
+#: post-type/module-base.php:383
+#: post-type/module-base.php:392
+#: post-type/module-base.php:220
+#: post-type/module-base.php:229
+msgctxt "Optional Documentation"
+msgid "The general location where this contact is located."
+msgstr "Општа локација на којој се налази овај контакт."
+
+#: post-type/module-base.php:399
+#: post-type/module-base.php:236
+msgid "Address"
+msgstr "Адреса"
+
+#: post-type/module-base.php:416
+msgid "Parent Training"
+msgstr "Обука родитеља"
+
+#: post-type/module-base.php:417
+msgctxt "Optional Documentation"
+msgid "A training that launched this training."
+msgstr "Обука која је покренула ову обуку."
+
+#: post-type/module-base.php:427
+msgid "Peer Training"
+msgstr "Вршњачка обука"
+
+#: post-type/module-base.php:428
+msgctxt "Optional Documentation"
+msgid "A related training that isn't a parent/child in relationship. It might indicate trainings that collaborate, are about to merge, recently split, etc."
+msgstr "Сродни тренинг који није родитељ / дете у вези. То може указивати на тренинге који сарађују, који се спремају да се споје, недавно поделе итд."
+
+#: post-type/module-base.php:438
+msgid "Child Training"
+msgstr "Дечји тренинг"
+
+#: post-type/module-base.php:439
+msgctxt "Optional Documentation"
+msgid "A training that has been birthed out of this training."
+msgstr "Тренинг који је рођен са овог тренинга."
+
+#: post-type/module-base.php:449
+#: post-type/module-base.php:543
+#: post-type/module-base.php:654
+msgid "Member List"
+msgstr "Листа чланова"
+
+#: post-type/module-base.php:450
+msgctxt "Optional Documentation"
+msgid "The contacts who are members of this training."
+msgstr "Контакти који су чланови овог тренинга."
+
+#: post-type/module-base.php:467
+msgctxt "Optional Documentation"
+msgid "The people trainings represented by this training."
+msgstr "Обуке људи представљене овом обуком."
+
+#: post-type/module-base.php:487
+msgid "Member Count"
+msgstr "Цоунт Цоунт"
+
+#: post-type/module-base.php:488
+#: post-type/module-base.php:495
+msgctxt "Optional Documentation"
+msgid "The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training."
+msgstr "Број чланова на овом тренингу. Аутоматски ће се ажурирати када се нови чланови додају или уклоне са листе чланова. Ручно промените овај број на укључене људе који можда нису у систему, али су такође чланови обуке."
+
+#: post-type/module-base.php:494
+msgid "Leader Count"
+msgstr "Вођа Цоунт"
+
+#: post-type/module-base.php:504
+msgid "Training as Leader"
+msgstr "Обука за вођу"
+
+#: post-type/module-base.php:505
+msgctxt "Optional Documentation"
+msgid "Leader of a training"
+msgstr "Вођа тренинга"
+
+#: post-type/module-base.php:515
+msgid "Training as Participant"
+msgstr "Обука за учесника"
+
+#: post-type/module-base.php:516
+msgctxt "Optional Documentation"
+msgid "Participant in a training."
+msgstr "Полазник обуке."
+
+#: post-type/module-base.php:545
+#: post-type/module-base.php:537
+msgid "Other"
+msgstr "Остало"
+
+#: post-type/module-base.php:576
+#: post-type/module-base.php:568
+msgctxt "input field placeholder"
+msgid "Search Users"
+msgstr "Претражите кориснике"
+
+#: post-type/module-base.php:633
+#: post-type/module-base.php:601
+msgctxt "Search 'something'"
+msgid "Search %s"
+msgstr "Претражите% с"
+
+#: post-type/module-base.php:657
+msgid "Create"
+msgstr "Креирај"
+
+#: post-type/module-base.php:662
+msgid "Select"
+msgstr "Изаберите"
+
+#: post-type/module-base.php:667
+msgid "To add new members, click on 'Create' or 'Select'."
+msgstr "Да бисте додали нове чланове, кликните на „Направи“ или „Изабери“."
+
+#: post-type/module-base.php:672
+msgctxt "Add members modal"
+msgid "Add members from existing contacts"
+msgstr "Додајте чланове из постојећих контаката"
+
+#: post-type/module-base.php:673
+msgctxt "Add members modal"
+msgid "In the 'Member List' field, type the name of an existing contact to add them to this training."
+msgstr "У поље „Листа чланова“ откуцајте име постојећег контакта да бисте их додали у ову обуку."
+
+#: post-type/module-base.php:682
+msgid "Close"
+msgstr "Близу"
+
+#: post-type/module-base.php:880
+msgid "Removed %1$s: %2$s"
+msgstr "Уклоњено% 1 $ с:% 2 $ с"
+
+#: post-type/module-base.php:883
+msgid "Added %1$s: %2$s"
+msgstr "Додато% 1 $ с:% 2 $ с"
+
+#: post-type/module-base.php:886
+msgid "Updated %1$s: %2$s to %3$s"
+msgstr "Ажурирано% 1 $ с:% 2 $ с на% 3 $ с"
+
+#: post-type/module-base.php:958
+#: post-type/module-base.php:942
+msgctxt "List Filters"
+msgid "Assigned to me"
+msgstr "Додељен мени"
+
+#: post-type/module-base.php:966
+#: post-type/module-base.php:1023
+#: post-type/module-base.php:1031
+#: post-type/module-base.php:950
+#: post-type/module-base.php:1007
+#: post-type/module-base.php:1015
+msgctxt "List Filters"
+msgid "All"
+msgstr "Све"
+
+#: post-type/module-reports.php:85
+msgid "Reports"
+msgstr "Извештаји"
+
+#: post-type/module-reports.php:121
+msgid "Total Groups"
+msgstr "Укупно група"
+
+#: post-type/module-reports.php:122
+msgid "Total Baptisms"
+msgstr "Укупно крштења"
+
+#: post-type/module-reports.php:123
+#: metrics/base.php:312
+msgid "Countries"
+msgstr "Земље"
+
+#: post-type/module-reports.php:124
+msgid "States"
+msgstr "државе"
+
+#: post-type/module-reports.php:125
+msgid "Counties"
+msgstr "Жупаније"
+
+#: post-type/module-public-calendar.php:432
+#: post-type/module-registration.php:385
+msgid "Add"
+msgstr "Додати"
+
+#: post-type/module-registration.php:31
+msgid "Apps"
+msgstr "Апликације"
+
+#: post-type/module-registration.php:59
+msgid "copy link"
+msgstr "копирај везу"
+
+#: post-type/module-registration.php:61
+msgid "edit form"
+msgstr "уреди образац"
+
+#: post-type/module-registration.php:63
+msgid "report"
+msgstr "извештај"
+
+#: post-type/module-registration.php:67
+msgid "create link"
+msgstr "креирај везу"
+
+#: post-type/module-registration.php:114
+msgid "link"
+msgstr "линк"
+
+#: post-type/module-registration.php:116
+msgid "show on calendar"
+msgstr "емисија на календару"
+
+#: post-type/module-registration.php:118
+msgid "open registration"
+msgstr "отворена регистрација "
+
+#: metrics/network-maps-area.php:68
+msgid "add"
+msgstr "додати"
+
+#: post-type/module-registration.php:266
+msgid "Use"
+msgstr "Користите"
+
+#: post-type/module-registration.php:267 post-type/module-registration.php:695
+msgid "Search Location"
+msgstr "Претражите локацију"
+
+#: post-type/module-registration.php:268
+msgid "Delete Location"
+msgstr "Избриши локацију"
+
+#: post-type/module-registration.php:269
+msgid "Open Mapping"
+msgstr "Отвори мапирање"
+
+#: post-type/module-registration.php:270
+msgid "clear"
+msgstr "јасно"
+
+#: post-type/module-registration.php:384
+msgid "Register for Training"
+msgstr "Региструјте се за обуку"
+
+#: post-type/module-registration.php:386
+msgid "Join Training"
+msgstr "Придружите се тренингу"
+
+#: post-type/module-registration.php:387
+msgid "Join in"
+msgstr "Прикључи се"
+
+#: post-type/module-registration.php:700
+msgid "Clear"
+msgstr "Јасно"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Training"
+msgstr "Алати за ученике - Обука"
+
+#: includes/admin/admin-menu-and-tabs.php:62
+msgid "Extensions (DT)"
+msgstr "Проширења (ДТ)"
+
+#: admin/menu-and-tabs.php:64 admin/menu-and-tabs.php:65
+#: admin/menu-and-tabs.php:103
+msgid "Network Dashboard"
+msgstr "Мрежна контролна табла"
+
+#: includes/admin/admin-menu-and-tabs.php:78
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Немате довољно дозвола за приступ овој страници."
+
+#: admin/menu-and-tabs.php:107 admin/menu-and-tabs.php:130
+#: admin/menu-and-tabs.php:135
+msgid "nav-tab-active"
+msgstr "нав-таб-активан"
+
+#: admin/migrations/0000-initial.php:21
+msgid "Network Dashboard Viewer"
+msgstr "Прегледник мрежне контролне табле"
+
+#: metrics/base.php:220
+msgid "ID"
+msgstr "ИД"
+
+#: metrics/base.php:221
+#: metrics/base.php:255
+msgid "Site"
+msgstr "Сите"
+
+#: metrics/base.php:224
+#: metrics/base.php:254
+#: metrics/network-maps-area.php:89
+#: metrics/network-maps-area.php:133
+#: metrics/network-statistics-users.php:12
+#: metrics/network-statistics-users.php:13
+#: metrics/network-statistics-users.php:14
+#: metrics/network-statistics-users.php:50
+msgid "Users"
+msgstr "Корисници"
+
+#: metrics/base.php:225
+msgid "Timestamp"
+msgstr "Временска ознака"
+
+#: metrics/base.php:226
+msgid "Visit"
+msgstr "Посетите"
+
+#: metrics/base.php:227
+msgid "View"
+msgstr "Поглед"
+
+#: metrics/base.php:229
+msgid "Active Snapshot"
+msgstr "Активни снимак"
+
+#: metrics/base.php:230
+msgid "Generations"
+msgstr "Генерације"
+
+#: metrics/base.php:231
+msgid "Follow-up Funnel"
+msgstr "Ток за праћење"
+
+#: metrics/base.php:232
+msgid "On-Going Meetings"
+msgstr "Састанци у току"
+
+#: metrics/base.php:233
+msgid "Coaching"
+msgstr "Цоацхинг"
+
+#: metrics/base.php:234
+msgid "Baptized"
+msgstr "Крштени"
+
+#: metrics/base.php:235
+msgid "Active Groups"
+msgstr "Активне групе"
+
+#: metrics/base.php:236
+#: metrics/base.php:258
+msgid "Church"
+msgstr "Црква"
+
+#: metrics/base.php:237
+msgid "Health Metrics"
+msgstr "Здравствене метрике"
+
+#: metrics/base.php:238
+msgid "Total Users"
+msgstr "Укупно корисника"
+
+#: metrics/base.php:239
+msgid "Responders"
+msgstr "Респондерс"
+
+#: metrics/base.php:240
+msgid "Dispatchers"
+msgstr "Диспечери"
+
+#: metrics/base.php:241
+msgid "Multipliers"
+msgstr "Мултипликатори"
+
+#: metrics/base.php:242
+msgid "Admins"
+msgstr "Администратори"
+
+#: metrics/base.php:243
+msgid "User Login Activity"
+msgstr "Активност пријаве корисника"
+
+#: metrics/base.php:244
+msgid "Users Active in the Last 30 Days"
+msgstr "Корисници активни у последњих 30 дана"
+
+#: metrics/base.php:245
+msgid "Practicing"
+msgstr "Вежбање"
+
+#: metrics/base.php:246
+msgid "Not Practicing"
+msgstr "Не вежбање"
+
+#: metrics/base.php:247
+msgid "Chart Funnel"
+msgstr "Лијевак за графикон"
+
+#: metrics/base.php:250
+msgid "Contact"
+msgstr "Контакт"
+
+#: metrics/base.php:251
+msgid "Group"
+msgstr "Група"
+
+#: metrics/base.php:253
+msgid "User"
+msgstr "Корисник"
+
+#: metrics/base.php:256
+#: metrics/base.php:301
+msgid "Sites"
+msgstr "Сајтови"
+
+#: metrics/base.php:257
+msgid "Baptisms"
+msgstr "Крштења"
+
+#: metrics/base.php:259
+#: metrics/network-maps-area.php:97
+#: metrics/network-maps-area.php:127
+msgid "Churches"
+msgstr "Цркве"
+
+#: metrics/base.php:260
+msgid "Location"
+msgstr "Локација"
+
+#: metrics/base.php:261
+msgid "Types"
+msgstr "Врсте"
+
+#: metrics/base.php:263
+msgid "modify filter"
+msgstr "изменити филтер"
+
+#: metrics/base.php:264
+msgid "Filter List"
+msgstr "Листа филтера"
+
+#: metrics/base.php:265
+msgid "reset data"
+msgstr "ресетовање података"
+
+#: post-type/module-base.php:133
+#: metrics/base.php:267
+msgid "Status"
+msgstr "Статус"
+
+#: metrics/base.php:268
+msgid "Status - All"
+msgstr "Статус - Све"
+
+#: metrics/base.php:270
+msgid "Zoom Level"
+msgstr "Ниво зумирања"
+
+#: metrics/base.php:271
+msgid "Auto Zoom"
+msgstr "Аутоматско зумирање"
+
+#: metrics/base.php:272
+msgid "World"
+msgstr "Свет"
+
+#: metrics/base.php:273
+msgid "Country"
+msgstr "Цоунтри"
+
+#: metrics/base.php:274
+msgid "State"
+msgstr "Држава"
+
+#: includes/template-dashboard.php:23
+#: metrics/base.php:276
+msgid "Active Contacts"
+msgstr "Активни контакти"
+
+#: metrics/base.php:277
+msgid "Paused Contacts"
+msgstr "Паузирани контакти"
+
+#: metrics/base.php:278
+msgid "Closed Contacts"
+msgstr "Затворени контакти"
+
+#: metrics/base.php:279
+msgid "Total Contacts"
+msgstr "Укупно контаката"
+
+#: metrics/base.php:280
+msgid "New Contacts"
+msgstr "Нови контакти"
+
+#: metrics/base.php:282
+msgid "New Baptisms"
+msgstr "Нова крштења"
+
+#: metrics/base.php:283
+msgid "Baptism Generations"
+msgstr "Генерације крштења"
+
+#: metrics/base.php:284
+msgid "Select Location"
+msgstr "Изаберите Локација"
+
+#: metrics/base.php:286
+msgid "New Groups"
+msgstr "Нове групе"
+
+#: metrics/base.php:287
+msgid "Pre-Group"
+msgstr "Предгрупа"
+
+#: metrics/base.php:288
+msgid "Pre-Groups"
+msgstr "Предгрупе"
+
+#: metrics/base.php:290
+msgid "Last 7 Days"
+msgstr "Последњих 7 дана"
+
+#: metrics/base.php:291
+msgid "Last 30 Days"
+msgstr "Последњих 30 дана"
+
+#: metrics/base.php:292
+msgid "Last 60 Days"
+msgstr "Последњих 60 дана"
+
+#: metrics/base.php:293
+msgid "Last 12 Months"
+msgstr "Последњих 12 месеци"
+
+#: metrics/base.php:294
+msgid "Last 24 Months"
+msgstr "Последња 24 месеца"
+
+#: metrics/base.php:295
+msgid "This Year"
+msgstr "Ове године"
+
+#: metrics/base.php:297
+msgid "Activity Map"
+msgstr "Мапа активности"
+
+#: metrics/base.php:298
+#: metrics/network-activity-stats.php:11
+#: metrics/network-activity-stats.php:12
+#: metrics/network-activity-stats.php:13
+#: metrics/network-activity-stats.php:57
+msgid "Stats"
+msgstr "Статистика"
+
+#: metrics/base.php:299
+msgid "Activities"
+msgstr "Активности"
+
+#: metrics/base.php:300
+msgid "Actions"
+msgstr "Акције"
+
+#: metrics/base.php:302
+msgid "By Action Type"
+msgstr "По типу радње"
+
+#: metrics/base.php:303
+msgid "Key"
+msgstr "Кључ"
+
+#: metrics/base.php:304
+msgid "Name"
+msgstr "Име"
+
+#: metrics/base.php:305
+msgid "Total Activities"
+msgstr "Укупне активности"
+
+#: metrics/base.php:306
+msgid "Feed"
+msgstr "Напајање"
+
+#: metrics/base.php:307
+msgid "Time"
+msgstr "време"
+
+#: metrics/base.php:308
+msgid "Result Limit"
+msgstr "Резултат Ограничење"
+
+#: metrics/base.php:309
+msgid "uncheck"
+msgstr "уклоните ознаку"
+
+#: metrics/base.php:311
+#: metrics/network-home.php:12
+#: metrics/network-home.php:13
+#: metrics/network-home.php:14
+#: metrics/network-home.php:48
+msgid "Home"
+msgstr "Кућа"
+
+#: metrics/base.php:313
+msgid "Events (30 Days)"
+msgstr "Догађаји (30 дана)"
+
+#: metrics/base.php:315
+msgid "All Active/Inactive"
+msgstr "Сви активни / неактивни"
+
+#: metrics/base.php:316
+#: metrics/network-maps-hovermap.php:12
+#: metrics/network-maps-hovermap.php:13
+#: metrics/network-maps-hovermap.php:14
+#: metrics/network-maps-hovermap.php:51
+msgid "Hover Map"
+msgstr "Ховер Мап"
+
+#: metrics/loader.php:16
+msgid "Network"
+msgstr "Мрежа"
+
+#: metrics/network-activity-map.php:15
+#: metrics/network-activity-map.php:16
+#: metrics/network-activity-map.php:17
+#: metrics/network-activity-map.php:63
+msgid "Map"
+msgstr "Мапа"
+
+#: metrics/network-activity-stream.php:12
+#: metrics/network-activity-stream.php:13
+#: metrics/network-activity-stream.php:14
+#: metrics/network-activity-stream.php:51
+msgid "Log"
+msgstr "Пријава"
+
+#: metrics/network-activity.php:12
+#: metrics/network-activity.php:13
+#: metrics/network-activity.php:14
+#: metrics/network-activity.php:25
+msgid "Activity"
+msgstr "Активност"
+
+#: metrics/network-maps-area.php:15
+#: metrics/network-maps-area.php:16
+#: metrics/network-maps-area.php:17
+#: metrics/network-maps-area.php:110
+msgid "Area Maps"
+msgstr "Мапе подручја"
+
+#: metrics/network-maps-locationlist.php:12
+#: metrics/network-maps-locationlist.php:13
+#: metrics/network-maps-locationlist.php:14
+#: metrics/network-maps-locationlist.php:46
+msgid "Location List"
+msgstr "Листа локација"
+
+#: metrics/network-maps.php:12
+#: metrics/network-maps.php:13
+#: metrics/network-maps.php:14
+#: metrics/network-maps.php:25
+msgid "Maps"
+msgstr "Мапс"
+
+#: metrics/network-sites.php:12
+#: metrics/network-sites.php:13
+#: metrics/network-sites.php:14
+#: metrics/network-sites.php:45
+msgid "Site Reports"
+msgstr "Извештаји о локацијама"
+
+#: metrics/network-statistics.php:12
+#: metrics/network-statistics.php:13
+#: metrics/network-statistics.php:14
+#: metrics/network-statistics.php:25
+msgid "Statistics"
+msgstr "Статистика"
+
+#: shared/permissions.php:41
+msgid "Network Dashboard Transfer Both Ways"
+msgstr "Пренос мрежне контролне табле у оба правца"
+
+#: shared/permissions.php:42
+msgid "Network Dashboard Receiving Only"
+msgstr "Мрежна контролна табла само прима"
+
+#: shared/permissions.php:43
+msgid "Network Dashboard Sending Only"
+msgstr "Мрежна контролна табла само слање"
+
+#: shared/site-profile.php:99
+msgid "Network Dashboard Site Profile"
+msgstr "Профил веб локације мрежне контролне табле"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Network Dashboard"
+msgstr "Алати за ученике - мрежна контролна табла"
+
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:53
+#: post-type/module-base.php:393
+#: post-type/module-base.php:405
+#: post-type/module-base.php:449
+#: post-type/module-base.php:466
+#: post-type/module-base.php:483
+#: post-type/module-base.php:520
+msgid "Streams"
+msgstr "Потоци"
+
+#: metrics/mapbox-maps.php:30
+msgid "Stream Maps"
+msgstr "Стреам Мапс"
+
+#: metrics/mapbox-personal-maps.php:30
+msgid "Streams Maps"
+msgstr "Мапе стреамова"
+
+#: post-type/module-base.php:103
+msgctxt "Optional Documentation"
+msgid "A useful way to stream related items and can help stream contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags."
+msgstr "Користан начин струјања повезаних предмета и може помоћи у струјању контаката повезаних са значајним карактеристикама. на пример. власник предузећа, љубитељ спорта. Контакти се такође могу филтрирати помоћу ових ознака."
+
+#: post-type/module-base.php:138
+msgctxt "Stream Status label"
+msgid "New"
+msgstr "Нова"
+
+#: post-type/module-base.php:139
+msgctxt "Stream Status field description"
+msgid "New stream added to the system"
+msgstr "У систем је додат нови ток"
+
+#: post-type/module-base.php:143
+msgctxt "Stream Status label"
+msgid "Model"
+msgstr "Модел"
+
+#: post-type/module-base.php:144
+msgctxt "Stream Status field description"
+msgid "This stream has been proposed and is in initial conversations"
+msgstr "Овај ток је предложен и у почетним је разговорима"
+
+#: post-type/module-base.php:148
+msgctxt "Stream Status label"
+msgid "Assist"
+msgstr "Ассист"
+
+#: post-type/module-base.php:149
+msgctxt "Stream Status field description"
+msgid "This stream is confirmed, on the calendar."
+msgstr "Овај ток је потврђен у календару."
+
+#: post-type/module-base.php:153
+msgctxt "Stream Status label"
+msgid "Watch"
+msgstr "Гледати"
+
+#: post-type/module-base.php:154
+msgctxt "Stream Status field description"
+msgid "This stream is confirmed, on the calendar, or currently active."
+msgstr "Овај ток је потврђен, у календару или тренутно активан."
+
+#: post-type/module-base.php:158
+msgctxt "Stream Status label"
+msgid "Leave"
+msgstr "Одлази"
+
+#: post-type/module-base.php:159
+msgctxt "Stream Status field description"
+msgid "This stream has successfully completed"
+msgstr "Овај стрим је успешно завршен"
+
+#: post-type/module-base.php:163
+msgctxt "Stream Status label"
+msgid "Paused"
+msgstr "Паузирано"
+
+#: post-type/module-base.php:164
+msgctxt "Stream Status field description"
+msgid "This contact is currently on hold. It has potential of getting scheduled in the future."
+msgstr "Овај контакт је тренутно на чекању. Има потенцијал да се закаже у будућности."
+
+#: post-type/module-base.php:168
+msgctxt "Stream Status label"
+msgid "Closed"
+msgstr "Затворено"
+
+#: post-type/module-base.php:169
+msgctxt "Stream Status field description"
+msgid "This stream is no longer going to happen."
+msgstr "Овај ток се више неће догодити."
+
+#: post-type/module-base.php:177
+msgid "Select the main person who is responsible for reporting on this stream."
+msgstr "Изаберите главну особу која је одговорна за извештавање о овом току."
+
+#: post-type/module-base.php:186
+msgctxt "Optional Documentation"
+msgid "The person who planted and/or is coaching this stream. Only one person can be assigned to a stream while multiple people can be coaches / church planters of this stream."
+msgstr "Особа која је засадила и / или тренира овај ток. Само једна особа може бити додељена потоку, док више људи може бити тренери / засадитељи цркава овог потока."
+
+#: post-type/module-base.php:204
+msgctxt "Optional Documentation"
+msgid "The people streams represented by this stream."
+msgstr "Народни токови које представља овај ток."
+
+#: post-type/module-base.php:309
+msgid "Parent Stream"
+msgstr "Надређени ток"
+
+#: post-type/module-base.php:310
+msgctxt "Optional Documentation"
+msgid "A stream that launched this stream."
+msgstr "Поток који је покренуо овај ток."
+
+#: post-type/module-base.php:321
+msgid "Peer Streams"
+msgstr "Вршњачки токови"
+
+#: post-type/module-base.php:322
+msgctxt "Optional Documentation"
+msgid "A related stream that isn't a parent/child in relationship. It might indicate streams that collaborate, are about to merge, recently split, etc."
+msgstr "Повезани ток који није родитељ / дете у вези. То може указивати на токове који сарађују, који се спремају да се споје, недавно поделе итд."
+
+#: post-type/module-base.php:333
+msgid "Child Streams"
+msgstr "Дечији потоци"
+
+#: post-type/module-base.php:334
+msgctxt "Optional Documentation"
+msgid "A stream that has been birthed out of this stream."
+msgstr "Поток који је изашао из овог потока."
+
+#: post-type/module-base.php:369
+msgid "Leader in Stream"
+msgstr "Вођа у току"
+
+#: post-type/module-base.php:370
+msgctxt "Optional Documentation"
+msgid "Leader of a stream"
+msgstr "Вођа потока"
+
+#: post-type/module-base.php:380
+msgid "Key Disciple in Stream"
+msgstr "Кључни ученик у току"
+
+#: post-type/module-base.php:381
+msgctxt "Optional Documentation"
+msgid "Disciple in a stream."
+msgstr "Ученик у потоку."
+
+#: post-type/module-base.php:536
+msgid "Connections"
+msgstr "Везе"
+
+#: post-type/module-reports.php:432
+msgid "Add Report"
+msgstr "Додај извештај"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Streams"
+msgstr "Алати за ученике - токови"
+
+#: logging/log-generations.php:11
+msgid "Pre-Group Generations"
+msgstr "Генерације пре групе"
+
+#: logging/log-generations.php:17
+msgid "Group Generations"
+msgstr "Групне генерације"
+
+#: logging/log-generations.php:23
+msgid "Church Generations"
+msgstr "Цхурцх Генератионс"
+
+#: logging/log-generations.php:29
+msgid "Team Generations"
+msgstr "Теам Генератионс"
+
+#: logging/log-generations.php:76
+msgid "%s is reporting a new pre-group generation."
+msgstr "% с пријављује нову генерацију предгрупе."
+
+#: logging/log-generations.php:81
+msgid "%s is reporting a new group generation."
+msgstr "% с пријављује нову генерацију групе."
+
+#: logging/log-generations.php:86
+msgid "%s is reporting a new church generation."
+msgstr "% с пријављује нову црквену генерацију."
+
+#: logging/log-generations.php:91
+msgid "%s is reporting a new leadership team generation."
+msgstr "% с пријављује нову генерацију тима за вођство."
+
+#: includes/charts/baptisms.php:81
+msgid "New Contact"
+msgstr "Нови контакт"
+
+#: logging/log-new-posts.php:16
+msgid "New Pre-Group"
+msgstr "Нова предгрупа"
+
+#: logging/log-new-posts.php:21
+msgid "New Group"
+msgstr "Нова група"
+
+#: logging/log-new-posts.php:26
+msgid "New Church"
+msgstr "Нова црква"
+
+#: logging/log-new-posts.php:31
+msgid "New Team"
+msgstr "Нови тим"
+
+#: logging/log-new-posts.php:36
+msgid "New Baptism"
+msgstr "Ново крштење"
+
+#: logging/log-new-posts.php:41
+msgid "New Coaching"
+msgstr "Нев Цоацхинг"
+
+#: logging/log-new-posts.php:164
+msgid "%s is reporting a new contact."
+msgstr "% с пријављује нови контакт."
+
+#: logging/log-new-posts.php:169
+msgid "%s is reporting a new pre-group formed."
+msgstr "% с пријављује нову формирану предгрупу."
+
+#: logging/log-new-posts.php:174
+msgid "%s is reporting a new group formed."
+msgstr "% с пријављује формирану нову групу."
+
+#: logging/log-new-posts.php:179
+msgid "%s is reporting a new church."
+msgstr "% с пријављује нову цркву."
+
+#: logging/log-new-posts.php:184
+msgid "%s is reporting a new leadership team formed."
+msgstr "% с пријављује формиран нови тим руководства."
+
+#: logging/log-new-posts.php:189
+msgid "%s is reporting a new baptism."
+msgstr "% с пријављује ново крштење."
+
+#: logging/log-new-posts.php:194
+msgid "%s is reporting an coaching relationship."
+msgstr "% с пријављује тренерску везу."
+
+#: metrics/network-maps-area.php:74
+#: metrics/network-maps-area.php:83
+#: metrics/network-maps-area.php:91
+#: metrics/network-maps-area.php:99
+msgid "Active"
+msgstr "Активно"
+
+#: metrics/network-maps-area.php:75
+msgid "Paused"
+msgstr "Паузирано"
+
+#: metrics/network-maps-area.php:76
+msgid "Closed"
+msgstr "Затворено"
+
+#: metrics/network-maps-area.php:84
+#: metrics/network-maps-area.php:92
+#: metrics/network-maps-area.php:100
+msgid "Inactive"
+msgstr "Неактиван"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-нетворк-дасхбоард"
+
+#. Description of the plugin/theme
+#: 
+msgid "Connect this Disciple Tools site to a larger network of sites. Adds security sensitive totals, mapping, activity logging."
+msgstr "Повежите ову веб локацију Дисципле Тоолс са већом мрежом веб локација. Додаје укупне вредности осетљиве на безбедност, мапирање, евидентирање активности."
+
+#. Author URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-streams"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-стреамс"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools Streams Extension adds recording of streams and cross reference them with contacts, groups, and locations."
+msgstr "Додатак Дисципле Тоолс Стреамс додаје снимање токова и укрштање са контактима, групама и локацијама."
+
+#: disciple-tools-training.php:297
+msgid "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version."
+msgstr "Додатак „Дисципле Тоолс - Траининг“ захтева да тема „Дисципле Тоолс“ ради. Молимо активирајте тему „Алат за ученике“ или се уверите да је најновија верзија."
+
+#: disciple-tools-training.php:299
+msgid "Current Disciple Tools version: %1$s, required version: %2$s"
+msgstr "Тренутна верзија алата за ученике:% 1 $ с, обавезна верзија:% 2 $ с"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-training"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-траининг"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations."
+msgstr "Проширење за обуку „Дисципле Тоолс“ додаје снимање обука и укрштање са контактима, групама и локацијама."
+
+#: post-type/module-base.php:128
+msgid "Duplicates"
+msgstr "Дупликати"
+
+#: post-type/module-base.php:185
+msgid "Coach"
+msgstr "Тренеру"
+
+#: post-type/module-base.php:253
+msgid "Leaders Total"
+msgstr "Тотал Леадерс"
+
+#: post-type/module-base.php:271
+msgid "Disciples Total"
+msgstr "Укупно ученика"
+
+#: post-type/module-base.php:277
+msgid "Key Disciples"
+msgstr "Кључни ученици"
+
+#: post-type/module-base.php:288
+msgid "Groups Total"
+msgstr "Групе Укупно"
+
+#: post-type/module-base.php:348
+msgid "Trainings Total"
+msgstr "Укупно тренинга"
+
+#: includes/admin/admin-menu-and-tabs.php:63
+msgid "Dashboard Plugin"
+msgstr "Додатак за контролну таблу"
+
+#: includes/functions.php:85
+msgid "Dashboard"
+msgstr "Командна табла"
+
+#: includes/rest-api.php:86
+msgid "%s days since last update"
+msgstr "% с дана од последњег ажурирања"
+
+#: includes/rest-api.php:419
+msgid "Accept"
+msgstr "Прихвати"
+
+#: includes/rest-api.php:420
+msgid "Decline"
+msgstr "Одбити"
+
+#: includes/rest-api.php:421
+msgid "# Contacts Assigned"
+msgstr "# Контакти додељени"
+
+#: includes/rest-api.php:422
+msgid "# First Meetings"
+msgstr "# Први састанци"
+
+#: includes/rest-api.php:423
+msgid "# Faith milestones"
+msgstr "# Прекретнице вере"
+
+#: includes/rest-api.php:424
+msgid "Hurray! You are caught up."
+msgstr "Ура! Ухватили сте се."
+
+#: includes/rest-api.php:425
+msgid "remove"
+msgstr "уклонити"
+
+#: includes/rest-api.php:426
+msgid "mark as complete"
+msgstr "означити као потпуну"
+
+#: includes/rest-api.php:427
+msgid "No task created"
+msgstr "Није креиран ниједан задатак"
+
+#: includes/rest-api.php:428
+msgid "Reminder"
+msgstr "Подсетник"
+
+#: includes/rest-api.php:429
+msgid "No note set"
+msgstr "Није постављена ниједна белешка"
+
+#: includes/template-dashboard.php:30
+msgid "Add a contact"
+msgstr "Додати контакт"
+
+#: includes/template-dashboard.php:33
+msgid "View Contacts List"
+msgstr "Погледајте листу контаката"
+
+#: includes/template-dashboard.php:47
+msgid "Pending Contacts"
+msgstr "Контакти на чекању"
+
+#: includes/template-dashboard.php:52 includes/template-dashboard.php:70
+msgid "View All"
+msgstr "Погледати све"
+
+#: includes/template-dashboard.php:65
+msgid "Update Needed"
+msgstr "Потребно ажурирање"
+
+#: includes/template-dashboard.php:79
+msgid "Contact Workload"
+msgstr "Контактирајте оптерећење"
+
+#: includes/template-dashboard.php:83
+msgid "Choose an option to let the dispatcher(s) know if you are ready for new contacts"
+msgstr "Изаберите опцију да обавестите диспечера да ли сте спремни за нове контакте"
+
+#: includes/template-dashboard.php:93
+msgid "Set travel or dates unavailable"
+msgstr "Подесите путовање или датуме недоступним"
+
+#: includes/template-dashboard.php:106
+msgid "Personal Benchmarks"
+msgstr "Лична мјерила"
+
+#: includes/template-dashboard.php:135
+msgid "Faith Milestone Totals"
+msgstr "Фаитх Милестоне Тотал"
+
+#: includes/template-dashboard.php:138
+msgid "Milestones on your active contacts"
+msgstr "Прекретнице у вашим активним контактима"
+
+#: includes/template-dashboard.php:149
+msgid "Seeker Path Progress"
+msgstr "Напредак пута трагача"
+
+#: includes/template-dashboard.php:152
+msgid "No data to show yet. You have no active contacts"
+msgstr "Још нема података за приказ. Немате активних контаката"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Dashboard"
+msgstr "Алати за ученике - Контролна табла"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-дасхбоард"
+
+#. Description of the plugin/theme
+#: 
+msgid "The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats."
+msgstr "Контролна табла множитеља надограђује искуство множитеља чим се пријаве у систем дајући им одредишну страницу са статистиком"
+
+#: includes/dt-hooks.php:10
+msgid "Reason Assigned To"
+msgstr "Разлог додељен"
+
+#: includes/dt-hooks.php:14
+msgid "Follow-Up"
+msgstr "Пратити"
+
+#: includes/dt-hooks.php:20
+msgid "Digital Response"
+msgstr "Дигитални одговор"
+
+#: includes/dt-hooks.php:26
+msgid "Dispatch"
+msgstr "Депеша"
+
+#: includes/dt-hooks.php:34
+msgid "No Answer"
+msgstr "Нема одговора"
+
+#: includes/dt-hooks.php:38
+msgid "Talked"
+msgstr "Разговарао"
+
+#: includes/dt-hooks.php:42
+msgid "Scheduled"
+msgstr "Заказано"
+
+#: includes/dt-hooks.php:46
+msgid "Complete"
+msgstr "комплетан"
+
+#: includes/dt-hooks.php:50
+msgid "No-Show"
+msgstr "Но-Схов"
+
+#: includes/rest-api.php:44
+msgid "No permission"
+msgstr "Нема дозволу"
+
+#: includes/tiles.php:28
+msgid "All"
+msgstr "Све"
+
+#: includes/tiles.php:29
+msgid "Ready"
+msgstr "Спремни"
+
+#: includes/tiles.php:30
+msgid "Recent"
+msgstr "Скорашњи"
+
+#: includes/tiles.php:32
+msgid "Assign"
+msgstr "Додели"
+
+#: includes/tiles.php:50
+msgid "Choose an option:"
+msgstr "Изабери опцију:"
+
+#: includes/tiles.php:64
+msgid "Cancel"
+msgstr "Поништити, отказати"
+
+#: includes/tiles.php:77
+msgid "Assign For"
+msgstr "Додели за"
+
+#: includes/tiles.php:127
+msgid "Search"
+msgstr "Претрага"
+
+#: includes/tiles.php:208
+msgid "Claim for follow-up"
+msgstr "Захтев за праћење"
+
+#: includes/tiles.php:214
+msgid "Ready for Dispatch"
+msgstr "Спремно за отпрему"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles"
+msgstr "Алати за ученике - напредне плочице М2М"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
+msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-адванцед-м2м-тилес"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for different roles."
+msgstr "Алати за ученике - Напредне плочице М2М додају специфичне плочице за подршку за различите улоге."
+
+#: network/network-dashboard-integration.php:44
+msgid "New Training"
+msgstr ""
+
+#: network/network-dashboard-integration.php:50
+msgid "Training Started"
+msgstr ""
+
+#: network/network-dashboard-integration.php:56
+msgid "Training Completed"
+msgstr ""
+
+#: post-type/module-base.php:53
+msgid "Stream"
+msgstr ""
+
+#: includes/charts/baptisms.php:78
+msgid "Baptism Generation Tree"
+msgstr ""
+
+#: includes/charts/baptisms.php:79
+msgid "Search for a specific contact or multiplier"
+msgstr ""
+
+#: includes/charts/baptisms.php:80
+#: includes/charts/groups.php:79
+msgid "Reset"
+msgstr ""
+
+#: includes/charts/groups.php:76
+msgid "Group Generation Tree"
+msgstr ""
+
+#: includes/charts/groups.php:77
+msgid "This tree only shows First Generation groups that have multiplied."
+msgstr ""
+
+#: includes/charts/groups.php:78
+msgid "See descendants of a specific group"
+msgstr ""
+
+#: includes/export-action.php:9
+msgid "List Exports"
+msgstr ""
+
+#: includes/export-action.php:21
+msgid "bcc email list"
+msgstr ""
+
+#: includes/export-action.php:22
+msgid "phone number list"
+msgstr ""
+
+#: includes/export-action.php:23
+msgid "csv list"
+msgstr ""
+
+#: includes/export-action.php:25
+msgid "map list"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Mapped Locations"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Contacts Without Locations"
+msgstr ""
+
+#: includes/export-action.php:52
+msgid "List Export Help"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:72
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:81
+msgctxt "Coaching Checklist Initial for: Heard"
+msgid "H"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:82
+msgctxt "Coaching Checklist Initial for: Obeyed"
+msgid "O"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:83
+msgctxt "Coaching Checklist Initial for: Shared"
+msgid "S"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:84
+msgctxt "Coaching Checklist Initial for: Trained"
+msgid "T"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:88
+msgctxt "coaching checklist"
+msgid "Duckling Discipleship"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:89
+msgctxt "coaching checklist"
+msgid "Tell Your Story (testimony)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:90
+msgctxt "coaching checklist"
+msgid "Tell God's Story (gospel)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:91
+msgctxt "coaching checklist"
+msgid "List of 100"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:92
+msgctxt "coaching checklist"
+msgid "Pace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:93
+msgctxt "coaching checklist"
+msgid "Non-Sequential Ministry"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:94
+msgctxt "coaching checklist"
+msgid "3/3 Group Format"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:95
+msgctxt "coaching checklist"
+msgid "Simple Church"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:96
+msgctxt "coaching checklist"
+msgid "Being Part of Two Churches"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:97
+msgctxt "coaching checklist"
+msgid "Training Cycle"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:98
+msgctxt "coaching checklist"
+msgid "Accountability Groups"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:99
+msgctxt "coaching checklist"
+msgid "SOAPS"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:100
+msgctxt "coaching checklist"
+msgid "Prayer Wheel"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:101
+msgctxt "coaching checklist"
+msgid "Spiritual Breathing"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:102
+msgctxt "coaching checklist"
+msgid "Persecution & Suffering"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:103
+msgctxt "coaching checklist"
+msgid "Eyes to See Where the Kingdom Isn't"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:104
+msgctxt "coaching checklist"
+msgid "Person of Peace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:105
+msgctxt "coaching checklist"
+msgid "Prayer Walking"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:106
+msgctxt "coaching checklist"
+msgid "Baptism"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:107
+msgctxt "coaching checklist"
+msgid "Lord's Supper"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:108
+msgctxt "coaching checklist"
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:109
+msgctxt "coaching checklist"
+msgid "Leadership Cells"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:110
+msgctxt "coaching checklist"
+msgid "Peer Mentoring Group"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:111
+msgctxt "coaching checklist"
+msgid "Four Fields Tool"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:112
+msgctxt "coaching checklist"
+msgid "Generational Mapping"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:145
+msgid "Completed"
+msgstr ""
+
