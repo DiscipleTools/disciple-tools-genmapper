@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Genmapper
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
  * Description: Disciple Tools - Genmapper adds generation visualization to metrics section.
- * Version:  1.0
+ * Version:  1.1
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
  * Requires at least: 4.7.0
