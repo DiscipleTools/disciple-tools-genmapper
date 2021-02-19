@@ -236,7 +236,7 @@ class GenMapper {
 
   openRecord( d ){
     let id = d.data.id
-    var win = window.open( `${wpApiShare.site_url}/contacts/${id}/`, '_blank');
+    var win = window.open( `${wpApiShare.site_url}/${_.escape(d.data.post_type || "contacts")}/${_.escape(id)}/`, '_blank');
     win.focus();
   }
 
@@ -648,7 +648,7 @@ class GenMapper {
     } else {
       this.displayAlert(` Error setting up the graph
         <br><br>
-        This can be caused by circular connection data. 
+        This can be caused by circular connection data.
         Check that no child has two parents that are related. A group and a grand child group can't both be the parent of another group.
       `)
     }

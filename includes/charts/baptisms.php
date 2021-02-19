@@ -159,6 +159,7 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "id" => $baptism["id"],
                 "parentId" => $baptism["parent_id"] ?? 0,
                 "name" => $baptism["name"],
+                "post_type" => "contacts"
             ];
         }
         if ( empty( $contact_ids ) ){

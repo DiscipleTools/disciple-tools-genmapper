@@ -137,7 +137,8 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "name" => $group["name"],
                 "church" => $group["group_type"] === "church",
                 "active" => $group["group_status"] === "active",
-                "group_type" => $group["group_type"]
+                "group_type" => $group["group_type"],
+                "post_type" => "groups"
             ];
             $prepared_array[] = $values;
         }
