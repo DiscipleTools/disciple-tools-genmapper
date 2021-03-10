@@ -236,7 +236,7 @@ class GenMapper {
 
   openRecord( d ){
     let id = d.data.id
-    var win = window.open( `${wpApiShare.site_url}/${_.escape(d.data.post_type || "contacts")}/${_.escape(id)}/`, '_blank');
+    var win = window.open( `${wpApiShare.site_url}/${window.lodash.escape(d.data.post_type || "contacts")}/${window.lodash.escape(id)}/`, '_blank');
     win.focus();
   }
 
@@ -423,9 +423,9 @@ class GenMapper {
   }
 
   static getFieldValueForRadioType (field, d) {
-    let fieldValue = _.filter(field.values, {header: d.data[field.header]})[0]
+    let fieldValue = window.lodash.filter(field.values, {header: d.data[field.header]})[0]
     if (typeof fieldValue === 'undefined') {
-      fieldValue = _.filter(field.values, {header: field.initial})[0]
+      fieldValue = window.lodash.filter(field.values, {header: field.initial})[0]
     }
     return fieldValue
   }
@@ -479,7 +479,7 @@ class GenMapper {
   }
 
   addNode (d) {
-    let tmp = _.cloneDeep(this.masterData)
+    let tmp = window.lodash.cloneDeep(this.masterData)
     tmp.push({parentId:d.data.id})
     try {
       this.validTree(tmp)
@@ -517,7 +517,7 @@ class GenMapper {
   }
 
   findNewId () {
-    const ids = _.map(this.data, function (row) { return row.id })
+    const ids = window.lodash.map(this.data, function (row) { return row.id })
     return this.findNewIdFromArray(ids)
   }
 
@@ -543,7 +543,7 @@ class GenMapper {
   rebaseOnNode(d){
     //fetch from server because the local tree might not be complete
     jQuery('#chart').trigger("rebase-node-requested", [d])
-    // const tmpData = _.cloneDeep(d.descendants().map(x => x.data))
+    // const tmpData = window.lodash.cloneDeep(d.descendants().map(x => x.data))
     // tmpData[0].parentId = ''
     // this.data = tmpData
     // this.redraw(template)
@@ -572,9 +572,9 @@ class GenMapper {
     //   }
     //   if (window.confirm(confirmMessage)) {
     //     this.deleteAllDescendants(d)
-    //     const nodeToDelete = _.filter(this.data, {id: d.data.id})
+    //     const nodeToDelete = window.lodash.filter(this.data, {id: d.data.id})
     //     if (nodeToDelete) {
-    //       this.data = _.without(this.data, nodeToDelete[0])
+    //       this.data = window.lodash.without(this.data, nodeToDelete[0])
     //     }
     //   }
     // }
@@ -655,14 +655,14 @@ class GenMapper {
   }
 
   deleteAllDescendants (d) {
-    let idsToDelete = _.map(d.children, function (row) { return parseInt(row.id) })
+    let idsToDelete = window.lodash.map(d.children, function (row) { return parseInt(row.id) })
     while (idsToDelete.length > 0) {
       const currentId = idsToDelete.pop()
-      const childrenIdsToDelete = _.map(_.filter(this.data, {parentId: currentId}),
+      const childrenIdsToDelete = window.lodash.map(window.lodash.filter(this.data, {parentId: currentId}),
         function (row) { return row.id })
       idsToDelete = idsToDelete.concat(childrenIdsToDelete)
-      const nodeToDelete = _.filter(this.data, {id: currentId})
-      if (nodeToDelete) { this.data = _.without(this.data, nodeToDelete[0]) }
+      const nodeToDelete = window.lodash.filter(this.data, {id: currentId})
+      if (nodeToDelete) { this.data = window.lodash.without(this.data, nodeToDelete[0]) }
     }
   }
 

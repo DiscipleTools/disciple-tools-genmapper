@@ -71,7 +71,7 @@
       searchOnFocus: true,
       maxItem: 20,
       template: function (query, item) {
-        return `<span>${_.escape(item.name)}</span>`
+        return `<span>${window.lodash.escape(item.name)}</span>`
       },
       source: TYPEAHEADS.typeaheadSource('groups', 'dt-posts/v2/groups/compact/'),
       display: "name",
@@ -162,7 +162,7 @@
   chartDiv.on('node-updated', function (e, nodeID, nodeFields, groupFields) {
     let loading_spinner = $(".loading-spinner")
     loading_spinner.addClass("active")
-    _.forOwn(nodeFields, (value, key)=>{
+    window.lodash.forOwn(nodeFields, (value, key)=>{
       if ( key === "name" ){
         groupFields["title"] = value
       }

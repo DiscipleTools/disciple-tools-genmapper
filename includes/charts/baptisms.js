@@ -74,7 +74,7 @@
       searchOnFocus: true,
       maxItem: 20,
       template: function (query, item) {
-        return `<span>${_.escape(item.name)}</span>`
+        return `<span>${window.lodash.escape(item.name)}</span>`
       },
       source: TYPEAHEADS.typeaheadSource('contacts', 'dt-posts/v2/contacts/compact/'),
       display: "name",
@@ -168,7 +168,7 @@
   $("#chart").on('node-updated', function (e, nodeID, nodeFields, contactFields) {
     let loading_spinner = $(".loading-spinner")
     loading_spinner.addClass("active")
-    _.forOwn(nodeFields, (value, key)=>{
+    window.lodash.forOwn(nodeFields, (value, key)=>{
       if ( key === "name" ){
         contactFields["title"] = value
       }
