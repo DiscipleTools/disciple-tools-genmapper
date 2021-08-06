@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 abstract class DT_Genmapper_Metrics_Chart_Base
 {
 
-    public $namespace = "dt/v1/genmapper/";
+    public $namespace = "dt/v1/genmapper";
     public $base_slug = 'genmapper';
     public $base_title = "Gen Mapper";
 
@@ -101,9 +101,10 @@ abstract class DT_Genmapper_Metrics_Chart_Base
      */
     public function base_api_routes() {
         register_rest_route(
-            $this->namespace, 'sample', [
+            $this->namespace, '/sample', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'base_sample' ],
+                'permission_callback' => '__return_true',
             ]
         );
     }

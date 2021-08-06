@@ -86,10 +86,11 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
 
     public function add_api_routes() {
         register_rest_route(
-            $this->namespace, 'baptisms', [
+            $this->namespace, '/baptisms', [
                 [
                     'methods'  => WP_REST_Server::READABLE,
                     'callback' => [ $this, 'baptisms' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );

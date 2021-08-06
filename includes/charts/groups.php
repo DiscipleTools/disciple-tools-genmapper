@@ -90,6 +90,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 [
                     'methods'  => WP_REST_Server::READABLE,
                     'callback' => [ $this, 'groups' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );
