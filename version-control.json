@@ -21,6 +21,7 @@
     "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-772x250.jpg",
     "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
   },
+  "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-icon.png",
   "sections": {
     "description": "This plugin adds a generation mapping to the metrics section of the Disciple Tools system. Generation mapping shows parent/child relationship between contact, baptisms, and groups. ",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
