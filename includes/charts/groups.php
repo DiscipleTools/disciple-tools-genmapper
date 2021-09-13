@@ -132,14 +132,59 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         }
 
         foreach ( $groups as $group ){
+            $dates = $group['start_date'] ? date(get_option('date_format'), $group['start_date']) : '';
+            $label = $group["name"];
+            $sub_label = $group['location_name'];
+
+            if ($group['end_date']) {
+                if ($dates) {
+                    $dates .= " - ";
+                }
+                $dates .=date(get_option('date_format'), $group['end_date']);
+            }
+
+            if ($group["coach"]) {
+                if ($label) {
+                    $label .= ', ';
+                }
+                $label .= $group["coach"];
+            }
+
+            if ($group['start_date']) {
+                if ($sub_label) {
+                    $sub_label .= ', ';
+                }
+                $sub_label .= date(get_option('date_format'), $group['start_date']);
+            }
+
             $values = [
+                "object_type" => 'group',
                 "id" => $group["id"],
                 "parentId" => $group["parent_id"] ?? 0,
                 "name" => $group["name"],
+                "label" => $label,
+                'sub_label' => $sub_label,
                 "church" => $group["group_type"] === "church",
                 "active" => $group["group_status"] === "active",
                 "group_type" => $group["group_type"],
-                "post_type" => "groups"
+                "post_type" => "groups",
+                "coach" => $group["coach"],
+                "location" => $group["location_name"],
+                "dates" => $dates,
+                "attenders" => $group['total_members'],
+                "believers" => $group['total_believers'],
+                "baptized" => $group['total_baptized'],
+                "newlyBaptized" => $group['total_baptized_by_group'],
+                "health_metrics_baptism" => (bool) $group['health_metrics_baptism'],
+                "health_metrics_bible" => (bool) $group['health_metrics_bible'],
+                "health_metrics_commitment" => (bool) $group['health_metrics_commitment'],
+                "health_metrics_communion" => (bool) $group['health_metrics_communion'],
+                "health_metrics_giving" => (bool) $group['health_metrics_giving'],
+                "health_metrics_leaders" => (bool) $group['health_metrics_leaders'],
+                "health_metrics_fellowship" => (bool) $group['health_metrics_fellowship'],
+                "health_metrics_praise" => (bool) $group['health_metrics_praise'],
+                "health_metrics_prayer" => (bool) $group['health_metrics_prayer'],
+                "health_metrics_sharing" => (bool) $group['health_metrics_sharing'],
             ];
             $prepared_array[] = $values;
         }

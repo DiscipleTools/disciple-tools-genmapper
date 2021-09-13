@@ -349,6 +349,23 @@ p {
   stroke: #ddd;
 }
 
+.health-image {
+    opacity: .1;
+}
+
+.health--baptism .health-image--baptism,
+.health--bible .health-image--bible,
+.health--commitment .health-image--commitment,
+.health--communion .health-image--communion,
+.health--giving .health-image--giving,
+.health--leaders .health-image--leaders,
+.health--fellowship .health-image--fellowship,
+.health--praise .health-image--praise,
+.health--prayer .health-image--prayer,
+.health--sharing .health-image--sharing {
+    opacity: 1;
+}
+
 .link {
   fill: none;
   stroke: #ccc;

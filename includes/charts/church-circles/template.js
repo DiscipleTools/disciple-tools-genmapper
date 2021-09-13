@@ -1,6 +1,9 @@
 const boxHeight = 80
 const textHeight = 14
 const textMargin = 6
+const healthIconHeight = boxHeight / 5
+const healthIconGutter = boxHeight / 6
+const healthIconSpacing = healthIconHeight / 2
 
 const icons = window.genApiTemplate.plugin_uri + 'charts/church-circles/icons/';
 let group_types = window.genApiTemplate.group_fields.group_type.default
@@ -25,36 +28,36 @@ const template = {
         'opacity': '0'
       }
     },
-    // 'attenders-image': {
-    //   'type': 'image',
-    //   'attributes': {
-    //     'x': -boxHeight * 0.5,
-    //     'y': -2.5 * textHeight,
-    //     'width': boxHeight / 4,
-    //     'height': boxHeight / 4,
-    //     'href': icons + 'attenders.png'
-    //   }
-    // },
-    // 'believers-image': {
-    //   'type': 'image',
-    //   'attributes': {
-    //     'x': -boxHeight * 0.25,
-    //     'y': -2.5 * textHeight,
-    //     'width': boxHeight / 4,
-    //     'height': boxHeight / 4,
-    //     'href': icons + 'believers.png'
-    //   }
-    // },
-    // 'baptized-image': {
-    //   'type': 'image',
-    //   'attributes': {
-    //     'x': boxHeight * 0.1,
-    //     'y': -2.5 * textHeight,
-    //     'width': boxHeight / 4,
-    //     'height': boxHeight / 4,
-    //     'href': icons + 'element-baptism.png'
-    //   }
-    // },
+    'attenders-image': {
+       'type': 'image',
+       'attributes': {
+         'x': -boxHeight * 0.5,
+         'y': -2.5 * textHeight,
+         'width': boxHeight / 4,
+         'height': boxHeight / 4,
+         'href': icons + 'attenders.png'
+       }
+     },
+     'believers-image': {
+       'type': 'image',
+       'attributes': {
+         'x': -boxHeight * 0.25,
+         'y': -2.5 * textHeight,
+         'width': boxHeight / 4,
+         'height': boxHeight / 4,
+         'href': icons + 'believers.png'
+       },
+    },
+    'baptized-image': {
+      'type': 'image',
+      'attributes': {
+        'x': boxHeight * 0.1,
+        'y': -2.5 * textHeight,
+        'width': boxHeight / 4,
+        'height': boxHeight / 4,
+        'href': icons + 'element-baptism.png'
+      }
+    },
     'church-box': {
       'type': 'rect',
       'attributes': {
@@ -63,6 +66,106 @@ const template = {
         'rx': 0.5 * boxHeight,
         'width': boxHeight,
         'height': boxHeight
+      }
+    },
+    'health-fellowship-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -healthIconHeight / 2,
+        'y': healthIconSpacing,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'element-love.png',
+        'class': 'health-image health-image--fellowship'
+      }
+    },
+    'health-communion-image': {
+      'type': 'image',
+      'attributes': {
+        'x': boxHeight / 2 - healthIconHeight - healthIconGutter,
+        'y': healthIconGutter,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-communion.svg',
+        'class': 'health-image health-image--communion'
+      }
+    },
+    'health-leaders-image': {
+      'type': 'image',
+      'attributes': {
+        'x': boxHeight / 2 - healthIconGutter - healthIconSpacing,
+        'y':  healthIconHeight + healthIconSpacing * 2,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-leadership.svg',
+        'class': 'health-image health-image--leaders'
+
+      }
+    },
+    'health-sharing-image': {
+      'type': 'image',
+      'attributes': {
+        'x': boxHeight / 2 - healthIconHeight - healthIconGutter,
+        'y':  healthIconHeight * 2 + healthIconSpacing * 2,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-evangelism.svg',
+        'class': 'health-image health-image--sharing'
+      }
+    },
+    'health-praise-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -healthIconHeight / 2,
+        'y':  healthIconHeight * 2 + healthIconSpacing * 3,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-praise.svg',
+        'class': 'health-image health-image--praise'
+      }
+    },
+    'health-bible-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -boxHeight / 2 + healthIconGutter,
+        'y': healthIconHeight * 2 + healthIconSpacing * 2,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-word.svg',
+        'class': 'health-image health-image--bible'
+      }
+    },
+    'health-baptism-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -boxHeight / 2 + healthIconSpacing,
+        'y':  healthIconHeight + healthIconSpacing * 2,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-baptism.svg',
+        'class': 'health-image health-image--baptism'
+      }
+    },
+    'health-giving-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -boxHeight / 2 + healthIconGutter,
+        'y': healthIconGutter,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-giving.svg',
+        'class': 'health-image health-image--giving'
+      }
+    },
+    'health-prayer-image': {
+      'type': 'image',
+      'attributes': {
+        'x': -healthIconHeight / 2,
+        'y':  healthIconHeight + healthIconSpacing * 2,
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons + 'health-prayer.svg',
+        'class': 'health-image health-image--prayer'
       }
     }
   },
@@ -83,14 +186,36 @@ const template = {
       'header': 'name',
       'label' : 'Name',
       'initial': '',
-      'type': 'text',
+      'type': 'text'
+    },
+    {
+      'header': 'label',
       'svg': {
         'type': 'foreignObject',
         'attributes': {
-          'x': -(boxHeight*1.5/2),
+          'x': -(boxHeight*6/2),
           'y': boxHeight,
-          'width': boxHeight*1.5,
-          'height': 80,
+          'width': boxHeight*6,
+          'height': 20,
+        },
+        'style': {
+          'text-align': 'center',
+          'font-weight': 'bold'
+        }
+      }
+    },
+    {
+      'header': 'sub_label',
+      'svg': {
+        'type': 'foreignObject',
+        'attributes': {
+          'x': -(boxHeight*6/2),
+          'y': boxHeight + 20,
+          'width': boxHeight*6,
+          'height': 20,
+        },
+        'style': {
+          'text-align': 'center',
         }
       }
     },
@@ -104,66 +229,58 @@ const template = {
     //   'initial': null,
     //   'type': 'text'
     // },
-    // {
-    //   'header': 'attenders',
-    //   'initial': 0,
-    //   'type': 'text',
-    //   'svg': {
-    //     'type': 'text',
-    //     'attributes': {
-    //       'x': -boxHeight * 0.39,
-    //       'y': -0.5 * textMargin
-    //     },
-    //     'style': {
-    //       'text-anchor': 'center'
-    //     }
-    //   }
-    // },
-    // {
-    //   'header': 'believers',
-    //   'initial': 0,
-    //   'type': 'text',
-    //   'svg': {
-    //     'type': 'text',
-    //     'attributes': {
-    //       'x': -boxHeight * 0.13,
-    //       'y': -0.5 * textMargin
-    //     },
-    //     'style': {
-    //       'text-anchor': 'center'
-    //     }
-    //   }
-    // },
-    // {
-    //   'header': 'baptized',
-    //   'initial': 0,
-    //   'type': 'text',
-    //   'svg': {
-    //     'type': 'text',
-    //     'attributes': {
-    //       'x': boxHeight * 0.13,
-    //       'y': -0.5 * textMargin
-    //     },
-    //     'style': {
-    //       'text-anchor': 'center'
-    //     }
-    //   }
-    // },
-    // {
-    //   'header': 'newlyBaptized',
-    //   'initial': 0,
-    //   'type': 'text',
-    //   'svg': {
-    //     'type': 'text',
-    //     'attributes': {
-    //       'x': boxHeight * 0.39,
-    //       'y': -0.5 * textMargin
-    //     },
-    //     'style': {
-    //       'text-anchor': 'center'
-    //     }
-    //   }
-    // },
+    {
+      'header': 'attenders',
+      'svg': {
+        'type': 'text',
+        'attributes': {
+          'x': -boxHeight * 0.39,
+          'y': -0.5 * textMargin
+        },
+        'style': {
+          'text-anchor': 'center'
+        }
+      }
+    },
+    {
+      'header': 'believers',
+      'svg': {
+        'type': 'text',
+        'attributes': {
+          'x': -boxHeight * 0.13,
+          'y': -0.5 * textMargin
+        },
+        'style': {
+          'text-anchor': 'center'
+        }
+      }
+    },
+    {
+      'header': 'baptized',
+      'svg': {
+        'type': 'text',
+        'attributes': {
+          'x': boxHeight * 0.13,
+          'y': -0.5 * textMargin
+        },
+        'style': {
+          'text-anchor': 'center'
+        }
+      }
+    },
+    {
+      'header': 'newlyBaptized',
+      'svg': {
+        'type': 'text',
+        'attributes': {
+          'x': boxHeight * 0.39,
+          'y': -0.5 * textMargin
+        },
+        'style': {
+          'text-anchor': 'center'
+        }
+      }
+    },
     // {
     //   'header': 'church',
     //   'initial': false,
