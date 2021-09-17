@@ -18,8 +18,8 @@
   "tested": "5.6",
   "upgrade_notice": "Upgrade to get the latest features.",
   "banners": {
-    "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-772x250.jpg",
-    "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
+    "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-banner.png",
+    "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-banner.png"
   },
   "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-icon.png",
   "sections": {
