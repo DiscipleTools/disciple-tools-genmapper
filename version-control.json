@@ -1,8 +1,8 @@
 {
-  "name": "Disciple Tools - Genmapper",
+  "name": "Disciple.Tools - Genmapper",
   "version": "1.2",
   "last_updated": "2021-02",
-  "author": "Disciple Tools",
+  "author": "Disciple.Tools",
   "author_homepage": "https://disciple.tools",
   "git_owner": "DiscipleTools",
   "git_repo": "disciple-tools-genmapper",
@@ -23,7 +23,7 @@
   },
   "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-icon.png",
   "sections": {
-    "description": "This plugin adds a generation mapping to the metrics section of the Disciple Tools system. Generation mapping shows parent/child relationship between contact, baptisms, and groups. ",
+    "description": "This plugin adds a generation mapping to the metrics section of the Disciple.Tools system. Generation mapping shows parent/child relationship between contact, baptisms, and groups. ",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
     "changelog": ""
   }
