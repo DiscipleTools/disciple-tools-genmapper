@@ -11,8 +11,8 @@ const template = {
   'name': 'Church circles 0.6',
   'settings': {
     'nodeSize': {
-      'width': boxHeight * 1.4,
-      'height': boxHeight * 2.1
+      'width': boxHeight * 3,
+      'height': boxHeight * 2.5
     }
   },
   'svg': {
