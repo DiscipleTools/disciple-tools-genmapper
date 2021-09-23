@@ -2,7 +2,7 @@
 /**
  *Plugin Name: Disciple.Tools - Genmapper
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
- * Description: Disciple Tools - Genmapper adds generation visualization to metrics section.
+ * Description: Disciple.Tools - Genmapper adds generation visualization to metrics section.
  * Version:  1.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-genmapper
@@ -34,7 +34,7 @@ function dt_genmapper_metrics() {
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
-    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
+    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple.Tools" || $wp_theme->name === "Disciple.Tools";
     if ( $is_theme_dt && version_compare( $version, $dt_genmapper_required_dt_theme_version, "<" ) ) {
         add_action( 'admin_notices', 'dt_genmapper_metrics_hook_admin_notice' );
         add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
@@ -199,9 +199,9 @@ function dt_genmapper_metrics_hook_admin_notice() {
     global $dt_genmapper_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $current_version = $wp_theme->version;
-    $message = __( "'Disciple Tools - Genmapper Metrics' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.", "dt_genmapper" );
+    $message = __( "'Disciple.Tools - Genmapper Metrics' plugin requires 'Disciple.Tools' theme to work. Please activate 'Disciple.Tools' theme or make sure it is latest version.", "dt_genmapper" );
     if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-        $message .= sprintf( esc_html__( 'Current Disciple Tools version: %1$s, required version: %2$s', 'dt_genmapper' ), esc_html( $current_version ), esc_html( $dt_genmapper_required_dt_theme_version ) );
+        $message .= sprintf( esc_html__( 'Current Disciple.Tools version: %1$s, required version: %2$s', 'dt_genmapper' ), esc_html( $current_version ), esc_html( $dt_genmapper_required_dt_theme_version ) );
     }
     // Check if it's been dismissed...
     if ( ! get_option( 'dismissed-dt-genmapper', false ) ) { ?>
