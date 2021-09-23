@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-genmapper.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-genmapper)
 
-![GenMapper](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-banner.png)
+![Plugin Banner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/includes/charts/icons/genmapper-banner.png)
 # Disciple.Tools - GenMapper
 
 Add beautiful generation charts to visualize the connections between contacts, groups, churches, and baptisms.
