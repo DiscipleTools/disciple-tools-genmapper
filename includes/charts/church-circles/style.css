@@ -1,7 +1,7 @@
 /* CSS for GenMapper: template specific */
 
 .node-church-box {
-  stroke: black;
+  stroke: #a5a5a5;
   stroke-width: 2;
 }
 
@@ -10,12 +10,17 @@
 }
 
 .is-not-church {
-  stroke-dasharray: 7,7;
+  stroke-dasharray: 3,3;
+}
+
+.health--commitment .node-church-box {
+    stroke: #4BAF50;
+    stroke-dasharray: 0;
 }
 
 .church-legacy {
   stroke-width: 4;
-  stroke: green;
+  stroke: #3F729B;
 }
 
 .node-name {
@@ -33,3 +38,21 @@
     font-weight: bold;
     color: #939393;
 }
+
+.health-image {
+    opacity: .1;
+}
+
+.health--baptism .health-image--baptism,
+.health--bible .health-image--bible,
+.health--communion .health-image--communion,
+.health--giving .health-image--giving,
+.health--leaders .health-image--leaders,
+.health--fellowship .health-image--fellowship,
+.health--praise .health-image--praise,
+.health--prayer .health-image--prayer,
+.health--sharing .health-image--sharing {
+    opacity: 1;
+}
+
+

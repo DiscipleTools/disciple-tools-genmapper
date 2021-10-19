@@ -287,7 +287,6 @@ class GenMapper {
     //     .text(function (d) {
     //       return d.data.coach
     //     })
-
     // update nodes
     const node = this.gNodes.selectAll('.node')
           .data(this.nodes.descendants())
@@ -343,6 +342,9 @@ class GenMapper {
         if (d.data.health_metrics_baptism) {
           classes.push('health--baptism')
         }
+        if (d.data.health_metrics_baptism) {
+          classes.push('health--baptism')
+        }
         if (d.data.health_metrics_bible) {
           classes.push('health--bible')
         }
@@ -366,6 +368,9 @@ class GenMapper {
         }
         if (d.data.health_metrics_prayer) {
           classes.push('health--prayer')
+        }
+        if (d.data.health_metrics_sharing) {
+          classes.push('health--sharing')
         }
         if (d.data.health_metrics_sharing) {
           classes.push('health--sharing')

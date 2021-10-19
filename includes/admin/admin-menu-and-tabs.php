@@ -48,6 +48,7 @@ class DT_Genmapper_Metrics_Menu {
      * @since   0.1.0
      */
     public function __construct() {
+        require_once( __DIR__ . '/../icons.php' );
 
         add_action( "admin_menu", array( $this, "register_menu" ) );
         add_action( 'admin_enqueue_scripts', function() {
@@ -83,88 +84,19 @@ class DT_Genmapper_Metrics_Menu {
             'jquery',
             'jquery-ui',
         ], filemtime( DT_Genmapper_Metrics::dir() . 'includes/admin.js' ), true );
+
+        // Localize script with array data\
+        wp_localize_script(
+            'dt-genmapper-admin', 'wpApiGenmapper', [
+                'root' => esc_url_raw( rest_url() ),
+                'plugin_uri' => plugin_dir_url( __DIR__ ),
+                'nonce' => wp_create_nonce( 'wp_rest' ),
+                'current_user_login' => wp_get_current_user()->user_login,
+                'current_user_id' => get_current_user_id(),
+            ]
+        );
     }
 
-    /**
-     * Get the editable icons
-     * @return string[][]
-     */
-    public function icons() {
-        return [
-            [
-                'label' => 'Attenders',
-                'option' => 'dt_genmapper_attenders_icon',
-                'default' => 'attenders.png'
-            ],
-            [
-                'label' => 'Believers',
-                'option' => 'dt_genmapper_believers_icon',
-                'default' => 'believers.png'
-            ],
-            [
-                'label' => 'Baptism',
-                'option' => 'dt_genmapper_baptized_icon',
-                'default' => 'element-baptism.png'
-            ],
-            [
-                'label' => 'Fellowship',
-                'option' => 'dt_genmapper_health_fellowship_icon',
-                'default' => 'element-love.png'
-            ],
-            [
-                'label' => 'Health — Communion',
-                'option' => 'dt_genmapper_health_communion_icon',
-                'default' => 'health-communion.svg'
-            ],
-            [
-                'label' => 'Health — Leaders',
-                'option' => 'dt_genmapper_health_leaders_icon',
-                'default' => 'health-leadership.svg'
-            ],
-            [
-                'label' => 'Health — Sharing',
-                'option' => 'dt_genmapper_health_sharing_icon',
-                'default' => 'health-evangelism.svg'
-            ],
-            [
-                'label' => 'Health — Praise',
-                'option' => 'dt_genmapper_health_praise_icon',
-                'default' => 'health-praise.svg'
-            ],
-            [
-                'label' => 'Health — Word',
-                'option' => 'dt_genmapper_health_bible_icon',
-                'default' => 'health-word.svg'
-            ],
-            [
-                'label' => 'Health — Baptism',
-                'option' => 'dt_genmapper_health_baptism_icon',
-                'default' => 'health-baptism.svg'
-            ],
-            [
-                'label' => 'Health — Giving',
-                'option' => 'dt_genmapper_health_giving_icon',
-                'default' => 'health-giving.svg'
-            ],
-            [
-                'label' => 'Health — Prayer',
-                'option' => 'dt_genmapper_health_prayer_icon',
-                'default' => 'health-prayer.svg'
-            ],
-        ];
-    }
-
-    /**
-     * Get the icons hudrated with current option values
-     * @return string[][]
-     */
-    public function hydrated_icons() {
-        return array_map(function($icon) {
-            $icon['default'] = DT_Genmapper_Metrics::path() . 'includes/charts/church-circles/icons/' . $icon['default'];
-            $icon['value'] = get_option('dt_genmapper_attenders_icon', $icon['default']);
-            return $icon;
-        }, $this->icons());
-    }
 
     /**
      * Builds page contents
@@ -179,10 +111,11 @@ class DT_Genmapper_Metrics_Menu {
 
         status_header(200);
 
-        $this->update();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->update();
+        }
 
-        $icons = $this->hydrated_icons();
-
+        $iconGroups = DT_Genmapper_Plugin_Icons::instance()->groups();
         include DT_Genmapper_Metrics::includes_dir() . 'template-admin.php';
     }
 
@@ -190,6 +123,5 @@ class DT_Genmapper_Metrics_Menu {
      * Make updates before displaing.
      */
     public function update() {
-
     }
 }

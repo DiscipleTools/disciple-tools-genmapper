@@ -1,17 +1,18 @@
 const boxHeight = 80
 const textHeight = 14
 const textMargin = 6
+const lineHeight = 20
 const healthIconHeight = boxHeight / 5
 const healthIconGutter = boxHeight / 6
 const healthIconSpacing = healthIconHeight / 2
 
-const icons = window.genApiTemplate.plugin_uri + 'charts/church-circles/icons/';
+const icons = window.genApiTemplate.icons;
 let group_types = window.genApiTemplate.group_fields.group_type.default
 const template = {
   'name': 'Church circles 0.6',
   'settings': {
     'nodeSize': {
-      'width': boxHeight * 3,
+      'width': boxHeight * 2.5,
       'height': boxHeight * 2.5
     }
   },
@@ -33,29 +34,29 @@ const template = {
        'attributes': {
          'x': -boxHeight * 0.5,
          'y': -2.5 * textHeight,
-         'width': boxHeight / 4,
-         'height': boxHeight / 4,
-         'href': icons + 'attenders.png'
+         'width': healthIconHeight,
+         'height': healthIconHeight,
+         'href': icons.metrics_attenders
        }
      },
      'believers-image': {
        'type': 'image',
        'attributes': {
-         'x': -boxHeight * 0.25,
+         'x': -boxHeight * 0.24,
          'y': -2.5 * textHeight,
-         'width': boxHeight / 4,
-         'height': boxHeight / 4,
-         'href': icons + 'believers.png'
+         'width': healthIconHeight,
+         'height': healthIconHeight,
+         'href': icons.metrics_believers
        },
     },
     'baptized-image': {
       'type': 'image',
       'attributes': {
-        'x': boxHeight * 0.1,
+        'x': boxHeight * 0.04,
         'y': -2.5 * textHeight,
-        'width': boxHeight / 4,
-        'height': boxHeight / 4,
-        'href': icons + 'element-baptism.png'
+        'width': healthIconHeight,
+        'height': healthIconHeight,
+        'href': icons.metrics_baptism
       }
     },
     'church-box': {
@@ -75,7 +76,7 @@ const template = {
         'y': healthIconSpacing,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'element-love.png',
+        'href': icons.health_fellowship,
         'class': 'health-image health-image--fellowship'
       }
     },
@@ -86,7 +87,7 @@ const template = {
         'y': healthIconGutter,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-communion.svg',
+        'href': icons.health_communion,
         'class': 'health-image health-image--communion'
       }
     },
@@ -97,7 +98,7 @@ const template = {
         'y':  healthIconHeight + healthIconSpacing * 2,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-leadership.svg',
+        'href': icons.health_leaders,
         'class': 'health-image health-image--leaders'
 
       }
@@ -109,7 +110,7 @@ const template = {
         'y':  healthIconHeight * 2 + healthIconSpacing * 2,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-evangelism.svg',
+        'href': icons.health_sharing,
         'class': 'health-image health-image--sharing'
       }
     },
@@ -120,7 +121,7 @@ const template = {
         'y':  healthIconHeight * 2 + healthIconSpacing * 3,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-praise.svg',
+        'href': icons.health_praise,
         'class': 'health-image health-image--praise'
       }
     },
@@ -131,7 +132,7 @@ const template = {
         'y': healthIconHeight * 2 + healthIconSpacing * 2,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-word.svg',
+        'href': icons.health_word,
         'class': 'health-image health-image--bible'
       }
     },
@@ -142,7 +143,7 @@ const template = {
         'y':  healthIconHeight + healthIconSpacing * 2,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-baptism.svg',
+        'href': icons.health_baptism,
         'class': 'health-image health-image--baptism'
       }
     },
@@ -153,7 +154,7 @@ const template = {
         'y': healthIconGutter,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-giving.svg',
+        'href': icons.health_giving,
         'class': 'health-image health-image--giving'
       }
     },
@@ -164,7 +165,7 @@ const template = {
         'y':  healthIconHeight + healthIconSpacing * 2,
         'width': healthIconHeight,
         'height': healthIconHeight,
-        'href': icons + 'health-prayer.svg',
+        'href': icons.health_prayer,
         'class': 'health-image health-image--prayer'
       }
     }
@@ -189,7 +190,7 @@ const template = {
       'type': 'text'
     },
     {
-      'header': 'label',
+      'header': 'line_1',
       'svg': {
         'type': 'foreignObject',
         'attributes': {
@@ -205,12 +206,42 @@ const template = {
       }
     },
     {
-      'header': 'sub_label',
+      'header': 'line_2',
       'svg': {
         'type': 'foreignObject',
         'attributes': {
           'x': -(boxHeight*6/2),
-          'y': boxHeight + 20,
+          'y': boxHeight + lineHeight,
+          'width': boxHeight*6,
+          'height': 20,
+        },
+        'style': {
+          'text-align': 'center',
+        }
+      }
+    },
+    {
+      'header': 'line_3',
+      'svg': {
+        'type': 'foreignObject',
+        'attributes': {
+          'x': -(boxHeight*6/2),
+          'y': boxHeight + lineHeight*2,
+          'width': boxHeight*6,
+          'height': 20,
+        },
+        'style': {
+          'text-align': 'center',
+        }
+      }
+    },
+    {
+      'header': 'line_4',
+      'svg': {
+        'type': 'foreignObject',
+        'attributes': {
+          'x': -(boxHeight*6/2),
+          'y': boxHeight + lineHeight*3,
           'width': boxHeight*6,
           'height': 20,
         },
