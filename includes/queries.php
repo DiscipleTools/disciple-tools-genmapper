@@ -18,6 +18,12 @@ class DT_Genmapper_Plugin_Queries
         // Load required files
     } // End __construct
 
+    /**
+     * Group tree queries
+     * @param $query_name
+     * @param array $args
+     * @return mixed
+     */
     public function tree( $query_name, $args = []) {
         global $wpdb;
         $query = [];
@@ -166,6 +172,10 @@ class DT_Genmapper_Plugin_Queries
     }
 }
 
+/**
+ * Factory function
+ * @return DT_Genmapper_Plugin_Queries|null
+ */
 function dt_genmapper_plugin_queries() {
     return DT_Genmapper_Plugin_Queries::instance();
 }

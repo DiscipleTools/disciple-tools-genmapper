@@ -38,6 +38,12 @@ class DT_Genmapper_Plugin_Functions
         }
     }
 
+    /**
+     * Add extra count fields to the groups page
+     * @param $fields
+     * @param $post_type
+     * @return mixed
+     */
     public function dt_custom_fields_settings( $fields, $post_type) {
         if ($post_type === 'groups') {
             $fields["believer_count"] = [
@@ -72,6 +78,12 @@ class DT_Genmapper_Plugin_Functions
         return $fields;
     }
 
+    /**
+     * Allow the extra counts fields to be included in updates.
+     * @param $fields
+     * @param $post_type
+     * @return mixed
+     */
     public function dt_post_update_allow_fields( $fields, $post_type) {
         if ($post_type === 'groups') {
             $fields[] = "believer_count";
@@ -82,18 +94,38 @@ class DT_Genmapper_Plugin_Functions
         return $fields;
     }
 
+    /**
+     * Refresh counts when milestones are updated
+     * @param $meta_id
+     * @param $object_id
+     * @param $meta_key
+     * @param $_meta_value
+     */
     public function dt_updated_post_meta( $meta_id, $object_id, $meta_key, $_meta_value) {
         if ($meta_key === 'milestones') {
             self::refresh_milestone_counts_from_contact( $object_id );
         }
     }
 
+    /**
+     * Refresh counts when milestones are deleted
+     * @param $meta_id
+     * @param $object_id
+     * @param $meta_key
+     * @param $_meta_value
+     */
     public function dt_deleted_post_meta( $meta_id, $object_id, $meta_key, $_meta_value) {
         if ($meta_key === 'milestones') {
             self::refresh_milestone_counts_from_contact( $object_id, 'removed' );
         }
     }
 
+    /**
+     * Update a contacts counts.
+     *
+     * @param $contact_id
+     * @param string $action
+     */
     private static function refresh_milestone_counts_from_contact( $contact_id, $action = "added") {
         $groups = get_posts([
             'connected_type' => 'contacts_to_groups',
@@ -109,7 +141,14 @@ class DT_Genmapper_Plugin_Functions
         }
     }
 
-    //action when a post connection is added during create or update
+    /**
+     * action when a post connection is added during create or update
+     *
+     * @param $post_type
+     * @param $post_id
+     * @param $field_key
+     * @param $value
+     */
     public function post_connection_added( $post_type, $post_id, $field_key, $value) {
         if ($post_type === "groups" && $field_key === "members") {
             self::refresh_milestone_counts( $post_id );
@@ -118,7 +157,14 @@ class DT_Genmapper_Plugin_Functions
         }
     }
 
-    //action when a post connection is removed during create or update
+    /**
+     * action when a post connection is removed during create or update
+     *
+     * @param $post_type
+     * @param $post_id
+     * @param $field_key
+     * @param $value
+     */
     public function post_connection_removed( $post_type, $post_id, $field_key, $value) {
         if ($post_type === "groups" && $field_key === "members") {
             self::refresh_milestone_counts( $post_id, "removed" );
@@ -127,6 +173,11 @@ class DT_Genmapper_Plugin_Functions
         }
     }
 
+    /**
+     * Refresh the milestone counts
+     * @param $group_id
+     * @param string $action
+     */
     private static function refresh_milestone_counts( $group_id, $action = "added") {
         $group = get_post( $group_id );
         $contacts = get_posts([

@@ -1,4 +1,8 @@
 (function() {
+  /**
+   * Form for managing genmapper icons.
+   * @param form
+   */
   function iconForm(form) {
     const IconForm = Object.assign({}, {
       init: function(form) {
