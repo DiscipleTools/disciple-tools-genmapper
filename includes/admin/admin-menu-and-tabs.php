@@ -76,9 +76,9 @@ class DT_Genmapper_Metrics_Menu {
             'nonce' => wp_create_nonce( 'wp_rest' ),
             'root' => esc_url_raw( rest_url() ) . 'dt-genmapper'
         ));
-        wp_enqueue_script('jquery');
-        wp_register_script('jquery-ui','https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',array('jquery'));
-        wp_enqueue_script('jquery-ui');
+        wp_enqueue_script( 'jquery' );
+        wp_register_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', array( 'jquery' ), '1.12.1' );
+        wp_enqueue_script( 'jquery-ui' );
         wp_enqueue_script( 'dt-genmapper-admin', DT_Genmapper_Metrics::path() . 'includes/admin.js', [
             'wp-api',
             'jquery',
@@ -109,13 +109,13 @@ class DT_Genmapper_Metrics_Menu {
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        status_header(200);
+        status_header( 200 );
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->update();
         }
 
-        $iconGroups = DT_Genmapper_Plugin_Icons::instance()->groups();
+        $icon_groups = DT_Genmapper_Plugin_Icons::instance()->by_group();
         include DT_Genmapper_Metrics::includes_dir() . 'template-admin.php';
     }
 

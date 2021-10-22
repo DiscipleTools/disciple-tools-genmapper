@@ -7,9 +7,8 @@ class DT_Genmapper_Plugin_Queries
 {
     private static $_instance = null;
 
-    public static function instance()
-    {
-        if (is_null(self::$_instance)) {
+    public static function instance() {
+        if (is_null( self::$_instance )) {
             self::$_instance = new self();
         }
         return self::$_instance;
@@ -19,8 +18,7 @@ class DT_Genmapper_Plugin_Queries
         // Load required files
     } // End __construct
 
-    public function tree($query_name, $args = [])
-    {
+    public function tree( $query_name, $args = []) {
         global $wpdb;
         $query = [];
 

@@ -1,17 +1,15 @@
 <?php
 
-abstract class TestCase extends \WP_UnitTestCase {
-    public function setUp()
-    {
+abstract class TestCase extends WP_UnitTestCase {
+    public function setUp() {
         global $wpdb;
-        $wpdb->query('START TRANSACTION');
+        $wpdb->query( 'START TRANSACTION' );
         parent::setUp();
     }
 
-    public function tearDown()
-    {
+    public function tearDown() {
         global $wpdb;
-        $wpdb->query('ROLLBACK');
+        $wpdb->query( 'ROLLBACK' );
         parent::tearDown();
     }
 }

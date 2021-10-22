@@ -43,7 +43,7 @@ class DT_Genmapper_Plugin_Endpoints
             $this->namespace, '/icon', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'update_icon' ],
-                'validate_callback' => [ $this, 'validate_update_icon'],
+                'validate_callback' => [ $this, 'validate_update_icon' ],
                 'permission_callback' => function( WP_REST_Request $request ) {
                     return $this->has_permission();
                 }
@@ -58,16 +58,16 @@ class DT_Genmapper_Plugin_Endpoints
      */
     public function update_icon( WP_REST_Request $request ){
         $body = $request->get_body_params();
-        $icon = $this->icons->find($body['icon'], false);
-        $current = get_option($icon['option']);
+        $icon = $this->icons->find( $body['icon'], false );
+        $current = get_option( $icon['option'] );
         $result = true;
         if ($current && !$body['value']) {
-            $result = delete_option($icon['option']);
-        } elseif($body['value']) {
-            $result = update_option($icon['option'], $body['value'], false);
+            $result = delete_option( $icon['option'] );
+        } elseif ($body['value']) {
+            $result = update_option( $icon['option'], $body['value'], false );
         }
-        if (!$result) {
-            return new WP_Error(501, 'Failed to save icon.');
+        if ( !$result) {
+            return new WP_Error( 501, 'Failed to save icon.' );
         }
         return true;
     }
@@ -80,12 +80,12 @@ class DT_Genmapper_Plugin_Endpoints
     public function validate_update_icon( WP_REST_Request $request ) {
         $body = $request->get_body_params();
 
-        if (!isset($body['icon']) || !isset($body['value'])) {
+        if ( !isset( $body['icon'] ) || !isset( $body['value'] )) {
             return false;
         }
 
-        $icon = $this->icons->find($body['icon'], false);
-        if (!$icon) {
+        $icon = $this->icons->find( $body['icon'], false );
+        if ( !$icon) {
             return false;
         }
         return true;

@@ -73,7 +73,7 @@ class DT_Genmapper_Metrics {
      * @since 0.3.3
      * @return string
      */
-    static function dir() {
+    public static function dir() {
         return __DIR__ . '/';
     }
 
@@ -83,7 +83,7 @@ class DT_Genmapper_Metrics {
      * @since 0.3.3
      * @return string
      */
-    static function includes_dir() {
+    public static function includes_dir() {
         return self::dir() . 'includes/';
     }
 
@@ -93,7 +93,7 @@ class DT_Genmapper_Metrics {
      * @since 0.3.3
      * @return string
      */
-    static function path() {
+    public static function path() {
         return plugin_dir_url( __FILE__ );
     }
 
@@ -101,8 +101,8 @@ class DT_Genmapper_Metrics {
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
-            require_once ('includes/queries.php');
-            require_once ('includes/rest-api.php');
+            require_once( 'includes/queries.php' );
+            require_once( 'includes/rest-api.php' );
             require_once( 'includes/admin/admin-menu-and-tabs.php' );
             require_once( 'includes/functions.php' );
             DT_Genmapper_Plugin_Endpoints::instance();
