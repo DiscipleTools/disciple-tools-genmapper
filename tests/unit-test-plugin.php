@@ -1,6 +1,6 @@
 <?php
 
-class PluginTest extends WP_UnitTestCase
+class PluginTest extends TestCase
 {
     public function test_plugin_installed()
     {

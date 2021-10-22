@@ -1,6 +1,6 @@
 <?php
 
-class CountsTest extends WP_UnitTestCase
+class CountsTest extends TestCase
 {
     protected $plugin;
 
@@ -17,18 +17,6 @@ class CountsTest extends WP_UnitTestCase
         "contact_email" => [ "values" => [ [ "value" => "bob@example.com" ] ] ],
         "tags" => [ "values" => [ [ "value" => "tag1" ] ] ],
     ];
-
-    public $sample_group = [
-        'name' => 'Bob\'s group',
-        'group_type' => 'church',
-        "location_grid" => [ "values" => [ [ "value" => '100089589' ] ] ],
-        "member_count" => 5
-    ];
-
-    public function setUp() {
-        activate_plugin('disciple-tools-genmapper/disciple-tools-genmapper.php');
-        $this->plugin = DT_Genmapper_Metrics::instance();
-    }
 
     public function test_milestone_counts() {
         $user_id = wp_create_user( "user3", "test", "test3@example.com" );

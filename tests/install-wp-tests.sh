@@ -159,7 +159,7 @@ install_theme() {
 }
 
 install_plugin() {
-    ln -s $PLUGIN_DIR $WP_PLUGINS_DIR/.
+    ln -sf $PLUGIN_DIR $WP_PLUGINS_DIR/.
 }
 
 install_wp
