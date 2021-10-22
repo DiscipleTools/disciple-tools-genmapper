@@ -8,7 +8,7 @@
                     <table class="widefat striped" style="max-width: 400px; margin-bottom: 25px;">
                         <thead>
                         <tr>
-                            <th><?php echo strtoupper($name); ?></th>
+                            <th><?php echo strtoupper(_e($name, "dt_genmapper" )); ?></th>
                             <th></th>
                         </tr>
                         </thead>

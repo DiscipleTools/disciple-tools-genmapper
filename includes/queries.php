@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class Disciple_Tools_Queries_Factory
+ * Class DT_Genmapper_Plugin_Queries
  */
 class DT_Genmapper_Plugin_Queries
 {

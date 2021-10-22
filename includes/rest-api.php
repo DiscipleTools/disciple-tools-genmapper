@@ -2,8 +2,6 @@
 /**
  * Rest API example class
  */
-
-
 class DT_Genmapper_Plugin_Endpoints
 {
     public $permissions = [ 'access_contacts' ];
@@ -37,6 +35,9 @@ class DT_Genmapper_Plugin_Endpoints
     }
 
 
+    /**
+     * Register any api routes
+     */
     public function add_api_routes() {
         register_rest_route(
             $this->namespace, '/icon', [
@@ -50,6 +51,32 @@ class DT_Genmapper_Plugin_Endpoints
         );
     }
 
+    /**
+     * Save a genmapper icon.
+     * @param WP_REST_Request $request
+     * @return bool|WP_Error
+     */
+    public function update_icon( WP_REST_Request $request ){
+        $body = $request->get_body_params();
+        $icon = $this->icons->find($body['icon'], false);
+        $current = get_option($icon['option']);
+        $result = true;
+        if ($current && !$body['value']) {
+            $result = delete_option($icon['option']);
+        } elseif($body['value']) {
+            $result = update_option($icon['option'], $body['value'], false);
+        }
+        if (!$result) {
+            return new WP_Error(501, 'Failed to save icon.');
+        }
+        return true;
+    }
+
+    /**
+     * Validate the genmapper icon submission
+     * @param WP_REST_Request $request
+     * @return bool
+     */
     public function validate_update_icon( WP_REST_Request $request ) {
         $body = $request->get_body_params();
 
@@ -64,20 +91,5 @@ class DT_Genmapper_Plugin_Endpoints
         return true;
     }
 
-    public function update_icon( WP_REST_Request $request ){
-        $body = $request->get_body_params();
-        $icon = $this->icons->find($body['icon'], false);
-        var_dump($icon);
-        $current = get_option($icon['option']);
-        $result = true;
-        if ($current && !$body['value']) {
-            $result = delete_option($icon['option']);
-        } elseif($body['value']) {
-            $result = update_option($icon['option'], $body['value'], false);
-        }
-        if (!$result) {
-            return new WP_Error(501, 'Failed to save icon.');
-        }
-        return true;
-    }
+
 }
