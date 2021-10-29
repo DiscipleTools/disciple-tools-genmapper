@@ -34,7 +34,7 @@ function dt_genmapper_metrics() {
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
-    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple.Tools" || $wp_theme->name === "Disciple.Tools";
+    $is_theme_dt = class_exists( "Disciple_Tools" );
     if ( $is_theme_dt && version_compare( $version, $dt_genmapper_required_dt_theme_version, "<" ) ) {
         add_action( 'admin_notices', 'dt_genmapper_metrics_hook_admin_notice' );
         add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
