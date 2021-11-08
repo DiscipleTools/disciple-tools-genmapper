@@ -25,6 +25,21 @@ class DT_Genmapper_Metrics_Menu {
 
     private static $_instance = null;
 
+    public function tabs() {
+        return [
+            [
+                'key' =>  'general',
+                'label' => __( 'General', 'disciple-tools-genmapper' ),
+                'class' => DT_Genmapper_Tab_General::class
+            ],
+            [
+                'key' =>  'icons',
+                'label' => __( 'Icons', 'disciple-tools-genmapper' ),
+                'class' => DT_Genmapper_Tab_Icons::class
+            ]
+        ];
+    }
+
     /**
      * DT_Genmapper_Metrics_Menu Instance
      *
@@ -48,13 +63,40 @@ class DT_Genmapper_Metrics_Menu {
      * @since   0.1.0
      */
     public function __construct() {
-        require_once( __DIR__ . '/../icons.php' );
+        require_once(  __DIR__ . '/admin-general.php' );
+        require_once(  __DIR__ . '/admin-icons.php' );
 
         add_action( "admin_menu", array( $this, "register_menu" ) );
         add_action( 'admin_enqueue_scripts', function() {
             $this->scripts();
         }, 1 );
     } // End __construct()
+
+    private function current_tab_key() {
+        if (!isset($_GET["tab"])) {
+            return 'general';
+        }
+        $needle = sanitize_key( wp_unslash( $_GET["tab"] ));
+        $matching_tabs = array_filter($this->tabs(), function($tab) use ($needle) {
+            return $needle === $tab['key'];
+        });
+        if (!count($matching_tabs)) {
+            return 'general';
+        }
+        $match = array_values($matching_tabs)[0];
+        return $match['key'];
+    }
+
+    private function current_tab_info() {
+        return array_values(array_filter($this->tabs(), function($tab) {
+            return $this->current_tab_key() === $tab['key'];
+        }))[0];
+    }
+
+    private function current_tab() {
+        $info = $this->current_tab_info();
+        return new $info['class'];
+    }
 
 
     /**
@@ -97,7 +139,6 @@ class DT_Genmapper_Metrics_Menu {
         );
     }
 
-
     /**
      * Builds page contents
      * @since 0.1
@@ -115,7 +156,11 @@ class DT_Genmapper_Metrics_Menu {
             $this->update();
         }
 
-        $icon_groups = DT_Genmapper_Plugin_Icons::instance()->by_group();
+        $token = $this->token;
+        $tabs = $this->tabs();
+        $current_tab = $this->current_tab_key();
+        $tab_object = $this->current_tab();
+        $link = 'admin.php?page=' . $token . '&tab=';
         include DT_Genmapper_Metrics::includes_dir() . 'template-admin.php';
     }
 
@@ -123,5 +168,7 @@ class DT_Genmapper_Metrics_Menu {
      * Make updates before displaing.
      */
     public function update() {
+        $tab = $this->current_tab();
+        $tab->update();
     }
 }

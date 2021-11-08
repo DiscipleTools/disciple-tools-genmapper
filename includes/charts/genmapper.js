@@ -8,6 +8,8 @@ class GenMapper {
 
   constructor () {
     this.plugin_uri = window.wpApiGenmapper.plugin_uri
+    this.showMetrics = window.genApiTemplate.show_metrics === "1"
+    this.showIcons = window.genApiTemplate.show_icons === "1"
     this.appVersion = '0.2.16'
 
     this.language = 'en'
@@ -339,41 +341,43 @@ class GenMapper {
           classes.push('node--dummyroot')
         }
         classes.push(d.data.active ? 'node--active' : 'node--inactive')
-        if (d.data.health_metrics_baptism) {
-          classes.push('health--baptism')
-        }
-        if (d.data.health_metrics_baptism) {
-          classes.push('health--baptism')
-        }
-        if (d.data.health_metrics_bible) {
-          classes.push('health--bible')
-        }
-        if (d.data.health_metrics_commitment) {
-          classes.push('health--commitment')
-        }
-        if (d.data.health_metrics_communion) {
-          classes.push('health--communion')
-        }
-        if (d.data.health_metrics_giving) {
-          classes.push('health--giving')
-        }
-        if (d.data.health_metrics_leaders) {
-          classes.push('health--leaders')
-        }
-        if (d.data.health_metrics_fellowship) {
-          classes.push('health--fellowship')
-        }
-        if (d.data.health_metrics_praise) {
-          classes.push('health--praise')
-        }
-        if (d.data.health_metrics_prayer) {
-          classes.push('health--prayer')
-        }
-        if (d.data.health_metrics_sharing) {
-          classes.push('health--sharing')
-        }
-        if (d.data.health_metrics_sharing) {
-          classes.push('health--sharing')
+        if (this.showIcons) {
+          if (d.data.health_metrics_baptism) {
+            classes.push('health--baptism')
+          }
+          if (d.data.health_metrics_baptism) {
+            classes.push('health--baptism')
+          }
+          if (d.data.health_metrics_bible) {
+            classes.push('health--bible')
+          }
+          if (d.data.health_metrics_commitment) {
+            classes.push('health--commitment')
+          }
+          if (d.data.health_metrics_communion) {
+            classes.push('health--communion')
+          }
+          if (d.data.health_metrics_giving) {
+            classes.push('health--giving')
+          }
+          if (d.data.health_metrics_leaders) {
+            classes.push('health--leaders')
+          }
+          if (d.data.health_metrics_fellowship) {
+            classes.push('health--fellowship')
+          }
+          if (d.data.health_metrics_praise) {
+            classes.push('health--praise')
+          }
+          if (d.data.health_metrics_prayer) {
+            classes.push('health--prayer')
+          }
+          if (d.data.health_metrics_sharing) {
+            classes.push('health--sharing')
+          }
+          if (d.data.health_metrics_sharing) {
+            classes.push('health--sharing')
+          }
         }
         return classes.join(' ')
       })

@@ -18,14 +18,17 @@ class DT_Genmapper_Plugin_Functions
      * DT_Genmapper_Plugin_Functions constructor.
      */
     public function __construct() {
-        add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
-        add_filter( 'dt_post_update_allow_fields', [ $this, 'dt_post_update_allow_fields' ], 1, 2 );
-        add_action( 'added_post_meta', [ $this, 'dt_updated_post_meta' ], 10, 4 );
-        add_action( 'updated_post_meta', [ $this, 'dt_updated_post_meta' ], 10, 4 );
-        add_action( 'deleted_post_meta', [ $this, 'dt_deleted_post_meta' ], 10, 4 );
-        add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
-        add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
-        add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_group_scripts' ], 99 );
+        //We only need these filters if we're showing metrics
+        if (get_option("dt_genmapper_show_health_metrics")) {
+            add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
+            add_filter( 'dt_post_update_allow_fields', [ $this, 'dt_post_update_allow_fields' ], 1, 2 );
+            add_action( 'added_post_meta', [ $this, 'dt_updated_post_meta' ], 10, 4 );
+            add_action( 'updated_post_meta', [ $this, 'dt_updated_post_meta' ], 10, 4 );
+            add_action( 'deleted_post_meta', [ $this, 'dt_deleted_post_meta' ], 10, 4 );
+            add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
+            add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
+            add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_group_scripts' ], 99 );
+        }
     }
 
     /**
