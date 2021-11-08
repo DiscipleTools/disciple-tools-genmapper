@@ -33,7 +33,7 @@
                                         <input type="hidden"
                                                class="dt-genmapper__icon-url-field"
                                                name="value"
-                                               value="<?php echo esc_attr( $icon['value'] ) ?>"/>
+                                               value="<?php echo esc_attr( $icon['url'] ) ?>"/>
                                         <input type="hidden"
                                                name="icon"
                                                value="<?php echo esc_attr( $icon['option'] ) ?>"/>
