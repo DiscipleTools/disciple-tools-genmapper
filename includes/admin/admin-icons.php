@@ -15,8 +15,7 @@ class DT_Genmapper_Tab_Icons
 {
     private static $_instance = null;
 
-    public function __construct()
-    {
+    public function __construct() {
         require_once( __DIR__ . '/../icons.php' );
     }
 
@@ -29,9 +28,8 @@ class DT_Genmapper_Tab_Icons
      * @since 0.1.0
      * @static
      */
-    public static function instance()
-    {
-        if (is_null(self::$_instance)) {
+    public static function instance() {
+        if (is_null( self::$_instance )) {
             self::$_instance = new self();
         }
         return self::$_instance;
