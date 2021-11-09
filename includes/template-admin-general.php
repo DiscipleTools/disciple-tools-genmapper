@@ -2,6 +2,7 @@
      class="metabox-holder columns-2">
     <div id="post-body-content">
         <form class="columns-2" method="POST">
+            <input type="hidden" name="field_add_nonce" value="<?php _e($nonce) ?>">
             <table class="widefat striped"
                    style="max-width: 400px; margin-bottom: 25px;">
                 <thead>

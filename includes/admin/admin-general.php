@@ -16,7 +16,6 @@ class DT_Genmapper_Tab_General
     private static $_instance = null;
 
 
-
     /**
      * DT_Genmapper_Metrics_Menu Instance
      *
@@ -36,11 +35,14 @@ class DT_Genmapper_Tab_General
     public function content() {
         $show_health_icons = get_option( 'dt_genmapper_show_health_icons', true );
         $show_health_metrics = get_option( 'dt_genmapper_show_health_metrics', true );
-
+        $nonce = wp_create_nonce( static::class );
         include DT_Genmapper_Metrics::includes_dir() . 'template-admin-general.php';
     }
 
     public function update() {
+        if ( !wp_verify_nonce( sanitize_key( $_POST['field_add_nonce'] ), static::class ) ) {
+            return;
+        }
         update_option( 'dt_genmapper_show_health_icons', !empty( $_POST["dt_genmapper_show_health_icons"] ) );
         update_option( 'dt_genmapper_show_health_metrics', !empty( $_POST["dt_genmapper_show_health_metrics"] ) );
     }
