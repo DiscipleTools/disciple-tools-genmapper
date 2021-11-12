@@ -28,7 +28,18 @@ class DT_Genmapper_Plugin_Functions
             add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
             add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
             add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_group_scripts' ], 99 );
+            add_filter( 'dt_details_additional_tiles', [ $this, 'dt_details_additional_tiles' ], 10, 2 );
         }
+    }
+
+    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
+
+        if ( $post_type === "groups" ){
+            $tiles["metrics"] = [
+                "label" => __( "Metrics", 'disciple_tools' ),
+            ];
+        }
+        return $tiles;
     }
 
     /**
@@ -54,7 +65,7 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers in this group.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'relationships',
+                'tile' => 'metrics',
                 "show_in_table" => 25,
                 "icon" => get_template_directory_uri() . '/dt-assets/images/groups/prayer-2.svg',
             ];
@@ -63,7 +74,7 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers who are baptized.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'relationships',
+                'tile' => 'metrics',
                 "show_in_table" => 25,
                 "icon" => get_template_directory_uri() . '/dt-assets/images/groups/baptism-2.svg',
             ];
@@ -72,7 +83,7 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers who are baptized by the group', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'relationships',
+                'tile' => 'metrics',
                 "show_in_table" => 25,
                 "icon" => '',
             ];
