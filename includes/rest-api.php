@@ -5,7 +5,6 @@
 class DT_Genmapper_Plugin_Endpoints
 {
     public $permissions = [ 'access_contacts' ];
-    public $icons;
 
     private static $_instance = null;
     public static function instance() {
@@ -20,7 +19,6 @@ class DT_Genmapper_Plugin_Endpoints
     private $namespace;
     public function __construct() {
         $this->namespace = $this->context . "/v" . intval( $this->version );
-        $this->icons = DT_Genmapper_Plugin_Icons::instance();
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
     }
 
@@ -33,63 +31,4 @@ class DT_Genmapper_Plugin_Endpoints
         }
         return $pass;
     }
-
-
-    /**
-     * Register any api routes
-     */
-    public function add_api_routes() {
-        register_rest_route(
-            $this->namespace, '/icon', [
-                'methods'  => 'POST',
-                'callback' => [ $this, 'update_icon' ],
-                'validate_callback' => [ $this, 'validate_update_icon' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
-                    return $this->has_permission();
-                }
-            ]
-        );
-    }
-
-    /**
-     * Save a genmapper icon.
-     * @param WP_REST_Request $request
-     * @return bool|WP_Error
-     */
-    public function update_icon( WP_REST_Request $request ){
-        $body = $request->get_body_params();
-        $icon = $this->icons->find( $body['icon'], false );
-        $current = get_option( $icon['option'] );
-        $result = true;
-        if ($current && !$body['value']) {
-            $result = delete_option( $icon['option'] );
-        } elseif ($body['value']) {
-            $result = update_option( $icon['option'], $body['value'], false );
-        }
-        if ( !$result) {
-            return new WP_Error( 501, 'Failed to save icon.' );
-        }
-        return true;
-    }
-
-    /**
-     * Validate the genmapper icon submission
-     * @param WP_REST_Request $request
-     * @return bool
-     */
-    public function validate_update_icon( WP_REST_Request $request ) {
-        $body = $request->get_body_params();
-
-        if ( !isset( $body['icon'] ) || !isset( $body['value'] )) {
-            return false;
-        }
-
-        $icon = $this->icons->find( $body['icon'], false );
-        if ( !$icon) {
-            return false;
-        }
-        return true;
-    }
-
-
 }

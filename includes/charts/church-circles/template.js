@@ -7,7 +7,9 @@ const healthIconGutter = boxHeight / 6
 const healthIconSpacing = healthIconHeight / 2
 
 const icons = window.genApiTemplate.icons;
-let group_types = window.genApiTemplate.group_fields.group_type.default
+let group_fields = window.genApiTemplate.group_fields
+let group_types = group_fields.group_type.default
+let health_fields = group_fields.health_metrics.default
 const showMetrics = window.genApiTemplate.show_metrics === "1"
 const showIcons = window.genApiTemplate.show_icons === "1"
 
@@ -40,7 +42,7 @@ const template = {
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.metrics_attenders
+          'href': group_fields.leader_count.icon
         }
       },
       'believers-image': {
@@ -50,7 +52,7 @@ const template = {
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.metrics_believers
+          'href': group_fields.believer_count.icon
         },
       },
       'baptized-image': {
@@ -60,9 +62,19 @@ const template = {
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.metrics_baptism
-        }
+          'href': group_fields.baptized_count.icon
+        },
       },
+      'baptized-in-group-image': {
+        'type': 'image',
+        'attributes': {
+          'x': boxHeight * 0.28,
+          'y': -2.5 * textHeight,
+          'width': healthIconHeight,
+          'height': healthIconHeight,
+          'href': group_fields.baptized_in_group_count.icon
+        }
+      }
     }),
     'church-box': {
       'type': 'rect',
@@ -82,7 +94,7 @@ const template = {
           'y': healthIconSpacing,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_fellowship,
+          'href': health_fields.church_fellowship.icon,
           'class': 'health-image health-image--fellowship'
         }
       },
@@ -93,7 +105,7 @@ const template = {
           'y': healthIconGutter,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_communion,
+          'href': health_fields.church_communion.icon,
           'class': 'health-image health-image--communion'
         }
       },
@@ -104,7 +116,7 @@ const template = {
           'y':  healthIconHeight + healthIconSpacing * 2,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_leaders,
+          'href': health_fields.church_leaders.icon,
           'class': 'health-image health-image--leaders'
 
         }
@@ -116,7 +128,7 @@ const template = {
           'y':  healthIconHeight * 2 + healthIconSpacing * 2,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_sharing,
+          'href': health_fields.church_sharing.icon,
           'class': 'health-image health-image--sharing'
         }
       },
@@ -127,7 +139,7 @@ const template = {
           'y':  healthIconHeight * 2 + healthIconSpacing * 3,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_praise,
+          'href': health_fields.church_praise.icon,
           'class': 'health-image health-image--praise'
         }
       },
@@ -138,7 +150,7 @@ const template = {
           'y': healthIconHeight * 2 + healthIconSpacing * 2,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_word,
+          'href': health_fields.church_bible.icon,
           'class': 'health-image health-image--bible'
         }
       },
@@ -149,7 +161,7 @@ const template = {
           'y':  healthIconHeight + healthIconSpacing * 2,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_baptism,
+          'href': health_fields.church_baptism.icon,
           'class': 'health-image health-image--baptism'
         }
       },
@@ -160,7 +172,7 @@ const template = {
           'y': healthIconGutter,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_giving,
+          'href': health_fields.church_giving.icon,
           'class': 'health-image health-image--giving'
         }
       },
@@ -171,7 +183,7 @@ const template = {
           'y':  healthIconHeight + healthIconSpacing * 2,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': icons.health_prayer,
+          'href': health_fields.church_prayer.icon,
           'class': 'health-image health-image--prayer'
         }
       }

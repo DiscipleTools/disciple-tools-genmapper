@@ -56,7 +56,7 @@ class DT_Genmapper_Plugin_Functions
                 'default' => '',
                 'tile' => 'relationships',
                 "show_in_table" => 25,
-                "icon" => get_template_directory_uri() . '/dt-assets/images/cross.svg',
+                "icon" => get_template_directory_uri() . '/dt-assets/images/groups/prayer-2.svg',
             ];
             $fields["baptized_count"] = [
                 'name' => __( 'Baptized Count', 'disciple_tools' ),
@@ -65,7 +65,7 @@ class DT_Genmapper_Plugin_Functions
                 'default' => '',
                 'tile' => 'relationships',
                 "show_in_table" => 25,
-                "icon" => get_template_directory_uri() . '/dt-assets/images/baptism.svg',
+                "icon" => get_template_directory_uri() . '/dt-assets/images/groups/baptism-2.svg',
             ];
             $fields["baptized_in_group_count"] = [
                 'name' => __( 'Baptized in Group Count', 'disciple_tools' ),
@@ -74,7 +74,7 @@ class DT_Genmapper_Plugin_Functions
                 'default' => '',
                 'tile' => 'relationships',
                 "show_in_table" => 25,
-                "icon" => get_template_directory_uri() . '/dt-assets/images/baptism.svg',
+                "icon" => '',
             ];
         }
 

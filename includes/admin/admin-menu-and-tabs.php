@@ -31,11 +31,6 @@ class DT_Genmapper_Metrics_Menu {
                 'key' => 'general',
                 'label' => __( 'General', 'disciple-tools-genmapper' ),
                 'class' => DT_Genmapper_Tab_General::class
-            ],
-            [
-                'key' => 'icons',
-                'label' => __( 'Icons', 'disciple-tools-genmapper' ),
-                'class' => DT_Genmapper_Tab_Icons::class
             ]
         ];
     }
@@ -64,7 +59,6 @@ class DT_Genmapper_Metrics_Menu {
      */
     public function __construct() {
         require_once( __DIR__ . '/admin-general.php' );
-        require_once( __DIR__ . '/admin-icons.php' );
 
         add_action( "admin_menu", array( $this, "register_menu" ) );
         add_action( 'admin_enqueue_scripts', function() {
@@ -121,11 +115,6 @@ class DT_Genmapper_Metrics_Menu {
         wp_enqueue_script( 'jquery' );
         wp_register_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', array( 'jquery' ), '1.12.1' );
         wp_enqueue_script( 'jquery-ui' );
-        wp_enqueue_script( 'dt-genmapper-admin', DT_Genmapper_Metrics::path() . 'includes/admin.js', [
-            'wp-api',
-            'jquery',
-            'jquery-ui',
-        ], filemtime( DT_Genmapper_Metrics::dir() . 'includes/admin.js' ), true );
 
         // Localize script with array data\
         wp_localize_script(
