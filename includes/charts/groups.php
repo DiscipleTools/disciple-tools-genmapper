@@ -46,7 +46,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
             'gen-template', 'genApiTemplate', [
                 'plugin_uri' => plugin_dir_url( __DIR__ ),
                 'group_fields' => $group_fields,
-                'show_metrics' => get_option( "dt_genmapper_show_health_metrics", true ),
+                'show_metrics' => get_option( "dt_genmapper_show_health_metrics", false ),
                 'show_icons' => get_option( "dt_genmapper_show_health_icons", true ),
             ]
         );
@@ -59,7 +59,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         ], filemtime( plugin_dir_path( __FILE__ ) . "genmapper.js" ), true);
         wp_localize_script(
             'genmapper', 'genApiTemplate', [
-                'show_metrics' => get_option( "dt_genmapper_show_health_metrics", true ),
+                'show_metrics' => get_option( "dt_genmapper_show_health_metrics", false ),
                 'show_icons' => get_option( "dt_genmapper_show_health_icons", true ),
             ]
         );
