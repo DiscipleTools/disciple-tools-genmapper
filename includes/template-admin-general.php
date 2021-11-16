@@ -15,7 +15,7 @@
                     <tr>
                         <td>
                             <label for="genmapper-health-icons">
-                                Show health icons?
+                                <?php echo _e( 'Show health icons?', 'disciple-tools-genmapper' )?>
                             </label>
                         </td>
                         <td>
@@ -25,11 +25,21 @@
                     <tr>
                         <td>
                             <label for="genmapper-health-metrics">
-                                Show health metrics?
+                                <?php echo _e( 'Show health metrics?', 'disciple-tools-genmapper' )?>
                             </label>
                         </td>
                         <td>
                             <input type="checkbox" name="dt_genmapper_show_health_metrics" <?php if ($show_health_metrics): ?>checked<?php endif; ?> id="genmapper-health-metrics">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="genmapper-collapse-health-metrics">
+                                <?php echo _e( 'Collapse group page health metric fields?', 'disciple-tools-genmapper' )?>
+                            </label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="dt_genmapper_collapse_metrics" <?php if ($collapse_health_metrics_fields): ?>checked<?php endif; ?> id="genmapper-collapse-health-metrics">
                         </td>
                     </tr>
                 </tbody>

@@ -28,18 +28,8 @@ class DT_Genmapper_Plugin_Functions
             add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
             add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
             add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_group_scripts' ], 99 );
-            add_filter( 'dt_details_additional_tiles', [ $this, 'dt_details_additional_tiles' ], 10, 2 );
+            add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 99, 2 );
         }
-    }
-
-    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
-
-        if ( $post_type === "groups" ){
-            $tiles["metrics"] = [
-                "label" => __( "Metrics", 'disciple_tools' ),
-            ];
-        }
-        return $tiles;
     }
 
     /**
@@ -51,6 +41,22 @@ class DT_Genmapper_Plugin_Functions
             filemtime( plugin_dir_path( __FILE__ ) . '/groups.js' ), true);
         }
     }
+
+    public function dt_details_additional_section($section, $post_type) {
+        if ( $post_type === "groups" && $section === "relationships" ) {
+            $post_settings = DT_Posts::get_post_settings( $post_type );
+            $fields = array_map(function($field) {
+                $field['custom_display'] = false;
+                return $field;
+            }, array_filter($post_settings['fields'], function($field) {
+                return !empty($field['genmapper_metric']);
+            }));
+            $post = DT_Posts::get_post( $post_type, get_the_ID() );
+            $collapse_fields = get_option( 'dt_genmapper_collapse_metrics', true );
+            include DT_Genmapper_Metrics::includes_dir() . 'template-group-relationship-fields.php';
+        }
+    }
+
 
     /**
      * Add extra count fields to the groups page
@@ -65,8 +71,9 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers in this group.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'metrics',
-                "show_in_table" => 25,
+                'tile' => 'relationships',
+                'custom_display' => true,
+                'genmapper_metric' => true,
                 "icon" => get_template_directory_uri() . '/dt-assets/images/groups/prayer-2.svg',
             ];
             $fields["baptized_count"] = [
@@ -74,8 +81,9 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers who are baptized.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'metrics',
-                "show_in_table" => 25,
+                'tile' => 'relationships',
+                'custom_display' => true,
+                'genmapper_metric' => true,
                 "icon" => get_template_directory_uri() . '/dt-assets/images/groups/baptism-2.svg',
             ];
             $fields["baptized_in_group_count"] = [
@@ -83,8 +91,9 @@ class DT_Genmapper_Plugin_Functions
                 'description' => _x( 'The number of believers who are baptized by the group', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
-                'tile' => 'metrics',
-                "show_in_table" => 25,
+                'tile' => 'relationships',
+                'custom_display' => true,
+                'genmapper_metric' => true,
                 "icon" => '',
             ];
         }
