@@ -31,4 +31,8 @@ class DT_Genmapper_Plugin_Endpoints
         }
         return $pass;
     }
+
+    public function add_api_routes() {
+        //Add API routes here
+    }
 }
