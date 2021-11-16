@@ -14,8 +14,20 @@ before_install:
   - mysql -e "GRANT ALL ON testdb.* TO 'travis'@'localhost'"
 before_script:
   - composer install --no-interaction
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - |
+    if [[ ! -z "$WP_VERSION" ]] ; then
+    bash tests/install-wp-tests.sh wordpress_test root '' localhost latest
+    fi
   - npm install -g eslint
 script:
   - includes/admin/test/test_for_syntax_errors.sh
   - includes/admin/test/test_installation.sh
   - includes/admin/test/test_phpcs.sh
+  - |
+    if [[ ! -z "$WP_VERSION" ]] ; then
+      composer require "phpunit/phpunit=7.5.*"
+      composer require "yoast/phpunit-polyfills"
+      vendor/phpunit/phpunit/phpunit --version
+      WP_MULTISITE=1 vendor/phpunit/phpunit/phpunit
+    fi
