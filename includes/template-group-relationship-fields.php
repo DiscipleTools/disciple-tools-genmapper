@@ -6,7 +6,7 @@
     </div>
 <?php endif; ?>
 <div id="metrics-extra-fields" style="display: <?php echo $collapse_fields ? "none" : "block"; ?>;">
-    <?php foreach($fields as $key => $options): ?>
+    <?php foreach ($fields as $key => $options): ?>
         <?php render_field_for_display( $key, $fields, $post, true ); ?>
     <?php endforeach; ?>
     <div class="clear"></div>

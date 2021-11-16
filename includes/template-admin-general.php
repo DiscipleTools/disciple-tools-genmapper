@@ -2,12 +2,12 @@
      class="metabox-holder columns-2">
     <div id="post-body-content">
         <form class="columns-2" method="POST">
-            <input type="hidden" name="field_add_nonce" value="<?php _e($nonce) ?>">
+            <input type="hidden" name="field_add_nonce" value="<?php esc_attr( $nonce ) ?>">
             <table class="widefat striped"
                    style="max-width: 400px; margin-bottom: 25px;">
                 <thead>
                     <tr>
-                        <th><?php esc_attr_e( 'Church Circles', 'disciple-tools-genmapper' ) ?></b></th>
+                        <th><?php esc_html_e( 'Church Circles', 'disciple-tools-genmapper' ) ?></b></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -15,7 +15,7 @@
                     <tr>
                         <td>
                             <label for="genmapper-health-icons">
-                                <?php echo _e( 'Show health icons?', 'disciple-tools-genmapper' )?>
+                                <?php esc_html_e( 'Show health icons?', 'disciple-tools-genmapper' )?>
                             </label>
                         </td>
                         <td>
@@ -25,7 +25,7 @@
                     <tr>
                         <td>
                             <label for="genmapper-health-metrics">
-                                <?php echo _e( 'Show health metrics?', 'disciple-tools-genmapper' )?>
+                                <?php esc_html_e( 'Show health metrics?', 'disciple-tools-genmapper' )?>
                             </label>
                         </td>
                         <td>
@@ -35,7 +35,7 @@
                     <tr>
                         <td>
                             <label for="genmapper-collapse-health-metrics">
-                                <?php echo _e( 'Collapse group page health metric fields?', 'disciple-tools-genmapper' )?>
+                                <?php esc_html_e( 'Collapse group page health metric fields?', 'disciple-tools-genmapper' )?>
                             </label>
                         </td>
                         <td>

@@ -41,7 +41,7 @@ class DT_Genmapper_Tab_General
     }
 
     public function update() {
-        if ( !wp_verify_nonce( sanitize_key( $_POST['field_add_nonce'] ), static::class ) ) {
+        if ( !isset( $_POST['field_add_nonce'] ) || !wp_verify_nonce( sanitize_key( $_POST['field_add_nonce'] ), static::class ) ) {
             return;
         }
         update_option( 'dt_genmapper_show_health_icons', !empty( $_POST["dt_genmapper_show_health_icons"] ) );

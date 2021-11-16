@@ -42,15 +42,17 @@ class DT_Genmapper_Plugin_Functions
         }
     }
 
-    public function dt_details_additional_section($section, $post_type) {
+    public function dt_details_additional_section( $section, $post_type ) {
         if ( $post_type === "groups" && $section === "relationships" ) {
             $post_settings = DT_Posts::get_post_settings( $post_type );
-            $fields = array_map(function($field) {
+            function map_fields( $field) {
                 $field['custom_display'] = false;
                 return $field;
-            }, array_filter($post_settings['fields'], function($field) {
-                return !empty($field['genmapper_metric']);
-            }));
+            }
+            function filter_fields( $field) {
+                return !empty( $field['genmapper_metric'] );
+            }
+            $fields = array_map( "map_fields", array_filter( $post_settings['fields'], "filter_fields" ) );
             $post = DT_Posts::get_post( $post_type, get_the_ID() );
             $collapse_fields = get_option( 'dt_genmapper_collapse_metrics', true );
             include DT_Genmapper_Metrics::includes_dir() . 'template-group-relationship-fields.php';
