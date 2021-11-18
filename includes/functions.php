@@ -76,7 +76,7 @@ class DT_Genmapper_Plugin_Functions
                 'tile' => 'relationships',
                 'custom_display' => true,
                 'genmapper_metric' => true,
-                "icon" => get_template_directory_uri() . '/dt-assets/images/groups/prayer-2.svg',
+                "icon" => DT_Genmapper_Metrics::path() . '/includes/charts/church-circles/icons/believers.svg',
             ];
             $fields["baptized_count"] = [
                 'name' => __( 'Baptized Count', 'disciple_tools' ),
@@ -96,7 +96,7 @@ class DT_Genmapper_Plugin_Functions
                 'tile' => 'relationships',
                 'custom_display' => true,
                 'genmapper_metric' => true,
-                "icon" => '',
+                "icon" => DT_Genmapper_Metrics::path() . '/includes/charts/church-circles/icons/baptized-in-group.svg',
             ];
         }
 
