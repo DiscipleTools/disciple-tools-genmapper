@@ -2,7 +2,7 @@
      class="metabox-holder columns-2">
     <div id="post-body-content">
         <form class="columns-2" method="POST">
-            <input type="hidden" name="field_add_nonce" value="<?php esc_attr_e( $nonce ) ?>">
+            <input type="hidden" name="field_add_nonce" value="<?php echo esc_attr( $nonce ) ?>">
             <table class="widefat striped"
                    style="max-width: 700px; margin-bottom: 25px;">
                 <thead>
