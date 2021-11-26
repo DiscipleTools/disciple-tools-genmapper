@@ -3,7 +3,7 @@
     <div class="nav-tab-wrapper">
         <?php foreach ( $tabs as $item ): ?>
             <a href="<?php esc_html( $link . $item['key'] ) ?>"
-               class="nav-tab <?php ( $current_tab === $item['key'] ) ? esc_attr( 'nav-tab-active' ) : print ''; ?>"><?php esc_attr( $item['label'], 'disciple-tools-genmapper' ) ?></a>
+               class="nav-tab <?php ( $current_tab === $item['key'] ) ? esc_attr( 'nav-tab-active' ) : print ''; ?>"><?php esc_html_e( $item['label'], 'disciple-tools-genmapper' ) ?></a>
         <?php endforeach ?>
     </div>
     <div id="poststuff">
