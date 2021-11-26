@@ -1,7 +1,7 @@
 /* CSS for GenMapper: template specific */
 
 .node-church-box {
-  stroke: #a5a5a5;
+  stroke: #000000;
   stroke-width: 2;
 }
 
@@ -27,16 +27,8 @@
     text-align: center;
 }
 
-.node--active .node-name, .link-text--active {
-    text-align: center;
-    font-weight: bold;
-    color: black;
-}
-
-.node--inactive .node-name, .link-text--inactive {
-    text-align: center;
-    font-weight: bold;
-    color: #939393;
+.node--inactive .node-church-box {
+    stroke: #e7e7e7;
 }
 
 .health-image {

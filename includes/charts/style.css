@@ -338,11 +338,6 @@ p {
 .node--inactive text, .link-text--inactive {
   stroke: #000;
   fill: #000;
-  opacity: 0.4;
-}
-
-.node--inactive image {
-  opacity: 0.4;
 }
 
 .node--inactive > rect, .node--inactive > line {
