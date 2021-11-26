@@ -19,7 +19,7 @@ class DT_Genmapper_Plugin_Functions
      */
     public function __construct() {
         //We only need these filters if we're showing metrics
-        if (get_option( "dt_genmapper_show_health_metrics", true )) {
+        if (get_option( "dt_genmapper_show_health_metrics", false )) {
             add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
             add_filter( 'dt_post_update_allow_fields', [ $this, 'dt_post_update_allow_fields' ], 1, 2 );
             add_action( 'added_post_meta', [ $this, 'dt_updated_post_meta' ], 10, 4 );
