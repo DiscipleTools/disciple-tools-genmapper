@@ -46,8 +46,22 @@ class DT_Genmapper_Tab_General
             return;
         }
 
-        update_option( 'dt_genmapper_show_health_icons', !empty( $_POST["dt_genmapper_show_health_icons"] ) );
-        update_option( 'dt_genmapper_show_health_metrics', !empty( $_POST["dt_genmapper_show_health_metrics"] ) );
-        update_option( 'dt_genmapper_collapse_metrics', !empty( $_POST["dt_genmapper_collapse_metrics"] ) );
+        if ( get_option( 'dt_genmapper_show_health_icons' ) === false ) {
+            add_option( 'dt_genmapper_show_health_icons', !empty( $_POST["dt_genmapper_show_health_icons"] ) );
+        } else {
+            update_option( 'dt_genmapper_show_health_icons', !empty( $_POST["dt_genmapper_show_health_icons"] ) );
+        }
+
+        if ( get_option( 'dt_genmapper_show_health_metrics' ) === false ) {
+            add_option( 'dt_genmapper_show_health_metrics', !empty( $_POST["dt_genmapper_show_health_metrics"] ) );
+        } else {
+            update_option( 'dt_genmapper_show_health_metrics', !empty( $_POST["dt_genmapper_show_health_metrics"] ) );
+        }
+
+        if ( get_option( 'dt_genmapper_collapse_metrics' ) === false ) {
+            add_option( 'dt_genmapper_collapse_metrics', !empty( $_POST["dt_genmapper_collapse_metrics"] ) );
+        } else {
+            update_option( 'dt_genmapper_collapse_metrics', !empty( $_POST["dt_genmapper_collapse_metrics"] ) );
+        }
     }
 }
