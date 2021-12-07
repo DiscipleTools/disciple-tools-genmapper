@@ -79,7 +79,7 @@ abstract class DT_Genmapper_Metrics_Chart_Base
                 'spinner' => '<img src="' .trailingslashit( plugin_dir_url( __DIR__ ) ) . 'ajax-loader.gif" style="height:1em;" />',
                 'map_key' => get_option( 'dt_map_key' ), // this expects Disciple.Tools to have this google maps key installed
                 'stats' => $this->base_chart_data(),
-                'translations' => $this->base_translations(),
+                'translations' => $this->base_translations()
             ]
         );
     }

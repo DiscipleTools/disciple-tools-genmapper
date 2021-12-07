@@ -50,10 +50,10 @@ function dt_genmapper_metrics() {
         require_once get_template_directory() . '/dt-core/global-functions.php';
     }
     /*
-     * Don't load the plugin on every rest request. Only those with the metrics namespace
+     * Don't load the plugin on every rest request. Only those with the metrics namespaces
      */
     $is_rest = dt_is_rest();
-    if ( !$is_rest || strpos( dt_get_url_path(), 'genmapper' ) !== false ){
+    if ( !$is_rest || strpos( dt_get_url_path(), 'genmapper' ) !== false || strpos( dt_get_url_path(), 'groups' ) !== false ){
         return DT_genmapper_Metrics::instance();
     }
 }
@@ -67,10 +67,46 @@ add_action( 'after_setup_theme', 'dt_genmapper_metrics' );
  */
 class DT_Genmapper_Metrics {
 
+    /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    public static function dir() {
+        return __DIR__ . '/';
+    }
+
+    /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    public static function includes_dir() {
+        return self::dir() . 'includes/';
+    }
+
+    /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    public static function path() {
+        return plugin_dir_url( __FILE__ );
+    }
+
     private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
+            require_once( 'includes/queries.php' );
+            require_once( 'includes/rest-api.php' );
+            require_once( 'includes/admin/admin-menu-and-tabs.php' );
+            require_once( 'includes/functions.php' );
+            DT_Genmapper_Plugin_Endpoints::instance();
+            DT_Genmapper_Plugin_Functions::instance();
         }
         return self::$_instance;
     }
