@@ -39,7 +39,28 @@ code contributions are welcome using the [Pull Request](https://github.com/Disci
 system for git. For a more details on contribution see the
 [contribution guidelines](https://github.com/DiscipleTools/disciple-tools-genmapper/blob/master/CONTRIBUTING.md).
 
+## Setup for Developers
+
+### Composer
+
+Install via Homebrew or run Installer:
+```
+$ brew update
+$ brew install composer
+```
+Run Composer to install dependencies
+```
+$ composer install
+```
+### PHP Code Sniffer
+
+Run `./vendor/bin/phpcs` to see list of PHP format errors
+Run `./vendor/bin/phpcbf` to auto-fix all possible format errors
+
+### Unit Testing
+Install the wordpress test environment by running `tests/install-wp-tests.sh`
+Run `phpunit` to run unit tests.
 
 ## Screenshots
 
-![sample gen map](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/documentation/genmapper-1.png)
+![sample gen map](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-genmapper/master/documentation/genmapper-1.1.png)

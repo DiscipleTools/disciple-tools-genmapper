@@ -8,6 +8,8 @@ class GenMapper {
 
   constructor () {
     this.plugin_uri = window.wpApiGenmapper.plugin_uri
+    this.showMetrics = window.genApiTemplate.show_metrics === "1"
+    this.showIcons = window.genApiTemplate.show_icons === "1"
     this.appVersion = '0.2.16'
 
     this.language = 'en'
@@ -270,26 +272,30 @@ class GenMapper {
                ' ' + d.parent.x + ',' + (d.y + (d.parent.y + boxHeight)) / 2 +
                ' ' + d.parent.x + ',' + (d.parent.y + boxHeight)
           })
-
     // update the link text between the nodes
-    const LINK_TEXT_POSITION = 0.3 // 1 -> parent, 0 -> child
-    const linkText = this.gLinksText.selectAll('.link-text')
-          .data(this.nodes.descendants().slice(1))
-    linkText.exit()
-        .remove()
-    linkText.enter()
-        .append('text')
-      .merge(linkText)
-        .attr('class', function (d) {
-          return 'link-text ' + (d.data.active ? ' link-text--active' : ' link-text--inactive')
-        })
-        .attr('x', function (d) { return d.x * (1 - LINK_TEXT_POSITION) + d.parent.x * LINK_TEXT_POSITION })
-        .attr('y', function (d) { return d.y * (1 - LINK_TEXT_POSITION) + (d.parent.y + boxHeight) * LINK_TEXT_POSITION })
-        .text(function (d) { return d.data.coach })
-
+    // const LINK_TEXT_POSITION = 0.3 // 1 -> parent, 0 -> child
+    // const linkText = this.gLinksText.selectAll('.link-text')
+    //       .data(this.nodes.descendants().slice(1))
+    // linkText.exit()
+    //     .remove()
+    // linkText.enter()
+    //     .append('text')
+    //   .merge(linkText)
+    //     .attr('class', function (d) {
+    //       return 'link-text ' + (d.data.active ? ' link-text--active' : ' link-text--inactive')
+    //     })
+    //     .attr('x', function (d) { return d.x * (1 - LINK_TEXT_POSITION) + d.parent.x * LINK_TEXT_POSITION })
+    //     .attr('y', function (d) { return d.y * (1 - LINK_TEXT_POSITION) + (d.parent.y + boxHeight) * LINK_TEXT_POSITION })
+    //     .text(function (d) {
+    //       return d.data.coach
+    //     })
     // update nodes
     const node = this.gNodes.selectAll('.node')
           .data(this.nodes.descendants())
+
+    node.enter().text(function(d) {
+      console.log(d)
+    })
 
     node.exit()
         .remove()
@@ -329,6 +335,52 @@ class GenMapper {
     nodeWithNew.attr('class', function (d) {
       return 'node' + ((d.data.id === 0) ? ' node--dummyroot' : (d.data.active ? ' node--active' : ' node--inactive'))
     })
+      .attr('class', (d) => {
+        const classes = ['node'];
+        if (d.data.id === 0) {
+          classes.push('node--dummyroot')
+        }
+        classes.push(d.data.active ? 'node--active' : 'node--inactive')
+        if (this.showIcons) {
+          if (d.data.health_metrics_baptism) {
+            classes.push('health--baptism')
+          }
+          if (d.data.health_metrics_baptism) {
+            classes.push('health--baptism')
+          }
+          if (d.data.health_metrics_bible) {
+            classes.push('health--bible')
+          }
+          if (d.data.health_metrics_commitment) {
+            classes.push('health--commitment')
+          }
+          if (d.data.health_metrics_communion) {
+            classes.push('health--communion')
+          }
+          if (d.data.health_metrics_giving) {
+            classes.push('health--giving')
+          }
+          if (d.data.health_metrics_leaders) {
+            classes.push('health--leaders')
+          }
+          if (d.data.health_metrics_fellowship) {
+            classes.push('health--fellowship')
+          }
+          if (d.data.health_metrics_praise) {
+            classes.push('health--praise')
+          }
+          if (d.data.health_metrics_prayer) {
+            classes.push('health--prayer')
+          }
+          if (d.data.health_metrics_sharing) {
+            classes.push('health--sharing')
+          }
+          if (d.data.health_metrics_sharing) {
+            classes.push('health--sharing')
+          }
+        }
+        return classes.join(' ')
+      })
       .attr('transform', function (d) {
         return 'translate(' + d.x + ',' + d.y + ')'
       })
