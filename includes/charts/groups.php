@@ -141,7 +141,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         }
 
         foreach ($groups as $group) {
-            $dates = $group['start_date'] ? gmdate( get_option( 'date_format' ), $group['start_date'] ) : '';
             $lines = [];
             $lines[] = $group['name'];
             if ($group["coach"]) {
