@@ -168,7 +168,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "post_type" => "groups",
                 "coach" => $group["coach"],
                 "location" => $group["location_name"],
-                "start_date" => $group['start_date'] ? gmdate( get_option( 'date_format' ), $group['start_date'] ) : null,
+                "start_date" => $group['start_date'] ? gmdate( get_option( 'date_format' ), strtotime( $group['start_date'] ) ) : null,
                 "attenders" => (int) $group['total_members'],
                 "believers" => (int) $group['total_believers'],
                 "baptized" => (int) $group['total_baptized'],
