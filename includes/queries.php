@@ -171,7 +171,7 @@ class DT_Genmapper_Plugin_Queries
 
         // guarantee only one record with one parent.
         $list = [];
-        foreach( $query as $q) {
+        foreach ( $query as $q) {
             $list[$q['id']] = $q;
         }
 
