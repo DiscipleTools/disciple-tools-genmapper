@@ -45,7 +45,7 @@ class DT_Genmapper_Plugin_Queries
                       IFNULL(believers1.meta_value, 0) as total_believers,
                       IFNULL(baptized1.meta_value, 0) as total_baptized,
                       IFNULL(baptized2.meta_value, 0) as total_baptized_by_group,
-                      
+
                       (SELECT EXISTS (SELECT 1 FROM $wpdb->postmeta as metricbaptized1 WHERE metricbaptized1.post_id = a.ID AND metricbaptized1.meta_key = 'health_metrics' AND metricbaptized1.meta_value = 'church_baptism')) as health_metrics_baptism,
                       (SELECT EXISTS (SELECT 1 FROM $wpdb->postmeta as metricfellowship1 WHERE metricfellowship1.post_id = a.ID AND metricfellowship1.meta_key = 'health_metrics' AND metricfellowship1.meta_value = 'church_fellowship')) as health_metrics_fellowship,
                       (SELECT EXISTS (SELECT 1 FROM $wpdb->postmeta as metricsharing1 WHERE metricsharing1.post_id = a.ID AND metricsharing1.meta_key = 'health_metrics' AND metricsharing1.meta_value = 'church_sharing')) as health_metrics_sharing,
@@ -169,7 +169,13 @@ class DT_Genmapper_Plugin_Queries
                 break;
         }
 
-        return dt_queries()->check_tree_health( $query );
+        // guarantee only one record with one parent.
+        $list = [];
+        foreach ( $query as $q) {
+            $list[$q['id']] = $q;
+        }
+
+        return dt_queries()->check_tree_health( $list );
     }
 }
 

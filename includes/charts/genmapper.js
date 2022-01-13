@@ -673,6 +673,8 @@ class GenMapper {
       this.validTree(tree)
     } catch (err) {
       this.displayImportError(err)
+      console.log(tree)
+      console.log(err)
       return
     }
     if ( initial ){
