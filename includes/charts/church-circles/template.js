@@ -5,6 +5,9 @@ const lineHeight = 20
 const healthIconHeight = boxHeight / 5
 const healthIconGutter = boxHeight / 6
 const healthIconSpacing = healthIconHeight / 2
+const countLeft = boxHeight * -.65
+const countNumberLeft = boxHeight * -.55
+const countSpacing = boxHeight / 2.8
 
 const icons = window.genApiTemplate.icons;
 let group_fields = window.genApiTemplate.group_fields
@@ -27,7 +30,7 @@ const template = {
       // if the visible shape is circle
       'type': 'rect',
       'attributes': {
-        'x': -boxHeight / 2,
+        'x': -boxHeight / 3,
         'y': 0,
         'width': boxHeight,
         'height': boxHeight,
@@ -38,7 +41,7 @@ const template = {
       'attenders-image': {
         'type': 'image',
         'attributes': {
-          'x': -boxHeight * 0.5,
+          'x': countLeft,
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
@@ -48,7 +51,7 @@ const template = {
       'believers-image': {
         'type': 'image',
         'attributes': {
-          'x': -boxHeight * 0.24,
+          'x': countLeft + countSpacing,
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
@@ -58,7 +61,7 @@ const template = {
       'baptized-image': {
         'type': 'image',
         'attributes': {
-          'x': boxHeight * 0.04,
+          'x': countLeft + countSpacing * 2,
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
@@ -68,7 +71,7 @@ const template = {
       'baptized-in-group-image': {
         'type': 'image',
         'attributes': {
-          'x': boxHeight * 0.28,
+          'x': countLeft + countSpacing * 3,
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
@@ -275,7 +278,7 @@ const template = {
         'svg': {
           'type': 'text',
           'attributes': {
-            'x': -boxHeight * 0.39,
+            'x': countNumberLeft,
             'y': -0.5 * textMargin
           },
           'style': {
@@ -288,7 +291,7 @@ const template = {
         'svg': {
           'type': 'text',
           'attributes': {
-            'x': -boxHeight * 0.13,
+            'x': countNumberLeft + countSpacing,
             'y': -0.5 * textMargin
           },
           'style': {
@@ -301,7 +304,7 @@ const template = {
         'svg': {
           'type': 'text',
           'attributes': {
-            'x': boxHeight * 0.13,
+            'x': countNumberLeft + countSpacing * 2,
             'y': -0.5 * textMargin
           },
           'style': {
@@ -314,7 +317,7 @@ const template = {
         'svg': {
           'type': 'text',
           'attributes': {
-            'x': boxHeight * 0.39,
+            'x': countNumberLeft + countSpacing * 3,
             'y': -0.5 * textMargin
           },
           'style': {
