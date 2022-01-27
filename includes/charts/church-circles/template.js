@@ -16,6 +16,8 @@ let health_fields = group_fields.health_metrics.default
 const showMetrics = window.genApiTemplate.show_metrics === "1"
 const showIcons = window.genApiTemplate.show_icons === "1"
 
+const icons = window.genApiTemplate.plugin_uri + 'charts/church-circles/icons/';
+let group_types = window.genApiTemplate.group_fields.group_type.default
 const template = {
   'name': 'Church circles 0.6',
   'settings': {
@@ -188,7 +190,7 @@ const template = {
           'height': healthIconHeight,
           'href': health_fields.church_prayer.icon,
           'class': 'health-image health-image--prayer'
-        }
+    }
       }
     }),
   },

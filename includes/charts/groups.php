@@ -96,7 +96,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         register_rest_route(
             $this->namespace, 'groups', [
                 [
-                    'methods' => WP_REST_Server::READABLE,
+                    'methods'  => WP_REST_Server::READABLE,
                     'callback' => [ $this, 'groups' ],
                     'permission_callback' => '__return_true',
                 ],
@@ -141,7 +141,6 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         }
 
         foreach ($groups as $group) {
-            $dates = $group['start_date'] ? gmdate( get_option( 'date_format' ), $group['start_date'] ) : '';
             $lines = [];
             $lines[] = $group['name'];
             if ($group["coach"]) {
@@ -151,7 +150,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 $lines[] = $group['location_name'];
             }
             if ($group['start_date']) {
-                $lines[] = gmdate( get_option( 'date_format' ), $group['start_date'] );
+                $lines[] = gmdate( get_option( 'date_format' ), strtotime( $group['start_date'] ) );
             }
 
             $values = [
@@ -169,7 +168,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "post_type" => "groups",
                 "coach" => $group["coach"],
                 "location" => $group["location_name"],
-                "start_date" => $group['start_date'] ? gmdate( get_option( 'date_format' ), $group['start_date'] ) : null,
+                "start_date" => $group['start_date'] ? gmdate( get_option( 'date_format' ), strtotime( $group['start_date'] ) ) : null,
                 "attenders" => (int) $group['total_members'],
                 "believers" => (int) $group['total_believers'],
                 "baptized" => (int) $group['total_baptized'],
