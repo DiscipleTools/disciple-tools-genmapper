@@ -96,7 +96,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         register_rest_route(
             $this->namespace, 'groups', [
                 [
-                    'methods' => WP_REST_Server::READABLE,
+                    'methods'  => WP_REST_Server::READABLE,
                     'callback' => [ $this, 'groups' ],
                     'permission_callback' => '__return_true',
                 ],
