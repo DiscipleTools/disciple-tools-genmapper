@@ -23,7 +23,7 @@ jobs:
     - name: Build project
       run: |
         mkdir disciple-tools-genmapper |
-        cp -r disciple-tools-genmapper.php spinner.svg LICENSE README.md includes languages version-control.json disciple-tools-genmapper/ |
+        cp -r disciple-tools-genmapper.php spinner.svg LICENSE README.md includes languages version-control.json disciple-tools-genmapper/
         zip -r disciple-tools-genmapper.zip disciple-tools-genmapper
     - name: Create Release
       id: create_release
