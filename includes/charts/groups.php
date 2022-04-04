@@ -150,7 +150,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 $lines[] = $group['location_name'];
             }
             if ($group['start_date']) {
-                $lines[] = gmdate( get_option( 'date_format' ), strtotime( $group['start_date'] ) );
+                $lines[] = gmdate( get_option( 'date_format' ), intval( $group['start_date'] ) );
             }
 
             $values = [
