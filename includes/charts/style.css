@@ -391,3 +391,47 @@ p {
 #metrics-container .bordered-box {
     height: 100%;
 }
+
+
+@media print {
+    .header {
+      display: none;
+    }
+
+    #side-nav-container {
+      display: none;
+    }
+
+    #metrics-content {
+      width: 100%;
+    }
+
+    .cell.medium-3 {
+      display: none;
+    }
+
+    #chart .cell.medium-9 {
+      height: 7.5%;
+    }
+
+    #left-menu {
+      display: none;
+    }
+
+    #metrics-content {
+      height: 100%;
+      margin: 0;
+    }
+    #genmapper-graph {
+      width: 100%;
+      height: 92.5%;
+      border: none;
+    }
+
+    .rebaseNode svg {
+      display: none;
+    }
+    .addNode svg {
+      display: none;
+    }
+  }
