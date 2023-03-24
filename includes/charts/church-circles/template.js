@@ -45,7 +45,7 @@ const template = {
           'y': -2.5 * textHeight,
           'width': healthIconHeight,
           'height': healthIconHeight,
-          'href': group_fields.leader_count.icon
+          'href': group_fields.member_count.icon
         }
       },
       'believers-image': {
