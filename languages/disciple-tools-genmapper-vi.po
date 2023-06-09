@@ -361,7 +361,7 @@ msgstr "Tìm kiếm người dùng"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Tìm kiếm% s"
+msgstr "Tìm kiế %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Đóng"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Đã xóa% 1 $ s:% 2 $ s"
+msgstr "Đã xóa %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Đã thêm% 1 $ s:% 2 $ s"
+msgstr "Đã thêm %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Đã cập nhật% 1 $ s:% 2 $ s thành% 3 $ s"
+msgstr "Đã cập nhật %1$s: %2$s thành %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Thế hệ nhóm"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s đang báo cáo tạo trước nhóm mới."
+msgstr "%s đang báo cáo tạo trước nhóm mới."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s đang báo cáo tạo nhóm mới."
+msgstr "%s đang báo cáo tạo nhóm mới."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s đang báo cáo một thế hệ nhà thờ mới."
+msgstr "%s đang báo cáo một thế hệ nhà thờ mới."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s đang báo cáo một thế hệ nhóm lãnh đạo mới."
+msgstr "%s đang báo cáo một thế hệ nhóm lãnh đạo mới."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Huấn luyện mới"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s đang báo cáo một địa chỉ liên hệ mới."
+msgstr "%s đang báo cáo một địa chỉ liên hệ mới."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s đang báo cáo một nhóm trước mới được thành lập."
+msgstr "%s đang báo cáo một nhóm trước mới được thành lập."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s đang báo cáo một nhóm mới được thành lập."
+msgstr "%s đang báo cáo một nhóm mới được thành lập."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s đang báo cáo một nhà thờ mới."
+msgstr "%s đang báo cáo một nhà thờ mới."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s đang báo cáo một nhóm lãnh đạo mới được thành lập."
+msgstr "%s đang báo cáo một nhóm lãnh đạo mới được thành lập."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s đang báo cáo một lễ rửa tội mới."
+msgstr "%s đang báo cáo một lễ rửa tội mới."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s đang báo cáo mối quan hệ huấn luyện."
+msgstr "%s đang báo cáo mối quan hệ huấn luyện."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Plugin 'Công cụ Đệ tử - Đào tạo' yêu cầu chủ đề \"C�
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Phiên bản Công cụ Đệ tử Hiện tại:% 1 $ s, phiên bản bắt buộc:% 2 $ s"
+msgstr "Phiên bản Công cụ Đệ tử Hiện tại: %1$s, phiên bản bắt buộc: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "bảng điều khiển"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s ngày kể từ lần cập nhật cuối cùng"
+msgstr "%s ngày kể từ lần cập nhật cuối cùng"
 
 #: includes/rest-api.php:419
 msgid "Accept"

@@ -361,7 +361,7 @@ msgstr "Tafuta Watumiaji"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Tafuta% s"
+msgstr "Tafut %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Funga"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Imeondoa% 1 $ s:% 2 $ s"
+msgstr "Imeondoa %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Imeongeza% 1 $ s:% 2 $ s"
+msgstr "Imeongeza %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Imesasisha% 1 $ s:% 2 $ s hadi% 3 $ s"
+msgstr "Imesasisha %1$s: %2$s hadi %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Vizazi vya Timu"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s inaripoti kizazi kipya cha kabla ya kikundi."
+msgstr "%s inaripoti kizazi kipya cha kabla ya kikundi."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s inaripoti kizazi kipya cha kikundi."
+msgstr "%s inaripoti kizazi kipya cha kikundi."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s inaripoti kizazi kipya cha kanisa."
+msgstr "%s inaripoti kizazi kipya cha kanisa."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s inaripoti kizazi kipya cha timu ya uongozi."
+msgstr "%s inaripoti kizazi kipya cha timu ya uongozi."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Kufundisha mpya"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s inaripoti anwani mpya."
+msgstr "%s inaripoti anwani mpya."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s inaripoti kikundi kipya cha mapema kilichoundwa."
+msgstr "%s inaripoti kikundi kipya cha mapema kilichoundwa."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s inaripoti kikundi kipya kilichoundwa."
+msgstr "%s inaripoti kikundi kipya kilichoundwa."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s inaripoti kanisa jipya."
+msgstr "%s inaripoti kanisa jipya."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s inaripoti timu mpya ya uongozi iliyoundwa."
+msgstr "%s inaripoti timu mpya ya uongozi iliyoundwa."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s inaripoti ubatizo mpya."
+msgstr "%s inaripoti ubatizo mpya."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s inaripoti uhusiano wa ukocha."
+msgstr "%s inaripoti uhusiano wa ukocha."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Zana za Wanafunzi - Plugin ya Mafunzo inahitaji mandhari ya 'Zana za Wan
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Toleo la Sasa la Zana za Wanafunzi:% 1 $ s, toleo linalohitajika:% 2 $ s"
+msgstr "Toleo la Sasa la Zana za Wanafunzi: %1$s, toleo linalohitajika: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dashibodi"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "Siku% s tangu sasisho la mwisho"
+msgstr "Sik %s tangu sasisho la mwisho"
 
 #: includes/rest-api.php:419
 msgid "Accept"

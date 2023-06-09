@@ -361,7 +361,7 @@ msgstr "Bikarhênerên Bigerin"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Li% s bigerin"
+msgstr "L %s bigerin"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Nêzîkî"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s hate rakirin:% 2 $ s"
+msgstr "%1$s hate rakirin: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s zêde kir:% 2 $ s"
+msgstr "%1$s zêde kir: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s nûvekirî:% 2 $ s heya% 3 $ s"
+msgstr "%1$s nûvekirî: %2$s heya %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Nifşên Tîmê"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s nifşek pêş-komek nû radigihîne."
+msgstr "%s nifşek pêş-komek nû radigihîne."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s nifşek koma nû radigihîne."
+msgstr "%s nifşek koma nû radigihîne."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s nifşek dêrê ya nû radigihîne."
+msgstr "%s nifşek dêrê ya nû radigihîne."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s nifşek tîmê serokatiyê ya nû radigihîne."
+msgstr "%s nifşek tîmê serokatiyê ya nû radigihîne."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Coaching Nû"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s têkiliyek nû radigihîne."
+msgstr "%s têkiliyek nû radigihîne."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s rapor dike ku pêş-komek nû hatî damezrandin."
+msgstr "%s rapor dike ku pêş-komek nû hatî damezrandin."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s rapor dike ku komek nû ava bûye."
+msgstr "%s rapor dike ku komek nû ava bûye."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s dêrek nû radigihîne."
+msgstr "%s dêrek nû radigihîne."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s ragihand ku tîmek nû ya serokatiyê ava bûye."
+msgstr "%s ragihand ku tîmek nû ya serokatiyê ava bûye."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s ragihand ku vaftîzmek nû ye."
+msgstr "%s ragihand ku vaftîzmek nû ye."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s têkiliyek rahêneriyê radigihîne."
+msgstr "%s têkiliyek rahêneriyê radigihîne."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Pêveka 'Amûrên ipagirt - Perwerde' pêdivî ye ku mijara 'Amûrên ip
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Guhertoya Amûrên ipagirtê ya Naha:% 1 $ s, guhertoya hewce:% 2 $ s"
+msgstr "Guhertoya Amûrên ipagirtê ya Naha: %1$s, guhertoya hewce: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dashboard"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "Ji nûvekirina dawîn ve% s roj"
+msgstr "Ji nûvekirina dawîn v %s roj"
 
 #: includes/rest-api.php:419
 msgid "Accept"

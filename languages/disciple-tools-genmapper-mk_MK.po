@@ -361,7 +361,7 @@ msgstr "Пребарувајте корисници"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Пребарувајте% s"
+msgstr "Пребарувајте%s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Затвори"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Отстранети% 1 $ s:% 2 $ s"
+msgstr "Отстранети %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Додадено е% 1 $ s:% 2 $ s"
+msgstr "Додадено е %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Ажурирано% 1 $ s:% 2 $ s до% 3 $ s"
+msgstr "Ажурирано %1$s: %2$s до %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Генерации на тимот"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s известува за нова генерација пред-група."
+msgstr "%s известува за нова генерација пред-група."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s известува за нова групна генерација."
+msgstr "%s известува за нова групна генерација."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s известува за нова црковна генерација."
+msgstr "%s известува за нова црковна генерација."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s известува за нова генерација на лидерски тим."
+msgstr "%s известува за нова генерација на лидерски тим."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Нов тренер"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s пријавува нов контакт."
+msgstr "%s пријавува нов контакт."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s известува за формирана нова пред-група."
+msgstr "%s известува за формирана нова пред-група."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s известува за формирана нова група."
+msgstr "%s известува за формирана нова група."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s известува за нова црква."
+msgstr "%s известува за нова црква."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s известува за формиран нов лидерски тим."
+msgstr "%s известува за формиран нов лидерски тим."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s известува за ново крштевање."
+msgstr "%s известува за ново крштевање."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s известува за тренерска врска."
+msgstr "%s известува за тренерска врска."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Приклучокот „Алатки за ученици - Обука�
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Тековна верзија на Алатки за ученици:% 1 $ s, потребна верзија:% 2 $ s"
+msgstr "Тековна верзија на Алатки за ученици: %1$s, потребна верзија: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Табла"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s дена од последното ажурирање"
+msgstr "%s дена од последното ажурирање"
 
 #: includes/rest-api.php:419
 msgid "Accept"

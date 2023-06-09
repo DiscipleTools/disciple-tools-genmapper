@@ -361,7 +361,7 @@ msgstr "Cari Pengguna"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Telusuri% s"
+msgstr "Telusur %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Menutup"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s:% 2 $ s dihapus"
+msgstr "%1$s: %2$s dihapus"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Menambahkan% 1 $ s:% 2 $ s"
+msgstr "Menambahkan %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Diperbarui% 1 $ s:% 2 $ s menjadi% 3 $ s"
+msgstr "Diperbarui %1$s: %2$s menjadi %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Generasi Tim"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s melaporkan generasi pra-grup baru."
+msgstr "%s melaporkan generasi pra-grup baru."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s melaporkan pembuatan grup baru."
+msgstr "%s melaporkan pembuatan grup baru."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s melaporkan generasi gereja baru."
+msgstr "%s melaporkan generasi gereja baru."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s melaporkan generasi tim kepemimpinan baru."
+msgstr "%s melaporkan generasi tim kepemimpinan baru."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Pelatihan Baru"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s melaporkan kontak baru."
+msgstr "%s melaporkan kontak baru."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s melaporkan kelompok baru yang dibentuk."
+msgstr "%s melaporkan kelompok baru yang dibentuk."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s melaporkan pembentukan grup baru."
+msgstr "%s melaporkan pembentukan grup baru."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s melaporkan gereja baru."
+msgstr "%s melaporkan gereja baru."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s melaporkan pembentukan tim kepemimpinan baru."
+msgstr "%s melaporkan pembentukan tim kepemimpinan baru."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s melaporkan pembaptisan baru."
+msgstr "%s melaporkan pembaptisan baru."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s melaporkan hubungan pembinaan."
+msgstr "%s melaporkan hubungan pembinaan."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Plugin 'Disciple Tools - Training' membutuhkan tema 'Disciple Tools' aga
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Versi Alat Pemuridan saat ini:% 1 $ s, versi yang diperlukan:% 2 $ s"
+msgstr "Versi Alat Pemuridan saat ini: %1$s, versi yang diperlukan: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dasbor"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s hari sejak pembaruan terakhir"
+msgstr "%s hari sejak pembaruan terakhir"
 
 #: includes/rest-api.php:419
 msgid "Accept"

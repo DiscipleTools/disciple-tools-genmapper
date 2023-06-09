@@ -361,7 +361,7 @@ msgstr "Masu Amfani da Bincike"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Binciko% s"
+msgstr "Bincik %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Kusa"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "An cire% 1 $ s:% 2 $ s"
+msgstr "An cire %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "An ƙara% 1 $ s:% 2 $ s"
+msgstr "An ƙara %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "An sabunta% 1 $ s:% 2 $ s zuwa% 3 $ s"
+msgstr "An sabunta %1$s: %2$s zuwa %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Geneungiyoyin Teamungiyoyi"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s yana bayar da rahoton sabon ƙarni-ƙarni."
+msgstr "%s yana bayar da rahoton sabon ƙarni-ƙarni."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s yana bayar da rahoton sabon ƙarni na rukuni."
+msgstr "%s yana bayar da rahoton sabon ƙarni na rukuni."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s yana bayar da rahoton sabon ƙarni na coci."
+msgstr "%s yana bayar da rahoton sabon ƙarni na coci."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s yana bayar da rahoton sabon ƙarni na ƙungiyar jagoranci."
+msgstr "%s yana bayar da rahoton sabon ƙarni na ƙungiyar jagoranci."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Sabon Koyawa"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s yana bayar da rahoton sabuwar lamba."
+msgstr "%s yana bayar da rahoton sabuwar lamba."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s yana bayar da rahoton sabon rukuni da aka kafa."
+msgstr "%s yana bayar da rahoton sabon rukuni da aka kafa."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s yana bayar da rahoton sabon rukuni da aka kafa."
+msgstr "%s yana bayar da rahoton sabon rukuni da aka kafa."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s yana bayar da rahoton sabon coci."
+msgstr "%s yana bayar da rahoton sabon coci."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s yana bayar da rahoton sabuwar ƙungiyar jagoranci da aka kafa."
+msgstr "%s yana bayar da rahoton sabuwar ƙungiyar jagoranci da aka kafa."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s yana ba da rahoton sabon baftisma."
+msgstr "%s yana ba da rahoton sabon baftisma."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s yana bayar da rahoton dangantakar koyawa."
+msgstr "%s yana bayar da rahoton dangantakar koyawa."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "'Kayan aikin Almajiranci - Kayan horo' na buƙatar taken 'Kayan Almajira
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Sigar Kayan Almajirai Na Yanzu:% 1 $ s, sigar da ake buƙata:% 2 $ s"
+msgstr "Sigar Kayan Almajirai Na Yanzu: %1$s, sigar da ake buƙata: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dashboard"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "Kwanaki% s tun ɗaukakawa ta ƙarshe"
+msgstr "Kwanak %s tun ɗaukakawa ta ƙarshe"
 
 #: includes/rest-api.php:419
 msgid "Accept"

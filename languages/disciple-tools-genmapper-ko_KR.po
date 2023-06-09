@@ -361,7 +361,7 @@ msgstr "사용자 검색"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "% s 검색"
+msgstr "%s 검색"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "닫기"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s 삭제 : % 2 $ s"
+msgstr "%1$s 삭제 :  %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s 추가 : % 2 $ s"
+msgstr "%1$s 추가 :  %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s 업데이트 : % 2 $ s에서 % 3 $ s로"
+msgstr "%1$s 업데이트 :  %2$s에서  %3$s로"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "팀 세대"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s이 (가) 새로운 사전 그룹 생성을보고합니다."
+msgstr "%s이 (가) 새로운 사전 그룹 생성을보고합니다."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s이 (가) 새 그룹 생성을보고합니다."
+msgstr "%s이 (가) 새 그룹 생성을보고합니다."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s 님이 새로운 교회 세대를보고하고 있습니다."
+msgstr "%s 님이 새로운 교회 세대를보고하고 있습니다."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s 님이 새로운 리더십 팀 세대를보고하고 있습니다."
+msgstr "%s 님이 새로운 리더십 팀 세대를보고하고 있습니다."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "새로운 코칭"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s이 (가) 새 연락처를보고합니다."
+msgstr "%s이 (가) 새 연락처를보고합니다."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s이 (가) 새로운 사전 그룹 형성을보고합니다."
+msgstr "%s이 (가) 새로운 사전 그룹 형성을보고합니다."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s이 (가) 구성된 새 그룹을보고합니다."
+msgstr "%s이 (가) 구성된 새 그룹을보고합니다."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s 님이 새 교회를보고하고 있습니다."
+msgstr "%s 님이 새 교회를보고하고 있습니다."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s이 (가) 새로운 리더십 팀이 구성되었다고보고합니다."
+msgstr "%s이 (가) 새로운 리더십 팀이 구성되었다고보고합니다."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s 님이 새로운 세례를보고하고 있습니다."
+msgstr "%s 님이 새로운 세례를보고하고 있습니다."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s 님이 코칭 관계를보고하고 있습니다."
+msgstr "%s 님이 코칭 관계를보고하고 있습니다."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "'Disciple Tools-Training'플러그인이 작동하려면 'Disciple Tools
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "현재 Disciple Tools 버전 : % 1 $ s, 필수 버전 : % 2 $ s"
+msgstr "현재 Disciple Tools 버전 :  %1$s, 필수 버전 :  %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "계기반"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "마지막 업데이트 이후 % s 일"
+msgstr "마지막 업데이트 이후 %s 일"
 
 #: includes/rest-api.php:419
 msgid "Accept"

@@ -361,7 +361,7 @@ msgstr "વપરાશકર્તાઓ શોધો"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "% S શોધો"
+msgstr "%s શોધો"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "બંધ"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s દૂર કર્યું:% 2 $ s"
+msgstr "%1$s દૂર કર્યું: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ઉમેરી:% 2 $ s"
+msgstr "%1$s ઉમેરી: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s થી% 3 $ s પર અપડેટ કર્યું"
+msgstr "%1$s: %2$s થી %3$s પર અપડેટ કર્યું"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "ટીમ જનરેશન"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s નવી પૂર્વ-જૂથ જનરેશનની જાણ કરી રહ્યું છે."
+msgstr "%s નવી પૂર્વ-જૂથ જનરેશનની જાણ કરી રહ્યું છે."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s નવી જૂથ પે generationીનો અહેવાલ આપે છે."
+msgstr "%s નવી જૂથ પે generationીનો અહેવાલ આપે છે."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s નવી ચર્ચ પે generationીની જાણ કરે છે."
+msgstr "%s નવી ચર્ચ પે generationીની જાણ કરે છે."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s નવી નેતૃત્વ ટીમ બનાવટની જાણ કરે છે."
+msgstr "%s નવી નેતૃત્વ ટીમ બનાવટની જાણ કરે છે."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "નવી કોચિંગ"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s નવા સંપર્કની જાણ કરી રહ્યું છે."
+msgstr "%s નવા સંપર્કની જાણ કરી રહ્યું છે."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s રચિત નવા પૂર્વ જૂથની જાણ કરી રહ્યું છે."
+msgstr "%s રચિત નવા પૂર્વ જૂથની જાણ કરી રહ્યું છે."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s એ બનાવેલ નવા જૂથની જાણ કરી રહ્યાં છે."
+msgstr "%s એ બનાવેલ નવા જૂથની જાણ કરી રહ્યાં છે."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s નવા ચર્ચની જાણ કરે છે."
+msgstr "%s નવા ચર્ચની જાણ કરે છે."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s રચિત નવી લીડરશીપ ટીમની રીપોર્ટ આપી રહ્યો છે."
+msgstr "%s રચિત નવી લીડરશીપ ટીમની રીપોર્ટ આપી રહ્યો છે."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s નવા બાપ્તિસ્માની જાણ કરે છે."
+msgstr "%s નવા બાપ્તિસ્માની જાણ કરે છે."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s કોચિંગના સંબંધની જાણ કરી રહ્યું છે."
+msgstr "%s કોચિંગના સંબંધની જાણ કરી રહ્યું છે."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "'શિષ્ય સાધનો - તાલીમ' પ્લગઇન�
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "વર્તમાન શિષ્ય સાધનોનું સંસ્કરણ:% 1 $ s, આવશ્યક સંસ્કરણ:% 2 $ s"
+msgstr "વર્તમાન શિષ્ય સાધનોનું સંસ્કરણ: %1$s, આવશ્યક સંસ્કરણ: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "ડેશબોર્ડ"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "છેલ્લા અપડેટ પછી% s દિવસ"
+msgstr "છેલ્લા અપડેટ પછી%s દિવસ"
 
 #: includes/rest-api.php:419
 msgid "Accept"

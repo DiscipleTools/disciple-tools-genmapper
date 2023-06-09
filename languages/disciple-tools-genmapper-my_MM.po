@@ -361,7 +361,7 @@ msgstr "အသုံးပြုသူများကိုရှာပါ"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "% s ကိုရှာပါ"
+msgstr "%s ကိုရှာပါ"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "ပိတ်"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s ဖယ်ရှားပြီး% 2 $ s"
+msgstr "%1$s ဖယ်ရှားပြီး %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ထပ်တိုး% 1 $ s ထည့်သွင်းထားသည်"
+msgstr "%1$s ထပ်တိုး %1$s ထည့်သွင်းထားသည်"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s မှ% 2 $ s မှ% 3 $ s သို့အဆင့်မြှင့်တင်ထားသည်"
+msgstr "%1$s မှ %2$s မှ %3$s သို့အဆင့်မြှင့်တင်ထားသည်"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "အဖွဲ့မျိုးဆက်များ"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s သည်အုပ်စုမတိုင်မီမျိုးဆက်သစ်ကိုသတင်းပို့သည်။"
+msgstr "%s သည်အုပ်စုမတိုင်မီမျိုးဆက်သစ်ကိုသတင်းပို့သည်။"
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s သည်အုပ်စုမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်အုပ်စုမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s သည်ဘုရားကျောင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ဘုရားကျောင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s သည်ခေါင်းဆောင်ပိုင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ခေါင်းဆောင်ပိုင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "နည်းပြအသစ်"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s သည်အဆက်အသွယ်အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်အဆက်အသွယ်အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s သည်ဖွဲ့စည်းထားသည့် Pre- group အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ဖွဲ့စည်းထားသည့် Pre- group အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s သည်ဖွဲ့စည်းသည့်အုပ်စုအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ဖွဲ့စည်းသည့်အုပ်စုအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s သည်ဘုရားကျောင်းအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ဘုရားကျောင်းအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s သည်ဖွဲ့စည်းထားသည့်ခေါင်းဆောင်အဖွဲ့အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်ဖွဲ့စည်းထားသည့်ခေါင်းဆောင်အဖွဲ့အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s သည်နှစ်ခြင်းအသစ်ကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်နှစ်ခြင်းအသစ်ကိုအစီရင်ခံနေသည်။"
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s သည်နည်းပြဆက်ဆံရေးကိုအစီရင်ခံနေသည်။"
+msgstr "%s သည်နည်းပြဆက်ဆံရေးကိုအစီရင်ခံနေသည်။"
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "'Disciple Tools - Training' ပလပ်ဂင်တွင်အလု�
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "လက်ရှိ Disciple Tools ဗားရှင်း -% 1 $ s၊ လိုအပ်သောမူကွဲ -% 2 $ s"
+msgstr "လက်ရှိ Disciple Tools ဗားရှင်း - %1$s၊ လိုအပ်သောမူကွဲ - %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "ဒိုင်ခွက်"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
+msgstr "%s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
 
 #: includes/rest-api.php:419
 msgid "Accept"

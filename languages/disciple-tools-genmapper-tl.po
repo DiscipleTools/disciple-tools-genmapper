@@ -361,7 +361,7 @@ msgstr "Mga Gumagamit ng Paghahanap"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Maghanap sa% s"
+msgstr "Maghanap s %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Isara"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Inalis ang% 1 $ s:% 2 $ s"
+msgstr "Inalis ang %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Nagdagdag ng% 1 $ s:% 2 $ s"
+msgstr "Nagdagdag ng %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Nai-update na% 1 $ s:% 2 $ s hanggang% 3 $ s"
+msgstr "Nai-update na %1$s: %2$s hanggang %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Mga Henerasyon ng Koponan"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "Nag-uulat si% s ng isang bagong henerasyong bago ang pangkat."
+msgstr "Nag-uulat s %s ng isang bagong henerasyong bago ang pangkat."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s ay nag-uulat ng isang bagong henerasyon ng pangkat."
+msgstr "%s ay nag-uulat ng isang bagong henerasyon ng pangkat."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s ay nag-uulat ng isang bagong henerasyon ng simbahan."
+msgstr "%s ay nag-uulat ng isang bagong henerasyon ng simbahan."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s ay nag-uulat ng isang bagong henerasyon ng pangkat ng pamumuno."
+msgstr "%s ay nag-uulat ng isang bagong henerasyon ng pangkat ng pamumuno."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Bagong Pagtuturo"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s ay nag-uulat ng isang bagong contact."
+msgstr "%s ay nag-uulat ng isang bagong contact."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s ay nag-uulat ng isang bagong pre-group na nabuo."
+msgstr "%s ay nag-uulat ng isang bagong pre-group na nabuo."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s ay nag-uulat ng isang bagong pangkat na nabuo."
+msgstr "%s ay nag-uulat ng isang bagong pangkat na nabuo."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s ay nag-uulat ng isang bagong simbahan."
+msgstr "%s ay nag-uulat ng isang bagong simbahan."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s ay nag-uulat ng isang bagong koponan ng pamumuno nabuo."
+msgstr "%s ay nag-uulat ng isang bagong koponan ng pamumuno nabuo."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s ay nag-uulat ng isang bagong bautismo."
+msgstr "%s ay nag-uulat ng isang bagong bautismo."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s ay nag-uulat ng isang relasyon sa coaching."
+msgstr "%s ay nag-uulat ng isang relasyon sa coaching."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Mga Tool ng 'Disipulo - Ang plugin ng Pagsasanay' ay nangangailangan ng 
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Kasalukuyang bersyon ng Mga Tool ng Disipulo:% 1 $ s, kinakailangang bersyon:% 2 $ s"
+msgstr "Kasalukuyang bersyon ng Mga Tool ng Disipulo: %1$s, kinakailangang bersyon: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dashboard"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s araw mula noong huling pag-update"
+msgstr "%s araw mula noong huling pag-update"
 
 #: includes/rest-api.php:419
 msgid "Accept"

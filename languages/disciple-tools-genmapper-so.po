@@ -361,7 +361,7 @@ msgstr "Raadi Isticmaalayaasha"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Raadi% s"
+msgstr "Raad %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Xidh"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Laga saaray% 1 $ s:% 2 $ s"
+msgstr "Laga saaray %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "Lagu daray% 1 $ s:% 2 $ s"
+msgstr "Lagu daray %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "La cusbooneysiiyay% 1 $ s:% 2 $ s ilaa% 3 $ s"
+msgstr "La cusbooneysiiyay %1$s: %2$s ilaa %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Jiilka Kooxda"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s waxay ka warbixineysaa jiil cusub oo koox-koox ah."
+msgstr "%s waxay ka warbixineysaa jiil cusub oo koox-koox ah."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s waxay ka warbixineysaa jiil cusub oo koox ah."
+msgstr "%s waxay ka warbixineysaa jiil cusub oo koox ah."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s waxay tabinaysaa jiil kaniisad cusub."
+msgstr "%s waxay tabinaysaa jiil kaniisad cusub."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s waxay ka warbixineysaa jiil cusub oo kooxda hogaaminta ah."
+msgstr "%s waxay ka warbixineysaa jiil cusub oo kooxda hogaaminta ah."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Tababar cusub"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s waxay ka warbixineysaa xiriir cusub."
+msgstr "%s waxay ka warbixineysaa xiriir cusub."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s waxay tabinaysaa koox cusub oo hore loo sameeyay."
+msgstr "%s waxay tabinaysaa koox cusub oo hore loo sameeyay."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s waxay tabinaysaa koox cusub oo la sameeyay."
+msgstr "%s waxay tabinaysaa koox cusub oo la sameeyay."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s waxay tabinaysaa kaniisad cusub."
+msgstr "%s waxay tabinaysaa kaniisad cusub."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s waxay tabinaysaa koox hogaamineed oo cusub oo la sameeyay."
+msgstr "%s waxay tabinaysaa koox hogaamineed oo cusub oo la sameeyay."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s waxay tabineysaa baabtiis cusub."
+msgstr "%s waxay tabineysaa baabtiis cusub."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s waxay tabinaysaa xiriir tababarenimo."
+msgstr "%s waxay tabinaysaa xiriir tababarenimo."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Qalabka 'Xerta - Tababarka' plugin wuxuu u baahan yahay 'Qalabka Xerta' 
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Nooca Qalabka Xerta ee Hadda:% 1 $ s, nooca loo baahan yahay:% 2 $ s"
+msgstr "Nooca Qalabka Xerta ee Hadda: %1$s, nooca loo baahan yahay: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Dashboard"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s maalmood ilaa cusboonaysiintii ugu dambaysay"
+msgstr "%s maalmood ilaa cusboonaysiintii ugu dambaysay"
 
 #: includes/rest-api.php:419
 msgid "Accept"

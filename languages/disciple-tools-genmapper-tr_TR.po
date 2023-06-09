@@ -361,7 +361,7 @@ msgstr "Kullanıcı Ara"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "% S ara"
+msgstr "%s ara"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Kapat"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s kaldırıldı:% 2 $ s"
+msgstr "%1$s kaldırıldı: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s eklendi:% 2 $ s"
+msgstr "%1$s eklendi: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s güncellendi:% 2 $ s,% 3 $ s olarak"
+msgstr "%1$s güncellendi: %2$s, %3$s olarak"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Takım Nesilleri"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s, yeni bir ön grup nesli bildiriyor."
+msgstr "%s, yeni bir ön grup nesli bildiriyor."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s yeni bir grup nesli bildiriyor."
+msgstr "%s yeni bir grup nesli bildiriyor."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s, yeni bir kilise nesli bildiriyor."
+msgstr "%s, yeni bir kilise nesli bildiriyor."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s, yeni bir liderlik ekibi nesli bildiriyor."
+msgstr "%s, yeni bir liderlik ekibi nesli bildiriyor."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Yeni Koçluk"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s yeni bir kişi bildiriyor."
+msgstr "%s yeni bir kişi bildiriyor."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s yeni bir ön grup oluşturduğunu bildiriyor."
+msgstr "%s yeni bir ön grup oluşturduğunu bildiriyor."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s yeni bir grup oluştuğunu bildiriyor."
+msgstr "%s yeni bir grup oluştuğunu bildiriyor."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s yeni bir kilise bildiriyor."
+msgstr "%s yeni bir kilise bildiriyor."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s, yeni bir liderlik ekibinin kurulduğunu bildiriyor."
+msgstr "%s, yeni bir liderlik ekibinin kurulduğunu bildiriyor."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s yeni bir vaftiz bildiriyor."
+msgstr "%s yeni bir vaftiz bildiriyor."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s bir koçluk ilişkisi bildiriyor."
+msgstr "%s bir koçluk ilişkisi bildiriyor."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "'Disciple Tools - Training' eklentisinin çalışması için 'Disciple T
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Mevcut Öğrenci Araçları sürümü:% 1 $ s, gerekli sürüm:% 2 $ s"
+msgstr "Mevcut Öğrenci Araçları sürümü: %1$s, gerekli sürüm: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Gösterge Paneli"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "Son güncellemeden bu yana% s gün"
+msgstr "Son güncellemeden bu yan %s gün"
 
 #: includes/rest-api.php:419
 msgid "Accept"

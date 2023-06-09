@@ -361,7 +361,7 @@ msgstr "Căutați utilizatori"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "Căutați% s"
+msgstr "Căutaț %s"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "Închide"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "Eliminat% 1 $ s:% 2 $ s"
+msgstr "Eliminat %1$s: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "S-a adăugat% 1 $ s:% 2 $ s"
+msgstr "S-a adăugat %1$s: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Actualizat% 1 $ s:% 2 $ s până la% 3 $ s"
+msgstr "Actualizat %1$s: %2$s până la %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Generatii de echipa"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s raportează o nouă generație pre-grup."
+msgstr "%s raportează o nouă generație pre-grup."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s raportează o nouă generație de grup."
+msgstr "%s raportează o nouă generație de grup."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s raportează o nouă generație bisericească."
+msgstr "%s raportează o nouă generație bisericească."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s raportează o nouă generație de echipe de conducere."
+msgstr "%s raportează o nouă generație de echipe de conducere."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Nou antrenor"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s raportează un contact nou."
+msgstr "%s raportează un contact nou."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s raportează un nou pre-grup format."
+msgstr "%s raportează un nou pre-grup format."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s raportează un nou grup format."
+msgstr "%s raportează un nou grup format."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s raportează o nouă biserică."
+msgstr "%s raportează o nouă biserică."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s raportează o nouă echipă de conducere formată."
+msgstr "%s raportează o nouă echipă de conducere formată."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s raportează un nou botez."
+msgstr "%s raportează un nou botez."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s raportează o relație de coaching."
+msgstr "%s raportează o relație de coaching."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "Pluginul „Disciple Tools - Training” necesită ca tema „Disciple T
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Versiunea actuală a Disciple Tools:% 1 $ s, versiunea necesară:% 2 $ s"
+msgstr "Versiunea actuală a Disciple Tools: %1$s, versiunea necesară: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "Bord"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "% s zile de la ultima actualizare"
+msgstr "%s zile de la ultima actualizare"
 
 #: includes/rest-api.php:419
 msgid "Accept"

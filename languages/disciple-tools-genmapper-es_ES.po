@@ -391,15 +391,15 @@ msgstr "Cerrar"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s eliminado:% 2 $ s"
+msgstr "%1$s eliminado: %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s añadido:% 2 $ s"
+msgstr "%1$s añadido: %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s actualizado:% 2 $ s a% 3 $ s"
+msgstr "%1$s actualizado: %2$s a %3$s"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "Generaciones de equipo"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s informa sobre una nueva generación previa al grupo."
+msgstr "%s informa sobre una nueva generación previa al grupo."
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s informa sobre una nueva generación de grupos."
+msgstr "%s informa sobre una nueva generación de grupos."
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s informa sobre una nueva generación de iglesias."
+msgstr "%s informa sobre una nueva generación de iglesias."
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s informa sobre una nueva generación de equipos de liderazgo."
+msgstr "%s informa sobre una nueva generación de equipos de liderazgo."
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "Coaching nuevo"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s informa de un nuevo contacto."
+msgstr "%s informa de un nuevo contacto."
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s informa que se formó un nuevo grupo previo."
+msgstr "%s informa que se formó un nuevo grupo previo."
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s informa que se formó un nuevo grupo."
+msgstr "%s informa que se formó un nuevo grupo."
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s informa sobre una nueva iglesia."
+msgstr "%s informa sobre una nueva iglesia."
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s informa que se formó un nuevo equipo de liderazgo."
+msgstr "%s informa que se formó un nuevo equipo de liderazgo."
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s informa de un nuevo bautismo."
+msgstr "%s informa de un nuevo bautismo."
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s informa sobre una relación de coaching."
+msgstr "%s informa sobre una relación de coaching."
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "El complemento 'Disciple Tools - Training' requiere el tema 'Disciple To
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "Versión actual de Disciple Tools:% 1 $ s, versión requerida:% 2 $ s"
+msgstr "Versión actual de Disciple Tools: %1$s, versión requerida: %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 

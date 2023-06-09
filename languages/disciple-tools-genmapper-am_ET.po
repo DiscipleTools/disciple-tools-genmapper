@@ -361,7 +361,7 @@ msgstr "የፍለጋ ተጠቃሚዎች"
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
-msgstr "% S ን ፈልግ"
+msgstr "%s ን ፈልግ"
 
 #: post-type/module-base.php:657
 msgid "Create"
@@ -391,15 +391,15 @@ msgstr "ገጠመ"
 
 #: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s ተወግዷል% 2 $ s"
+msgstr "%1$s ተወግዷል %2$s"
 
 #: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ታክሏል% 2 $ s"
+msgstr "%1$s ታክሏል %2$s"
 
 #: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "ከ% 1 $ s:% 2 $ s እስከ% 3 $ s ዘምኗል"
+msgstr "ከ %1$s: %2$s እስከ %3$s ዘምኗል"
 
 #: post-type/module-base.php:958
 #: post-type/module-base.php:942
@@ -1142,19 +1142,19 @@ msgstr "የቡድን ትውልዶች"
 
 #: logging/log-generations.php:76
 msgid "%s is reporting a new pre-group generation."
-msgstr "% s አዲስ የቅድመ-ቡድን ትውልድ ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የቅድመ-ቡድን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #: logging/log-generations.php:81
 msgid "%s is reporting a new group generation."
-msgstr "% s አዲስ የቡድን ትውልድ ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የቡድን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #: logging/log-generations.php:86
 msgid "%s is reporting a new church generation."
-msgstr "% s አዲስ የቤተክርስቲያን ትውልድ ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የቤተክርስቲያን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #: logging/log-generations.php:91
 msgid "%s is reporting a new leadership team generation."
-msgstr "% s አዲስ የአመራር ቡድን መፍጠርን ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የአመራር ቡድን መፍጠርን ሪፖርት እያደረገ ነው።"
 
 #: includes/charts/baptisms.php:81
 msgid "New Contact"
@@ -1186,31 +1186,31 @@ msgstr "አዲስ ስልጠና"
 
 #: logging/log-new-posts.php:164
 msgid "%s is reporting a new contact."
-msgstr "% s አዲስ እውቂያ ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ እውቂያ ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:169
 msgid "%s is reporting a new pre-group formed."
-msgstr "% s አዲስ የተቋቋመ ቡድንን ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የተቋቋመ ቡድንን ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:174
 msgid "%s is reporting a new group formed."
-msgstr "% s አዲስ የተቋቋመ ቡድን ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ የተቋቋመ ቡድን ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:179
 msgid "%s is reporting a new church."
-msgstr "% s አዲስ ቤተክርስቲያንን ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ ቤተክርስቲያንን ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:184
 msgid "%s is reporting a new leadership team formed."
-msgstr "% s ለተቋቋመው አዲስ የአመራር ቡድን ሪፖርት እያደረገ ነው።"
+msgstr "%s ለተቋቋመው አዲስ የአመራር ቡድን ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:189
 msgid "%s is reporting a new baptism."
-msgstr "% s አዲስ ጥምቀትን ሪፖርት እያደረገ ነው።"
+msgstr "%s አዲስ ጥምቀትን ሪፖርት እያደረገ ነው።"
 
 #: logging/log-new-posts.php:194
 msgid "%s is reporting an coaching relationship."
-msgstr "% s የአሰልጣኝነት ግንኙነትን ሪፖርት እያደረገ ነው።"
+msgstr "%s የአሰልጣኝነት ግንኙነትን ሪፖርት እያደረገ ነው።"
 
 #: metrics/network-maps-area.php:74
 #: metrics/network-maps-area.php:83
@@ -1264,7 +1264,7 @@ msgstr "‹የደቀመዝሙር መሣሪያዎች - የሥልጠና› ተሰ�
 
 #: disciple-tools-training.php:299
 msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-msgstr "የአሁኑ የደቀመዝሙር መሳሪያዎች ስሪት% 1 $ s ፣ አስፈላጊ ስሪት% 2 $ s"
+msgstr "የአሁኑ የደቀመዝሙር መሳሪያዎች ስሪት %1$s ፣ አስፈላጊ ስሪት %2$s"
 
 #. Plugin URI of the plugin/theme
 #: 
@@ -1314,7 +1314,7 @@ msgstr "ዳሽቦርድ"
 
 #: includes/rest-api.php:86
 msgid "%s days since last update"
-msgstr "ካለፈው ዝመና ጀምሮ% s ቀናት"
+msgstr "ካለፈው ዝመና ጀምሮ%s ቀናት"
 
 #: includes/rest-api.php:419
 msgid "Accept"
