@@ -89,6 +89,7 @@ class GenMapper {
     <button onclick="genmapper.origData();" class="hint--rounded hint--right" aria-label="Original Zoom &amp; Position"><img src="${this.plugin_uri}/charts/icons/refresh.svg"></i></button>
     <button onclick="genmapper.zoomIn();" class="hint--rounded hint--right" aria-label="Zoom In"><img src="${this.plugin_uri}/charts/icons/136-zoom-in.svg"></i></button>
     <button onclick="genmapper.zoomOut();" class="hint--rounded hint--right" aria-label="Zoom Out"><img src="${this.plugin_uri}/charts/icons/137-zoom-out.svg"></i></button>
+    <button onclick="genmapper.printMap('horizontal');" class="hint--rounded hint--right" aria-label="Print Horizontal"><img src="${this.plugin_uri}/charts/icons/print-horizontal.svg"></button>
   `
 
     document.getElementById('edit-group').innerHTML = `<div id="edit-group-content">
@@ -787,6 +788,36 @@ class GenMapper {
     })
     this.editParentElement = document.getElementById('edit-parent')
   }
+
+  // Talks to GenMapperPoster service to print the gen map 
+  // Connected to the print button in the UI left menu
+  printMap (printType) {
+    console.log('GenMapper: Triggering print for', printType);
+    console.log('GenMapper: Checking window.GenMapperPoster availability:', typeof window.GenMapperPoster);
+    console.log('GenMapper: Window object keys:', Object.keys(window).filter(key => key.includes('GenMapper')));
+    
+    // ATTEMPT 3 FIX: Check for the actual GenMapperPoster instance, not just the class
+    if (typeof window.GenMapperPoster === 'undefined' || !window.GenMapperPoster) {
+      console.error('GenMapperPoster service not available');
+      console.log('GenMapper: Available window properties:', Object.keys(window).filter(key => key.toLowerCase().includes('gen')));
+      this.displayAlert('Print service not loaded. Please refresh the page and try again.');
+      return;
+    }
+    
+    console.log('GenMapper: GenMapperPoster found, dispatching event');
+    
+    // Dispatch event to GenMapperPoster service
+    const printEvent = new CustomEvent('generatePoster', {
+      detail: {
+        printType: printType,
+        sourceElementId: 'genmapper-graph-svg'
+      }
+    });
+    
+    document.dispatchEvent(printEvent);
+    console.log('GenMapper: Print event dispatched successfully');
+  }
+
 }
 
 window.genMapperClass = GenMapper

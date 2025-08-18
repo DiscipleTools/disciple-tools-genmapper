@@ -50,11 +50,20 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 'show_icons' => get_option( "dt_genmapper_show_health_icons", true ),
             ]
         );
+
+        // Enqueue GenMapperPoster before genmapper
+        wp_enqueue_script('genmapper-poster', trailingslashit( plugin_dir_url( __FILE__ ) ) . "GenMapperPoster.js", [
+            'jquery',
+            'd3'
+        ], filemtime( plugin_dir_path( __FILE__ ) . "GenMapperPoster.js" ), true);
+            
+
         wp_enqueue_script('genmapper', trailingslashit( plugin_dir_url( __FILE__ ) ) . "genmapper.js", [
             'jquery',
             'jquery-ui-core',
             'd3',
             'gen-template',
+            'genmapper-poster',
             'wp-i18n'
         ], filemtime( plugin_dir_path( __FILE__ ) . "genmapper.js" ), true);
         wp_localize_script(
