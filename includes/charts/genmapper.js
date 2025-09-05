@@ -294,10 +294,6 @@ class GenMapper {
     const node = this.gNodes.selectAll('.node')
           .data(this.nodes.descendants())
 
-    node.enter().text(function(d) {
-      console.log(d)
-    })
-
     node.exit()
         .remove()
 
@@ -391,11 +387,9 @@ class GenMapper {
 
     nodeWithNew.select('.removeNode')
         .on('click', (d) => {
-          console.log("removeNode");
           this.removeNode(d); d3.event.stopPropagation() })
     nodeWithNew.select('.rebaseNode')
         .on('click', (d) => {
-          console.log("rebaseNode");
           this.rebaseOnNode(d);
           d3.event.stopPropagation()
         })
@@ -789,23 +783,15 @@ class GenMapper {
     this.editParentElement = document.getElementById('edit-parent')
   }
 
-  // Talks to GenMapperPoster service to print the gen map 
+  // Talks to GenMapperPoster service to print the gen map
   // Connected to the print button in the UI left menu
   printMap (printType) {
-    console.log('GenMapper: Triggering print for', printType);
-    console.log('GenMapper: Checking window.GenMapperPoster availability:', typeof window.GenMapperPoster);
-    console.log('GenMapper: Window object keys:', Object.keys(window).filter(key => key.includes('GenMapper')));
-    
-    // ATTEMPT 3 FIX: Check for the actual GenMapperPoster instance, not just the class
     if (typeof window.GenMapperPoster === 'undefined' || !window.GenMapperPoster) {
       console.error('GenMapperPoster service not available');
-      console.log('GenMapper: Available window properties:', Object.keys(window).filter(key => key.toLowerCase().includes('gen')));
       this.displayAlert('Print service not loaded. Please refresh the page and try again.');
       return;
     }
-    
-    console.log('GenMapper: GenMapperPoster found, dispatching event');
-    
+
     // Dispatch event to GenMapperPoster service
     const printEvent = new CustomEvent('generatePoster', {
       detail: {
@@ -813,9 +799,8 @@ class GenMapper {
         sourceElementId: 'genmapper-graph-svg'
       }
     });
-    
+
     document.dispatchEvent(printEvent);
-    console.log('GenMapper: Print event dispatched successfully');
   }
 
 }

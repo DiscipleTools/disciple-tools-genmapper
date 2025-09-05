@@ -57,10 +57,10 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
             'wp-i18n'
         ], filemtime( plugin_dir_path( __FILE__ ) . "genmapper.js" ), true );
         // Enqueue GenMapperPoster before genmapper
-        wp_enqueue_script('genmapper-poster', trailingslashit( plugin_dir_url( __FILE__ ) ) . "GenMapperPoster.js", [
+        wp_enqueue_script('genmapper-poster', trailingslashit( plugin_dir_url( __FILE__ ) ) . "genmapper-poster.js", [
             'jquery',
             'd3'
-        ], filemtime( plugin_dir_path( __FILE__ ) . "GenMapperPoster.js" ), true);
+        ], filemtime( plugin_dir_path( __FILE__ ) . "genmapper-poster.js" ), true);
         wp_enqueue_script( 'dt_'.$this->slug.'_script', trailingslashit( plugin_dir_url( __FILE__ ) ) . $this->js_file_name, [
             'jquery',
             'jquery-ui-core',

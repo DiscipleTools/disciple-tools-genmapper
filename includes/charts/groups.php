@@ -52,11 +52,11 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
         );
 
         // Enqueue GenMapperPoster before genmapper
-        wp_enqueue_script('genmapper-poster', trailingslashit( plugin_dir_url( __FILE__ ) ) . "GenMapperPoster.js", [
+        wp_enqueue_script('genmapper-poster', trailingslashit( plugin_dir_url( __FILE__ ) ) . "genmapper-poster.js", [
             'jquery',
             'd3'
-        ], filemtime( plugin_dir_path( __FILE__ ) . "GenMapperPoster.js" ), true);
-            
+        ], filemtime( plugin_dir_path( __FILE__ ) . "genmapper-poster.js" ), true);
+
 
         wp_enqueue_script('genmapper', trailingslashit( plugin_dir_url( __FILE__ ) ) . "genmapper.js", [
             'jquery',
