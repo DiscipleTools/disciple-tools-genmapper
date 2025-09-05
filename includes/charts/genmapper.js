@@ -457,7 +457,7 @@ class GenMapper {
     // add class to the element which the field inherits from
     element.attr('class', function (d) {
       const fieldValue = GenMapper.getFieldValueForRadioType(field, d)
-      if (fieldValue.class) {
+      if ((typeof fieldValue !== 'undefined') && fieldValue.class) {
         return this.classList.value + ' ' + fieldValue.class
       } else {
         return this.classList.value
@@ -465,7 +465,7 @@ class GenMapper {
     })
     element.attr('rx', function (d) {
       const fieldValue = GenMapper.getFieldValueForRadioType(field, d)
-      if (typeof fieldValue.attributes !== 'undefined' &&
+      if ((typeof fieldValue !== 'undefined') && typeof fieldValue.attributes !== 'undefined' &&
           typeof fieldValue.attributes.rx !== 'undefined') {
         return String(fieldValue.attributes.rx)
       } else {
