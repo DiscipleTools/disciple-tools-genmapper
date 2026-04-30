@@ -155,8 +155,11 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
             if ($group["coach"]) {
                 $lines[] = $group['coach'];
             }
-            if ($group['location_name']) {
-                $lines[] = $group['location_name'];
+            $location_display = !empty( $group['location_meta_label'] )
+                ? $group['location_meta_label']
+                : $group['location_name'];
+            if ( $location_display ) {
+                $lines[] = $location_display;
             }
             if ($group['start_date']) {
                 $lines[] = gmdate( get_option( 'date_format' ), intval( $group['start_date'] ) );
@@ -176,7 +179,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
                 "group_type" => $group["group_type"],
                 "post_type" => "groups",
                 "coach" => $group["coach"],
-                "location" => $group["location_name"],
+                "location" => $location_display,
                 "start_date" => $group['start_date'] ? gmdate( get_option( 'date_format' ), strtotime( $group['start_date'] ) ) : null,
                 "attenders" => (int) $group['total_members'],
                 "believers" => (int) $group['total_believers'],
