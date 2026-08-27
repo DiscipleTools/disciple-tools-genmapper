@@ -119,7 +119,7 @@ class DT_Genmapper_Groups_Chart extends DT_Genmapper_Metrics_Chart_Base
      * @param WP_REST_Request $request
      * @return array|WP_Error
      */
-    public function groups( WP_REST_Request $request) {
+    public function groups( WP_REST_Request $request ) {
 
         $params = $request->get_params();
 

@@ -21,7 +21,6 @@ class DT_Genmapper_Metrics_Charts
 
         new DT_Genmapper_Groups_Chart();
         new DT_Genmapper_Baptisms_Chart();
-
     } // End __construct
 }
 DT_Genmapper_Metrics_Charts::instance();

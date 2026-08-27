@@ -216,5 +216,4 @@ class DT_Genmapper_Baptisms_Chart extends DT_Genmapper_Metrics_Chart_Base
             return $prepared_array;
         }
     }
-
 }

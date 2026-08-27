@@ -71,7 +71,7 @@ class DT_Genmapper_Metrics_Menu {
             return 'general';
         }
         $needle = sanitize_key( wp_unslash( $_GET["tab"] ) );
-        $matching_tabs = array_filter($this->tabs(), function( $tab) use ( $needle) {
+        $matching_tabs = array_filter($this->tabs(), function( $tab ) use ( $needle ) {
             return $needle === $tab['key'];
         });
         if ( !count( $matching_tabs )) {
@@ -82,7 +82,7 @@ class DT_Genmapper_Metrics_Menu {
     }
 
     private function current_tab_info() {
-        return array_values(array_filter($this->tabs(), function( $tab) {
+        return array_values(array_filter($this->tabs(), function( $tab ) {
             return $this->current_tab_key() === $tab['key'];
         }))[0];
     }

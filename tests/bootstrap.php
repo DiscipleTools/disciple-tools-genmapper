@@ -21,7 +21,7 @@ require_once $_tests_dir . '/includes/functions.php';
 /**
  * Registers theme
  */
-$_register_theme = function () use ( $_tests_dir, $_core_dir, $_theme_dir, $_plugin_file) {
+$_register_theme = function () use ( $_tests_dir, $_core_dir, $_theme_dir, $_plugin_file ) {
     $current_theme = basename( $_theme_dir );
     $theme_root    = dirname( $_theme_dir );
     add_filter( 'theme_root', function () use ( $theme_root ) {
@@ -49,4 +49,3 @@ tests_add_filter( 'muplugins_loaded', $_register_theme );
 // Start up the WP testing environment.
 require $_tests_dir . '/includes/bootstrap.php';
 require_once __DIR__ . '/testcase.php';
-

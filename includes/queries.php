@@ -24,7 +24,7 @@ class DT_Genmapper_Plugin_Queries
      * @param array $args
      * @return mixed
      */
-    public function tree( $query_name, $args = []) {
+    public function tree( $query_name, $args = [] ) {
         global $wpdb;
         $query = [];
 
@@ -35,7 +35,7 @@ class DT_Genmapper_Plugin_Queries
 
         switch ($query_name) {
             case 'multiplying_groups_only':
-                $query = $wpdb->get_results("
+                $query = $wpdb->get_results( $wpdb->prepare("
                     SELECT
                       a.ID         as id,
                       0            as parent_id,
@@ -47,7 +47,7 @@ class DT_Genmapper_Plugin_Queries
                         INNER JOIN $wpdb->posts as leaders1
                           ON leaders1.ID=groupleader1.p2p_to
                         WHERE groupleader1.p2p_from=a.ID
-                          AND groupleader1.p2p_type = '$connection_type') as coach,
+                          AND groupleader1.p2p_type = %s) as coach,
                       location1.name as location_name,
                       (SELECT label FROM $wpdb->dt_location_grid_meta WHERE post_id = a.ID ORDER BY grid_meta_id DESC LIMIT 1) as location_meta_label,
                       startdate1.meta_value as start_date,
@@ -124,7 +124,7 @@ class DT_Genmapper_Plugin_Queries
                         INNER JOIN $wpdb->posts as gleaders1
                           ON gleaders1.ID=ggroupleader1.p2p_to
                         WHERE ggroupleader1.p2p_from=p.p2p_from
-                          AND ggroupleader1.p2p_type = '$connection_type') as coach,
+                          AND ggroupleader1.p2p_type = %s) as coach,
                       glocation1.name as location,
                       (SELECT label FROM $wpdb->dt_location_grid_meta WHERE post_id = p.p2p_from ORDER BY grid_meta_id DESC LIMIT 1) as location_meta_label,
                       gstartdate1.meta_value as start_date,
@@ -169,7 +169,7 @@ class DT_Genmapper_Plugin_Queries
                       ON genddate1.post_id=p.p2p_from
                       AND genddate1.meta_key = 'end_date'
                     WHERE p.p2p_type = 'groups_to_groups'
-                ", ARRAY_A);
+                ", $connection_type, $connection_type ), ARRAY_A);
                 break;
 
             default:
