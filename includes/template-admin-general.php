@@ -51,6 +51,22 @@
                             </p>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <label for="genmapper-connection-display">
+                                <b><?php esc_html_e( 'Show on group circles', 'disciple-tools-genmapper' )?></b>
+                            </label>
+                        </td>
+                        <td>
+                            <select name="dt_genmapper_connection_display" id="genmapper-connection-display">
+                                <option value="coach" <?php selected( $connection_display, 'coach' ); ?>><?php esc_html_e( 'Coach', 'disciple-tools-genmapper' ) ?></option>
+                                <option value="leaders" <?php selected( $connection_display, 'leaders' ); ?>><?php esc_html_e( 'Group Leaders', 'disciple-tools-genmapper' ) ?></option>
+                            </select>
+                            <p>
+                                <?php esc_html_e( 'Controls whether the group circles display the connected coaches or the group leaders.', 'disciple-tools-genmapper' ) ?>
+                            </p>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <input class="button hollow" type="submit" value="Save" />

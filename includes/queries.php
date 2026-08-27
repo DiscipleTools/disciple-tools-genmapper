@@ -28,6 +28,11 @@ class DT_Genmapper_Plugin_Queries
         global $wpdb;
         $query = [];
 
+        // The "coach" column is populated from either the connected coach or the
+        // group's leaders (comma separated), depending on the plugin setting.
+        $connection_display = get_option( 'dt_genmapper_connection_display', 'coach' );
+        $connection_type = $connection_display === 'leaders' ? 'groups_to_leaders' : 'groups_to_coaches';
+
         switch ($query_name) {
             case 'multiplying_groups_only':
                 $query = $wpdb->get_results("
@@ -37,7 +42,12 @@ class DT_Genmapper_Plugin_Queries
                       a.post_title as name,
                       gs1.meta_value as group_status,
                       type1.meta_value as group_type,
-                      coach1.post_title as coach,
+                      (SELECT GROUP_CONCAT(leaders1.post_title SEPARATOR ', ')
+                        FROM $wpdb->p2p as groupleader1
+                        INNER JOIN $wpdb->posts as leaders1
+                          ON leaders1.ID=groupleader1.p2p_to
+                        WHERE groupleader1.p2p_from=a.ID
+                          AND groupleader1.p2p_type = '$connection_type') as coach,
                       location1.name as location_name,
                       (SELECT label FROM $wpdb->dt_location_grid_meta WHERE post_id = a.ID ORDER BY grid_meta_id DESC LIMIT 1) as location_meta_label,
                       startdate1.meta_value as start_date,
@@ -77,11 +87,6 @@ class DT_Genmapper_Plugin_Queries
                     LEFT JOIN $wpdb->postmeta as type1
                       ON type1.post_id=a.ID
                       AND type1.meta_key = 'group_type'
-                    LEFT JOIN $wpdb->p2p as groupcoach1
-                      ON groupcoach1.p2p_from=a.ID
-                      AND groupcoach1.p2p_type = 'groups_to_coaches'
-                    LEFT JOIN $wpdb->posts as coach1
-                      ON coach1.ID=groupcoach1.p2p_to
                     LEFT JOIN $wpdb->postmeta as grouplocation1
                       ON grouplocation1.post_id=a.ID
                       AND grouplocation1.meta_key = 'location_grid'
@@ -114,7 +119,12 @@ class DT_Genmapper_Plugin_Queries
                       (SELECT sub.post_title FROM $wpdb->posts as sub WHERE sub.ID = p.p2p_from ) as name,
                       (SELECT gsmeta.meta_value FROM $wpdb->postmeta as gsmeta WHERE gsmeta.post_id = p.p2p_from AND gsmeta.meta_key = 'group_status' LIMIT 1 ) as group_status,
                       (SELECT gsmeta.meta_value FROM $wpdb->postmeta as gsmeta WHERE gsmeta.post_id = p.p2p_from AND gsmeta.meta_key = 'group_type' LIMIT 1 ) as group_type,
-                      gcoach1.post_title as coach,
+                      (SELECT GROUP_CONCAT(gleaders1.post_title SEPARATOR ', ')
+                        FROM $wpdb->p2p as ggroupleader1
+                        INNER JOIN $wpdb->posts as gleaders1
+                          ON gleaders1.ID=ggroupleader1.p2p_to
+                        WHERE ggroupleader1.p2p_from=p.p2p_from
+                          AND ggroupleader1.p2p_type = '$connection_type') as coach,
                       glocation1.name as location,
                       (SELECT label FROM $wpdb->dt_location_grid_meta WHERE post_id = p.p2p_from ORDER BY grid_meta_id DESC LIMIT 1) as location_meta_label,
                       gstartdate1.meta_value as start_date,
@@ -147,11 +157,6 @@ class DT_Genmapper_Plugin_Queries
                     LEFT JOIN $wpdb->postmeta as gbaptized2
                       ON gbaptized2.post_id=p.p2p_from
                       AND gbaptized2.meta_key = 'baptized_in_group_count'
-                    LEFT JOIN $wpdb->p2p as ggroupcoach1
-                      ON ggroupcoach1.p2p_from=p.p2p_from
-                      AND ggroupcoach1.p2p_type = 'groups_to_coaches'
-                    LEFT JOIN $wpdb->posts as gcoach1
-                      ON gcoach1.ID=ggroupcoach1.p2p_to
                     LEFT JOIN $wpdb->postmeta as ggrouplocation1
                       ON ggrouplocation1.post_id=p.p2p_from
                       AND ggrouplocation1.meta_key = 'location_grid'
