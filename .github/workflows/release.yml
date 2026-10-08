@@ -10,8 +10,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
@@ -19,29 +22,13 @@ jobs:
     # - name: Run test suite
     #   run: composer run-script test
 
-    # Below borrowed from https://github.com/actions/upload-release-asset
+    # Build the plugin zip and publish it as the asset of a GitHub release for the pushed tag
     - name: Build project
       run: |
         mkdir disciple-tools-genmapper |
         cp -r disciple-tools-genmapper.php spinner.svg LICENSE README.md includes languages version-control.json disciple-tools-genmapper/
         zip -r disciple-tools-genmapper.zip disciple-tools-genmapper
     - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release v${{ github.ref }}
-        draft: false
-        prerelease: false
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-        asset_path: ./disciple-tools-genmapper.zip
-        asset_name: disciple-tools-genmapper.zip
-        asset_content_type: application/zip
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release create "$GITHUB_REF_NAME" disciple-tools-genmapper.zip --title "Release v$GITHUB_REF_NAME" --notes ""
